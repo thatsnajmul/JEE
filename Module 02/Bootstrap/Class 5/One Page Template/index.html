@@ -7,11 +7,12 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
   <!-- Start nav -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-none d-sm-block">
     <div class="container-fluid fixed-top">
       <a class="navbar-brand" href="#"><img src="images/logo.webp" alt="Logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -21,10 +22,10 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#about"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;About</a>
           </li>
 
           <li class="nav-item">
@@ -46,7 +47,11 @@
               <li><a class="dropdown-item" href="#">C#</a></li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-target="#examplemodal" data-bs-toggle="modal" >Feedback</a>
+          </li>
         </ul>
+        
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
@@ -266,7 +271,7 @@
         </form>
         <div class="mb-5"></div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 d-none d-sm-block">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14604.544337045478!2d90.36106188159116!3d23.77816794021354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c74e8282b185%3A0x5e029ded49de5bfc!2sIDB%20Bhaban%2C%20E%2F8-A%2C%20Dhaka%201207!5e0!3m2!1sen!2sbd!4v1708273276305!5m2!1sen!2sbd"
           width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
@@ -288,6 +293,39 @@
     </div>
   </div>
   <!-- Credit end -->
+
+  <div class="modal bg-transparent" tabindex="-1" id="examplemodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Login -->
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Submit</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
