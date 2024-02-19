@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        button{
+            padding: 10px;
+            color: tomato;
+            background-color: white;
+            border: 2px solid palegoldenrod;
+
+        }
+        button:hover{
+            color: white;
+            background-color: tomato;
+            border: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Reg Form</h1>
+    <form style="text-align: center;" action="post">
+        ID: <input type="number"> <br> <br>
+        Name: <input type="text"> <br> <br>
+        Email: <input type="email"> <br> <br>
+        Round: <select name="" id="">
+            <option value="JEE">SELECT</option>
+            <option value="JEE">JEE</option>
+            <option value="DDD">DDD</option>
+            <option value="C#">C#</option> 
+        </select> <br> <br>
+        Gender: <input type="radio" name="gender" id="">Male &nbsp;
+        <input type="radio" name="gender" id="">Female &nbsp;
+        <input type="radio" name="gender" id="">Other's <br> <br>
+
+        Education: <input type="checkbox" name="SSC" id="">SSC &nbsp;
+         <input type="checkbox" name="SSC" id="">HSC &nbsp;
+         <input type="checkbox" name="SSC" id="">HONS <br> <br>
+
+         <button type="submit">Submit</button>&nbsp; <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>
