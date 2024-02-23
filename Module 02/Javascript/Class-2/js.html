@@ -12,6 +12,12 @@
     <label>Number 2</label>
     <input type="number" id="number2"> <br>
 
+    <label>Number 2 not float</label>
+    <input type="number" id="number3"> <br>
+
+    <label>Number 2</label>
+    <input type="number" id="number4"> <br>
+
     <input type="submit" value="Sum" onclick="doSum()">
 
 
@@ -20,12 +26,16 @@
         function doSum(){
             let number_one=document.getElementById('number1').value;
             let number_two=document.getElementById('number2').value;
+            let number_three=document.getElementById('number3').value;
+            let number_four=document.getElementById('number4').value;
 
 
             let nu1ToInt=parseFloat(number_one);
             let nu2ToInt=parseFloat(number_two);
+            let nu3ToInt=parseInt(number_three);
+            let nu4ToInt=parseFloat(number_four);
 
-            let result=nu1ToInt+nu1ToInt;
+            let result=nu1ToInt+nu1ToInt+nu3ToInt+nu4ToInt;
 
             document.write(result);
         }
