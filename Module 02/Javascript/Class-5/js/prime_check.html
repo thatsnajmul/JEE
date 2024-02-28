@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min</title>
+</head>
+<body>
+    <input id="numOne" type="text">
+    
+
+
+    <button id="" onclick="primeCheck()">Primeclick</button>
+
+
+    <p id="result"></p>
+
+
+
+    <script>
+        function primeCheck(){
+            let number1 = parseInt(document.getElementById('numOne').value);
+            let result = document.getElementById('result');
+            let count = 0;
+
+            for(let i=1; i<=number1; i++){
+                if(number1%i==0){
+                    count++;
+                }
+            }
+            if(count==2){
+                result.innerHTML='This Number is prime';
+            }
+            else{
+                result.innerHTML='This Number is not prime';
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>
