@@ -18,18 +18,21 @@
     <label>Number 2</label>
     <input type="number" id="number4"> <br>
 
-    <input type="submit" value="Sum" onclick="doSum()">
+    <input type="submit" value="Sum_alrt" onclick="doSum()">
+    <input type="submit" value="Sum_print" onclick="doSum()">
 
 
 
     <script>
         function doSum(){
+
+            //front id conv using var and valu recei
             let number_one=document.getElementById('number1').value;
             let number_two=document.getElementById('number2').value;
             let number_three=document.getElementById('number3').value;
             let number_four=document.getElementById('number4').value;
 
-
+            //f and int 
             let nu1ToInt=parseFloat(number_one);
             let nu2ToInt=parseFloat(number_two);
             let nu3ToInt=parseInt(number_three);
@@ -37,7 +40,9 @@
 
             let result=nu1ToInt+nu1ToInt+nu3ToInt+nu4ToInt;
 
+            alert(result);
             document.write(result);
+
         }
 
 

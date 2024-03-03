@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Four: Odd Even show to Paragraph</title>
+</head>
+<body>
+    <label for="">Enter your Odd Even Number</label> <br> <br>
+    <input type="number" id="number"> <br> <br>
+    <input type="submit" value="Check Odd Even" onclick="checkOddEven()"> <br> <br>
+
+    <p id="show_odd_even_odd"></p>
+
+
+    <script>
+        function checkOddEven(){
+            let userINput=document.getElementById('number').value;
+
+        if(userINput%2==0){
+            document.getElementById('show_odd_even_odd').innerHTML="This is an even number";
+        }
+        else{
+            document.getElementById("show_odd_even_odd").innerHTML="This is an odd number";
+        }
+        }
+    </script>
+</body>
+</html>

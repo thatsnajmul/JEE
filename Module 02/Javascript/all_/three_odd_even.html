@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic three: OddEven</title>
+</head>
+<body>
+    <label for="">Check Odd Even Number</label>
+    <input type="number" id="number"> <br> <br>
+
+    <input type="submit" value="Check" onclick="checkOddEven()">
+
+
+    <script>
+        function checkOddEven(){
+            let userINput=document.getElementById("number").value;
+
+
+            if(userINput%2==0){
+                alert(userINput+" is Even Number");
+            }
+            else{
+                alert(userINput+" is Odd Number");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logic two: Result with Grade</title>
+</head>
+<body>
+    <label for="">Enter your subject Number</label> <br> <br>
+    <input type="number" id="entermarks"> <br> <br>
+
+    <input type="submit" value="Check result" onclick="findResult()">
+
+    <p id="result"></p>
+
+
+    <script>
+        function findResult(){
+            let userInputMarks = document.getElementById('entermarks').value;
+            let show_grade= "";
+
+            if(userInputMarks<=32){
+                show_grade = "F";
+            }
+            else if(userInputMarks<=39){
+                show_grade = "D";
+            }
+            else if(userInputMarks<=49){
+                show_grade = "C";
+            }
+            else if(userInputMarks<=59){
+                show_grade = "B";
+            }
+            else if(userInputMarks<=69){
+                show_grade = "A-";
+            }
+            else if(userInputMarks<=79){
+                show_grade = "A";
+            }
+            else if(userInputMarks<=100){
+                show_grade = "A+";
+            }
+            else{
+                alert("Invalid Number");
+            }
+
+
+            document.getElementById('result').innerHTML=show_grade;
+            
+        }
+    </script>
+</body>
+</html>
