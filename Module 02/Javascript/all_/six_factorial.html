@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic 6: Factorial</title>
+</head>
+
+<body>
+    <script>
+        let userInput = prompt("Please enter number what you want factorial");
+
+        let factorial = 1;
+
+        for (let i = userInput; i > 1; i--) {
+            factorial *=i; //factorial=factorial*i
+        }
+
+        document.write(factorial);
+    </script>
+</body>
+
+</html>
