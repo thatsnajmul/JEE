@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <title>Template</title>
+  </head>
+  <body>
+    
+    <!--Menu Strarted Here-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img style="height: 35px;" class="" src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a  class="nav-link active " aria-current="page" href="#"><button class="btn btn-outline-success">About Us</button></a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-outline-success">Features</button></a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><p class="dropdown-item p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam illo, vel eius, totam dignissimos odio ad sapiente optio nostrum, quam temporibus.</p></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-outline-success">Contact Us</button></a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">SL.</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Contact No.</th>
+                            <th scope="col">Email</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Md. Example1</td>
+                            <td>017-xxx-yyyy</td>
+                            <td>example@example.com</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Md. Example2</td>
+                            <td>017-xxx-yyyy</td>
+                            <td>example@example.com</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Md. Example3</td>
+                            <td>017-xxx-yyyy</td>
+                            <td>example@example.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </a></li>
+                </ul>
+              </li>
+             
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+          </div>
+        </div>
+      </nav>
+
+    <!--Menu End Here-->
+
+    <div class="d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="m-3 active btn btn-outline-primary" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home&nbsp;<i class="bi bi-house-door-fill"></i></button>
+          <button class="m-3 btn btn-outline-primary " id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Search Book&nbsp;<i class="bi bi-search-heart-fill"></i></button>
+          <button class="m-3 btn btn-outline-primary" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Upload Book&nbsp;<i class="bi bi-cloud-upload-fill"></i></button>
+          <button class="m-3 btn btn-outline-primary" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">The News&nbsp;<i class="bi bi-newspaper"></i></button>
+          <button class="m-3 btn btn-outline-primary" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">User Registration</button>
+        </div>
+        <div style="font-size: 50px;" class="  tab-content" id="v-pills-tabContent">
+          <div class=" mt-5 tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">Home
+            
+          </div>
+          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">Search Book
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">Upload Book
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">The News
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">User Registration
+
+          </div>
+        </div>
+      </div>
+
+    
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
