@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+</head>
+<body>
+    
+    <script>
+        // let myAr=[40,50,60,10,20];
+        let myAr=[20,50,40,80,10];
+        document.write("Old "+myAr);
+
+        for(let first =0; first<myAr.length; first++){
+            for(let second=0; second<myAr.length-first-1; second++){
+                if(myAr[second]>myAr[second+1]){
+                    let temp=myAr[second];
+                    myAr[second]=myAr[second+1];
+                    myAr[second+1]=temp;
+
+                }
+            }
+        }
+
+        let myArr=[20,45,56,67];
+        document.write("Old="+myArr);
+
+        for(let first=0; first<myArr.length; first++){
+            for(let second=0; second<myArr.length-first-1; second++;){
+                if(myArr[second]>myArr[second+1]){
+                    let temp=myArr[second];
+                    myArr[second]=myArr[second+1];
+                    myArr[seceond+1]=temp;
+                }
+            }
+        }
+        
+        document.write("<br>New " + myAr);
+
+
+        let myArr1=[300.700,455,677,600];
+        document.write("Old="+myArr1);
+        for(first=0; first<length; first++){
+            for(let second=0; second<smyArr1-second-1; second++){
+                if(myArr1[second]>myArr[second+1]){
+                    let temp=myArr[second];
+                    myArr1[second]=myArr1[second+1];
+                    myArr1[second+1]=temp;
+                }
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
