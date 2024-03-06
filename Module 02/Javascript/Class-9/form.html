@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    
+</head>
+
+<body>
+
+    <h1>Reg Form</h1>
+
+    <form  id="myForm">
+
+        <!--Name strat-->
+        <label for="">Name</label> <br> <br>
+        <input name="name" id="name" type="text"> <br> <br>
+        <!--Name end-->
+
+        <!--Email strat-->
+        <label for="">Email</label> <br> <br>
+        <input name="email" id="email" type="email"> <br> <br>
+        <!--Email end-->
+
+
+        <label for="">Phone</label> <br> <br>
+        <input name="phone" id="phone" type="number"> <br> <br>
+
+        <label for="">Pass</label> <br> <br>
+        <input name="password" id="pass" type="password"> <br> <br>
+
+        <label for="">Gender</label> <br> <br>
+        <input name="gender" type="radio" value="Male">Male
+        <input name="gender" type="radio" value="Female">Female
+        <input name="gender" type="radio" value="Others">Others <br> <br>
+
+        <label for="">Course</label> <br> <br>
+        <select name="course" id="course">
+            <option name="course" id="jee" value="jee">JEE</option>
+            <option name="course" id="c_sharp" value="jee">C#</option>
+            <option name="course" id="pythone" value="jee">Pythone</option>
+        </select> <br> <br>
+
+        <label for="">Hobby</label> <br> <br>
+        <input name="hobby" id="hobby_one" type="checkbox">Hobby 1
+        <input name="hobby" id="hobby_two" type="checkbox">Hobby 2
+        <input name="hobby" id="hobby_three" type="checkbox">Hobby 3 <br> <br>
+
+        <label for="">DOB</label> <br> <br>
+        <input name="dob" id="dob" type="date"> <br> <br>
+
+        <label for="">Address</label> <br> <br>
+        <textarea name="comment" id="comment" cols="30" rows="10">
+
+
+
+        </textarea> <br> <br>
+
+        <input type="submit" value="submit">
+
+        <!-- <button type="button" name="button" id="button">Register</button> -->
+
+    </form>
+
+
+    <script src="form.js">
+
+    </script>
+
+</body>
+
+
+
+</html>
