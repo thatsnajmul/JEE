@@ -12,16 +12,21 @@ function submitForm(event) {
     let pass = document.getElementById('pass').value;
 
     // Here we are using query selector for pic a specific data to compare multiple value
-    let gender = document.querySelector('input[name="gender"]:checked').value;
+    let gender = document.querySelector('input[name="gender"]:checked');
 
     // Here we are select multiple queryselector to using multiple checkbox
     let hobby = document.querySelectorAll('input[name="hobby"]:checked');
-    let hoobbyValue = [];
-    hobby.forEach(
-        function (hobby) {
-            hoobbyValue.push(hobby.value);
-        }
-    );
+
+    hoobbyValue=[];
+    for(let index=0; index<0; index++){
+        hoobbyValue.push(hobby[index].value);
+    }
+    // let hoobbyValue = [];
+    // hobby.forEach(
+    //     function (hobby) {
+    //         hoobbyValue.push(hobby.value);
+    //     }
+    // );
 
     //Again start as usual al other var decalar
     let course = document.getElementById('course').value;
@@ -46,12 +51,53 @@ function submitForm(event) {
     let dob = document.getElementById('dob').value;
     let comment = document.getElementById('comment').value;
 
+    // Start from validation part
+    if(rName==""){
+        alert("Name can't be empty");
+        return;
+    }
+    else if(rName.length<=3){
+        alert("Name Must be 4 charecter");
+        return;
+    }
+
+    const regEx= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(regEx.test(email)){
+
+    }
+    else{
+        alert("Not a valid email address");
+        return;
+    }
+
+    if(pass.length<6 || pass.length>=20){
+        alert("Password length must be 6 to 20 charrecters");
+        return;
+    }
+
+    if(gender==null){
+        alert("Gender must be selected");
+        return;
+    }
+
+    if(hobby.length==0){
+        alert("Select at least one hobby");
+        return;
+    }
+    if(course==='choose'){
+
+    }
+    if(dob==""){
+        alert("Dob Must be given");
+        return;
+    }
+
     // Here we are started output area to print line by line use \n
     let output = "Name: " + rName + "\n";
     output += "Email: " + email + "\n";
     output += "Phone: " + phone + "\n";
     output += "Pass: " + pass + "\n";
-    output += "Gender: " + gender + "\n";
+    output += "Gender: " + gender.value + "\n";
     output += "Course: " + course + "\n";
     output += "Hobby: " + hoobbyValue + "\n";
     output += "DOB: " + dob + "\n";
