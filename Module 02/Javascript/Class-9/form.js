@@ -17,8 +17,8 @@ function submitForm(event) {
     // Here we are select multiple queryselector to using multiple checkbox
     let hobby = document.querySelectorAll('input[name="hobby"]:checked');
 
-    hoobbyValue=[];
-    for(let index=0; index<0; index++){
+    hoobbyValue = [];
+    for (let index = 0; index < 0; index++) {
         hoobbyValue.push(hobby[index].value);
     }
     // let hoobbyValue = [];
@@ -52,42 +52,42 @@ function submitForm(event) {
     let comment = document.getElementById('comment').value;
 
     // Start from validation part
-    if(rName==""){
+    if (rName == "") {
         alert("Name can't be empty");
         return;
     }
-    else if(rName.length<=3){
+    else if (rName.length <= 3) {
         alert("Name Must be 4 charecter");
         return;
     }
 
-    const regEx= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(regEx.test(email)){
+    const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (regEx.test(email)) {
 
     }
-    else{
+    else {
         alert("Not a valid email address");
         return;
     }
 
-    if(pass.length<6 || pass.length>=20){
+    if (pass.length < 6 || pass.length >= 20) {
         alert("Password length must be 6 to 20 charrecters");
         return;
     }
 
-    if(gender==null){
+    if (gender == null) {
         alert("Gender must be selected");
         return;
     }
 
-    if(hobby.length==0){
+    if (hobby.length == 0) {
         alert("Select at least one hobby");
         return;
     }
-    if(course==='choose'){
+    if (course === 'choose') {
 
     }
-    if(dob==""){
+    if (dob == "") {
         alert("Dob Must be given");
         return;
     }
