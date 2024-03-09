@@ -10,17 +10,31 @@ function submitForm(event) {
     let email = document.getElementById('email').value;
     let phone = document.getElementById('phone').value;
     let pass = document.getElementById('pass').value;
-
-    // Here we are using query selector for pic a specific data to compare multiple value
+    // // Here we are using query selector for pic a specific data to compare multiple value
     let gender = document.querySelector('input[name="gender"]:checked');
-
     // Here we are select multiple queryselector to using multiple checkbox
     let hobby = document.querySelectorAll('input[name="hobby"]:checked');
+    hoobbyValue = [];
+    // for (let index = 0; index < hobby.length; index++) {
+    //     hoobbyValue.push(hobby[index].value);
+    // }
 
+<<<<<<< Updated upstream
     hoobbyValue = [];
     for (let index = 0; index < 0; index++) {
+=======
+    for(let index=0; index<hobby.length; index++){
+>>>>>>> Stashed changes
         hoobbyValue.push(hobby[index].value);
     }
+
+    // let gender =document.querySelector('input[name="gender"]:checked');
+    // let hobby = document.querySelectorAll('input[name="hobby"]:checked');
+    // hobbyValue=[];
+    // for(let index=0; index<0; index++){
+    //     hobbyValue.push(hobby=[index].value);
+    // }
+
     // let hoobbyValue = [];
     // hobby.forEach(
     //     function (hobby) {
@@ -57,12 +71,21 @@ function submitForm(event) {
         return;
     }
     else if (rName.length <= 3) {
+<<<<<<< Updated upstream
         alert("Name Must be 4 charecter");
         return;
     }
 
     const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (regEx.test(email)) {
+=======
+        alert("Name should be allowed 4 Charecter");
+        return;
+    }
+
+    const passType = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (passType.test(email)) {
+>>>>>>> Stashed changes
 
     }
     else {
@@ -71,6 +94,7 @@ function submitForm(event) {
     }
 
     if (pass.length < 6 || pass.length >= 20) {
+<<<<<<< Updated upstream
         alert("Password length must be 6 to 20 charrecters");
         return;
     }
@@ -80,6 +104,15 @@ function submitForm(event) {
         return;
     }
 
+=======
+        alert("Password should be accept 6 to 20 charecters");
+        return;
+    }
+    if (gender == null) {
+        alert("Please must be select your gender");
+        return;
+    }
+>>>>>>> Stashed changes
     if (hobby.length == 0) {
         alert("Select at least one hobby");
         return;
@@ -88,30 +121,93 @@ function submitForm(event) {
 
     }
     if (dob == "") {
+<<<<<<< Updated upstream
         alert("Dob Must be given");
+=======
+        alert("Please enter your dob");
+>>>>>>> Stashed changes
         return;
     }
 
+
+    // if(rName==""){
+    //     alert("Name can't be empty");
+    //     return;
+    // }
+    // else if(rName.length<=3){
+    //     alert("Name Must be 4 charecter");
+    //     return;
+    // }
+
+    // const regEx= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if(regEx.test(email)){
+
+    // }
+    // else{
+    //     alert("Not a valid email address");
+    //     return;
+    // }
+
+    // if(pass.length<6 || pass.length>=20){
+    //     alert("Password length must be 6 to 20 charrecters");
+    //     return;
+    // }
+
+    // if(gender==null){
+    //     alert("Gender must be selected");
+    //     return;
+    // }
+
+    // if(hobby.length==0){
+    //     alert("Select at least one hobby");
+    //     return;
+    // }
+    // if(course==='choose'){
+
+    // }
+    // if(dob==""){
+    //     alert("Dob Must be given");
+    //     return;
+    // }
+
     // Here we are started output area to print line by line use \n
+    // let output = "Name: " + rName + "\n";
+    // output += "Email: " + email + "\n";
+    // output += "Phone: " + phone + "\n";
+    // output += "Pass: " + pass + "\n";
+    // output += "Gender: " + gender.value + "\n";
+    // output += "Course: " + course + "\n";
+    // output += "Hobby: " + hoobbyValue + "\n";
+    // output += "DOB: " + dob + "\n";
+    // output += "Comment: " + comment + "\n";
+
     let output = "Name: " + rName + "\n";
     output += "Email: " + email + "\n";
     output += "Phone: " + phone + "\n";
-    output += "Pass: " + pass + "\n";
+    output += "Password: " + pass + "\n";
     output += "Gender: " + gender.value + "\n";
     output += "Course: " + course + "\n";
     output += "Hobby: " + hoobbyValue + "\n";
+    // output += "Hobby: " +hobbyValue+ "\n";
     output += "DOB: " + dob + "\n";
-    output += "Comment: " + comment + "\n";
+    output += "Comment:" + comment + "\n";
+
 
     //Here we use newWindow = window.open("","_blank{to go another page and show value}")
     //Secoend line we are print all data finally
+    // let newWindow = window.open("", '_blank');
+    // newWindow.document.write("<pre>" + output + "</pre>");
+
     let newWindow = window.open("", '_blank');
     newWindow.document.write("<pre>" + output + "</pre>");
 }
 
-//Here we write myForm that we declare to our main html form tag id
 let myForm = document.getElementById("myForm");
-
-//Here we fire a a event that name is addEvent Listener and we use 2 parameter
 myForm.addEventListener("submit", submitForm);
+
+// //Here we write myForm that we declare to our main html form tag id
+// let myForm = document.getElementById("myForm");
+
+// //Here we fire a a event that name is addEvent Listener and we use 2 parameter
+// myForm.addEventListener("submit", submitForm);
 
