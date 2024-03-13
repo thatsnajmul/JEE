@@ -94,7 +94,6 @@ function submitForm(event) {
     }
 
     if (pass.length < 6 || pass.length >= 20) {
-<<<<<<< Updated upstream
         alert("Password length must be 6 to 20 charrecters");
         return;
     }
@@ -104,15 +103,6 @@ function submitForm(event) {
         return;
     }
 
-=======
-        alert("Password should be accept 6 to 20 charecters");
-        return;
-    }
-    if (gender == null) {
-        alert("Please must be select your gender");
-        return;
-    }
->>>>>>> Stashed changes
     if (hobby.length == 0) {
         alert("Select at least one hobby");
         return;
