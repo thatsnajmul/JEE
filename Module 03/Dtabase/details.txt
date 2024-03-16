@@ -1,0 +1,27 @@
+windows user========== admin59,admin59
+Admin1234, Admin1234, orclpdb, orcl
+
+
+//Change user
+as sysdba;
+
+alter user system identified by cscorner;
+
+
+//Hr_connect
+
+sqlplus / as sysdba
+SHOW con_name
+ALTER SESSION SET CONTAINER = orclpdb;
+COLUMN name FORMAT a15;
+SELECT name, open_mode FROM v$pdbs;
+ALTER PLUGGABLE DATABASE OPEN;
+ALTER PLUGGABLE DATABASE orclpdb SAVE STATE;
+
+@D:\sqldb\WINDOWS.X64_213000_db_home\demo\schema\human_resources\hr_main.sql hr users temp or @D:\sqldb\WINDOWS.X64_213000_db_home\demo\schema\log
+
+
+
+//hr_from_online
+https://github.com/oracle-samples/db-sample-schemas/releases/tag/v23.2
+
