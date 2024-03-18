@@ -19,12 +19,8 @@ function submitForm(event) {
     //     hoobbyValue.push(hobby[index].value);
     // }
 
-<<<<<<< Updated upstream
     hoobbyValue = [];
     for (let index = 0; index < 0; index++) {
-=======
-    for(let index=0; index<hobby.length; index++){
->>>>>>> Stashed changes
         hoobbyValue.push(hobby[index].value);
     }
 
@@ -71,21 +67,12 @@ function submitForm(event) {
         return;
     }
     else if (rName.length <= 3) {
-<<<<<<< Updated upstream
         alert("Name Must be 4 charecter");
         return;
     }
 
     const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (regEx.test(email)) {
-=======
-        alert("Name should be allowed 4 Charecter");
-        return;
-    }
-
-    const passType = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (passType.test(email)) {
->>>>>>> Stashed changes
 
     }
     else {
@@ -111,11 +98,7 @@ function submitForm(event) {
 
     }
     if (dob == "") {
-<<<<<<< Updated upstream
         alert("Dob Must be given");
-=======
-        alert("Please enter your dob");
->>>>>>> Stashed changes
         return;
     }
 
