@@ -1,0 +1,7 @@
+lsnrctl start
+
+lsnrctl services
+
+lsnrctl status
+
+
