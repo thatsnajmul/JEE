@@ -1,0 +1,13 @@
+Chapter One
+=============
+select * from hr.employees;
+as
+
+
+
+Chapter Two
+============
+where clause === for restriction
+in ====== target
+beetween ===== 
+Like
