@@ -4,13 +4,13 @@ function submitForm(event) {
     let rName = document.getElementById('name').value;
     let phone = document.getElementById('phone').value;
     let remarks = document.getElementById('remarks').value;
-    let sex = document.querySelector('input[name="sex"]:checkbox');
-    let courses = document.querySelectorAll('input[name="courses"]:checkbox');
+    let sex = document.querySelector('input[name="sex"]:checked').value;
+    let courses = document.querySelectorAll('input[name="courses"]:checked');
     let location = document.getElementById('location').value;
 
     let courseValue = [];
     for (let index = 0; index < courses.length; index++) {
-        courseValue.push(courses[index]);
+        courseValue.push(courses[index].value);
     }
 
 

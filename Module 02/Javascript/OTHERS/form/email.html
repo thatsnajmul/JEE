@@ -9,13 +9,15 @@
     
 
     <script>
-        let userInput = prompt("Enter your factorial number");
-        let factorial = 1;
-
-        for(let i =userInput; i>1; i--){
-            factorial *=i;
+        let userEmail = prompt('Please enter your email address');
+        let regEx= "";
+        if(regEx.test(userEmail)){
+            alert('Email is valid');
+        }else{
+            alert('Email is not valid');
         }
-        document.write(factorial);
     </script>
+
+    
 </body>
 </html>

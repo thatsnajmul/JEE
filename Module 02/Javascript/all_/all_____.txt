@@ -1,0 +1,24 @@
+Count
+Odd Even
+Prime 
+Factorial
+Max num min num
+Sum array
+Bubble Short
+Grade
+Nested for
+Time table
+Switch Case
+
+
+
+
+
+
+
+1St Day: ==== +,-,*,/,%,++,--,!=,<,<=,>,>=,||;
+	Count, count++;
+2nd Day: Odd(-), Even(+)
+3rd Day: Show grade using if else
+4th Day: Odd Even show inner HTML
+5th Day: 
