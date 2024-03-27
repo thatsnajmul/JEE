@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min</title>
+</head>
+<body>
+
+    
+    <script>
+        
+            let number1 = parseInt(prompt('Enter your first number'));
+            let number2 = parseInt(prompt('Enter your seceond number'));
+            let number3 = parseInt(prompt('Enter your third number'));
+
+            let minNum = 0;
+
+            if(number1<=number2 && number1<=number3){
+                minNum= number1;
+            }
+            else if(number2<=number1 && number2<=number3){
+                minNum= number2;
+            }
+            else{
+                minNum= number3;
+            }
+        document.write(minNum);
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
