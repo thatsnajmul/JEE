@@ -31,9 +31,22 @@ from employees where
 months_between (sysdate, hire_date) <200;
 
  select to_char(sysdate, 'dy/mon') from dual;
+  select to_char(sysdate , 'fmDDth MONTH') from dual;
 
 ----------?
 
+
+select sysdate from dual;
+select current_date from dual;
+select current_timestamp from dual;
+select sessiontimezone from dual;
+
+
+select first_name, last_name, nvl(commission_pct, 0) from employees;
+
+select last_name, salary, commission_pct, NVL2(commission_pct, 'sal+comm', 'sal')as incomes from employees;
+
+select last_name, salary, commission_pct, coalesce((salary+(commission_pct*salary)), salary+2000) as "New salary" from employees;
 
 
 
