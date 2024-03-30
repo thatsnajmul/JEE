@@ -42,6 +42,11 @@ order by sum(salary);
 
 
 
+
+
+
+
+
 Select first_name, job_id, hire_date
 from employees
 where hire_date like '%'
