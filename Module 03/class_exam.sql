@@ -23,15 +23,19 @@ select sessiontimezone, current_date from dual;
 
 --Date
 select employee_id, hire_date, 
-months_between (sysdate, hire_date) as tenure, 
+months_between (sysdate, hire_date) as tenure,
 add_months (hire_date, 6)as review, 
 next_day (hire_date, 'friday'), 
 last_day (hire_date) 
 from employees where 
 months_between (sysdate, hire_date) <200;
 
+<<<<<<< Updated upstream
  select to_char(sysdate, 'dy/mon') from dual;
   select to_char(sysdate , 'fmDDth MONTH') from dual;
+=======
+select to_char(sysdate, 'dy/mon') from dual;
+>>>>>>> Stashed changes
 
 ----------?
 
