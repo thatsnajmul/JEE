@@ -21,3 +21,86 @@ on e.department_id = d.department_id;
 
 --Cartesian Products
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select e.first_name, d.department_name, l.postal_code, l.street_address, e.manager_id, d.location_id as departmentLocationName
+from employees e
+join departments d on employee_id = d.department_id
+join locations l on d.location_id = l.location_id
+where e.first_name='Steven'
+;
+
+
+
+
+---Subquries
+select first_name, hire_date, salary
+from employees
+where hire_date>(select hire_date from employees where last_name='Davies' fetch first 1 row only);
+
+
+
+select * from employees
+where hire_date> (select hire_date from employees where first_name ='Curtis');   
+
+
+--Multiple subquries only
+select last_name, job_id, salary
+from employees 
+where job_id =  (select job_id 
+                    from employees 
+                    where last_name ='Taylor' 
+                    fetch first 1 row only)
+and salary > (select salary 
+                from employees
+                where last_name = 'Taylor' 
+                fetch first 1 row only);
+                
+
+--Single subquries only            
+select department_id, min(salary)
+from employees
+group by department_id
+having min(salary)>
+                    (select min(salary)
+                    from employees
+                    where department_id = 30);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
