@@ -1,4 +1,7 @@
+________________________________________________________
 <!--ALL HTML TAG-->
+________________________________________________________
+
 <!--...-->: Defines a comment.
 <!DOCTYPE>: Specifies the document type.
 <a>: Defines a hyperlink.
@@ -50,7 +53,9 @@
 <hr>: Represents a thematic change in content.
 <html>: Defines the root of an HTML document.
 
+________________________________________________________
 <!--HTML attributes-->
+________________________________________________________
 accept: Specifies the types of files that the server accepts (only for <input type="file">).
 accept-charset: Specifies the character encodings to be used for form submission.
 accesskey: Specifies a shortcut key to activate/focus an element.
@@ -82,9 +87,9 @@ dir: Specifies text direction (ltr or rtl).
 dirname: Specifies text direction for form input submission.
 disabled: Disables specified elements (buttons, input fields, etc.).
 
-
+________________________________________________________
 <!--HTML META TAGS-->
-
+________________________________________________________
 Basic HTML Meta Tags:
 <meta name="keywords" content="your, tags"/>: Specifies keywords related to the page’s content.
 <meta name="description" content="150 words"/>: Provides a brief description of the page.
@@ -101,6 +106,8 @@ OpenGraph Meta Tags (used for social media sharing):
 <meta name="og:description" content="A group of U.S. Marines, under command of..."/>: Provides a description for sharing.
 
 <!--HTML Entities-->
+
+
 Certainly! Here’s a comprehensive list of HTML entities, including both ASCII characters and ISO 8859-1 characters:
 
 ASCII Characters (Printable)
