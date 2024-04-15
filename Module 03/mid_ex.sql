@@ -75,6 +75,7 @@ select last_name, hire_date,
 to_char(next_day(add_months(hire_date,6), 'Monday'), 'fmDay, "the" Ddspth "of" Month, YYYY')
 from employees;
 
+<<<<<<< Updated upstream
 
 -----------------------------
 --Chapter--6
@@ -165,4 +166,13 @@ join employees es on e.department_id=es.department_id
 where e.employee_id <> es.employee_id
 order by 1;
         
+=======
+select last_name,hire_date,to_char(next_day(add_months(hire_date,6), 'Monday'), 'fmDay, "the" Ddspth "of" Month, YYYY')
+from employees;
+
+select last_name 
+from employees
+where last_name ='&Emp_last_name';
+       
+>>>>>>> Stashed changes
 

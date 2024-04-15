@@ -36,4 +36,6 @@ from locations l join departments d
 using (location_id)
 where location_id = 1400;
 
+SELECT DATEADD(year, 1, '2017/08/25') AS DateAdd;
+
 
