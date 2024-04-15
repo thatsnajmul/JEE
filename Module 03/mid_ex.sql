@@ -74,5 +74,46 @@ from employees;
 select last_name, hire_date, 
 to_char(next_day(add_months(hire_date,6), 'Monday'), 'fmDay, "the" Ddspth "of" Month, YYYY')
 from employees;
-       
+
+
+-----------------------------
+--Chapter--6
+-----------------------------
+select max(salary) as maximum, 
+min(salary) as minimum,
+round(avg(salary)) as avarage
+from employees;
+
+
+select job_id, 
+min(salary) as minimum,
+sum(salary) as minimum,
+round(avg(salary)) as avarage
+from employees
+group by job_id;
+
+select job_id, count(*)
+from employees
+group by job_id;
+
+select count(distinct(manager_id)) as "Number of Managers"
+from employees;
+
+select max(salary)- min(salary)
+from employees;
+
+select manager_id, min(salary)
+from employees
+where manager_id is not null
+group by manager_id 
+having min(salary)>6000
+order by 2 desc;
+
+select count(*) as "Total",
+sum(case when to_char(hire_date,'YYYY')=2005 then 1 else 0 end) as "2005",
+sum(case when to_char(hire_date,'YYYY')=2006 then 1 else 0 end) as "2006",
+sum(case when to_char(hire_date,'YYYY')=2007 then 1 else 0 end) as "2007",
+sum(case when to_char(hire_date,'YYYY')=2008 then 1 else 0 end) as "2008"
+        from employees;
+        
 
