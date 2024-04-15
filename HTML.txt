@@ -1,0 +1,155 @@
+________________________________________________________
+<!--ALL HTML TAG-->
+________________________________________________________
+
+<!--...-->: Defines a comment.
+<!DOCTYPE>: Specifies the document type.
+<a>: Defines a hyperlink.
+<abbr>: Defines an abbreviation or an acronym.
+<address>: Provides contact information for the author/owner of a document.
+<applet>: (Not supported in HTML5) Defines an embedded applet.
+<area>: Defines an area inside an image map.
+<article>: Represents an article.
+<aside>: Defines content aside from the main page content.
+<audio>: Embeds sound content.
+<b>: Defines bold text.
+<base>: Specifies the base URL/target for relative URLs in a document.
+<bdi>: Isolates text that might be formatted differently from other text.
+<bdo>: Overrides the current text direction.
+<blockquote>: Defines a section quoted from another source.
+<body>: Defines the document’s body.
+<br>: Creates a single line break.
+<button>: Defines a clickable button.
+<canvas>: Used for drawing graphics via scripting (usually JavaScript).
+<caption>: Defines a table caption.
+<cite>: Specifies the title of a work.
+<code>: Represents a piece of computer code.
+<col>: Specifies column properties within a <colgroup> element.
+<colgroup>: Groups one or more columns in a table for formatting.
+<data>: Adds machine-readable translation of content.
+<datalist>: Specifies pre-defined options for input controls.
+<dd>: Defines a description/value in a description list.
+<del>: Represents deleted text.
+<details>: Defines additional details that the user can view or hide.
+<dfn>: Specifies a term to be defined within the content.
+<dialog>: Defines a dialog box or window.
+<div>: Represents a section in a document.
+<dl>: Defines a description list.
+<dt>: Defines a term/name in a description list.
+<em>: Represents emphasized text.
+<embed>: Defines a container for an external application.
+<fieldset>: Groups related elements in a form.
+<figcaption>: Provides a caption for a <figure> element.
+<figure>: Specifies self-contained content.
+<font>: (Not supported in HTML5) Defines font, color, and size for text.
+<footer>: Represents a footer for a document or section.
+<form>: Defines an HTML form for user input.
+<frame>: (Not supported in HTML5) Defines a window (frame) in a frameset.
+<frameset>: (Not supported in HTML5) Defines a set of frames.
+<h1> to <h6>: Define HTML headings.
+<head>: Contains metadata/information for the document.
+<header>: Represents a header for a document or section.
+<hgroup>: Defines a header and related content.
+<hr>: Represents a thematic change in content.
+<html>: Defines the root of an HTML document.
+
+________________________________________________________
+<!--HTML attributes-->
+________________________________________________________
+accept: Specifies the types of files that the server accepts (only for <input type="file">).
+accept-charset: Specifies the character encodings to be used for form submission.
+accesskey: Specifies a shortcut key to activate/focus an element.
+action: Specifies where to send form data when submitted.
+align: (Not supported in HTML5) Specifies alignment according to surrounding elements (use CSS instead).
+alt: Specifies alternate text for images, areas, and input elements.
+async: Specifies that a script is executed asynchronously (for external scripts).
+autocomplete: Enables or disables autocomplete for form fields.
+autofocus: Specifies that an element should automatically receive focus when the page loads.
+autoplay: Specifies that audio/video will start playing as soon as it’s ready.
+bgcolor: (Not supported in HTML5) Specifies background color (use CSS instead).
+border: (Not supported in HTML5) Specifies border width (use CSS instead).
+charset: Specifies character encoding for meta and script elements.
+checked: Specifies pre-selection for checkboxes or radio buttons.
+cite: Specifies a URL that explains a quote/deleted/inserted text.
+class: Specifies one or more class names for an element (used in CSS).
+color: (Not supported in HTML5) Specifies text color (use CSS instead).
+cols: Specifies visible width for a text area.
+colspan: Specifies the number of columns a table cell should span.
+content: Gives the value associated with http-equiv or name attribute in meta tags.
+contenteditable: Specifies whether an element’s content is editable.
+controls: Specifies that audio/video controls should be displayed.
+coords: Specifies coordinates for an image map area.
+data-*: Used to store custom data private to the page or application.
+datetime: Specifies date and time for <del>, <ins>, and <time> elements.
+default: Specifies that a track is enabled if user preferences don’t indicate otherwise.
+defer: Specifies that a script is executed after parsing (for external scripts).
+dir: Specifies text direction (ltr or rtl).
+dirname: Specifies text direction for form input submission.
+disabled: Disables specified elements (buttons, input fields, etc.).
+
+________________________________________________________
+<!--HTML META TAGS-->
+________________________________________________________
+Basic HTML Meta Tags:
+<meta name="keywords" content="your, tags"/>: Specifies keywords related to the page’s content.
+<meta name="description" content="150 words"/>: Provides a brief description of the page.
+<meta name="subject" content="your website's subject">: Describes the subject matter of the website.
+<meta name="robots" content="index,follow"/>: Instructs search engines on how to crawl and index the page.
+<meta name="author" content="name, email@hotmail.com"/>: Indicates the author of the content.
+<meta name="revised" content="Sunday, July 18th, 2010, 5:15 pm"/>: Specifies the last revision date.
+…and more.
+OpenGraph Meta Tags (used for social media sharing):
+<meta name="og:title" content="The Rock"/>: Sets the title for OpenGraph sharing.
+<meta name="og:type" content="movie"/>: Defines the type of content (e.g., movie, article).
+<meta name="og:url" content="http://www.imdb.com/title/tt0117500/"/>: Specifies the URL for sharing.
+<meta name="og:image" content="http://ia.media-imdb.com/rock.jpg"/>: Sets the image for sharing.
+<meta name="og:description" content="A group of U.S. Marines, under command of..."/>: Provides a description for sharing.
+
+<!--HTML Entities-->
+
+
+Certainly! Here’s a comprehensive list of HTML entities, including both ASCII characters and ISO 8859-1 characters:
+
+ASCII Characters (Printable)
+Only printable characters are displayed, as control characters (0-31) shouldn’t be present in HTML pages since they have no visual representations.
+
+Table
+
+Character	Entity Name	Entity Number	Description
+  (Space)	&nbsp;	&#32;	Non-breaking space
+!	&excl;	&#33;	Exclamation mark
+"	&quot;	&#34;	Quotation mark
+#	&num;	&#35;	Number sign
+$	&dollar;	&#36;	Dollar sign
+%	&percent;	&#37;	Percent sign
+&	&amp;	&#38;	Ampersand
+'	&apos;	&#39;	Apostrophe
+(	&lpar;	&#40;	Opening/Left parenthesis
+)	&rpar;	&#41;	Closing/Right parenthesis
+… (continues for other characters)	…	…	…
+ISO 8859-1 Characters
+Here’s a list of supported ISO-8859-1 characters. The names are case-sensitive, so if you want an uppercase letter, the name should also start with an uppercase letter.
+
+Table
+
+Character	Entity Name	Entity Number	Description
+  (Space)	&nbsp;	&#160;	Non-breaking space
+!	&cent;	&#162;	Cent symbol
+"	&pound;	&#163;	Pound symbol
+#	&yen;	&#165;	Yen symbol
+
+Certainly! HTML entities are special codes used to represent reserved characters in HTML. These entities ensure that characters like <, >, and & are correctly displayed in web pages. Here are some commonly used HTML entities:
+
+Less Than Sign (<): To display a less than sign, use &lt; or &#60;1.
+Greater Than Sign (>): To display a greater than sign, use &gt; or &#62;1.
+Ampersand (&): To display an ampersand, use &amp; or &#38;1.
+Double Quotation Mark ("): To display a double quotation mark, use &quot; or &#34;1.
+Single Quotation Mark ('): To display a single quotation mark, use &apos; or &#39;1.
+Cent Symbol (¢): To display the cent symbol, use &cent; or &#162;1.
+Pound Symbol (£): To display the pound symbol, use &pound; or &#163;1.
+Yen Symbol (¥): To display the yen symbol, use &yen; or &#165;1.
+Euro Symbol (€): To display the euro symbol, use &euro; or &#8364;1.
+Copyright Symbol (©): To display the copyright symbol, use &copy; or &#169;1.
+Trademark Symbol (®): To display the trademark symbol, use &reg; or &#174;1.
+
+
