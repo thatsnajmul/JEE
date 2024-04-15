@@ -116,4 +116,53 @@ sum(case when to_char(hire_date,'YYYY')=2007 then 1 else 0 end) as "2007",
 sum(case when to_char(hire_date,'YYYY')=2008 then 1 else 0 end) as "2008"
         from employees;
         
+        
+select job_id as "Job",
+sum(decode(department_id, 20, salary)) "Dept 20",
+sum(decode(department_id, 50, salary)) "Dept 50",
+sum(decode(department_id, 80, salary)) "Dept 80",
+sum(decode(department_id, 90, salary)) "Dept 90"
+from employees
+group by job_id;
+
+
+
+--========================
+--Chapter 7
+--========================
+select location_id, street_address, city, state_province, country_name
+from locations
+natural join countries;
+
+
+select last_name, department_id, department_name
+from employees
+natural join departments;
+
+select e.last_name, d.department_id, d.department_name
+from employees e
+join departments d on d.department_id=e.department_id;
+
+select e.last_name, e.job_id,e.department_id, d.department_name
+from employees e
+join departments d on d.department_id=e.department_id
+join locations l on d.location_id=l.location_id
+where l.city='Toronto';
+
+
+select e.last_name as "Employee", e.employee_id as "Emp#", m.last_name as "Manager", m.employee_id as "Mgr#"
+from employees e
+join employees m on m.employee_id=e.manager_id;
+
+select e.last_name as "Employee", e.employee_id as "Emp#", m.last_name as "Manager", m.employee_id as "Mgr#"
+from employees e
+join employees m on m.employee_id=e.manager_id
+order by 2;
+
+select e.department_id, e.last_name, e.last_name
+from employees e
+join employees es on e.department_id=es.department_id
+where e.employee_id <> es.employee_id
+order by 1;
+        
 
