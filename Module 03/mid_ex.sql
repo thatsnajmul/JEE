@@ -189,4 +189,29 @@ COMMIT
 --Job Grade data insert end
 --==========================
 
+describe job_grades;
+
+--Using normal join
+select e.last_name, e.salary, d.department_name, j.grade
+from employees e
+join departments d on d.department_id=e.department_id
+join job_grades j on e.salary between j.lowest_sal and j.highest_sal;
+
+--Using natural join data compressed by matching employee_id and department_id
+select e.last_name, e.salary, d.department_name, j.grade
+from employees e
+natural join departments d
+join job_grades j on e.salary between j.lowest_sal and j.highest_sal;
+
+select last_name, hire_date
+from employees
+where hire_date > (select hire_date from employees where last_name ='Davies');
+
+--Same table but 1 primary_id another one is matching
+select e.last_name, e.hire_date, m.last_name, m.hire_date
+from employees e
+join employees m on e.manager_id=m.employee_id
+where e.hire_date <m.hire_date;
+
+
 
