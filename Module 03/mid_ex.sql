@@ -213,5 +213,42 @@ from employees e
 join employees m on e.manager_id=m.employee_id
 where e.hire_date <m.hire_date;
 
+--Chapter 8
+Select employee_id, last_name, salary
+from employees
+WHERE SALARY >(SELECT AVG(SALARY) FROM EMPLOYEES)
+order by 3;
+
+SELECT EMPLOYEE_ID, LAST_NAME
+FROM EMPLOYEES 
+WHERE DEPARTMENT_ID in (select department_id from employees where LAST_NAME LIKE '%u%');
+
+
+select last_name,salary
+from employees
+where manager_id in (select manager_id from employees where last_name in 'King');
+
+
+select department_id, last_name, job_id
+from employees
+where department_id in (select department_id from departments where department_name = 'Executive');
+
+select last_name, salary
+from employees 
+where salary> any(select salary
+                    from employees
+                        where department_id=60);
+
+                      
+select employee_id, last_name, salary
+from employees
+where department_id in (select department_id
+from employees
+where last_name like '%u%')
+and salary > (select avg(salary) from employees);
+
+
+insert into departments (department_name,department_id,manager_id,location_id)
+
 
 
