@@ -249,6 +249,73 @@ and salary > (select avg(salary) from employees);
 
 
 insert into departments (department_name,department_id,manager_id,location_id)
+values('Demo',71,100,1700);
+commit
+
+insert into departments
+values(72,100,null,null);
+commit
+
+select * from departments order by department_id;
+
+insert into departments
+values(73,'JEE',100,1700);
+commit
+
+select * from job_history order by job_id;
+
+insert into job_history
+values(104,to_date('Apr 15,2024','Mon DD, YYYY'),to_date('Apr 18,2024','Mon DD, YYYY'),'AC_ACCOUNT',110);
+commit
+
+insert into departments
+values(&department_id,'&department_name',&)
 
 
+--For finding all const
+select * from all_CONSTRAINTS;
+select * from user_constraints;
 
+
+--Create basics
+create table sales_reps(
+id number(4) not null,
+name varchar2(30),
+salary number(8,2),
+commission_pct number(2,2),
+constraint const_sales_reps_id primary key(id)
+);
+
+--Insert Basics
+insert into sales_reps(
+id,
+name,
+salary,
+commission_pct
+)
+select employee_id, last_name, salary, commission_pct
+from employees
+where job_id like '%REP%';
+commit
+
+select * from sales_reps;
+
+--Update Basics
+update sels_rep set col_name=value
+where primary_key='';
+
+--commit,roolback
+
+update employees
+set (job_id,salary) = (select job_id, salary
+from employees
+where employee_id=205)
+where employee_id=103;
+
+select * from employees where employee_id in (103,205);
+
+update copy_emp
+set department_id = (select department_id from employees where employee_id =100)
+where job_id = (select job_id from employees where employee_id =200);
+
+select * from employees where employee_id in (103,205);
