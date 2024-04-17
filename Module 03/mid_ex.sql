@@ -311,11 +311,22 @@ set (job_id,salary) = (select job_id, salary
 from employees
 where employee_id=205)
 where employee_id=103;
+rollback
 
 select * from employees where employee_id in (103,205);
 
-update copy_emp
+update employees
 set department_id = (select department_id from employees where employee_id =100)
 where job_id = (select job_id from employees where employee_id =200);
+rollback
 
-select * from employees where employee_id in (103,205);
+select * from employees where employee_id in (100,200);
+
+--Delete, truncate, drop
+delete from sales_reps
+where id=100;
+
+
+--DDL
+  
+
