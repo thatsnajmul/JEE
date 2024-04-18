@@ -380,8 +380,11 @@ email varchar2(60) not null constraint student_email_unique unique
 
 insert into student(name,email)
 values('demo1', 'demo1@gmail.com');
-
+commit
 select * from student;
+
+describe user_sequences;
+select * from user_sequences;
 --==============================================================================
 
 
