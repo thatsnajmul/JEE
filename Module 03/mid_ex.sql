@@ -326,6 +326,13 @@ select * from employees where employee_id in (100,200);
 delete from sales_reps
 where id=100;
 
+--DDL
+select * from departments;
+
+update departments
+set department_name = 'Stavenn'
+where department_id='10';
+
 --===============================
 --Reverse again
 --kubernetes~~Go
@@ -337,12 +344,46 @@ where id=100;
 --Azure on Java~~Support another
 --==============================
 
---DDL
-select * from departments;
 
-update departments
-set department_name = 'Stavenn'
-where department_id='10';
+--Create Squence synonyms, and Indexes
+
+--68 Sequence (MIP)
+Create sequence sales_reps_id
+increment by 1
+start with 101
+maxvalue 99999
+nocache
+nocycle;
+
+select sales_reps_id.nextval
+from dual;
+
+
+insert into sales_reps values(sales_reps_id.nextval, 'Demo',40000,0.02);
+
+select * from sales_reps;
+
+
+--==============================================================================
+Create sequence student_id
+increment by 1
+start with 101
+maxvalue 99999
+nocache
+nocycle;
+
+create table student(
+id number(5) default student_id.nextval constraint sys_student_id primary key,
+name varchar2(30) not null,
+email varchar2(60) not null constraint student_email_unique unique
+);
+
+insert into student(name,email)
+values('demo1', 'demo1@gmail.com');
+
+select * from student;
+--==============================================================================
+
 
 
   
