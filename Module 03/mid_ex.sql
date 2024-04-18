@@ -326,7 +326,24 @@ select * from employees where employee_id in (100,200);
 delete from sales_reps
 where id=100;
 
+--===============================
+--Reverse again
+--kubernetes~~Go
+--Docker~~Go
+--Scala~~Java
+--ppc64le~~Machine
+--s390x~~Machine
+--Aws on Java~~Support another
+--Azure on Java~~Support another
+--==============================
 
 --DDL
+select * from departments;
+
+update departments
+set department_name = 'Stavenn'
+where department_id='10';
+
+
   
 
