@@ -456,6 +456,12 @@ select * from view_emp_100_days;
 describe view_emp_100_days ;
 
 
+--DBA is tipically difficult
+--Progranne is logically difficult
+--Design is think
+
+
+
 
 
   
