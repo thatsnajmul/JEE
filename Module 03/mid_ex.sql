@@ -389,5 +389,74 @@ select * from user_sequences;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--1. Display job id of jobs that were done by more than 3 employees for more than 100 days.
+
+--using join
+select j.job_id
+from jobs j
+join on job_id j = employees e
+--where ;
+
+select job_id
+from jobs,employees;
+--where hire_date <= 17-jun-03;
+--where hire_date between '17-jun-03' and '17-jun-04;
+--where hire_date to_date(,DD-MM-YY);
+
+--2. Display departments where any manager is managing more than 5 employees.
+
+select * from
+departments
+--where manager_id > 5;
+where manager_id = 100;
+
+
+--3. Display how many employees joined in each month of current year.
+select * from
+employees
+--where hire_date in '17-JUN-03';
+
+select * from employees;
+
+
+--Views
+
+create view view_emp_100_days
+as
+select distinct(job_id)
+from employees
+where current_date - hire_date >100
+group by job_id
+having count(employee_id) >3;
+
+select * from view_emp_100_days;
+
+describe view_emp_100_days ;
+
+
+
+
   
 
