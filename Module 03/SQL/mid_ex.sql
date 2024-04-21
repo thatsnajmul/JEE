@@ -461,6 +461,11 @@ describe view_emp_100_days ;
 --Design is think
 
 
+Create role manager;
+grant 
+
+
+
 
 
 
