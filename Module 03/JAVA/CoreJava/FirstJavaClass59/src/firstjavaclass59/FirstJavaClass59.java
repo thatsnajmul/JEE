@@ -6,7 +6,7 @@ package firstjavaclass59;
 
 public class FirstJavaClass59 {
     public static void main(String[] demo) {
-        
+          
         String name = "demo";
         
     }
