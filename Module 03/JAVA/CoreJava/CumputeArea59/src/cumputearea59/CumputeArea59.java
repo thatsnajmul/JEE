@@ -36,7 +36,7 @@ public class CumputeArea59 {
 //          System.out.println(area);
 
 
-//------------------------3rd-----------------------pinhiycle
+//------------------------3rd-----------------------pinhiycle  
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Number 1:");
         System.out.println("Enter Number 2:");
