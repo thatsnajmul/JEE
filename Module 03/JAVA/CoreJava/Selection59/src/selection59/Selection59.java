@@ -43,32 +43,45 @@ public class Selection59 {
         
         
         
-        Scanner scanner =new Scanner(System.in);
-//        char grade;
-        System.out.println("Enter your number");
-        int marks= scanner.nextInt();
-        
-        if(marks>100 || marks<0){
-            System.out.println("Number is wrong");
-        }
-        else if(marks>=80){
-            System.out.println("A+");
-        }
-        else if(marks>=70){
-            System.out.println("A");
-        }
-        else if(marks>=60){
-            System.out.println("B");
-        }
-        else if(marks>=50){
-            System.out.println("C");
-        }
-        else if(marks>=32){
-            System.out.println("D");
-        }
-        else{
-            System.out.println("F");
-        }
+//        Scanner scanner =new Scanner(System.in);
+////        char grade;
+//        System.out.println("Enter your number");
+//        int marks= scanner.nextInt();
+//        
+//        if(marks>100 || marks<0){
+//            System.out.println("Number is wrong");
+//        }
+//        else if(marks>=80){
+//            System.out.println("A+");
+//        }
+//        else if(marks>=70){
+//            System.out.println("A");
+//        }
+//        else if(marks>=60){
+//            System.out.println("B");
+//        }
+//        else if(marks>=50){
+//            System.out.println("C");
+//        }
+//        else if(marks>=32){
+//            System.out.println("D");
+//        }
+//        else{
+//            System.out.println("F");
+//        }
+
+//        Scanner scanner = new Scanner(System.in);
+//        int maxNum;
+//        
+//        System.out.println("Enter your 1st number");
+//        int firstNum = scanner.nextInt();
+//        System.out.println("Enter your 2nd number");
+//        int secoendNum = scanner.nextInt();
+//        System.out.println("Enter your 3rd number");
+//        int thirdNum = scanner.nextInt();
+//        
+////        if(){
+////        }
     }
     
 }

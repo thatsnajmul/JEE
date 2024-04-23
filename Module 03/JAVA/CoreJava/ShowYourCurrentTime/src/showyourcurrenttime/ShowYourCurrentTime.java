@@ -35,17 +35,43 @@ public class ShowYourCurrentTime {
 //         System.out.println(totalMinutes);
 
 
-        int i =3, j=3;
-//        System.out.println(i++);
-//        System.out.println(--j);
-            //Implicit
-            double result = i*j;
-            System.out.println(result); 
-            //Explicit
+//        int i =3, j=3;
+////        System.out.println(i++);
+////        System.out.println(--j);
+//            //Implicit
+//            double result = i*j;
+//            System.out.println(result); 
+//            //Explicit
 //            double i=3.50, j=7.88;
 //            double preResult = i*j;
 //            int result = (int)(i*j);
 //            System.out.println(preResult);
+
+
+//        long currentTime = System.currentTimeMillis();
+//        System.out.println(currentTime);
+//        
+//        long sec = currentTime/1000;
+//        System.out.println(sec);
+//        long min = sec/60;
+//        System.out.println(min);
+//        long hour = min/60;
+//        System.out.println(hour);
+//        long day = hour/24;
+//        System.out.println(day);
+////        long month = day/12;
+////        System.out.println(month);
+//        long year = day/365;
+//        System.out.println(year);
+        
+        int i=3, j=5, k=4;
+        i+=i+4;
+        System.out.println(i);
+        
+        
+       
+        
+        
             
         
         

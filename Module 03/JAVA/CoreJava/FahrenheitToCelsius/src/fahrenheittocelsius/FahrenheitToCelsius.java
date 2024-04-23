@@ -10,14 +10,20 @@ public class FahrenheitToCelsius {
     public static void main(String[] args) {
         
         Scanner input=new Scanner(System.in);
-        
-        System.out.println("Please enter your temperature in celcious:");
+//----------------------------F to C--------------------------------
+//        System.out.println("Please enter your temperature in Farheneit:");
+//        float fertemp=input.nextFloat();
+//        float result=((fertemp-32)/9)*5;
+//        
+//        System.out.println("Temperature in celsius:"+result);
+
+//-------------------------C to F--------------------------------
+System.out.println("Please enter your temperature in celsius:");
         float fertemp=input.nextFloat();
+//        (32°C × 9/5) + 32 = 89.6°F
+          float result = ((fertemp*9)/5)+32;
         
-        float result=((fertemp-32)/9)*5;
-        
-        System.out.println("Temperature in celsius:"+result);
-        
+        System.out.println("Temperature in Farheneit:"+result+"°F");
         
     }
     
