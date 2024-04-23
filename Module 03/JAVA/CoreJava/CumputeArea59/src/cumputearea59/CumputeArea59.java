@@ -37,18 +37,34 @@ public class CumputeArea59 {
 
 
 //------------------------3rd-----------------------pinhiycle  
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("Enter Number 1:");
+//        System.out.println("Enter Number 2:");
+//        System.out.println("Enter Number 3:");
+//        System.out.println("Enter Number 4:");
+//        int number1 = input.nextInt();
+//        int number2 = input.nextInt();
+//        int number3 = input.nextInt();
+//        int number4 = input.nextInt();
+//        int sum;
+//        sum = number1 + number2 + number3 + number4;
+//        System.out.println(sum);
+        
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter Number 1:");
-        System.out.println("Enter Number 2:");
-        System.out.println("Enter Number 3:");
-        System.out.println("Enter Number 4:");
-        int number1 = input.nextInt();
-        int number2 = input.nextInt();
-        int number3 = input.nextInt();
-        int number4 = input.nextInt();
+        System.out.println("Enter number 1");
+        int numberone = input.nextInt();
+        System.out.println("Enter number 2");
+        int numbertwo = input.nextInt();
+        
         int sum;
-        sum = number1 + number2 + number3 + number4;
+        
+        sum = numberone+numbertwo;
+        
         System.out.println(sum);
+        
+        
+        
+        
 
     }
 
