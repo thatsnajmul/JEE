@@ -6,6 +6,9 @@ package cumputearea59;
 
 import java.util.Scanner;
 
+
+
+
 public class CumputeArea59 {
 
     public static void main(String[] args) {
@@ -49,21 +52,16 @@ public class CumputeArea59 {
 //        int sum;
 //        sum = number1 + number2 + number3 + number4;
 //        System.out.println(sum);
-        
+
+//------------------------Sum-------------------------------
         Scanner input = new Scanner(System.in);
         System.out.println("Enter number 1");
         int numberone = input.nextInt();
         System.out.println("Enter number 2");
         int numbertwo = input.nextInt();
-        
         int sum;
-        
-        sum = numberone+numbertwo;
-        
+        sum = numberone+numbertwo;  
         System.out.println(sum);
-        
-        
-        
         
 
     }
