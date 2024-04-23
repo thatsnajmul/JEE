@@ -42,12 +42,10 @@ public class CumputeArea59 {
         System.out.println("Enter Number 2:");
         System.out.println("Enter Number 3:");
         System.out.println("Enter Number 4:");
-
         int number1 = input.nextInt();
         int number2 = input.nextInt();
         int number3 = input.nextInt();
         int number4 = input.nextInt();
-
         int sum;
         sum = number1 + number2 + number3 + number4;
         System.out.println(sum);
