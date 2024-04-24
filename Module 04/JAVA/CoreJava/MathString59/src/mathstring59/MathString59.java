@@ -22,6 +22,10 @@ public class MathString59 {
         System.out.println(Math.rint(5.55));
         System.out.println((Math.random()*20));
         System.out.println(Math.round(Math.random()*20));
+        
+        
+        
+       //ASCII Number, Char(), upperlower, /n,t and many more cover after break
     }
     
 }
