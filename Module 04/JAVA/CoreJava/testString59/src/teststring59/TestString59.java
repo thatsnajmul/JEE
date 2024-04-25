@@ -15,13 +15,15 @@ public class TestString59 {
         
         System.out.println("Please enter your email address");
         String userEmail = input.next();
+        System.out.println("Enter your password");
+        String password= input.next();
         String message = String.format("Welcome %ss to google", userEmail);
         
         if(userEmail.equalsIgnoreCase("java")){
 //            System.out.println("Welcome to java");
-              System.out.println("Enter your password");
-              String password= input.next();
               
+              //intentionally blank
+              //M(2016-2017)Nastrc equals.time("mi");
               if(password.equals("Java123")){
                   System.out.println(message);
               }
