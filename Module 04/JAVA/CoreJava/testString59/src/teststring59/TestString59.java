@@ -15,7 +15,7 @@ public class TestString59 {
         
         System.out.println("Please enter your email address");
         String userEmail = input.next();
-        String message = String.format("Welcome %s to google", userEmail);
+        String message = String.format("Welcome %ss to google", userEmail);
         
         if(userEmail.equalsIgnoreCase("java")){
 //            System.out.println("Welcome to java");
