@@ -35,22 +35,22 @@ public class TestString59 {
 //        }
 
 //------------------------------------------------------------------------------
-        System.out.println("Enter Your username:");
-        String userName = input.next();
-        System.out.println("Enter Your password:");
-        String password = input.next();
-        String message = String.format("Welcome %ss to google", userName);
-        if (userName.equalsIgnoreCase("") && password.contentEquals("Java123")) {
-            System.out.println(message);
-//            if(userName.length()>=3){
-//                System.out.println("3 or more...");
-//            }
-//            else{
-//                System.out.println("3 or more...");
-//            }
-        } else {
-            System.out.println("Invalid");
-        }
+//        System.out.println("Enter Your username:");
+//        String userName = input.next();
+//        System.out.println("Enter Your password:");
+//        String password = input.next();
+//        String message = String.format("Welcome %ss to google", userName);
+//        if (userName.equalsIgnoreCase("") && password.contentEquals("Java123")) {
+//            System.out.println(message);
+////            if(userName.length()>=3){
+////                System.out.println("3 or more...");
+////            }
+////            else{
+////                System.out.println("3 or more...");
+////            }
+//        } else {
+//            System.out.println("Invalid");
+//        }
 
 //------------------------------------------------------------
 //        System.out.println("Enter your username");
@@ -73,6 +73,9 @@ public class TestString59 {
 //           else{
 //             System.out.println("Isn't Vaouel");   
 //           }
+
+
+        
            
     }
 
