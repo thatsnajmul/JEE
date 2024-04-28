@@ -71,7 +71,7 @@ public class TestString59 {
 //               System.out.println("Isn't Vaouel");  
 //           }
 //           else{
-//             System.out.println("Isn't Vaouel");   
+//             System.out.println("It's consonent");   
 //           }
            
     }
