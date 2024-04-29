@@ -21,7 +21,14 @@ public class MathString59 {
 //        System.out.println(Math.sqrt(5.55));
 //        System.out.println(Math.rint(5.55));
 //        System.out.println((Math.random()*20));
-//        System.out.println(Math.round(Math.random()*20));
+        
+ //       System.out.println(Math.round(Math.random()));
+             
+//            System.out.println(Math.random());
+            
+            
+            System.out.println(Math.random());
+        
         
         
         
@@ -54,6 +61,7 @@ public class MathString59 {
 //       char alphacheck26=(char)65;
 //       
 //        System.out.println(alphacheck1+alphacheck2+alphacheck3+alphacheck4+alphacheck5+alphacheck6+alphacheck7+alphacheck8+alphacheck9+alphacheck10 +alphacheck1+alphacheck1+alphacheck1+alphacheck1+alphacheck1+alphacheck1);
+//        System.out.println(alphacheck1);
     }
     
 }
