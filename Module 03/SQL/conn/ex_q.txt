@@ -1,0 +1,84 @@
+--Create a table and name using your id preceded by emp(as emp106588), which have 5 fields as eid, ename, salary, hire_date, and address with appropriate data types and create primary key on eid
+
+CREATE TABLE emp106588 (
+    eid INT PRIMARY KEY,
+    ename VARCHAR(255),
+    salary DECIMAL(10, 2),
+    hire_date DATE,
+    address VARCHAR(512)
+);
+
+--Add two new columns named department_id,dept_name alter table command
+
+ALTER TABLE emp106588
+ADD department_id INT,
+    dept_name VARCHAR(255);
+
+--Insert values to the table
+INSERT INTO emp106588 (eid, ename, salary, hire_date, address, department_id, dept_name)
+VALUES
+    (101, 'Alice', 60000.00, '2022-04-15', '123 Main St', 1, 'HR'),
+    (102, 'Bob', 75000.50, '2021-09-10', '456 Elm St', 2, 'IT'),
+    (103, 'Carol', 55000.75, '2023-01-20', '789 Oak Ave', 3, 'Finance');
+
+
+--Create a view that which contains ename, dept_name and salary in department 80
+CREATE VIEW employees
+SELECT eid, ename, salary, hire_date, address
+FROM employees
+WHERE deparmet_id = 80;
+
+
+
+--Create a sequence
+CREATE SEQUENCE my_sequence
+    START WITH 1
+    INCREMENT BY 1
+    MINVALUE 1
+    MAXVALUE 1000
+    NOCACHE
+    NOCYCLE;
+
+
+--Give an appropriate example of insert data from subquries
+INSERT INTO employees (first_name, last_name, Phone)
+SELECT some_col
+FROM departments
+where department_id=80;
+
+================================================================================================================
+
+--Create a table and name using your id preceded by emp(as emp106588), which have 5 fields as eid, ename, salary, hire_date, and address with appropriate data types and create primary key on eid
+CREATE TABLE emp106588 (
+    eid INT PRIMARY KEY,
+    ename VARCHAR(255),
+    salary DECIMAL(10, 2),
+    hire_date DATE,
+    address VARCHAR(512)
+);
+
+
+--Display the department numbers and avarage salaries for those departments with a maximum salary that is greater than 12000
+SELECT department_id, AVG(salary)
+FROM employees 
+GROUP BY department_id
+HAVING MAX(salary) > 12000;
+
+--3  Display the name whose name start from S
+SELECT * FROM department
+WHERE NAME LIKE 'S%';
+
+
+--4(display the avg salary of employees of departments sales)
+SELECT d.department_name, e.salary*12
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+WHERE d.department_name = 'Sales';
+
+
+--5(Display the name of employees joining in company in ascending order)
+SELECT first_name ||' '||last_name as empNAme, hire_date
+FROM employees
+ORDER BY hire_date ASC;
+
+

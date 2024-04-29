@@ -49,11 +49,30 @@ where in
 
 
 
+SELECT department_id, AVG(salary)
+FROM employees 
+GROUP BY department_id
+HAVING MAX(salary) > 12000;
+
+SELECT department, AVG(salary*12) AS average_salary
+FROM employees
+WHERE department_name = 'Sales';
+
+select department_name,salary
+from employees
+natural join departments
+where department_name='Sales';
 
 
 
+SELECT first_name ||' '||last_name as empNAme, hire_date
+FROM employees
+ORDER BY hire_date ASC;
 
-
+SELECT d.department_name, ROUND(AVG(e.salary), 2) AS average_salary
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id
+WHERE d.department_name = 'Sales';
 
 
 
