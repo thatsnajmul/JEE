@@ -23,6 +23,11 @@ public class TestSingleDimentionalArray {
             int num = r.nextInt(100)+1;
             myList[i]=num;
         }
+        
+        int min = 999999999;
+        int max = 0;
+        int min1 = 0;
+        int max1 = myList[0];
         int sum =0;
         int avg =0;
         int count=0;
@@ -42,6 +47,19 @@ public class TestSingleDimentionalArray {
             newList[index] = val;
             index++;
             }
+        }
+        
+        for (int val : myList){
+            if(max<val){
+                  min = val;
+            }
+        }
+        
+        for (int j =0; j<myList.length; j++){
+            if(max<myList[j]){
+                max1 = myList[j];
+            }
+            System.out.println(j);
         }
         
         System.out.println(Arrays.toString(myList));
