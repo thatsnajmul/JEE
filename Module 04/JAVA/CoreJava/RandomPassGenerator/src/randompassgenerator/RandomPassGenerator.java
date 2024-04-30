@@ -22,6 +22,14 @@ public class RandomPassGenerator {
         String pass ="";
         String finalPass="";
         
+        System.out.println("Your password is"+pass);
+        
+        
+    }
+    
+    public static String passGenerator(int passLength){
+        Random random = new Random();
+        
         for(int i=1; i <=8; i++){
             int range = random.nextInt(3)+1;
             switch (range) {
@@ -46,12 +54,7 @@ public class RandomPassGenerator {
                 finalPass +=pass.charAt(i); //pass=ABCD__1234
             }
         }        
-        System.out.println(finalPass);
-        
-    }
-    
-    public static String passGenerator(int passLength){
-        Random random = new Random();
+//        System.out.println(finalPass);
         
         return finalPass;
     }
