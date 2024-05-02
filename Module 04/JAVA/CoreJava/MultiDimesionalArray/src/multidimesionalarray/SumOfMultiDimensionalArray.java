@@ -13,6 +13,8 @@ public class SumOfMultiDimensionalArray {
         System.out.println(sumsss);
     }
     
+    
+    //Logically declare data
     public static int doSumofMdarray(int[][] myArrays) {
         int sum = 0; //
         for(int row=0; row<myArrays.length; row++){
@@ -23,6 +25,9 @@ public class SumOfMultiDimensionalArray {
         return sum;
     }
     
+    
+    
+    //https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8266715/
 }
 
 
