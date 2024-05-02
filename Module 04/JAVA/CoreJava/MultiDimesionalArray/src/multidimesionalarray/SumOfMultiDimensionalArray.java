@@ -8,9 +8,9 @@ public class SumOfMultiDimensionalArray {
         
         int[][] numbers = {{10,20,30},{10,20,30},{10,20,30}};
         
-        int sum = doSumofMdarray(numbers);
+        int sumsss = doSumofMdarray(numbers);
         
-        System.out.println(sum);
+        System.out.println(sumsss);
     }
     
     public static int doSumofMdarray(int[][] myArrays) {
