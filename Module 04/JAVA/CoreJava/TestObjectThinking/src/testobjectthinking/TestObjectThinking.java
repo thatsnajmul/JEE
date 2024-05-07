@@ -14,10 +14,7 @@ public class TestObjectThinking {
         
         System.out.println(fa.getFactorial());
         
-        if (fa instanceof Object) {
-            Object object = (Object) fa;
-            
-        }
+        
         
        
     }
