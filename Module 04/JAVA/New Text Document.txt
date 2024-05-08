@@ -1,0 +1,43 @@
+Java
+---------------------
+
+Module 3
+---------------
+1. Introduction to computers, programmes, and java
+2. Elementary programming
+Module 4
+--------------
+3. Selections
+	
+4. Mathmatical functions, characters and strings
+	Math(), Round(), char(''), String(),
+5. Loops
+	for, for in, while, do while
+6. Methods
+	public, private, protected and default. 
+	Overloading method:- 
+7. Single dimensional arrays
+	A Single Dimensinal arrays is a 1D Array/Single/One Dimensional
+8. Multi dimensional arrays
+	1D Array/Single/One Dimensional, 2D Array/Single/2 Dimensional Array, 3D Array
+9. Object and classes
+	Object ob = new Object();
+	static class, void class, 
+10. Thinking in objects
+	String[] name = {a,b,c};
+11. Inheritance and polymorphism
+	-------------------------------
+	Overloading vs overriding
+	-------------------------------
+	Supper class and sub class
+	//
+	Private, public or protected variable declaration
+	Constractor (default)
+	Constractor (argument)
+	Geteer and Setter (Get and set)
+	Convert data into the toString();
+	@Override
+
+12. Exception handelling and Text (I/O)
+	Using try{ } catch { } for exception handelling. We can pass method like Exception, 	ArethmaticException and another Exception. Exception type == Data Type.
+
