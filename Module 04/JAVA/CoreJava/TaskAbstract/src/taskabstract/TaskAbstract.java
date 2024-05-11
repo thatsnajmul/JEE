@@ -1,10 +1,12 @@
-package com.example;
 
-public class Sub extends Super {
-    
+package taskabstract;
+
+
+public class TaskAbstract {
+
+  
     public static void main(String[] args) {
         
     }
-
-
+    
 }
