@@ -16,14 +16,14 @@ public class ArrayofRandomNumber {
             tenNumbers[i] = userInput;
             System.out.println(i);
         }
-//        // Printing 10 times
-//        for (int i = 0; i < tenNumbers.length; i++) {
-//            System.out.println(tenNumbers[i] + "\n");
-//        }
-//        for (int n : tenNumbers) {
-//           
-//            System.out.println(n);
-//        }
+        // Printing 10 times
+        for (int i = 0; i < tenNumbers.length; i++) {
+            System.out.println(tenNumbers[i] + "\n");
+        }
+        for (int n : tenNumbers) {
+           
+            System.out.println(n);
+        }
         
         
 
