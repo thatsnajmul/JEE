@@ -3,13 +3,10 @@ package bankaccount;
 
 
 public class BankAccount {
+    public double balance;
     
     
     
-    
-    
-    public void abstract calculateInterrest();
-    
-    
+   //
     
 }
