@@ -14,13 +14,9 @@ public class ClassOne {
         queue.offer("Indiana");
         queue.offer("Georgia");
         queue.offer("Texas");
-        
-        TimeZone defaultTimeZone = null;
-
-        TimeZone defaultZone = defaultTimeZone; //no time generating without ....
 
         while (queue.size() > 4) {
-            System.out.println("Hello, " + queue.remove() + "Your time is" + defaultTimeZone);
+            System.out.println("Hello, " + queue.remove() + "Your time is" + "TimeZone");
         }
 
     }
