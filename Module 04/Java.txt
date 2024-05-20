@@ -1,13 +1,17 @@
 Variable
 Operator
-	Arethmatic operator
-	Assignment operator
-	Comparission operator
-	Conditional operator
-	Logical operator
+Arethmatic operator
+Assignment operator
+Comparission operator
+Conditional operator
+Logical operator
 Math
 Array
-	single array
-	multi dimentional arry
+single array
+multi dimentional arry
 If else
 else if
+for
+while
+do while
+

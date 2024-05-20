@@ -7,14 +7,18 @@ public class IntInput {
     public int pr(int a) {
         Scanner sc = new Scanner(System.in);
 
-        int n = 3;
-        System.out.println("Enter your number: ");
-        for (int i = 0; i < n; i++) {
-            int gs = sc.nextInt();
-            
-          System.out.println(gs);
-        }   
         
+        System.out.println("Enter your number: ");
+        for (int i = 0; i < 3; i++) {
+            int gs = sc.nextInt();
+
+        }
+
+        int[] integers = new int[3];
+        for (int i = 0; i < 3; i++) {
+            integers[i] = sc.nextInt();
+        }
+
         return a;
     }
 
