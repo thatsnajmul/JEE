@@ -1,0 +1,4 @@
+Step 1: Download MySQL Workbranch and find jar file (c:/mySQLserver)
+	** Create a connection (change the port if have another port before on the 				computer).
+	** 
+Step 2: Add sql.jar to the project

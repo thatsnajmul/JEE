@@ -5,13 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import teacher.Teacher;
 
-public class ExampleOfGeneric{
+
+public class ExampleOfGeneric {
 
 
     public static void main(String[] args) {
         
-        List li = new ArrayList();
-        
+        /*
+        List li = new ArrayList();        
         li.add("Md Najmul Islam");
         li.add(25);
         li.add("IsDB");
@@ -21,13 +22,14 @@ public class ExampleOfGeneric{
                             +"My age is "+li.get(1)+".\n" 
                             +"I'm student of "+li.get(2)+".\n"
                             +"I Lives in "+li.get(3)+"."); 
+        */
+
         
-        
-        TeacherList e = new TeacherList();
+        Teacher e = new Teacher();       
+        e.setId(10);  
+        System.out.println(e);
         
        
-        
-        System.out.println(e);
         
     }
     
