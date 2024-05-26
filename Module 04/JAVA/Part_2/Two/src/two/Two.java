@@ -14,7 +14,8 @@ public class Two {
         Vehicle motorcycle = new Motorcycle("522211", "Honda", 2005);
         
         
-        //System.out.println(car);
+        System.out.println(car.regNumber()+" "+car.brand()+" "+car.year());
+        System.out.println(motorcycle.regNumber()+" "+motorcycle.brand()+" "+motorcycle.year());
         //System.out.println(motorcycle);
         
         car.start();
