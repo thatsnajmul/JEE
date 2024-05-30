@@ -22,13 +22,31 @@ import util.DbUtil;
  *
  * @author thatsnajmul
  */
-public class PrductView extends javax.swing.JFrame {
+
+    //=====================================================//
+    //Here ProductView extends Swing design
+    //====================================================//
+    
+    public class PrductView extends javax.swing.JFrame {
+        
+    //=====================================================//
+    //Db util object
+    //====================================================//
 
     DbUtil db = new DbUtil();
 
     /**
      * Creates new form PrductView
      */
+    
+    
+    
+    
+    
+    
+    //=====================================================//
+    //Constractor and declare method start
+    //====================================================//
     public PrductView() {
         initComponents();
         showProductOntable();
@@ -42,7 +60,17 @@ public class PrductView extends javax.swing.JFrame {
         });
         
     }
-
+    //=====================================================//
+    //Constractor and declare method end
+    //====================================================//
+    
+    
+    
+    
+    //=====================================================//
+    //ADD Product to the sql product table using select 
+    //statement and push the user data to the database (start)
+    //====================================================//
     //Addproduct with database
     public void addProduct() {
 
@@ -76,7 +104,17 @@ public class PrductView extends javax.swing.JFrame {
         }
 
     }
-
+    //=====================================================//
+    //ADD Product to the sql product table using select 
+    //statement and push the user data to the database (end)
+    //====================================================//
+    
+    
+    
+    //=====================================================//
+    //When user put the quentity in the box that multiply 
+    //and show the total price box (start)
+    //====================================================//
     //another method
     //==================
     public void getTotalPrice() {
@@ -87,7 +125,18 @@ public class PrductView extends javax.swing.JFrame {
 
         txtTotalPrice.setText(totalPrice + ""); //ques
     }
-
+    //=====================================================//
+    //When user put the quentity in the box that multiply 
+    //and show the total price box (end)
+    //====================================================//
+    
+    
+    
+    
+    //=====================================================//
+    //When user save/insert the data automitically blank all box
+    //that name is add product (start)
+    //====================================================//
     //clear
     public void clear() {
         txtId.setText("");
@@ -98,10 +147,34 @@ public class PrductView extends javax.swing.JFrame {
         txtSalesPrice.setText("");
 
     }
-
+    //=====================================================//
+    //When user save/insert the data automitically blank all box
+    //that name is add product (end)
+    //====================================================//
+    
+    
+    
+    
+    //=====================================================//
+    //Here we change swing GUI table name programitically
+    //that already declare on the Swing GUI control interface (start)
+    //We can write the line on the specific method
+    //====================================================//
     //Table View change
     String[] productViewTableColumn = {"Id", "Name", "Unit Price", "Quantity", "Total Price", "Sales Price"};
-
+    //=====================================================//
+    //Here we change swing GUI table name programitically
+    //that already declare on the Swing GUI control interface (end)
+    //We can write the line on the specific method
+    //====================================================//
+    
+    
+    
+    //=====================================================//
+    //We insert/throw the data to the database from user input
+    //We are already create a table and name the name programiticcally
+    //Now we show the data on the table (start)
+    //====================================================//
     //show product data
     public void showProductOntable() {
         String sql = "select * from product";
@@ -140,9 +213,22 @@ public class PrductView extends javax.swing.JFrame {
         }
 
     }
-
-    //Delete product
+    //=====================================================//
+    //We insert/throw the data to the database from user input
+    //We are already create a table and name the name programiticcally
+    //Now we show the data on the table (end)
+    //====================================================//
     
+    
+    
+    //=====================================================//
+    //We insert/throw the data to the database from user input
+    //We are already create a table and name the name programiticcally
+    //Now we show the data on the table
+    //Now we want to delete the row from the database using(sql unique id) 
+    //when we clicked the delete button (start)
+    //====================================================//
+    //Delete product  
     public void deleteProduct(){
         String sql = "delete from product where id=?";
         PreparedStatement ps;
@@ -167,8 +253,25 @@ public class PrductView extends javax.swing.JFrame {
             Logger.getLogger(PrductView.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-    }
+    }   
+    //=====================================================//
+    //We insert/throw the data to the database from user input
+    //We are already create a table and name the name programiticcally
+    //Now we show the data on the table
+    //Now we want to delete the row from the database using(sql unique id) 
+    //when we clicked the delete button (start)
+    //====================================================//
     
+    
+     //=====================================================//
+    //We insert/throw the data to the database from user input
+    //We are already create a table and name the name programiticcally
+    //Now we show the data on the table
+    //Now we want to delete the row from the database using(sql unique id) 
+    //when we clicked the delete button
+    //now we update/edit the data using update.execute query
+    //and then show again to the database (start)
+    //====================================================//
     //Edit Product
     public void editProduct(){
         String sql = "update product set name=?, unitPrice=?, quantity=?, totalPrice=?, salesPrice=? where id=?";
@@ -204,9 +307,29 @@ public class PrductView extends javax.swing.JFrame {
         
         
     }
+    //=====================================================//
+    //We insert/throw the data to the database from user input
+    //We are already create a table and name the name programiticcally
+    //Now we show the data on the table
+    //Now we want to delete the row from the database using(sql unique id) 
+    //when we clicked the delete button
+    //now we update/edit the data using update.execute query
+    //and then show again to the database (end)
+    //====================================================//
     
-    //Show Product Item
     
+    //=====================================================//
+    //We insert/throw the data to the database from user input
+    //We are already create a table and name the name programiticcally
+    //Now we show the data on the table
+    //Now we want to delete the row from the database using(sql unique id) 
+    //when we clicked the delete button
+    //now we update/edit the data using update.execute query
+    //and then show again to the database
+    
+    //------------------
+    //====================================================//
+    //Show Product Item    
     public void showProductToCombo() {
         String sql = "select name from product";
         PreparedStatement ps;
@@ -232,9 +355,33 @@ public class PrductView extends javax.swing.JFrame {
         }
         
     }
+    //=====================================================//
+    //We insert/throw the data to the database from user input
+    //We are already create a table and name the name programiticcally
+    //Now we show the data on the table
+    //Now we want to delete the row from the database using(sql unique id) 
+    //when we clicked the delete button
+    //now we update/edit the data using update.execute query
+    //and then show again to the database
     
-    //Product Sales Price
+    //------------------
+    //====================================================//
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++--------------------------------------++++++++++++++++++++++++++++    
     
+    //=====================================================//
+    //We insert/throw the data to the database from user input
+    //We are already create a table and name the name programiticcally
+    //Now we show the data on the table
+    //Now we want to delete the row from the database using(sql unique id) 
+    //when we clicked the delete button
+    //now we update/edit the data using update.execute query
+    //and then show again to the database
+    //when we select any product bellow the method return selected (start)
+    //====================================================//
+    //Product Sales Price    
     public void getProdutSalesPrice(ItemEvent e){
         String selectedProductName = "";
         if(e.getStateChange() == ItemEvent.SELECTED) {
@@ -243,6 +390,24 @@ public class PrductView extends javax.swing.JFrame {
             extractSalesPrice(selectedProductName);
         }
     }
+    //=====================================================//
+    //We insert/throw the data to the database from user input
+    //We are already create a table and name the name programiticcally
+    //Now we show the data on the table
+    //Now we want to delete the row from the database using(sql unique id) 
+    //when we clicked the delete button
+    //now we update/edit the data using update.execute query
+    //and then show again to the database
+    //when we select any product bellow the method return selected (end)
+    //====================================================//
+    
+    
+    
+    
+    
+    
+    //+++++++++++++++++++++++Need Explain
+    //++++++++++++++++++++++++++++++++
     
     //Extract 
     public void extractSalesPrice(String productName){
@@ -335,7 +500,23 @@ public class PrductView extends javax.swing.JFrame {
         
         
     }
+     //+++++++++++++++++++++++Need Explain
+    //++++++++++++++++++++++++++++++++
 
+    
+    
+    
+   
+    
+    
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++Swing GUI priavte variable that we declare frontend(start)+++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -818,7 +999,15 @@ public class PrductView extends javax.swing.JFrame {
         // TODO add your handling code here:
         clear();
     }//GEN-LAST:event_btnProductResetMouseClicked
-
+    
+    
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++Call the event (start)+++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
     //Product view before update/edit and save to the database
     private void tblProductViewMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblProductViewMouseClicked
         // TODO add your handling code here:
@@ -839,7 +1028,14 @@ public class PrductView extends javax.swing.JFrame {
         txtTotalPrice.setText(totalPrice);
         txtSalesPrice.setText(salesPrice);
     }//GEN-LAST:event_tblProductViewMouseClicked
-
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++Call end=nt(end)+++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    
     private void btnProductDeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductDeleteMouseClicked
         // TODO add your handling code here:
         deleteProduct();
@@ -869,8 +1065,23 @@ public class PrductView extends javax.swing.JFrame {
         
         addSales();
     }//GEN-LAST:event_btnSalesSaveMouseClicked
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++Swing GUI priavte variable that we declare frontend(end)+++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//    
     
     
+    
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++Main method(start)++++++++++++++++++++++++++++++//
+    //++++++++When we run the class may be it's create runnable++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
     /**
      * @param args the command line arguments
      */
@@ -905,7 +1116,22 @@ public class PrductView extends javax.swing.JFrame {
             }
         });
     }
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++Main method(end)++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
+    
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++All Swing Variable(Start++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel add;
     private javax.swing.JButton btnAddPrduct;
@@ -961,12 +1187,29 @@ public class PrductView extends javax.swing.JFrame {
     private javax.swing.JTextField txtTotalPrice;
     private javax.swing.JTextField txtUnitPrice;
     // End of variables declaration//GEN-END:variables
-
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++All Swing Variable(End)+++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    
+    
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    //unused method
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     private String formatDateToDDMMYYYY(JDateChooser salesDate) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     private float convertUtilDateToSqlDate(String date) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    //unused method
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    
+    
 }

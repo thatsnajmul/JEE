@@ -6,13 +6,10 @@ import view.PrductView;
 
 public class Store {
 
-
-    public static void main(String[] args) {
-        
+    //Call Product view method 
+    public static void main(String[] args) { 
         PrductView productview = new PrductView();
-        
-        productview.setVisible(true);
-        
+        productview.setVisible(true);  
         
     }
     
