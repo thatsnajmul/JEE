@@ -203,7 +203,7 @@ import util.DbUtil;
             }
 
             ps.close();
-            db.getCon();
+            db.getCon().close();
             rs.close();
 
         } catch (ClassNotFoundException ex) {
@@ -239,7 +239,7 @@ import util.DbUtil;
             ps.executeUpdate();
             
             ps.close();
-            db.getCon();
+            db.getCon().close();
             
             JOptionPane.showMessageDialog(this, "Product deleted successfully");
             clear(); //
@@ -289,7 +289,7 @@ import util.DbUtil;
             ps.executeUpdate();
             
             ps.close();
-            db.getCon();
+            db.getCon().close();
             
             JOptionPane.showMessageDialog(this, "Product updated successfully");
             clear(); //
@@ -486,7 +486,7 @@ import util.DbUtil;
             
             
             ps.executeUpdate();
-            db.getCon();
+            db.getCon().close();
             JOptionPane.showMessageDialog(this, "Product sales added successfully");
             
             
