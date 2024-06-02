@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<studentinfo>
+    <studentinfo>
+        <studentid>1001</studentid>
+        <studentname>Md. Abid</studentname>
+        <studentclass>Class 9</studentclass>
+        <studentroll>1001</studentroll>
+    </studentinfo>
+    <studentinfo>
+        <studentid>1002</studentid>
+        <studentname>Md. sakid</studentname>
+        <studentclass>Class 10</studentclass>
+        <studentroll>1005</studentroll>
+    </studentinfo>
+</studentinfo>
