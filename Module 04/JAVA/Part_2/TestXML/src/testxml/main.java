@@ -51,10 +51,7 @@ public class main {
                 }
                 
                  }
-            
-            
-        
-        
+           
             
         } catch (IOException | ParserConfigurationException | DOMException | SAXException e) {
             
