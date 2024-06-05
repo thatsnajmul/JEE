@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><topcompany>
+    <companyinfo>
+        <id>1</id>
+        <name>Amazon</name>
+        <position>#1</position>
+    </companyinfo>
+    <companyinfo>
+        <id>2</id>
+        <name>Google</name>
+        <position>#2</position>
+    </companyinfo>
+    <companyinfo>
+        <id>2</id>
+        <name>Microsoft</name>
+        <position>#3</position>
+    </companyinfo>
+</topcompany>
