@@ -865,8 +865,6 @@ import util.DbUtil;
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton4.setText("DELETE");
         sales.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, 80, 40));
-
-        salesDate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         sales.add(salesDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 150, -1));
 
         mainView.addTab("SALES", sales);
