@@ -68,17 +68,9 @@ public class JDBCWithCLI {
 
         updateJDBC(jdbc);
 
-        //Delete
+        
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
     
     //Edit or Update
     public static void updateJDBC(jdbc j) {
