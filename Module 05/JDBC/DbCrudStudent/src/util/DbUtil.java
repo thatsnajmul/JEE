@@ -12,9 +12,9 @@ public class DbUtil {
     
     //Write something
     private Connection con = null;
-    private String url = "jdbc:mysql://localhost:3307/student";
+    private String url = "jdbc:mysql://localhost:3310/jdbccrud";
     private String user = "root";
-    private String password = "1234";
+    private String password = "12345";
     private String driver = "com.mysql.cj.jdbc.Driver";
 
     //Write something
