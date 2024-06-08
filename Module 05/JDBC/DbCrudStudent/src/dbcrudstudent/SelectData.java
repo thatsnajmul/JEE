@@ -26,7 +26,7 @@ public class SelectData {
                 int id = rs.getInt("studentId");
                 String name=    rs.getString("studentName");
                 String email=    rs.getString("studentEmail");
-                String address=    rs.getString("studentAddres");
+                String address=    rs.getString("studentAddress");
                 String phone=    rs.getString("studentPhone");
                 
                 System.out.println("Id is: " + id + " Name is: "+name+ " Email is: "+ email+ " Address is: "+ address+ " Phone is: "+phone);

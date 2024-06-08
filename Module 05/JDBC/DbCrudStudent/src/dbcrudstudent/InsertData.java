@@ -14,7 +14,7 @@ public class InsertData {
     private static DbUtil db = new DbUtil();
     
     public static void saveData(){
-        String insertsql = "insert into student(studentName, studentEmail, studentAddres, studentPhone)" + "values(?,?,?,?)";
+        String insertsql = "insert into student(studentName, studentEmail, studentAddress, studentPhone)" + "values(?,?,?,?)";
         
         String name= "Md. Najmul Islam";
         String email= "najmul@gmail.com";
