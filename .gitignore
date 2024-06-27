@@ -196,7 +196,13 @@
 /Module 05/JDBC/DbCrudStudent/dist/
 /Module 05/XML/DivOfTwoNumbers/nbproject/private/
 /Module 05/XML/DivOfTwoNumbers/build/
+<<<<<<< HEAD
 /Module 05/JDBC/DBCrud2/nbproject/private/
 /Module 05/JDBC/DBCrud2/build/
 /Module 05/JDBC/DBCrud3/nbproject/private/
 /Module 05/JDBC/DBCrud3/build/
+=======
+/Module 05/JDBC/JavaApplication15/nbproject/private/
+/Module 05/JDBC/JavaApplication15/build/
+/Module 05/JDBC/JavaApplication15/dist/
+>>>>>>> 2ecc4332768b4f7204911fcf3195cf129a8b3f83
