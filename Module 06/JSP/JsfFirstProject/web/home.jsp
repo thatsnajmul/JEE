@@ -14,6 +14,6 @@
     <body style="color: red; font-size: 50px; text-align: center;">
         <h1>Home.JSP Page</h1>
         
-        <b>After JSTL jar add and change web xml (welcome-file)</b>
+        <b>After JSTL jar add and change web xml (welcome-file: home.jsp)</b>
     </body>
 </html>
