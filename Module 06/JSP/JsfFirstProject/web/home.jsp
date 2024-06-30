@@ -21,7 +21,9 @@
         
         <b>After JSTL jar add and change web xml (welcome-file: home.jsp)</b>
         <br>
+        <br>
         <img src="image/jsp.png" width="300" height="200" alt="alt"/>
+        <img src="image/jsp-icon.jfif" width="300" height="200" alt="alt"/>
         
     </body>
 </html>
