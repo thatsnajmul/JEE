@@ -11,9 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home JSP</title>
     </head>
-    <body>
+    <body style="color: red; font-size: 50px; text-align: center;">
         <h1>Home.JSP Page</h1>
         
-        <p>After JSTL jar add and change web xml (welcome-file)</p>
+        <b>After JSTL jar add and change web xml (welcome-file)</b>
     </body>
 </html>
