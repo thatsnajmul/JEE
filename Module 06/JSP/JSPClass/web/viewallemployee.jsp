@@ -16,10 +16,13 @@ request.setAttribute("list", list);
 
 <body style="">
     
+    <h1 style="text-align: center;">Employee Data</h1>
+    
+    
     <div style="">
         
         
-       <table border="1"; >
+        <table border="1"; style="width:70%; font-size: 20px; margin-left: auto; margin-right: auto;" >
 
     <thead>
         <tr>
@@ -59,11 +62,9 @@ request.setAttribute("list", list);
         
         
     </div>
-    
 
-
-
-<div style="font-size: 30px; color: darkcyan;">
+<div style="font-size: 30px; color: darkcyan; text-align:center;">
+    <a href="home.jsp">Home</a> <br>
     <a href="employeeform.jsp">Employee Form</a> <br>
     <a href="viewallemployee.jsp">VIew Employee Data</a>
 

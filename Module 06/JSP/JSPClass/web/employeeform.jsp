@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Employee Form</title>
     </head>
-    <body style="text-align: center;">
+    <body style="text-align: center; font-size: 20px;">
         <h1>Employee Form</h1>
 
         <form action="saveemployee.jsp" method="post">
@@ -26,6 +26,9 @@
 
 
         <div style="font-size: 30px; color: darkcyan;">
+            
+            
+            <a href="home.jsp">Home</a> <br>
             <a href="employeeform.jsp">Employee Form</a> <br>
             <a href="viewallemployee.jsp">VIew Employee Data</a>
 
