@@ -10,6 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home</title>
+        
+        <link rel="icon" href="images/employee.jpg"/>
     </head>
     <body style="font-size: 30px; text-align: center;">
         <h1>Reg Form</h1>
