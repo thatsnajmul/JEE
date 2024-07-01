@@ -14,5 +14,6 @@
     <body>
         <h1>Reg Form</h1>
         <a href="employeeform.jsp">Employee Form</a>
+        <a href="viewallemployee.jsp">VIew Employee Data</a>
     </body>
 </html>
