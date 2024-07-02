@@ -217,7 +217,11 @@ ProblemSolvingWithJava/
 /Module 06/JSP/JSPClass/nbproject/private/
 /Module 06/JSP/JSPClass/build/
 /Module 06/JSP/JSPClass/dist/
+<<<<<<< HEAD
 /Module 06/JSP/JSPEmployee/nbproject/private/
 /Module 06/JSP/JSPEmployee/build/
 /Module 06/JSP/JSPEmployee/dist/
+=======
+/Module 06/JSP/JSPWebCrud/build/
+>>>>>>> 085f8449509bf0271e6ab983b7240e4bac6a55b0
 /Module 06/JSP/JSPWebCrud/nbproject/private/
