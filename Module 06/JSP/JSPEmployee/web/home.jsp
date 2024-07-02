@@ -10,13 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home</title>
+        <link rel="icon" href="image/employee.jpg"/>
     </head>
-    <body>
+    <body style="font-size: 30px; text-align: center;">
         
         
         <h1>Reg Form</h1>
-        <a href="employeeform.jsp">Employee Form</a> <br>
-        <a href="viewallemployee.jsp">VIew Employee Data</a>
+        <a href="reg/employeeform.jsp">Employee Form</a> <br>
+        <a href="view/viewallemployee.jsp">VIew Employee Data</a>
         
     </body>
 </html>

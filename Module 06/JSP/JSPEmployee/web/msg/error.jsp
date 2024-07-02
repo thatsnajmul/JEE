@@ -14,6 +14,6 @@
     <body>
         <h1>Save unsuccessful</h1>
         
-        <%@include file="employeeform.jsp" %>
+        <%@include file="../reg/employeeform.jsp" %>
     </body>
 </html>

@@ -5,6 +5,6 @@
 <%
 
 EmployeeDao.deleteEmployee(e);
-response.sendRedirect("viewallemployee.jsp");
+response.sendRedirect("../view/viewallemployee.jsp");
 
 %>

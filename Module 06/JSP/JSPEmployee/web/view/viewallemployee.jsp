@@ -47,8 +47,8 @@ request.setAttribute("list", list);
                 <td>${e.getEmployeeAddress()}</td>
                 <td>${e.getEmployeePhone()}</td>
                 <td>
-                    <a href="#">Edit</a>
-                    <a href="deleteemployee.jsp?employeeId=${e.getEmployeeId()}">Delete</a>
+                    <a href="../update/updateemployeeform.jsp?employeeId=${e.getEmployeeId()}">Edit</a>
+                    <a href="../delete/deleteemployee.jsp?employeeId=${e.getEmployeeId()}">Delete</a>
                 </td>
 
             </tr>
@@ -63,9 +63,9 @@ request.setAttribute("list", list);
     </div>
 
 <div style="font-size: 30px; color: darkcyan; text-align:center;">
-    <a href="home.jsp">Home</a> <br>
-    <a href="employeeform.jsp">Employee Form</a> <br>
-    <a href="viewallemployee.jsp">VIew Employee Data</a>
+    <a href="../home.jsp">Home</a> <br>
+    <a href="../reg/employeeform.jsp">Employee Form</a> <br>
+    <a href="../view/viewallemployee.jsp">VIew Employee Data</a>
 
 </div>
     

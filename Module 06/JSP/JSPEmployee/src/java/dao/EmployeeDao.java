@@ -109,7 +109,7 @@ public class EmployeeDao {
     
     
     //Update
-    public static void updateStudent(Employee e) {
+    public static void updateEmployee(Employee e) {
         sql="update employee set employeeName=?, employeeEmail=?,employeeAddress=?,employeePhone=? where employeeId=?";
         
         try {
@@ -145,8 +145,10 @@ public class EmployeeDao {
             ps = DbUtil.getCon().prepareStatement(sql);
             ps.setInt(1, employeeId);
             
+            rs = ps.executeQuery();
+            
             while(rs.next()){            
-                Employee e = new Employee(
+                 e = new Employee(
                         rs.getInt("employeeId"), 
                         rs.getString("employeeName"), 
                         rs.getString("employeeEmail"), 
