@@ -18,6 +18,8 @@ public class EmployeeDao {
     static String sql = "";
     
     
+    
+    //Insert Data
      public static int saveEmployee(Employee e){
      
          
@@ -35,7 +37,7 @@ public class EmployeeDao {
             ps.setString(4, e.getPhone());
 
             status = ps.executeUpdate();
-            System.out.println(status);
+            //System.out.println(status);
             
             ps.close();
             DbUtil.getCon().close();
