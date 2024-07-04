@@ -1,0 +1,2 @@
+<h1 class="text-success">Data is not Save Successful</h1>
+        <%@include  file="viewallstudent.jsp"%>

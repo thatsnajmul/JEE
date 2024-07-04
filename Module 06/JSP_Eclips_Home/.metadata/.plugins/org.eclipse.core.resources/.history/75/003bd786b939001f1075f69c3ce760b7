@@ -1,0 +1,37 @@
+package dao;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import model.Student;
+import util.DbUtil;
+
+public class StudentDao {
+	
+	static PreparedStatement ps;
+    static ResultSet rs;
+    static String sql = "";
+    
+    public static int saveEmployee(Student s) {
+    	
+    	int status = 0;
+    	
+    	sql = "insert into student(name, email, address, phone) "
+                + "values(?,?,?,?)";
+    	
+    	ps = DbUtil.getCon().prepareStatement(sql);
+    	
+    	ps.setString(1, e.getName());
+        ps.setString(2, e.getEmail());
+        ps.setString(3, e.getAddress());
+        ps.setString(4, e.getPhone());
+
+        status = ps.executeUpdate();
+       // System.out.println(status);
+        
+        ps.close();
+        DbUtil.getCon().close();
+	
+
+    	return status;
+}

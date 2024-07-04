@@ -1,0 +1,15 @@
+package dao;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class StudentDao {
+	
+	static PreparedStatement ps;
+    static ResultSet rs;
+    static String sql = "";
+    
+    
+	
+
+}

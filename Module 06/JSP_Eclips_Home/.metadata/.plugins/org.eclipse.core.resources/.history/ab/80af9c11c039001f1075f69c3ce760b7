@@ -1,0 +1,24 @@
+<jsp:include page="header.jsp"></jsp:include>
+
+
+<jsp:include page="studentform.jsp"></jsp:include>
+
+<jsp:useBean class="model.Student" id="s"/>
+<%@page  import="dao.StudentDao" %>
+<jsp:setProperty name="s" property="*" />
+
+
+<%
+int i=StudentDao.saveStudent(s);
+
+    if(i>0){
+        response.sendRedirect("../msg/success.jsp");
+    }
+    else{
+    response.sendRedirect("../msg/error.jsp");
+    }
+
+
+
+%>
+<jsp:include page="footer.jsp"></jsp:include>
