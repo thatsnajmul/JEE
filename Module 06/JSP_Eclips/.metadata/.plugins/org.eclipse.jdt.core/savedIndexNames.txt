@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+D:\IsDB-JEE-59\JEE\Module 06\JSP_Eclips\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-1445241424.index
-552182231.index

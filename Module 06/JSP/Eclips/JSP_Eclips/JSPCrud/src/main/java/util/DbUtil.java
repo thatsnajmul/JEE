@@ -8,9 +8,9 @@ import java.util.logging.Logger;
 
 public class DbUtil {
 	
-	private static String url = "jdbc:mysql://localhost:3307/student_data";
+	private static String url = "jdbc:mysql://localhost:3310/student_schema";
     private static String user = "root";
-    private static String password = "1234";
+    private static String password = "12345";
 
     private static String driver = "com.mysql.cj.jdbc.Driver";
 
