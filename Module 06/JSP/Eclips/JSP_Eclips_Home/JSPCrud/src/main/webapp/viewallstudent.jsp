@@ -11,8 +11,11 @@
 
 %>
 
+<jsp:include page="header.jsp"></jsp:include>
 
-<table border="1" >
+<h1 class="text-center mt-5">All Student Data</h1>
+
+<table class="container table-striped mb-5 mt-5" >
     <thead>
         <tr>
             <th>ID</th>
@@ -44,3 +47,5 @@
     </tbody>   
 
 </table>
+
+<jsp:include page="footer.jsp"></jsp:include>

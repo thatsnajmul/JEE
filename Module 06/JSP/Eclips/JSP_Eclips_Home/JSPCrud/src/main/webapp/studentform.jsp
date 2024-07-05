@@ -31,7 +31,10 @@
     </div>
   </div>
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div style="text-align: center" class="container mb-5">
+  	 <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+ 
   
   
 </form>
