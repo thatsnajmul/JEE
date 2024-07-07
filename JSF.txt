@@ -1,0 +1,3 @@
+The project Properties > Actions settings are stored in this file.
+
+https://stackoverflow.com/questions/51972252/netbeans-java-maven-project-builds-sucesfully-but-wont-run
