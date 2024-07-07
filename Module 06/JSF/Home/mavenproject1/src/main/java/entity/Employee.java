@@ -14,6 +14,6 @@ public class Employee {
     private String department;
     private double salary;
 
-    // Getters and setters
+    // Getters and setters and db then probably view and crud completely
 }
 
