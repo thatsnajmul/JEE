@@ -27,5 +27,16 @@ add css source under the build:
 		node_modules/bootstrap/dist/css/bootstrap.min.cs
 		node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
 
+
+ng new myangularproject --no-standalone (project folder)
+
+============================================
+ng new myangularproject --standalone false
 ng g c student (For make a new component)
 ng new component --standalone projectname false/true
+====================================================
+
+npm install -g json-server (For installing json server on the project)
+manually create a db.json file
+Component: ng g c name
+Service: ng g s name
