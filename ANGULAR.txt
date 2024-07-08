@@ -12,12 +12,12 @@ npm install -g @angular/cli (For install angular)
 ng v (For checking angular version)
 npm fund 
 ctrl+shift+c (For copying from cmd)
-
-
+=====================================================
+================================================================
 ng new projectname (For create a new project where you install)
 ng serve or ng s (For start)
 ctrl+c (For close)
-
+================================================================
 If error run the command (powershell Set-ExecutionPolicy RemoteSigned)
 
 
@@ -40,3 +40,6 @@ npm install -g json-server (For installing json server on the project)
 manually create a db.json file
 Component: ng g c name
 Service: ng g s name
+
+
+
