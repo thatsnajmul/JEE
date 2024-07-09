@@ -7,7 +7,7 @@ import { CreatelocationComponent } from './createlocation/createlocation.compone
 import { StudentComponent } from './student/student.component';
 import { LocationComponent } from './location/location.component';
 import { EmployeeComponent } from './employee/employee.component';
-import { ModelComponent } from './model/location.model.component';
+
 
 @NgModule({
   declarations: [
