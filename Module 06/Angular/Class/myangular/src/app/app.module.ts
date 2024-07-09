@@ -15,8 +15,7 @@ import { EmployeeComponent } from './employee/employee.component';
     CreatelocationComponent,
     StudentComponent,
     LocationComponent,
-    EmployeeComponent,
-    
+    EmployeeComponent,   
   ],
   imports: [
     BrowserModule,

@@ -97,7 +97,7 @@ Install boostrap:-------------> npm i bootstrap@5.3.3
 Create a project:-------------------> ng new myangularproject --no-standalone
 Create a JSON File:-----------------> db.json
 Install json server:----------------> npm install -g json-server
-Run json server:--------------------> watch db.json
+Run json server:--------------------> json-server --watch db.json
 Create service for controller----> ng g s name
 Create component for view----------> ng g c name
 
