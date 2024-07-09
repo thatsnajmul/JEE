@@ -1,0 +1,9 @@
+<p>item-edit works!</p>
+<ul>
+    <li *ngFor="let item of items">
+      <a [routerLink]="['/items/view', item.id]">{{ item.name }}</a>
+      <button (click)="deleteItem(item.id)">Delete</button>
+      <a [routerLink]="['/items/edit', item.id]">Edit</a>
+    </li>
+  </ul>
+  

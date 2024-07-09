@@ -1,0 +1,11 @@
+<h2>Add Item</h2>
+<form (ngSubmit)="addItem()">
+  <label for="name">Name:</label>
+  <input id="name" [(ngModel)]="item.name" name="name" required>
+
+  <label for="description">Description:</label>
+  <input id="description" [(ngModel)]="item.description" name="description" required>
+
+  <button type="submit">Add</button>
+</form>
+
