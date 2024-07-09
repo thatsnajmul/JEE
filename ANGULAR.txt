@@ -6,7 +6,7 @@ npm (install in the directory)
 npm -v (For checking npm version)
 
 
-Angular JS
+Angular JS ========https://angular.dev/api
 ==========
 npm install -g @angular/cli (For install angular)
 ng v (For checking angular version)
@@ -76,5 +76,13 @@ manually create a db.json file
 Component: ng g c name
 Service: ng g s name
 
+---Again
+ng new myangularproject --no-standalone
+
+
+--Angular(MVC)
+Component------>Service---->M(Service)
+HTML----------->Component-->V(View)
+Service-------->URL-------->C(controller)
 
 
