@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myangularproject": {
+    "angular-crud-json": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/myangularproject",
+            "outputPath": "dist/angular-crud-json",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "myangularproject:build:production"
+              "buildTarget": "angular-crud-json:build:production"
             },
             "development": {
-              "buildTarget": "myangularproject:build:development"
+              "buildTarget": "angular-crud-json:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -107,8 +107,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "dc0243a1-b934-43aa-b3c0-bd05bd96ba6c"
   }
 }

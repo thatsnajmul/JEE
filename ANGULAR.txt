@@ -18,6 +18,41 @@ ng new projectname (For create a new project where you install)
 ng serve or ng s (For start)
 ctrl+c (For close)
 ================================================================
+\\\\\\\\\\\\
+npm install -g @angular/cli
+----------bash-------------
+ng new angular-crud-json
+cd angular-crud-json
+----------------------
+npm install -g json-server
+Create a JSON File: db.json
+Run JSON Server: json-server --watch db.json
+Generate Angular Components and Services: ng generate service item
+----------bash(git bash)--------
+ng generate component item-list
+ng generate component item-add
+ng generate component item-edit
+ng generate component item-view
+-------------------------------
+Configure Angular Service: item.service.ts
+Update Components: 
+		item-list.component.ts
+		item-add.component.ts:
+		item-edit.component.ts:
+		item-view.component.ts:
+Set Up Routing:	app-routing.module.ts
+Update HTML Templates: 
+		item-list.component.html:
+		item-add.component.html:
+		item-edit.component.html:
+		item-view.component.html:
+
+Run the Angular Application: ng serve
+Open your browser and navigate to: http://localhost:4200
+		
+\\\\\\\\\\\\\\\
+
+
 If error run the command (powershell Set-ExecutionPolicy RemoteSigned)
 
 
