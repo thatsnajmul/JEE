@@ -76,8 +76,29 @@ manually create a db.json file
 Component: ng g c name
 Service: ng g s name
 
----Again
-ng new myangularproject --no-standalone
+
+
+=================================================================================
+=================================================================================
+=========================Angular Project Behevior================================
+=================================================================================
+=================================================================================
+---Again For json with bootstrap
+Create a project:-------------------> ng new myangularproject --no-standalone
+Create a JSON File:-----------------> db.json
+Install json server:----------------> npm install -g json-server
+Run json server:--------------------> watch db.json
+Create service for controller----> ng g s name
+Create component for view----------> ng g c name
+Install boostrap:-------------> npm i bootstrap@5.3.3
+
+---Again For no-json with bootstrap
+Create a project:-------------------> ng new myangularproject --no-standalone
+Create a JSON File:-----------------> db.json
+Install json server:----------------> npm install -g json-server
+Run json server:--------------------> watch db.json
+Create service for controller----> ng g s name
+Create component for view----------> ng g c name
 
 
 --Angular(MVC)
@@ -85,4 +106,8 @@ Component------>Service---->M(Service)
 HTML----------->Component-->V(View)
 Service-------->URL-------->C(controller)
 
-
+=================================================================================
+=================================================================================
+=================================================================================
+=================================================================================
+=================================================================================
