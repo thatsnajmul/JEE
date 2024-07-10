@@ -12,7 +12,7 @@ export class LocationComponent implements OnInit {
   locations: any;
 
   constructor(
-    private locationService: LocationService,
+    private locationService: ,
     private router: Router,
     private httpClient: HttpClient
   ) {
