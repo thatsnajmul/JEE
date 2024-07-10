@@ -4,19 +4,25 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreatelocationComponent } from './createlocation/createlocation.component';
-import { StudentComponent } from './student/student.component';
+
 import { LocationComponent } from './location/location.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { StudentviewComponent } from './student/studentview/studentview.component';
+import { CreatestudentComponent } from './student/createstudent/createstudent.component';
+import { UpdatestudentComponent } from './student/updatestudent/updatestudent.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatelocationComponent,
-    StudentComponent,
+   
     LocationComponent,
     
-    EmployeeComponent,   
+    EmployeeComponent,
+          StudentviewComponent,
+          CreatestudentComponent,
+          UpdatestudentComponent,   
   ],
   imports: [
     BrowserModule,
