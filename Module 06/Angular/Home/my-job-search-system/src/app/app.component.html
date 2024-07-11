@@ -14,8 +14,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-white bg-white">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwlV23HoCvVKVo0F2iz-xHySNLC5_Cz-C-bA&s" alt="ff" class="d-inline-block align-text-top">
+            <a  class="navbar-brand" href="index.html">
+                <img style="width: 200px;" src="../assets/images/logo.png" alt="ff" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="jobs.html">Jobs</a>
+                        <a class="nav-link active" aria-current="page" router-link="/Jobs">Jobs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Companies</a>
@@ -42,3 +42,6 @@
             </div>
         </div>
     </nav>
+<div class="container-fluid">
+    <router-outlet></router-outlet>
+</div>
