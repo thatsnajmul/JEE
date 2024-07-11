@@ -1,0 +1,81 @@
++--------------------+
+|      Employee      |
++--------------------+
+| - EmployeeNumber   |
+| - Name             |
+| - StartDate        |
++--------------------+
+          ^
+          |
+          |--------------------------------------+
+          |                                      |
++--------------------+                +-----------------------+
+|  Technical Staff   |                |  Administrative Staff  |
++--------------------+                +-----------------------+
+| - AreaOfSkill      |                | - Qualification        |
+| - Availability     |                +-----------------------+
++--------------------+                           |
+                                                ManagedBy
+                                                 |
++--------------------+                           |
+|      Campaign      |<--------------------------+
++--------------------+
+| - Title            |
+| - Requirements     |
+| - StartDate        |
+| - EndDate          |
+| - BudgetCost       |
++--------------------+
+          |
+          | ComposedOf
+          |
++--------------------+
+|    Advertisement   |
++--------------------+
+| - Title            |
+| - TargetDate       |
+| - EstimatedCost    |
+| - ActualCost       |
++--------------------+
+          ^
+          |
+          |-----------------------------+
+          |                             |
++-------------------------+   +-----------------------+
+| Newspaper Advertisement |   |  Website Advertisement|
++-------------------------+   +-----------------------+
+| - Newspaper             |   | - WebsiteProvider     |
+| - Placement             |   | - StartDate           |
+| - Date                  |   | - EndDate             |
+| - RepeatDates           |
++-------------------------+
+          |
+          | PlacementAvailability
+          |
++-----------------------+
+|   Newspaper Company   |
++-----------------------+
+| - Name                |
+| - PlacementAvailability|
++-----------------------+
+
++--------------------+
+|      Customer      |
++--------------------+
+| - CompanyName      |
+| - Address          |
+| - FaxNumber        |
+| - ContactPerson    |
++--------------------+
+          |
+          | Proposes
+          |
++--------------------+
+|      Campaign      |
++--------------------+
+| - Title            |
+| - Requirements     |
+| - StartDate        |
+| - EndDate          |
+| - BudgetCost       |
++--------------------+

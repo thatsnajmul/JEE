@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Edit Employee</title>
+</h:head>
+<h:body>
+    <h1>Edit Employee</h1>
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel for="name" value="Name: " />
+            <h:inputText id="name" value="#{employeeBean.employee.name}" />
+
+            <h:outputLabel for="department" value="Department: " />
+            <h:inputText id="department" value="#{employeeBean.employee.department}" />
+
+            <h:outputLabel for="salary" value="Salary: " />
+            <h:inputText id="salary" value="#{employeeBean.employee.salary}" />
+        </h:panelGrid>
+        <h:commandButton value="Update" action="#{employeeBean.update}"/>
+        <h:commandLink value="Cancel" action="index"/>
+    </h:form>
+</h:body>
+</html>
+

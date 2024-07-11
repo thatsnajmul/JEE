@@ -1,0 +1,4 @@
+com\example\util\HibernateUtil.class
+com\example\model\Employee.class
+com\example\bean\EmployeeBean.class
+com\example\dao\EmployeeDAO.class

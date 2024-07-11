@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { LocationService } from '../service/location.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -12,7 +13,7 @@ export class LocationComponent implements OnInit {
   locations: any;
 
   constructor(
-    private locationService: ,
+    private locationService: LocationService,
     private router: Router,
     private httpClient: HttpClient
   ) {
@@ -21,7 +22,7 @@ export class LocationComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.locations = this.locationService.getAllLocation();
+    this.locations = this.locationService.getAlllocation();
   }
 
   deleteLocation(id: string) {
