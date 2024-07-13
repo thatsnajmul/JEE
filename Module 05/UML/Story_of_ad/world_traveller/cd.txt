@@ -1,0 +1,117 @@
++----------------------+
+|       Customer       |
++----------------------+
+| - customerID         |
+| - name               |
+| - address            |
+| - contactDetails     |
++----------------------+
+          |
+          | 1
+          |
+          | *
++----------------------+
+|  Sales Consultant    |
++----------------------+
+| - consultantID       |
+| - name               |
+| - contactDetails     |
++----------------------+
+          |
+          | 1
+          |
+          | *
++----------------------+
+|      Itinerary       |
++----------------------+
+| - itineraryID        |
+| - creationDate       |
+| - status             |
++----------------------+
+          |
+          | 1
+          |
+          | *
++----------------------+
+|       Booking        |
++----------------------+
+| - bookingID          |
+| - type               |
+| - details            |
+| - status             |
++----------------------+
+          |
+          | 1
+          |
+          | *
++----------------------+
+|      Payment         |
++----------------------+
+| - paymentID          |
+| - amount             |
+| - paymentDate        |
+| - paymentMethod      |
+| - isDeposit          |
+| - commissionRate     |
++----------------------+
+
++----------------------+
+|      Flight          |
++----------------------+
+| - flightID           |
+| - airline            |
+| - departureTime      |
+| - arrivalTime        |
+| - price              |
++----------------------+
+          |
+          | 1
+          |
+          | *
++----------------------+
+|       Hotel          |
++----------------------+
+| - hotelID            |
+| - name               |
+| - location           |
+| - checkInDate        |
+| - checkOutDate       |
+| - price              |
++----------------------+
+          |
+          | 1
+          |
+          | *
++----------------------+
+|   Holiday Agency     |
++----------------------+
+| - agencyID           |
+| - name               |
+| - location           |
+| - price              |
++----------------------+
+          |
+          | 1
+          |
+          | *
++----------------------+
+|    Insurance         |
++----------------------+
+| - insuranceID        |
+| - provider           |
+| - coverage           |
+| - price              |
++----------------------+
+          |
+          | 1
+          |
+          | *
++----------------------+
+|     Car Hire         |
++----------------------+
+| - carHireID          |
+| - provider           |
+| - pickUpLocation     |
+| - dropOffLocation    |
+| - price              |
++----------------------+
