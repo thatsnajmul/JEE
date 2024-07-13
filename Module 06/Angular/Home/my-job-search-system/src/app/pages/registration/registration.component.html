@@ -3,63 +3,97 @@
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-lg-8 col-xl-6">
           <div class="card rounded-3">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
-              class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
-              alt="Sample photo">
+            
             <div class="card-body p-4 p-md-5">
-              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
+              <h3 style="text-align: center;" class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration</h3>
   
               <form class="px-md-2">
   
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="text" id="form3Example1q" class="form-control" />
-                  <label class="form-label" for="form3Example1q">Name</label>
+                <div data-mdb-input-init class="form-outline">
+                  <input [(NngModel)]="employerObj.CompanyName" name="CompanyName" type="text" id="" class="form-control" />
+                  <label class="form-label" for="">Company Name</label>
                 </div>
   
                 <div class="row">
+                  
+                  <div class="col-md-4 mb-4">
+  
+                    <input [(NngModel)]="employerObj.EmailId" name="EmailId" type="text" id="" class="form-control" />
+                  <label class="form-label" for="">Email</label>
+  
+                  </div>
+                  <div class="col-md-4 mb-4">
+  
+                    <input [(NngModel)]="employerObj.MobileNo" name="MobileNo" type="text" id="" class="form-control" />
+                  <label class="form-label" for="">Mobile</label>
+  
+                  </div>
+                  <div class="col-md-4 mb-4">
+  
+                    <input [(NngModel)]="employerObj.PhoneNo" name="PhoneNo" type="text" id="" class="form-control" />
+                  <label class="form-label" for="">Phone</label>
+  
+                  </div>
+                  
+                </div>
+                
+                <div class="row">
+                  
                   <div class="col-md-6 mb-4">
   
-                    <div data-mdb-input-init class="form-outline datepicker">
-                      <input type="text" class="form-control" id="exampleDatepicker1" />
-                      <label for="exampleDatepicker1" class="form-label">Select a date</label>
-                    </div>
+                    <input [(NngModel)]="employerObj.LogoURL" name="text" type="url" id="" class="form-control" />
+                  <label class="form-label" for="">Company Logo URL</label>
   
                   </div>
-                  <div class="col-md-6 mb-4">
+                  <div  class="col-md-6 mb-4">
   
-                    <select data-mdb-select-init>
-                      <option value="1" disabled>Gender</option>
-                      <option value="2">Female</option>
-                      <option value="3">Male</option>
-                      <option value="4">Other</option>
-                    </select>
+                    <input [(NngModel)]="employerObj.GstNo" name="GstNo" type="text" id="" class="form-control" />
+                  <label class="form-label" for="">Company Registration Number</label>
   
                   </div>
+                  
+                  
                 </div>
+
+                <div class="row">
+                  
+                  <div class="col-md-4 mb-4">
   
-                <div class="mb-4">
-  
-                  <select data-mdb-select-init>
-                    <option value="1" disabled>Class</option>
-                    <option value="2">Class 1</option>
-                    <option value="3">Class 2</option>
-                    <option value="4">Class 3</option>
-                  </select>
-  
-                </div>
-  
-                <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
-                  <div class="col-md-6">
-  
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example1w" class="form-control" />
-                      <label class="form-label" for="form3Example1w">Registration code</label>
-                    </div>
+                    <input [(NngModel)]="employerObj.City" name="City" type="text" id="" class="form-control" />
+                  <label class="form-label" for="">City</label>
   
                   </div>
-                </div>
+                  <div class="col-md-4 mb-4">
   
-                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-success btn-lg mb-1">Submit</button>
+                    <input [(NngModel)]="employerObj.State" name="State" type="text" id="" class="form-control" />
+                  <label class="form-label" for="">State</label>
+  
+                  </div>
+                  <div class="col-md-4 mb-4">
+  
+                    <input [(NngModel)]="employerObj.PinCode" name="PinCode" type="text" id="" class="form-control" />
+                  <label class="form-label" for="">Zip</label>
+  
+                  </div>
+                  
+                </div>
+
+                <div class="row">
+                
+  
+                  <div class="col-md-12 mb-4">
+  
+                    <textarea [(NngModel)]="employerObj.CompanyAddress" name="CompanyAddress" type="text" id="" class="form-control" ></textarea>
+                  <label class="form-label" for="">Address</label>
+  
+                  </div>
+                  
+                </div>
+                
+  
+                
+  
+                <button (click)="register()" type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-success btn-lg mb-1">Submit</button>
   
               </form>
   
