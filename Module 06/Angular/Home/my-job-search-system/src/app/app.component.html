@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" router-link="/Jobs">Jobs</a>
+                        <a class="nav-link active" aria-current="page" routerLink="/jobs">Jobs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Companies</a>
@@ -37,7 +37,7 @@
                 </ul>
                 <form class="d-flex">
                     <button class="btn btn-outline-primary round-button mx-2" type="button">Login</button>
-                    <button class="btn btn-success round-button" type="button">Register</button>
+                    <button routerLink="/registration" class="btn btn-success round-button" type="button">Register</button>
                 </form>
             </div>
         </div>
@@ -45,3 +45,4 @@
 <div class="container-fluid">
     <router-outlet></router-outlet>
 </div>
+<router-outlet></router-outlet>
