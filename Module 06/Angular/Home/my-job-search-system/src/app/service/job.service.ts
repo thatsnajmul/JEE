@@ -23,22 +23,11 @@ interface EmployeerData {
 export class JobService {
 
 
-  //private apiUrl = 'http://localhost:3000/AddNewEmployer';
+  
 
   constructor(private http: HttpClient) { }
 
-  // registrationEmployer(employee: EmployeerData): Observable<EmployeerData> {
-  //   return this.http.post<EmployeerData>(this.apiUrl, employee);
-  // }
-
     apiEndPoint: string = 'https://freeapi.miniprojectideas.com/api/JobPortal/';
-  // baseUrl: string = "http://localhost:3000/AddNewEmployer";
-
-  // constructor(private http: HttpClient) { 
-    
-  // }
-  //return this.httpClient.get(this.baseUrl);
- // return this.http.post(this.baseUrl,obj);
 
   registrationEmployer(obj: any){
    return this.http.post(this.apiEndPoint+'AddNewEmployer',obj);
