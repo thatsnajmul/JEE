@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+//import { Observable } from 'rxjs';
 
 interface EmployeerData {
   CompanyName: string;
@@ -31,7 +31,7 @@ export class JobService {
   //   return this.http.post<EmployeerData>(this.apiUrl, employee);
   // }
 
-    apiEndPoint: string = 'https://freeapi.miniprojectideas.com/api/JobPortal/'
+    apiEndPoint: string = 'https://freeapi.miniprojectideas.com/api/JobPortal/';
   // baseUrl: string = "http://localhost:3000/AddNewEmployer";
 
   // constructor(private http: HttpClient) { 
