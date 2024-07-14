@@ -27,10 +27,10 @@ export class JobService {
 
   constructor(private http: HttpClient) { }
 
-    apiEndPoint: string = 'https://freeapi.miniprojectideas.com/api/JobPortal/';
+    apiEndPoint: string = 'https://freeapi.miniprojectideas.com/api/ClientStrive/';
 
   registrationEmployer(obj: any){
-   return this.http.post(this.apiEndPoint+'AddNewEmployer',obj);
+   return this.http.post(this.apiEndPoint+'CreateNewEmployee',obj);
     
   }
 
