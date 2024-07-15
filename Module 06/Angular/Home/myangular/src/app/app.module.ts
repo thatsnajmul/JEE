@@ -3,26 +3,43 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreatelocationComponent } from './createlocation/createlocation.component';
-import { StudentComponent } from './student/student.component';
-import { LocationComponent } from './location/location.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { LocationComponent } from './location/location.component';
+import { CreatelocationComponent } from './createlocation/createlocation.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { UpdatelocationComponent } from './updatelocation/updatelocation.component';
+import { ViewstudentComponent } from './student/viewstudent/viewstudent.component';
+import { CreatestudentComponent } from './student/createstudent/createstudent.component';
+import { UpdatestudentComponent } from './student/updatestudent/updatestudent.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CreatelocationComponent,
-    StudentComponent,
+    AppComponent,    
+    EmployeeComponent,
     LocationComponent,
-    EmployeeComponent,   
+    CreatelocationComponent,
+    UpdatelocationComponent,
+    ViewstudentComponent,
+    CreatestudentComponent,
+    UpdatestudentComponent,     
   ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule, 
+    AppRoutingModule 
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(
+      withFetch()
+    )
   ],
   bootstrap: [AppComponent]
 })

@@ -41,6 +41,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
+
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ],
             "server": "src/main.server.ts",
@@ -112,6 +113,6 @@
     }
   },
   "cli": {
-    "analytics": "70497fad-6ac9-4c46-af0f-6b276345441f"
+    "analytics": "723d3ff6-99f5-49bc-84a2-71fd931903ba"
   }
 }

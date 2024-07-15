@@ -1,44 +1,94 @@
 {
-    "locations": [
-      {
+  "locations": [
+    {
+      "id": "0",
+      "name": "Dhanmondi",
+      "city": "Dhaka",
+      "state": "Dhaka",
+      "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+      "availableUnits": 4,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "1",
+      "name": "Mirpur",
+      "city": "Dhaka",
+      "state": "Dhaka",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+      "availableUnits": 0,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "2",
+      "name": "Another Place",
+      "city": "Juneau",
+      "state": "AK",
+      "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+      "availableUnits": 1,
+      "wifi": false,
+      "laundry": false
+    },
+    {
+      "id": "76fb",
+      "name": "Md Najmul Islam",
+      "city": "Dhaka",
+      "state": "Jhalokathi",
+      "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftheweek.com%2Farts-life%2Ffood-drink%2F955083%2Ffenchurch-restaurant-review-london-walkie-talkie-sky-garden&psig=AOvVaw3Jov2roJBxV76W6zN4xtu1&ust=1721083564316000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNj8343Op4cDFQAAAAAdAAAAABAE",
+      "availableUnits": "5",
+      "wifi": true,
+      "laundry": true
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "dfdwedw",
+      "email": "ddddddddddd@gmail.com",
+      "cellNo": "22555632",
+      "location": {
         "id": "0",
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
+        "name": "Dhanmondi",
+        "city": "Dhaka",
+        "state": "Dhaka",
         "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
         "availableUnits": 4,
         "wifi": true,
         "laundry": true
-      },
-      {
+      }
+    },
+    {
+      "id": "ddwedwew",
+      "name": "dewewewd",
+      "email": "dweweweds@gmail.com",
+      "cellNo": "wewewe",
+      "location": {
+        "id": "0",
+        "name": "wewewew",
+        "city": "Dhaka",
+        "state": "Dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+        "availableUnits": 4,
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "f48f",
+      "name": "aa",
+      "email": "aa@gmail.com",
+      "cellNo": "aa",
+      "location": {
         "id": "1",
-        "name": "A113 Transitional Housing",
-        "city": "Santa Monica",
-        "state": "CA",
+        "name": "Khilgaon",
+        "city": "Dhaka",
+        "state": "Dhaka",
         "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
         "availableUnits": 0,
-        "wifi": false,
-        "laundry": true
-      },
-      {
-        "id": "2",
-        "name": "Warm Beds Housing Support",
-        "city": "Juneau",
-        "state": "AK",
-        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
-        "availableUnits": 1,
-        "wifi": false,
-        "laundry": false
-      },
-      {
-        "id": "3",
-        "name": "Homesteady Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "https://angular.io/assets/images/tutorials/faa/ian-macdonald-W8z6aiwfi1E-unsplash.jpg",
-        "availableUnits": 1,
         "wifi": true,
-        "laundry": false
+        "laundry": true
       }
-    ]
-  }
+    }
+  ]
+}

@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { LocationService } from '../service/location.service';
 import { Component, OnInit } from '@angular/core';
+import { LocationService } from './location.service';
 import { Router } from '@angular/router';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-location',
@@ -22,7 +21,7 @@ export class LocationComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.locations = this.locationService.getAlllocation();
+    this.locations = this.locationService.getAllLocation();
   }
 
   deleteLocation(id: string) {
@@ -39,6 +38,11 @@ export class LocationComponent implements OnInit {
 
       });
 
+  }
+
+
+  updateLocation(id:string){
+    this.router.navigate(['updatelocation',id]);
   }
 
 
