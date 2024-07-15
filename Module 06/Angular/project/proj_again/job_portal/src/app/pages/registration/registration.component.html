@@ -6,11 +6,14 @@
           <div class="card-body p-4 p-md-5">
             <h3 style="text-align: center;" class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration</h3>
 
-            <form>
+            <form #registrationForm="ngForm" (ngSubmit)="registration()">
               
               <div class="form-outline mb-4" data-mdb-input-init>
                 <input [(ngModel)]="employerObj.CompanyName" name="CompanyName" type="text" id="companyName" class="form-control" required />
                 <label class="form-label" for="companyName">Company Name</label>
+                <div *ngIf="registrationForm.submitted && !registrationForm.controls['CompanyName'].valid" class="text-danger">
+                  Company Name is required.
+                </div>
               </div>
 
               <div class="row">
@@ -18,14 +21,18 @@
                   <div class="form-outline" data-mdb-input-init>
                     <input [(ngModel)]="employerObj.EmailId" name="EmailId" type="email" id="emailId" class="form-control" required />
                     <label class="form-label" for="emailId">Email</label>
-                    
+                    <div *ngIf="registrationForm.submitted && !registrationForm.controls['EmailId'].valid" class="text-danger">
+                      Valid Email is required.
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
                   <div class="form-outline" data-mdb-input-init>
                     <input [(ngModel)]="employerObj.MobileNo" name="MobileNo" type="text" id="mobileNo" class="form-control" required />
                     <label class="form-label" for="mobileNo">Mobile</label>
-                    
+                    <div *ngIf="registrationForm.submitted && !registrationForm.controls['MobileNo'].valid" class="text-danger">
+                      Mobile number is required.
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -41,14 +48,18 @@
                   <div class="form-outline" data-mdb-input-init>
                     <input [(ngModel)]="employerObj.LogoURL" name="LogoURL" type="url" id="logoURL" class="form-control" required />
                     <label class="form-label" for="logoURL">Company Logo URL</label>
-                    
+                    <div *ngIf="registrationForm.submitted && !registrationForm.controls['LogoURL'].valid" class="text-danger">
+                      Company Logo URL is required.
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline" data-mdb-input-init>
                     <input [(ngModel)]="employerObj.GstNo" name="GstNo" type="text" id="gstNo" class="form-control" required />
                     <label class="form-label" for="gstNo">Company Registration Number</label>
-                    
+                    <div *ngIf="registrationForm.submitted && !registrationForm.controls['GstNo'].valid" class="text-danger">
+                      Company Registration Number is required.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -58,21 +69,27 @@
                   <div class="form-outline" data-mdb-input-init>
                     <input [(ngModel)]="employerObj.City" name="City" type="text" id="city" class="form-control" required />
                     <label class="form-label" for="city">City</label>
-                    
+                    <div *ngIf="registrationForm.submitted && !registrationForm.controls['City'].valid" class="text-danger">
+                      City is required.
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
                   <div class="form-outline" data-mdb-input-init>
                     <input [(ngModel)]="employerObj.State" name="State" type="text" id="state" class="form-control" required />
                     <label class="form-label" for="state">State</label>
-                    
+                    <div *ngIf="registrationForm.submitted && !registrationForm.controls['State'].valid" class="text-danger">
+                      State is required.
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
                   <div class="form-outline" data-mdb-input-init>
                     <input [(ngModel)]="employerObj.PinCode" name="PinCode" type="text" id="pinCode" class="form-control" required />
                     <label class="form-label" for="pinCode">Zip</label>
-                    
+                    <div *ngIf="registrationForm.submitted && !registrationForm.controls['PinCode'].valid" class="text-danger">
+                      Zip Code is required.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -80,10 +97,12 @@
               <div class="form-outline mb-4" data-mdb-input-init>
                 <textarea [(ngModel)]="employerObj.CompanyAddress" name="CompanyAddress" id="companyAddress" class="form-control" required></textarea>
                 <label class="form-label" for="companyAddress">Address</label>
-                
+                <div *ngIf="registrationForm.submitted && !registrationForm.controls['CompanyAddress'].valid" class="text-danger">
+                  Address is required.
+                </div>
               </div>
               
-              <button (ngSubmit)="registration()" type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+              <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
               
             </form>
 

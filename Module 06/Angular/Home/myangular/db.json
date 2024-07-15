@@ -1,18 +1,38 @@
 {
+  "user": [
+    {
+      "id": "1",
+      "name": "Raju Ahmed",
+      "email": "raju@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "89cf",
+      "name": "Muhammad Emran Hossain",
+      "email": "hsstanvir@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "6721",
+      "name": "Md Najmul Islam",
+      "email": "nmhislam1@gmail.com",
+      "password": "1234"
+    }
+  ],
   "locations": [
     {
       "id": "0",
       "name": "Dhanmondi",
       "city": "Dhaka",
       "state": "Dhaka",
-      "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXhpgeCdZS9TVcKeA8UdnSI8FX1vz8l-cufA&s",
       "availableUnits": 4,
       "wifi": true,
       "laundry": true
     },
     {
       "id": "1",
-      "name": "Mirpur",
+      "name": "Khilgaon",
       "city": "Dhaka",
       "state": "Dhaka",
       "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
@@ -22,31 +42,21 @@
     },
     {
       "id": "2",
-      "name": "Another Place",
+      "name": "Warm Beds Housing Support",
       "city": "Juneau",
       "state": "AK",
       "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
       "availableUnits": 1,
       "wifi": false,
       "laundry": false
-    },
-    {
-      "id": "76fb",
-      "name": "Md Najmul Islam",
-      "city": "Dhaka",
-      "state": "Jhalokathi",
-      "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftheweek.com%2Farts-life%2Ffood-drink%2F955083%2Ffenchurch-restaurant-review-london-walkie-talkie-sky-garden&psig=AOvVaw3Jov2roJBxV76W6zN4xtu1&ust=1721083564316000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNj8343Op4cDFQAAAAAdAAAAABAE",
-      "availableUnits": "5",
-      "wifi": true,
-      "laundry": true
     }
   ],
   "students": [
     {
       "id": "1",
-      "name": "dfdwedw",
-      "email": "ddddddddddd@gmail.com",
-      "cellNo": "22555632",
+      "name": "Raju",
+      "email": "raju55@gmail.com",
+      "cellNo": "123456789",
       "location": {
         "id": "0",
         "name": "Dhanmondi",
@@ -59,13 +69,29 @@
       }
     },
     {
-      "id": "ddwedwew",
-      "name": "dewewewd",
-      "email": "dweweweds@gmail.com",
-      "cellNo": "wewewe",
+      "id": "2",
+      "name": "Towhid",
+      "email": "Towhid@gmail.com",
+      "cellNo": "123456789",
+      "location": {
+        "id": "2",
+        "name": "Warm Beds Housing Support",
+        "city": "Juneau",
+        "state": "AK",
+        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+        "availableUnits": 1,
+        "wifi": false,
+        "laundry": false
+      }
+    },
+    {
+      "id": "fc94",
+      "name": "dd",
+      "email": "dds@gmail.com",
+      "cellNo": "dd",
       "location": {
         "id": "0",
-        "name": "wewewew",
+        "name": "Dhanmondi",
         "city": "Dhaka",
         "state": "Dhaka",
         "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
