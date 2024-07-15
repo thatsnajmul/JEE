@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { JobService } from '../../service/job.service';
 
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -23,7 +24,9 @@ export class RegistrationComponent {
       "GstNo": ""
   }
 
-  constructor(private job: JobService){
+  constructor(private job: JobService){}
+
+  registration(){
     this.job.registrationEmployer(this.employerObj).subscribe((res:any)=>{
       if(res.result){
         alert('Save Successfully')
@@ -32,6 +35,7 @@ export class RegistrationComponent {
         alert('Save not Successfully')
       }
     })
+
   }
 
 }
