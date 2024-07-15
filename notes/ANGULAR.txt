@@ -128,7 +128,7 @@ Firebase authentication in angular:
 	$ bower install angularfire --save
 
 https://github.com/FirebaseExtended/angularfire/blob/master/docs/quickstart.md
-
+https://jsfiddle.net/katowulf/syuzw9k1/
 
 {
   "object1": [
