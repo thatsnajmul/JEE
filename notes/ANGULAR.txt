@@ -121,7 +121,13 @@ Service-------->URL-------->C(controller)
 =================================================================================
 =================================================================================
 
-ng i model auth.response
+Create Model File: ng i model auth.response
+
+Firebase authentication in angular:
+	$ npm install angularfire --save
+	$ bower install angularfire --save
+
+https://github.com/FirebaseExtended/angularfire/blob/master/docs/quickstart.md
 
 
 {
