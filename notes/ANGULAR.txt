@@ -26,7 +26,7 @@ cd angular-crud-json
 ----------------------
 npm install -g json-server
 Create a JSON File: db.json
-Run JSON Server: json-server --watch db.json
+Run JSON Server: json-server --watch db.json,  json-server --watch AddNewEmployer.json
 Generate Angular Components and Services: ng generate service item
 ----------bash(git bash)--------
 ng generate component item-list
@@ -120,3 +120,16 @@ Service-------->URL-------->C(controller)
 =================================================================================
 =================================================================================
 =================================================================================
+
+{
+  "object1": [
+    {
+      //
+    }
+  ],
+  "object2": [
+    {
+      //
+    }
+  ]
+}

@@ -11,6 +11,8 @@ import { JobListingComponent } from './pages/job-listing/job-listing.component';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { MyJobsComponent } from './pages/my-jobs/my-jobs.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import { RegistrationComponent } from './pages/registration/registration.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [
     provideClientHydration()
