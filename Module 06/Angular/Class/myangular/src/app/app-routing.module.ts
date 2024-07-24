@@ -9,6 +9,7 @@ import { ViewstudentComponent } from './student/viewstudent/viewstudent.componen
 import { CreatestudentComponent } from './student/createstudent/createstudent.component';
 import { UpdatestudentComponent } from './student/updatestudent/updatestudent.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
 
@@ -20,8 +21,8 @@ const routes: Routes = [
 {path: 'student', component:ViewstudentComponent},
 {path: 'createstudent', component:CreatestudentComponent},
 {path: 'updatestudent/:id', component:UpdatestudentComponent},
-{path: 'login', component:LocationComponent},
-{path: 'registration', component:RegistrationComponent},
+{path: 'reg', component:RegistrationComponent},
+{path: 'login', component:LoginComponent},
 
 ];
 

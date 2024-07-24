@@ -104,6 +104,7 @@ Install json server:----------------> npm install -g json-server
 Run json server:--------------------> json-server --watch db.json
 Create service for controller-------> ng g s name
 Create component for view-----------> ng g c name
+ng g g guard/authguard
 
 important file for angular:
 ***service file configure the json server and crud
