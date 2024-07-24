@@ -12,6 +12,7 @@ import { JobListingComponent } from './pages/job-listing/job-listing.component';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { MyJobsComponent } from './pages/my-jobs/my-jobs.component';
 import { FormsModule } from '@angular/forms';
+import { withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(
+      //withFetch()
+    )
   ],
   bootstrap: [AppComponent]
 })

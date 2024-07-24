@@ -11,42 +11,42 @@ import { MyJobsComponent } from './pages/my-jobs/my-jobs.component';
 const routes: Routes = [
   //Default route
   {
-    path:'',
-    redirectTo:'home',
-    pathMatch:'full'
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: 'home',
-    component:HomeComponent
+    component: HomeComponent
   },
   {
     path: 'login',
-    component:LoginComponent
+    component: LoginComponent
   },
   {
-    path:'register',
+    path: 'register',
     component: RegistrationComponent
   },
   {
-    path:'jobs',
-    component:JobsComponent
+    path: 'jobs',
+    component: JobsComponent
   },
   {
     path: 'new-job',
-    component:CreateNewJobComponent
+    component: CreateNewJobComponent
   },
   {
-    path:'job-listing',
-    component:JobListingComponent
+    path: 'job-listing',
+    component: JobListingComponent
   },
   {
-    path:'my-jobs',
-    component:MyJobsComponent
+    path: 'my-jobs',
+    component: MyJobsComponent
   },
   //While cart route
   {
-    path:'**',
-    component:HomeComponent
+    path: '**',
+    component: HomeComponent
   }
 
 ];

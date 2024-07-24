@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { userModel } from '../../model/user.model';
+import { AuthService } from '../../service/auth.service';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-registration',
@@ -6,34 +12,54 @@ import { Component } from '@angular/core';
   styleUrl: './registration.component.css'
 })
 export class RegistrationComponent {
+
+  regForm!:FormGroup;
   
-  employerObj: any = {
+  
+
+constructor(
+  private authService:AuthService,
+    private router:Router,
+    private formBuilder:FormBuilder
+){
+  this.regForm = this.formBuilder.group({
+    companyName:['', Validators.required],
+    emailId:['', [Validators.required, Validators.email]],
+    password:['',Validators.required],
+    mobileNo:['',Validators.required],
+    phoneNo:['',Validators.required],
+    logoURL:['',Validators.required],
+    gstNo:['',Validators.required],
+    city:['',Validators.required],
+    state:['',Validators.required],
+    pinCode:['',Validators.required],
+    companyAddress:['',Validators.required]
+
     
-    "EmployerId": 0,
-    "CompanyName": "",
-    "EmailId": "",
-    "MobileNo": "",
-    "PhoneNo": "",
-    "CompanyAddress": "",
-    "City": "",
-    "State": "",
-    "PinCode": "",
-    "LogoURL": "",
-    "GstNo": ""
+    
+    
+  })
 }
 
-// constructor(private job: JobService){}
+onSubmit(): void {
+  if (this.regForm.valid) {
+    const user: userModel = this.regForm.value;
+    this.authService.registration(user).subscribe({
+      next: (res) => {
+        console.log('User registered successfully:', res);
+        this.authService.storeToken(res.token);
+        this.router.navigate(['/']); // Navigate to a protected route after registration
+      },
+      error: (err) => {
+        console.error('Error registering user:', err);
+      }
+    });
+  }
+  else{
+    alert("Complete mandatory Field");
+  }
+}
 
-// registration(){
-//   this.job.registrationEmployer(this.employerObj).subscribe((res:any)=>{
-//     if(res.result){
-//       alert('Save Successfully')
-//     }
-//     else{
-//       alert('Save not Successfully')
-//     }
-//   })
 
-// }
 
 }

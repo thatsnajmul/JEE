@@ -6,86 +6,153 @@
           <div class="card-body p-4 p-md-5">
             <h3 style="text-align: center;" class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration</h3>
 
-            <form>
-              
-              <div class="form-outline mb-4" data-mdb-input-init>
-                <input [(ngModel)]="employerObj.CompanyName" name="CompanyName" type="text" id="companyName" class="form-control" required />
-                <label class="form-label" for="companyName">Company Name</label>
+            <div class="row mb-5">
+              <div class="col-12 text-center">
+                <div class="btn-group">
+                  <a type="button" (click)="isJobSeeker = true" class="btn" [ngClass]="isJobSeeker? 'btn-success':'btn-primary'">Are you Job Seeker?</a>
+                  <a type="button" (click)="isJobSeeker = false" class="btn" [ngClass]="!isJobSeeker? 'btn-success':'btn-primary'">Register As an Employeer?</a>
+                </div>
               </div>
+            </div>
 
-              <div class="row">
-                <div class="col-md-4 mb-4">
-                  <div class="form-outline" data-mdb-input-init>
-                    <input [(ngModel)]="employerObj.EmailId" name="EmailId" type="email" id="emailId" class="form-control" required />
-                    <label class="form-label" for="emailId">Email</label>
-                    
+
+            <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+            
+            <div *ngIf="isJobSeeker">
+              <form>
+                <div class="form-outline mb-4" data-mdb-input-init>
+                  <input [(ngModel)]="jobSeekerObj.jobSeekerObj" name="Fullname" type="text" id="Fullname" class="form-control" required />
+                  <label class="form-label" for="Fullname">Full Name</label>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <input [(ngModel)]="jobSeekerObj.EmailId" name="EmailId" type="email" id="EmailId" class="form-control" required />
+                      <label class="form-label" for="EmailId">Email ID</label>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <input [(ngModel)]="jobSeekerObj.jobSeekerObj" name="MobileNo" type="text" id="MobileNo" class="form-control" required />
+                      <label class="form-label" for="MobileNo">Mobile</label>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <select [(ngModel)]="jobSeekerObj.ExperienceStatus" name="ExperienceStatus" type="text" id="ExperienceStatus" class="form-select">
+                        <option value="" selected disabled>Select</option>
+                        <option value="Fresher">Fresher</option>
+                        <option value="Experienced">Experienced</option>
+                      </select>
+                      <label class="form-label" for="ExperienceStatus">Experience Status</label>   
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                  <div class="form-outline" data-mdb-input-init>
-                    <input [(ngModel)]="employerObj.MobileNo" name="MobileNo" type="text" id="mobileNo" class="form-control" required />
-                    <label class="form-label" for="mobileNo">Mobile</label>
-                    
-                  </div>
+  
+                <div class="form-outline mb-4" data-mdb-input-init>
+                  <input [(ngModel)]="jobSeekerObj.ResumeUrl" name="ResumeUrl" type="text" id="ResumeUrl" class="form-control" required />
+                  <label class="form-label" for="ResumeUrl">Resume URL</label>
                 </div>
-                <div class="col-md-4 mb-4">
-                  <div class="form-outline" data-mdb-input-init>
-                    <input [(ngModel)]="employerObj.PhoneNo" name="PhoneNo" type="text" id="phoneNo" class="form-control" />
-                    <label class="form-label" for="phoneNo">Phone</label>
-                  </div>
-                </div>
-              </div>
+  
+                <button (ngSubmit)="registerAsJobSeeker()" type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+
+              </form>
               
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline" data-mdb-input-init>
-                    <input [(ngModel)]="employerObj.LogoURL" name="LogoURL" type="url" id="logoURL" class="form-control" required />
-                    <label class="form-label" for="logoURL">Company Logo URL</label>
-                    
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline" data-mdb-input-init>
-                    <input [(ngModel)]="employerObj.GstNo" name="GstNo" type="text" id="gstNo" class="form-control" required />
-                    <label class="form-label" for="gstNo">Company Registration Number</label>
-                    
-                  </div>
-                </div>
-              </div>
+
+            </div>
+
+            <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
+            
+            
+            
+            <div *ngIf="!isJobSeeker">
+              <form>
               
-              <div class="row">
-                <div class="col-md-4 mb-4">
-                  <div class="form-outline" data-mdb-input-init>
-                    <input [(ngModel)]="employerObj.City" name="City" type="text" id="city" class="form-control" required />
-                    <label class="form-label" for="city">City</label>
-                    
+                <div class="form-outline mb-4" data-mdb-input-init>
+                  <input [(ngModel)]="employerObj.CompanyName" name="CompanyName" type="text" id="companyName" class="form-control" required />
+                  <label class="form-label" for="companyName">Company Name</label>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <input [(ngModel)]="employerObj.EmailId" name="EmailId" type="email" id="emailId" class="form-control" required />
+                      <label class="form-label" for="emailId">Email</label>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <input [(ngModel)]="employerObj.MobileNo" name="MobileNo" type="text" id="mobileNo" class="form-control" required />
+                      <label class="form-label" for="mobileNo">Mobile</label>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <input [(ngModel)]="employerObj.PhoneNo" name="PhoneNo" type="text" id="phoneNo" class="form-control" />
+                      <label class="form-label" for="phoneNo">Phone</label>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                  <div class="form-outline" data-mdb-input-init>
-                    <input [(ngModel)]="employerObj.State" name="State" type="text" id="state" class="form-control" required />
-                    <label class="form-label" for="state">State</label>
-                    
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="form-outline" data-mdb-input-init>
-                    <input [(ngModel)]="employerObj.PinCode" name="PinCode" type="text" id="pinCode" class="form-control" required />
-                    <label class="form-label" for="pinCode">Zip</label>
-                    
-                  </div>
-                </div>
-              </div>
-              
-              <div class="form-outline mb-4" data-mdb-input-init>
-                <textarea [(ngModel)]="employerObj.CompanyAddress" name="CompanyAddress" id="companyAddress" class="form-control" required></textarea>
-                <label class="form-label" for="companyAddress">Address</label>
                 
-              </div>
-              
-              <button (ngSubmit)="registration()" type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
-              
-            </form>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <input [(ngModel)]="employerObj.LogoURL" name="LogoURL" type="url" id="logoURL" class="form-control" required />
+                      <label class="form-label" for="logoURL">Company Logo URL</label>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <input [(ngModel)]="employerObj.GstNo" name="GstNo" type="text" id="gstNo" class="form-control" required />
+                      <label class="form-label" for="gstNo">Company Registration Number</label>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <input [(ngModel)]="employerObj.City" name="City" type="text" id="city" class="form-control" required />
+                      <label class="form-label" for="city">City</label>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <input [(ngModel)]="employerObj.State" name="State" type="text" id="state" class="form-control" required />
+                      <label class="form-label" for="state">State</label>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline" data-mdb-input-init>
+                      <input [(ngModel)]="employerObj.PinCode" name="PinCode" type="text" id="pinCode" class="form-control" required />
+                      <label class="form-label" for="pinCode">Zip</label>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-outline mb-4" data-mdb-input-init>
+                  <textarea [(ngModel)]="employerObj.CompanyAddress" name="CompanyAddress" id="companyAddress" class="form-control" required></textarea>
+                  <label class="form-label" for="companyAddress">Address</label>
+                  
+                </div>
+                
+
+                <button (ngSubmit)="registration()" type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+                
+              </form>
+            </div>
+            
+            
 
           </div>
         </div>

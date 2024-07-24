@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './createlocation.component.html',
   styleUrl: './createlocation.component.css'
 })
+
 export class CreatelocationComponent implements OnInit {
 
   location: Location = new Location();

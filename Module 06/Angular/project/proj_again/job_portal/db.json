@@ -1,0 +1,19 @@
+{
+    "user": [
+      {
+        "companyId": "1",
+        "companyName": "Microsoft",
+        "emailId": "admin@microsoft.com",
+        "password": "admin123",
+        "mobileNo": "0188165522",
+        "phoneNo": "0002545354",
+        "logoURL": "https:microsoft.com/logo.png",
+        "gstNo": "41254-255255",
+        "city": "California",
+        "state": "California",
+        "pinCode": "5235",
+        "companyAddress": "Microsoft Inc., California, United States"
+        
+      }
+    ]
+}
