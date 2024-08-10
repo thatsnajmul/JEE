@@ -1,0 +1,52 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Raju Ahmed",
+      "email": "raju@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "89cf",
+      "name": "Muhammad Emran Hossain",
+      "email": "hsstanvir@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "f08c",
+      "name": "Md Najmul Islam",
+      "email": "najmul@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "locations": [
+    {
+      "id": "ce94",
+      "name": "Dhaka",
+      "city": "Dhaka",
+      "state": "Jhalokathi",
+      "photo": "https://avatars.githubusercontent.com/u/71885020?v=4",
+      "availableUnits": "4",
+      "wifi": true,
+      "laundry": true
+    }
+  ],
+  "students": [
+    {
+      "id": "6b84",
+      "name": "Md Najmul Islam",
+      "email": "nmhislam1@gmail.com",
+      "cellNo": "01790349310",
+      "location": {
+        "id": "ce94",
+        "name": "Dhaka",
+        "city": "Dhaka",
+        "state": "Jhalokathi",
+        "photo": "https://avatars.githubusercontent.com/u/71885020?v=4",
+        "availableUnits": "4",
+        "wifi": true,
+        "laundry": true
+      }
+    }
+  ]
+}

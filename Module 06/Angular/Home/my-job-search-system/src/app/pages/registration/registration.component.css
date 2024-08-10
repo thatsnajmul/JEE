@@ -1,0 +1,16 @@
+.btn {
+    padding: 3px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .btn-success {
+    background-color: green;
+    color: white;
+  }
+  
+  .btn-primary {
+    background-color: blue;
+    color: white;
+  }
+  
