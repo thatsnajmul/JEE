@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { JobService } from '../services/job.service';
-import { AuthService } from '../services/auth.service';
+import { JobService } from '../job.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-post-job',

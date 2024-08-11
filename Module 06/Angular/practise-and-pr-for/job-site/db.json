@@ -1,5 +1,17 @@
 {
-    "users": [],
-    "jobs": []
-  }
-  
+  "users": [
+    {
+      "id": "577b",
+      "email": "najmul@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "09d2",
+      "title": "My First Job",
+      "description": "giewudgjdv m,fhdwehdf fdhiwqd",
+      "postedBy": "najmul@gmail.com"
+    }
+  ]
+}
