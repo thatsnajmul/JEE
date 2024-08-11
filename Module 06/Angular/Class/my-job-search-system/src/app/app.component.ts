@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'my-job-search-system';
+  //title = 'my-job-search-system';
+
+  isLoggedIn: boolean = false;
+
+  userInfo: any;
+
+  // constructor() {
+  //   // const userData = localStorage.getItem('jobLoginUser');
+  //   // if(userData == null) {
+  //   //   this.isLoggedIn = false;
+  //   // }
+  //   // else{
+  //   //   this.isLoggedIn = true;
+  //   //   this.userInfo = JSON.parse(userData);
+  //   // }
+  // }
+
+  // logOff(){
+  //   //localStorage.removeItem('jobLoginUser');
+  //   this.isLoggedIn = false;
+  // }
+
 }

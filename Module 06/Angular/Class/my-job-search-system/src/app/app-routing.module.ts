@@ -8,12 +8,17 @@ import { JobDetailsComponent } from './pages/job-details/job-details.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CreateNewJobComponent } from './pages/create-new-job/create-new-job.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo:'home',
     pathMatch: 'full'
+  },
+  {
+    path:'admin-login',
+    component: AdminLoginComponent
   },
   {
     path:'home',
