@@ -1,0 +1,9 @@
+ng g c create-new-job
+ng g c home
+ng g c job-details
+ng g c job-listing
+ng g c jobs
+ng g c login
+ng g c my-jobs
+ng g c registration
+
