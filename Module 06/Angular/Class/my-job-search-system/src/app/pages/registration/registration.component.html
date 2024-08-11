@@ -8,7 +8,7 @@
 
             <div class="row mb-5">
               <div class="col-12 text-center">
-                <div class="btn-group m-4">
+                <div class="btn-group">
                   <a type="button" (click)="isJobSeeker = true" class="btn" [ngClass]="isJobSeeker? 'btn-success':'btn-primary'">Are you Job Seeker?</a>
                   <a type="button" (click)="isJobSeeker = false" class="btn" [ngClass]="!isJobSeeker? 'btn-success':'btn-primary'">Register As an Employeer?</a>
                 </div>
@@ -21,7 +21,7 @@
             <div *ngIf="isJobSeeker">
               <form>
                 <div class="form-outline mb-4" data-mdb-input-init>
-                  <input [(ngModel)]="jobSeekerObj.jobSeekerObj" name="Fullname" type="text" id="Fullname" class="form-control" required />
+                  <input [(ngModel)]="jobSeekerObj.Fullname" name="Fullname" type="text" id="Fullname" class="form-control" required />
                   <label class="form-label" for="Fullname">Full Name</label>
                 </div>
   
@@ -35,7 +35,7 @@
                   </div>
                   <div class="col-md-4 mb-4">
                     <div class="form-outline" data-mdb-input-init>
-                      <input [(ngModel)]="jobSeekerObj.jobSeekerObj" name="MobileNo" type="text" id="MobileNo" class="form-control" required />
+                      <input [(ngModel)]="jobSeekerObj.MobileNo" name="MobileNo" type="text" id="MobileNo" class="form-control" required />
                       <label class="form-label" for="MobileNo">Mobile</label>
                       
                     </div>

@@ -24,6 +24,10 @@ export class JobService {
     return this.http.post(this.apiEndPoint+'AddNewJobSeeker',obj); 
    }
 
+   login(obj: any){
+    return this.http.post(this.apiEndPoint+'login',obj); 
+   }
+
   }
 
 

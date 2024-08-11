@@ -15,7 +15,7 @@ export class RegistrationComponent {
 
   employerObj: any = {
     
-      "EmployerId": "",
+      "EmployerId": 0,
       "CompanyName": "",
       "EmailId": "",
       "MobileNo": "",
