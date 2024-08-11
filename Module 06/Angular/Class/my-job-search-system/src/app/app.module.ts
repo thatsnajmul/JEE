@@ -14,6 +14,7 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RouterModule } from '@angular/router';
     JobListingComponent,
     JobsComponent,
     MyJobsComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
