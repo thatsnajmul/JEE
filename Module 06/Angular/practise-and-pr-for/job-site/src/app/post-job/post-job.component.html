@@ -1,0 +1,6 @@
+<form (ngSubmit)="postJob()">
+    <input type="text" [(ngModel)]="job.title" name="title" placeholder="Job Title" required />
+    <textarea [(ngModel)]="job.description" name="description" placeholder="Job Description" required></textarea>
+    <button type="submit">Post Job</button>
+  </form>
+  

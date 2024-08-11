@@ -1,5 +1,23 @@
 {
-  "user": [],
-  "locations": [],
+  "user": [
+    {
+      "id": "ff4d",
+      "name": "Md Najmul Islam",
+      "email": "najmul@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "locations": [
+    {
+      "id": "950d",
+      "name": "Dhanmondi",
+      "city": "Dhaka",
+      "state": "Dhaka",
+      "photo": "https://th.bing.com/th?id=OSK.HEROTdnLwYlZFJ6BaFGTteS4PBfr_mtPJz2g8hVmazgb4no&w=384&h=228&c=1&rs=2&o=6&pid=SANGAM",
+      "availableUnits": "5",
+      "wifi": true,
+      "laundry": true
+    }
+  ],
   "students": []
 }
