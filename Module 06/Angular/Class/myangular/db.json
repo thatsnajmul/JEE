@@ -1,36 +1,5 @@
 {
-  "user": [
-    {
-      "id": "1",
-      "name": "Raju Ahmed",
-      "email": "raju@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "89cf",
-      "name": "Muhammad Emran Hossain",
-      "email": "hsstanvir@gmail.com",
-      "password": "123456789"
-    },
-    {
-      "id": "6721",
-      "name": "Md Najmul Islam",
-      "email": "nmhislam1@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "d175",
-      "name": "Md Najmul Islam",
-      "email": "najmul@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "c8b0",
-      "name": "Md Najmul Islam",
-      "email": "najmul@gmail.com",
-      "password": "12345"
-    }
-  ],
+  "user": [],
   "locations": [],
   "students": []
 }
