@@ -5,6 +5,12 @@ import { AuthService } from '../services/auth.service';
   selector: 'app-register',
   templateUrl: './register.component.html'
 })
+
+
+
+
+
+
 export class RegisterComponent {
   user = { email: '', password: '' };
 
