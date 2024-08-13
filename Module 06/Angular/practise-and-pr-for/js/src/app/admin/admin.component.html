@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Admin Dashboard</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Job Title</th>
+          <th>Company</th>
+          <th>Description</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let job of jobs">
+          <td>{{ job.title }}</td>
+          <td>{{ job.company }}</td>
+          <td>{{ job.description }}</td>
+          <td>{{ job.location }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

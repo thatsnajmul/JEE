@@ -1,3 +1,40 @@
+
+
+--Install npm
+--node version
+--install angular using cli
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 https://apollosat.com/portable-satellite-internet/
 https://www.outfittersatellite.com/
 https://www.outfittersatellite.com/used-cobham-explorer8100.html
