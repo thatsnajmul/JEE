@@ -19,7 +19,7 @@
             <!--/////////////////////////////////////////////////////////////////////////////////////////////-->
             
             <div *ngIf="isJobSeeker">
-              <form>
+
                 <div class="form-outline mb-4" data-mdb-input-init>
                   <input [(ngModel)]="jobSeekerObj.Fullname" name="Fullname" type="text" id="Fullname" class="form-control" required />
                   <label class="form-label" for="Fullname">Full Name</label>
@@ -59,7 +59,7 @@
   
                 <button (ngSubmit)="registerAsJobSeeker()" type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
 
-              </form>
+          
               
 
             </div>
@@ -69,7 +69,7 @@
             
             
             <div *ngIf="!isJobSeeker">
-              <form>
+            
               
                 <div class="form-outline mb-4" data-mdb-input-init>
                   <input [(ngModel)]="employerObj.CompanyName" name="CompanyName" type="text" id="companyName" class="form-control" required />
@@ -149,7 +149,7 @@
 
                 <button (ngSubmit)="registration()" type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
                 
-              </form>
+        
             </div>
             
             

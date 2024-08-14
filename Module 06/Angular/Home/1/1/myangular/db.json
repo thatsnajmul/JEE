@@ -1,0 +1,130 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Raju Ahmed",
+      "email": "raju@gmail.com",
+      "password": "123456",
+      "role": "User"
+    },
+    {
+      "id": "89cf",
+      "name": "Muhammad Emran Hossain",
+      "email": "hsstanvir@gmail.com",
+      "password": "123456789",
+      "role": "Admin"
+    },
+    {
+      "id": "89cf",
+      "name": "Muhammad Emran Hossain",
+      "email": "hss@gmail.com",
+      "password": "123456",
+      "role": "Admin"
+    },
+    {
+      "id": "3e8d",
+      "name": "Md Najmul Islam",
+      "email": "najmul@gmail.com",
+      "password": "12345"
+      
+    }
+  ],
+  "locations": [
+    {
+      "id": "0",
+      "name": "Dhanmondi",
+      "city": "Dhaka",
+      "state": "Dhaka",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXhpgeCdZS9TVcKeA8UdnSI8FX1vz8l-cufA&s",
+      "availableUnits": 4,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "1",
+      "name": "Khilgaon",
+      "city": "Dhaka",
+      "state": "Dhaka",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+      "availableUnits": 0,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "2",
+      "name": "Warm Beds Housing Support",
+      "city": "Juneau",
+      "state": "AK",
+      "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+      "availableUnits": 1,
+      "wifi": false,
+      "laundry": false
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "Raju",
+      "email": "raju55@gmail.com",
+      "cellNo": "123456789",
+      "location": {
+        "id": "0",
+        "name": "Dhanmondi",
+        "city": "Dhaka",
+        "state": "Dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+        "availableUnits": 4,
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "2",
+      "name": "Towhid",
+      "email": "Towhid@gmail.com",
+      "cellNo": "123456789",
+      "location": {
+        "id": "2",
+        "name": "Warm Beds Housing Support",
+        "city": "Juneau",
+        "state": "AK",
+        "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+        "availableUnits": 1,
+        "wifi": false,
+        "laundry": false
+      }
+    },
+    {
+      "id": "fc94",
+      "name": "dd",
+      "email": "dds@gmail.com",
+      "cellNo": "dd",
+      "location": {
+        "id": "0",
+        "name": "Dhanmondi",
+        "city": "Dhaka",
+        "state": "Dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+        "availableUnits": 4,
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "f48f",
+      "name": "aa",
+      "email": "aa@gmail.com",
+      "cellNo": "aa",
+      "location": {
+        "id": "1",
+        "name": "Khilgaon",
+        "city": "Dhaka",
+        "state": "Dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+        "availableUnits": 0,
+        "wifi": true,
+        "laundry": true
+      }
+    }
+  ]
+}

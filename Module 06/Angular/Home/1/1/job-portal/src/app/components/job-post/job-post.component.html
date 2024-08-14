@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <h2>Post a Job</h2>
+    <form (ngSubmit)="postJob()">
+      <div class="mb-3">
+        <label for="title" class="form-label">Job Title</label>
+        <input type="text" class="form-control" id="title" [(ngModel)]="job.title" name="title" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Job Description</label>
+        <textarea class="form-control" id="description" [(ngModel)]="job.description" name="description" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="company" class="form-label">Company</label>
+        <input type="text" class="form-control" id="company" [(ngModel)]="job.company" name="company" required>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location" [(ngModel)]="job.location" name="location" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Post Job</button>
+    </form>
+  </div>
+  

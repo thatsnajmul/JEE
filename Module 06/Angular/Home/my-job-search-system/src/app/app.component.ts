@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  //title = 'my-job-search-system';
+  title = 'my-job-search-system';
 
   isLoggedIn: boolean = false;
 
