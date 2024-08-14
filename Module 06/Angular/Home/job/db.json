@@ -1,28 +1,12 @@
 {
   "jobs": [
     {
-      "id": "6fb1",
-      "title": "ss",
-      "description": "sss",
-      "location": "sdsd",
-      "company": "sdsd",
+      "id": "b867",
+      "title": "ada",
+      "description": "afaf",
+      "location": "afaf",
+      "company": "adad",
       "type": "part-time"
-    },
-    {
-      "id": "5efb",
-      "title": "asd",
-      "description": "sdsd",
-      "location": "sdsd",
-      "company": "sdsd",
-      "type": "part-time"
-    },
-    {
-      "id": "be87",
-      "title": "vssc",
-      "description": "sfsfs",
-      "location": "fsfs",
-      "company": "sfsf",
-      "type": "contract"
     }
   ]
 }
