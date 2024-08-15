@@ -4,6 +4,7 @@ import { CreateJobComponent } from './create-job/create-job.component';
 import { JobsComponent } from './job/jobs.component';
 import { ModifyJobsComponent } from './modify-jobs/modify-jobs.component';
 import { UpdateModifyJobsComponent } from './update-modify-jobs/update-modify-jobs.component';
+import { CreateJobApplicationComponent } from './create-job-application/create-job-application.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,12 @@ const routes: Routes = [
   {
     path:'update-modify-jobs/:id',
     component: UpdateModifyJobsComponent
-  }
+  },
+  {
+    path:'create-job-application',
+    component: CreateJobApplicationComponent
+  },
+
  
 ];
 

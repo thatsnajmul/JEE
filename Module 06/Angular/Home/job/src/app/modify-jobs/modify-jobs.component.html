@@ -21,7 +21,8 @@
               <td>{{ job.company }}</td>
               <td>{{ job.type }}</td>
               <td>
-                <a href="#" routerLink="/update-modify-jobs" class="btn btn-warning btn-sm">Edit</a>
+                <!-- (click)="updateJob(job.id)" Shabab--> 
+                <a href="#" routerLink="/update-modify-jobs/:id" class="btn btn-warning btn-sm">Edit</a>
                 <a href="#" class="btn btn-danger btn-sm ml-2">Delete</a>
               </td>
             </tr>
