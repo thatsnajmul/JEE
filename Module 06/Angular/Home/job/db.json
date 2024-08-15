@@ -1,36 +1,23 @@
 {
   "jobs": [
     {
-      "id": "4101",
-      "title": "sfsf",
-      "description": "fsfsf",
-      "location": "sffs",
-      "company": "sfsfs",
-      "type": "full-time"
-    },
+      "id": "a340",
+      "title": "gdfgdf",
+      "description": "gfdgdfg",
+      "location": "dgdgd",
+      "company": "gdgd",
+      "type": "part-time"
+    }
+  ],
+  "applications": [
     {
-      "id": "b16e",
-      "title": "sfs",
-      "description": "sfsfs",
-      "location": "sfsf",
-      "company": "sfsfs",
-      "type": "full-time"
-    },
-    {
-      "id": "1ec9",
-      "title": "Junior Soft Engineer",
-      "description": "To write an effective junior software engineer job description, begin by listing detailed duties, responsibilities and expectations. We have included junior software engineer job description templates that you can modify and use.\n\nSample responsibilities for this position include:\n\nExperience developing in Java, Python and other Object Oriented languages\nWorking knowledge of SaaS application development – Java, RESTful, JSON, Maven, GIT, JIRA, Eclipse\nExperience with C++ and linux is desirable\nYou will work on software engineering projects, developing program enhancements, updates and changes on portions or subsystems of HP products\nYou will be participating as a member of a project team of other software engineers and internal and outsourced development partners to develop reliable, cost effective and high quality solutions for low to moderately-complex products\nDesigning Schemas\nIndexing systems like Solr and ElasticSearch\nDefinition and reporting of metrics for big data system performance\nDevelop tools and utilities to be integrated with the automation framework for smoother automation execution and monitoring\nDemonstrated time management skills with the ability to successfully manage and execute multiple tasks/projects simultaneously",
-      "location": "California",
-      "company": "Google",
-      "type": "internship"
-    },
-    {
-      "id": "e17e",
-      "title": "xcfsdc",
-      "description": "asdda",
-      "location": "dadada",
-      "company": "dadad",
-      "type": "contract"
+      "id": "ba6b",
+      "name": "Md Najmul Islam",
+      "email": "nmhislam1@gmail.com",
+      "phone": "017903493101",
+      "resume": "https://github.com/thatsnajmul",
+      "coverLetter": "zsdfasfasfv",
+      "jobId": "1088"
     }
   ]
 }

@@ -1,1 +1,31 @@
-<p>create-job-application works!</p>
+<div class="container mt-5">
+    <h2>Job Application Form</h2>
+    <form #applicationForm="ngForm" (ngSubmit)="onSubmit(applicationForm)">
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" id="name" class="form-control" name="name" [(ngModel)]="application.name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" id="email" class="form-control" name="email" [(ngModel)]="application.email" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="text" id="phone" class="form-control" name="phone" [(ngModel)]="application.phone" required>
+      </div>
+      <div class="mb-3">
+        <label for="resume" class="form-label">Resume (URL)</label>
+        <input type="text" id="resume" class="form-control" name="resume" [(ngModel)]="application.resume" required>
+      </div>
+      <div class="mb-3">
+        <label for="coverLetter" class="form-label">Cover Letter</label>
+        <textarea id="coverLetter" class="form-control" name="coverLetter" [(ngModel)]="application.coverLetter" rows="4" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="jobId" class="form-label">Job ID</label>
+        <input type="text" id="jobId" class="form-control" name="jobId" [(ngModel)]="application.jobId" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Application</button>
+    </form>
+  </div>
+  
