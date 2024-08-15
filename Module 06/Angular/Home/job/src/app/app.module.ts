@@ -7,8 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { JobsComponent } from './job/jobs.component';
-import { MenuComponent } from './menu/menu.component';
+
 import { ModifyJobsComponent } from './modify-jobs/modify-jobs.component';
+import { UpdateModifyJobsComponent } from './update-modify-jobs/update-modify-jobs.component';
 
 
 
@@ -17,8 +18,8 @@ import { ModifyJobsComponent } from './modify-jobs/modify-jobs.component';
     AppComponent,
     CreateJobComponent,
     JobsComponent,
-    MenuComponent,
-    ModifyJobsComponent
+    ModifyJobsComponent,
+    UpdateModifyJobsComponent
   ],
   imports: [
     BrowserModule,
