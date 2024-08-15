@@ -9,6 +9,7 @@ import { Job } from '../model/job.model';
 })
 export class CreateJobComponent {
   job: Job = {
+    id: undefined, // Include the id property here
     title: '',
     description: '',
     location: '',
@@ -35,10 +36,10 @@ export class CreateJobComponent {
 
   isFormValid(): boolean {
     // Add your custom validation logic here if needed
-    return this.job.title.trim() !== '' &&
-           this.job.description.trim() !== '' &&
-           this.job.location.trim() !== '' &&
-           this.job.company.trim() !== '' &&
-           this.job.type.trim() !== '';
+    return this.job?.title?.trim() !== '' &&
+       this.job?.description?.trim() !== '' &&
+       this.job?.location?.trim() !== '' &&
+       this.job?.company?.trim() !== '' &&
+       this.job?.type?.trim() !== '';
   }
 }

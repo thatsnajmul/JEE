@@ -11,7 +11,14 @@ import { Job } from '../model/job.model';
 })
 export class UpdateModifyJobsComponent implements OnInit{
 
-  job: Job = { title: '', description: '', location: '', company: '', type: '' };
+  job: Job = {
+    id: undefined, // Include the id property here as well
+    title: '',
+    description: '',
+    location: '',
+    company: '',
+    type: ''
+  };
   jobId: string = ''; // Store the ID of the job to update
 
   constructor(

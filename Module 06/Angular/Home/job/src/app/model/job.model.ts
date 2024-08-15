@@ -1,10 +1,10 @@
 // job.model.ts
-export interface Job {
-    id?: string;
-    title: string;
-    description: string;
-    location: string;
-    company: string;
-    type: string;
+export class Job {
+    id: string | undefined;
+    title: string | undefined;
+    description: string | undefined;
+    location: string | undefined;
+    company: string | undefined;
+    type: string | undefined;
   }
   

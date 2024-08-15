@@ -1,5 +1,5 @@
 // job.model.ts
-export interface Application {
+export class Application {
     id?: string;
     
   }

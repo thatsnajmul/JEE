@@ -12,6 +12,7 @@ import { ModifyJobsComponent } from './modify-jobs/modify-jobs.component';
 import { UpdateModifyJobsComponent } from './update-modify-jobs/update-modify-jobs.component';
 import { CreateJobApplicationComponent } from './create-job-application/create-job-application.component';
 import { ViewJobApplicationComponent } from './view-job-application/view-job-application.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -24,7 +25,8 @@ import { ViewJobApplicationComponent } from './view-job-application/view-job-app
     ModifyJobsComponent,
     UpdateModifyJobsComponent,
     CreateJobApplicationComponent,
-    ViewJobApplicationComponent
+    ViewJobApplicationComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
