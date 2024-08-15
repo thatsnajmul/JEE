@@ -1,0 +1,1 @@
+Web,Mysql,JPA,Spring Boot Devlopers, Lombok,Thymeleaf and then generate from start.spring.com
