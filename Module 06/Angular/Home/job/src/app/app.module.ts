@@ -6,13 +6,19 @@ import { CreateJobComponent } from './create-job/create-job.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { JobsComponent } from './job/jobs.component';
+import { MenuComponent } from './menu/menu.component';
+import { ModifyJobsComponent } from './modify-jobs/modify-jobs.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateJobComponent
+    CreateJobComponent,
+    JobsComponent,
+    MenuComponent,
+    ModifyJobsComponent
   ],
   imports: [
     BrowserModule,

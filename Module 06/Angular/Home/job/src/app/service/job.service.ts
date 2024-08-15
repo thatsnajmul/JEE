@@ -12,6 +12,12 @@ export class JobService {
 
   constructor(private http: HttpClient) {}
 
+    // Method to fetch all jobs
+    getAllJobs(): Observable<Job[]> {
+      return this.http.get<Job[]>(this.apiUrl);
+    }
+
+  //Create a new job
   createJob(job: Job): Observable<Job> {
     return this.http.post<Job>(this.apiUrl, job);
   }
