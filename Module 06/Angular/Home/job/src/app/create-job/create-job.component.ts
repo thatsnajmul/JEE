@@ -9,7 +9,7 @@ import { Job } from '../model/job.model';
 })
 export class CreateJobComponent {
   job: Job = {
-    id: undefined, // Include the id property here
+    id: '', // Include the id property here
     title: '',
     description: '',
     location: '',

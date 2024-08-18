@@ -1,40 +1,13 @@
 {
   "jobs": [
     {
-      "id": "a340",
-      "title": "gdfgdf",
-      "description": "gfdgdfg",
-      "location": "dgdgd",
-      "company": "gdgd",
-      "type": "part-time"
-    },
-    {
-      "id": "9bc8",
-      "title": "sass",
-      "description": "aasa",
-      "location": "assa",
-      "company": "asas",
+      "id": "929c",
+      "title": "adadada",
+      "description": "adadad",
+      "location": "adada",
+      "company": "adada",
       "type": "part-time"
     }
   ],
-  "applications": [
-    {
-      "id": "ba6b",
-      "name": "Md Najmul Islam",
-      "email": "nmhislam1@gmail.com",
-      "phone": "017903493101",
-      "resume": "https://github.com/thatsnajmul",
-      "coverLetter": "zsdfasfasfv",
-      "jobId": "1088"
-    },
-    {
-      "id": "76da",
-      "name": "Md Najmul Islam",
-      "email": "najmul@gmail.com",
-      "phone": "017903493101",
-      "resume": "https://github.com/thatsnajmul",
-      "coverLetter": "xvxx",
-      "jobId": "1089"
-    }
-  ]
+  "applications": []
 }

@@ -17,32 +17,35 @@ export class JobService {
   //Create Job Application
   submitApplication(application: any): Observable<any> {
     return this.http.post<any>(this.apiUrl1, application);
-  }
+  } 
 
-  //======================================================//
-  //======================================================//
-  // Update a job
-  getJob(id: string): Observable<Job> {
-    return this.http.get<Job>(`${this.apiUrl}/${id}`);
-  }
-
-  updateJob(id: string, job: Job): Observable<Job> {
-    return this.http.put<Job>(`${this.apiUrl}/${id}`, job);
-  }
-
-  // Method to fetch all jobs
+  // View Jobs in job page
   getAllJobs(): Observable<Job[]> {
     return this.http.get<Job[]>(this.apiUrl);
   }
-
 
   //Create a new job
   createJob(job: Job): Observable<Job> {
     return this.http.post<Job>(this.apiUrl, job);
   }
 
-  //======================================================//
-  //======================================================//
+  //
+    //
+      //
+
+  updateJob(job: Job): Observable<Job> {
+    return this.http.put<Job>(`${this.apiUrl}${job.id}`, job);
+  }
+
+  deleteJob(jobId: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}${jobId}`);
+    //return this.http.delete<void>(this.baseUrl+studentId);
+  }
+  
+  getJobById(jobId: string): Observable<Job> {
+    // const url = `${this.baseUrl}/${jobId}`;
+    return this.http.get<Job>(`${this.apiUrl}${jobId}`);
+  }
 
   
 }

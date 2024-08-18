@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { JobService } from '../service/job.service';
 import { Job } from '../model/job.model';
 
@@ -9,57 +9,72 @@ import { Job } from '../model/job.model';
   templateUrl: './update-modify-jobs.component.html',
   styleUrl: './update-modify-jobs.component.css'
 })
-export class UpdateModifyJobsComponent implements OnInit{
-
-  job: Job = {
-    id: undefined, // Include the id property here as well
-    title: '',
-    description: '',
-    location: '',
-    company: '',
-    type: ''
-  };
-  jobId: string = ''; // Store the ID of the job to update
+export class UpdateModifyJobsComponent {
+    
+  jobForm!: FormGroup;
+  jobId: string = "";
+  job: Job = new Job();
 
   constructor(
-    private jobService: JobService,
+    private formBuilder: FormBuilder,
+    private router: Router,
     private route: ActivatedRoute,
-    private router: Router
-  ) {}
+    private jobService: JobService,
+  ) { }
 
   ngOnInit(): void {
-    this.jobId = this.route.snapshot.paramMap.get('id')!;
-    if (this.jobId) {
-      this.jobService.getJob(this.jobId).subscribe({
-        next: (job: Job) => {
-          this.job = job;
-        },
-        error: (err) => {
-          console.error('Error fetching job:', err);
-          alert('Failed to load job data.');
-        }
-      });
-    } else {
-      alert('Invalid job ID.');
-    }
-  }
-  
+    this.jobId = this.route.snapshot.params['id'];
+    this.jobForm = this.formBuilder.group({
+      title: [''],
+      description: [''],
+      location: [''],
+      company: [''],
+      type: ['']
+    });
 
-  onSubmit(form: NgForm): void {
-    if (form.valid) {
-      this.jobService.updateJob(this.jobId, this.job).subscribe({
-        next: () => {
-          alert('Job updated successfully!');
-          this.router.navigate(['/jobs']); // Navigate to the jobs list or another route
-        },
-        error: (err) => {
-          console.error('Error updating job:', err);
-          alert('Failed to update job.');
-        }
-      });
-    }
+    this.loadJob();
   }
 
+  loadJob(): void {
+    this.jobService.getJobById(this.jobId).subscribe({
+      next: (job: Job) => {
+        this.job = job;
+        this.jobForm.patchValue({
+          title: job.title,
+          description: job.description,
+          location: job.location,
+          company: job.company,
+          type: job.type,
+        });
+      },
+      error: err => {
+        console.log(err);
+      }
+    });
+  }
+
+  updateJob(): void {
+    if (this.jobForm.invalid) {
+      return;
+    }
+
+    const updatedJob: Job = {
+      ...this.job,
+      ...this.jobForm.value
+    };
+    
+    this.jobService.updateJob(updatedJob).subscribe({
+      next: res => {
+        console.log('Job updated successfully:', res);
+        this.router.navigate(['/']); // Navigate to the jobs list after update
+      },
+      error: err => {
+        console.log('Error updating job:', err);
+      }
+    });
+  }
+  
+  }
+
   
 
-}
