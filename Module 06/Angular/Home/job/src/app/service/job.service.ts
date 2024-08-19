@@ -17,7 +17,10 @@ export class JobService {
   //Create Job Application
   submitApplication(application: any): Observable<any> {
     return this.http.post<any>(this.apiUrl1, application);
-  } 
+  }
+
+  //viewjobApplication
+  //
 
   // View Jobs in job page
   getAllJobs(): Observable<Job[]> {
