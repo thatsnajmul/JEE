@@ -21,8 +21,8 @@
             <td>{{ job.company }}</td>
             <td>{{ job.type }}</td>
             <td>
-              <a type="button" class="btn btn-warning btn-sm" (click)="updateJob(job)" >Edit</a>
-              <button class="btn btn-danger btn-sm ml-2" >Delete</button>
+              <button class="btn btn-warning btn-md m-2" (click)="updateJob(job.id)" >Edit</button>
+              <button class="btn btn-danger btn-md ml-2 m-2" (click)="deleteJob(job.id)" >Delete</button>
             </td>
           </tr>
         </tbody>

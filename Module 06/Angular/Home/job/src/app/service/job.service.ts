@@ -33,18 +33,18 @@ export class JobService {
     //
       //
 
-  updateJob(job: Job): Observable<Job> {
-    return this.http.put<Job>(`${this.apiUrl}${job.id}`, job);
+  updateJob(job?: Job): Observable<Job> {
+    return this.http.put<Job>(`${this.apiUrl}/${job?.id}`, job);
   }
 
-  deleteJob(jobId: string): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}${jobId}`);
-    //return this.http.delete<void>(this.baseUrl+studentId);
+  deleteJob(jobId?: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${jobId}`);
+    //return this.http.delete<void>(this.baseUrl+jobId);
   }
   
   getJobById(jobId: string): Observable<Job> {
     // const url = `${this.baseUrl}/${jobId}`;
-    return this.http.get<Job>(`${this.apiUrl}${jobId}`);
+    return this.http.get<Job>(`${this.apiUrl}/${jobId}`);
   }
 
   

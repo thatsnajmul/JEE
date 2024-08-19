@@ -9,7 +9,6 @@ import { Job } from '../model/job.model';
 })
 export class CreateJobComponent {
   job: Job = {
-    id: '', // Include the id property here
     title: '',
     description: '',
     location: '',

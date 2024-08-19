@@ -1,6 +1,6 @@
 // job.model.ts
 export class Job {
-    id!: string;
+    id?: string;
     title!: string;
     description!: string;
     location!: string;

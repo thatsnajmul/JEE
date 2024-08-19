@@ -17,7 +17,7 @@ export class ModifyJobsComponent implements OnInit {
   constructor(
     private jobService: JobService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadData();
@@ -34,7 +34,7 @@ export class ModifyJobsComponent implements OnInit {
     });
   }
 
-  deleteJob(jobId: string): void {
+  deleteJob(jobId?: string): void {
     this.jobService.deleteJob(jobId).subscribe({
       next: () => {
         this.loadData(); // Refresh the list after deletion
@@ -45,12 +45,8 @@ export class ModifyJobsComponent implements OnInit {
     });
   }
 
-  updateJob(job: Job): void {
-    if (job.id) {  // Check if job.id is defined
-      this.router.navigate(['/update-modify-jobs', job.id]);
-    } else {
-      console.error('Job ID is undefined.');
-    }
+  updateJob(jobId?: string): void {
+    this.router.navigate(['/update-modify-jobs', jobId]);
   }
 
 

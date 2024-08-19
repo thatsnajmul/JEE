@@ -66,7 +66,7 @@ export class UpdateModifyJobsComponent {
     this.jobService.updateJob(updatedJob).subscribe({
       next: res => {
         console.log('Job updated successfully:', res);
-        this.router.navigate(['/']); // Navigate to the jobs list after update
+        this.router.navigate(['/modify-jobs']); // Navigate to the jobs list after update
       },
       error: err => {
         console.log('Error updating job:', err);
