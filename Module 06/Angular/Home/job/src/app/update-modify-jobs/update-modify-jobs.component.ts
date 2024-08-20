@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { JobService } from '../service/job.service';
+import { JobService } from '../service/job/job.service';
 import { Job } from '../model/job.model';
 
 @Component({

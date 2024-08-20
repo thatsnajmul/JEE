@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { JobService } from '../service/job.service';
+import { JobService } from '../service/job/job.service';
 
 @Component({
   selector: 'app-create-job-application',

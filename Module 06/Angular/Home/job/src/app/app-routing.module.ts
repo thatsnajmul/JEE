@@ -6,6 +6,9 @@ import { ModifyJobsComponent } from './modify-jobs/modify-jobs.component';
 import { UpdateModifyJobsComponent } from './update-modify-jobs/update-modify-jobs.component';
 import { CreateJobApplicationComponent } from './create-job-application/create-job-application.component';
 import { ViewJobApplicationComponent } from './view-job-application/view-job-application.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 const routes: Routes = [
@@ -33,6 +36,18 @@ const routes: Routes = [
   {
     path:'view-job-application',
     component: ViewJobApplicationComponent
+  },
+  {
+    path:'login',
+    component: LoginComponent
+  },
+  {
+    path:'register',
+    component: RegisterComponent
+  },
+  {
+    path:'admin',
+    component: AdminComponent
   }
 
  

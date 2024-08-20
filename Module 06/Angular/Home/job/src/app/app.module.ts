@@ -13,6 +13,9 @@ import { UpdateModifyJobsComponent } from './update-modify-jobs/update-modify-jo
 import { CreateJobApplicationComponent } from './create-job-application/create-job-application.component';
 import { ViewJobApplicationComponent } from './view-job-application/view-job-application.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -26,7 +29,10 @@ import { HomeComponent } from './home/home.component';
     UpdateModifyJobsComponent,
     CreateJobApplicationComponent,
     ViewJobApplicationComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
