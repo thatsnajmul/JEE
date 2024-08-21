@@ -1,1 +1,185 @@
-<p>admin works!</p>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Manage Jobs</a>
+        <a href="#">Manage Users</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-9 mt-4">
+        <!-- Dashboard Cards -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 class="card-title">Total Jobs</h5>
+                    <h2>120</h2>
+                  </div>
+                  <div>
+                    <i class="fas fa-briefcase fa-3x"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 class="card-title">Active Users</h5>
+                    <h2>250</h2>
+                  </div>
+                  <div>
+                    <i class="fas fa-users fa-3x"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-white bg-warning mb-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 class="card-title">Pending Approvals</h5>
+                    <h2>5</h2>
+                  </div>
+                  <div>
+                    <i class="fas fa-exclamation-triangle fa-3x"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job Management Table -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h4>Manage Jobs</h4>
+            <button class="btn btn-primary btn-sm float-end" data-bs-toggle="modal" data-bs-target="#addJobModal"><i class="fas fa-plus"></i> Add Job</button>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Job Title</th>
+                  <th>Company</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Software Engineer</td>
+                  <td>ABC Tech</td>
+                  <td><span class="badge bg-success">Active</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-primary"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Marketing Manager</td>
+                  <td>XYZ Corp</td>
+                  <td><span class="badge bg-danger">Inactive</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-primary"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                  </td>
+                </tr>
+                <!-- Additional rows here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- User Management Table -->
+        <div class="card">
+          <div class="card-header">
+            <h4>Manage Users</h4>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John Doe</td>
+                  <td>john.doe.com</td>
+                  <td>Job Seeker</td>
+                  <td>
+                    <button class="btn btn-sm btn-primary"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jane Smith</td>
+                  <td>jane.smith.com</td>
+                  <td>Employer</td>
+                  <td>
+                    <button class="btn btn-sm btn-primary"><i class="fas fa-edit"></i> Edit</button>
+                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                  </td>
+                </tr>
+                <!-- Additional rows here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Job Modal -->
+  <div class="modal fade" id="addJobModal" tabindex="-1" aria-labelledby="addJobModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addJobModalLabel">Add New Job</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="jobTitle" class="form-label">Job Title</label>
+              <input type="text" class="form-control" id="jobTitle" placeholder="Enter job title">
+            </div>
+            <div class="mb-3">
+              <label for="company" class="form-label">Company</label>
+              <input type="text" class="form-control" id="company" placeholder="Enter company name">
+            </div>
+            <div class="mb-3">
+              <label for="jobStatus" class="form-label">Status</label>
+              <select class="form-control" id="jobStatus">
+                <option>Active</option>
+                <option>Inactive</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Job</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

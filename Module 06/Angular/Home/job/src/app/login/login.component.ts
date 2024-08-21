@@ -25,7 +25,7 @@ export class LoginComponent {
     });
   }
 
-  nSubmit(): void {
+  onSubmit(): void {
     if (this.loginForm.valid) {
       const credentials = this.loginForm.value;
       this.authService.login(credentials).subscribe({
