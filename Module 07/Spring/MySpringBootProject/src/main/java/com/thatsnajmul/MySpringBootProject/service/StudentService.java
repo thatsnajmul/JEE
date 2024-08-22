@@ -25,8 +25,8 @@ public class StudentService {
     }
 
     //DATA DELETE
-    public void deleteStudent(Student student) {
-        studentRepository.delete(student);
+    public void deleteById(int id) {
+        studentRepository.deleteById(id);
     }
 
     //DATA FIND BY ID

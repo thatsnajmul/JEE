@@ -10,29 +10,31 @@
 <body>
 <div class="container mt-5">
     <h2>Basic Information Form</h2>
-    <form action="/savestudent" method="post" th:object="${stu}">
+    <form action="/savestudent" method="post" th:object="${as}">
+
+        <input type="hidden" th:field="*{id}">
         <!-- Name -->
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            <label for="name" class="form-label" >Name</label>
+            <input type="text" class="form-control" th:field="*{name}" id="name" placeholder="Enter your name" required>
         </div>
 
         <!-- Email -->
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            <input type="email" class="form-control" id="email" th:field="*{email}" placeholder="Enter your email" required>
         </div>
 
         <!-- Cell -->
         <div class="mb-3">
             <label for="cell" class="form-label">Cell</label>
-            <input type="tel" class="form-control" id="cell" placeholder="Enter your cell number" required>
+            <input type="tel" class="form-control" id="cell" th:field="*{cell}" placeholder="Enter your cell number" required>
         </div>
 
         <!-- Gender -->
         <div class="mb-3">
             <label for="gender" class="form-label">Gender</label>
-            <select class="form-select" id="gender" required>
+            <select class="form-select" th:field="*{gender}" id="gender" required>
                 <option value="">Select gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -43,7 +45,7 @@
         <!-- Date of Birth -->
         <div class="mb-3">
             <label for="dob" class="form-label">Date of Birth</label>
-            <input type="date" class="form-control" id="dob" required>
+            <input type="date" th:field="*{dob}" class="form-control" id="dob" required>
         </div>
 
         <!-- Submit Button -->

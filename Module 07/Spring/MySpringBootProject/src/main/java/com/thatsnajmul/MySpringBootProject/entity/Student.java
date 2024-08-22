@@ -1,12 +1,16 @@
 package com.thatsnajmul.MySpringBootProject.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.sql.Date;
 
+@Data
 @Entity
 @Table(name = "students")
 public class Student {
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
