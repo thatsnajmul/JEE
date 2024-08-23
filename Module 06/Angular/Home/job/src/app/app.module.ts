@@ -16,6 +16,11 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LogoutComponent } from './logout/logout.component';
+import { CompaniesComponent } from './companies/companies.component';
+import { AddJobComponent } from './admin/addjob/add-job.component';
+
 
 
 
@@ -32,7 +37,12 @@ import { AdminComponent } from './admin/admin.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    AdminComponent
+    AdminComponent,
+    NavbarComponent,
+    LogoutComponent,
+    CompaniesComponent,
+    AddJobComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Job } from '../../model/job.model';
+import {Application} from "../../model/applications.model";
 
 @Injectable({
   providedIn: 'root',
@@ -14,13 +15,17 @@ export class JobService {
 
   constructor(private http: HttpClient) { }
 
-  //Create Job Application
+  //Job Application
+  //Create
   submitApplication(application: any): Observable<any> {
     return this.http.post<any>(this.apiUrl1, application);
   }
+  //View
+  getAllJobApplications(): Observable<Application[]> {
+    return this.http.get<Application[]>(this.apiUrl1);
+  }
 
-  //viewjobApplication
-  //
+
 
   // View Jobs in job page
   getAllJobs(): Observable<Job[]> {
@@ -44,11 +49,11 @@ export class JobService {
     return this.http.delete<void>(`${this.apiUrl}/${jobId}`);
     //return this.http.delete<void>(this.baseUrl+jobId);
   }
-  
+
   getJobById(jobId: string): Observable<Job> {
     // const url = `${this.baseUrl}/${jobId}`;
     return this.http.get<Job>(`${this.apiUrl}/${jobId}`);
   }
 
-  
+
 }

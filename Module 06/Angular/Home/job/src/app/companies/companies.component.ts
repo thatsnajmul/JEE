@@ -3,11 +3,12 @@ import { JobService } from '../service/job/job.service';
 import { Job } from '../model/job.model';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  selector: 'app-companies',
+  templateUrl: './companies.component.html',
+  styleUrl: './companies.component.css'
 })
-export class HomeComponent  implements OnInit{
+export class CompaniesComponent implements OnInit{
+
   jobs: Job[] = [];
 
   constructor(private jobService: JobService) {}
@@ -26,4 +27,5 @@ export class HomeComponent  implements OnInit{
       }
     );
   }
+
 }

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   loginForm!: FormGroup;
-  
+
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -34,10 +34,10 @@ export class LoginComponent {
           this.authService.storeToken(res.token);
 
           const role=this.authService.getUserRole();
-          
+
             this.router.navigate(['/userprofile']);
 
-          
+
 
            // Navigate to a protected route after login
         },
@@ -48,5 +48,5 @@ export class LoginComponent {
     }
   }
 
-  
+
 }

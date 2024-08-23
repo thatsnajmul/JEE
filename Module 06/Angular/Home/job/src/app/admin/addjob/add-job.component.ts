@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { JobService } from '../service/job/job.service';
-import { Job } from '../model/job.model';
+import {Job} from "../../model/job.model";
+import {JobService} from "../../service/job/job.service";
 
 @Component({
-  selector: 'app-create-job',
-  templateUrl: './create-job.component.html',
-  styleUrl: './create-job.component.css'
+  selector: 'app-add-job',
+  templateUrl: './add-job.component.html',
+  styleUrl: './add-job.component.css'
 })
-export class CreateJobComponent {
+export class AddJobComponent {
   job: Job = {
     title: '',
     description: '',
@@ -33,12 +33,13 @@ export class CreateJobComponent {
     }
   }
 
+
   isFormValid(): boolean {
     // Add your custom validation logic here if needed
     return this.job?.title?.trim() !== '' &&
-       this.job?.description?.trim() !== '' &&
-       this.job?.location?.trim() !== '' &&
-       this.job?.company?.trim() !== '' &&
-       this.job?.type?.trim() !== '';
+      this.job?.description?.trim() !== '' &&
+      this.job?.location?.trim() !== '' &&
+      this.job?.company?.trim() !== '' &&
+      this.job?.type?.trim() !== '';
   }
 }

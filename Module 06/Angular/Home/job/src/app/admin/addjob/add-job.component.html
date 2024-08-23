@@ -1,0 +1,59 @@
+<div class="modal fade" id="addJobModal" tabindex="-1" aria-labelledby="addJobModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addJobModalLabel">Add New Job</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container mt-5">
+          <h2 class="text-center">Create New Job</h2>
+          <form (ngSubmit)="onSubmit()" #jobForm="ngForm">
+            <div class="form-group">
+              <label for="jobTitle">Job Title</label>
+              <input type="text" class="form-control" id="jobTitle" [(ngModel)]="job.title" name="title" required #title="ngModel">
+              <div *ngIf="title.invalid && title.touched" class="text-danger">
+                Job Title is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="jobDescription">Job Description</label>
+              <textarea class="form-control" id="jobDescription" rows="4" [(ngModel)]="job.description" name="description" required #description="ngModel"></textarea>
+              <div *ngIf="description.invalid && description.touched" class="text-danger">
+                Job Description is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="jobLocation">Location</label>
+              <input type="text" class="form-control" id="jobLocation" [(ngModel)]="job.location" name="location" required #location="ngModel">
+              <div *ngIf="location.invalid && location.touched" class="text-danger">
+                Location is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="companyName">Company Name</label>
+              <input type="text" class="form-control" id="companyName" [(ngModel)]="job.company" name="company" required #company="ngModel">
+              <div *ngIf="company.invalid && company.touched" class="text-danger">
+                Company Name is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="jobType">Job Type</label>
+              <select class="form-control" id="jobType" [(ngModel)]="job.type" name="type" required #type="ngModel">
+                <option value="">Select job type</option>
+                <option value="full-time">Full-Time</option>
+                <option value="part-time">Part-Time</option>
+                <option value="contract">Contract</option>
+                <option value="internship">Internship</option>
+              </select>
+              <div *ngIf="type.invalid && type.touched" class="text-danger">
+                Job Type is required.
+              </div>
+            </div>
+            <button class="btn btn-primary mt-4 mb-4" type="submit" >Create Job</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

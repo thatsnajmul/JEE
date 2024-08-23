@@ -9,6 +9,8 @@ import { ViewJobApplicationComponent } from './view-job-application/view-job-app
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
+import {CompaniesComponent} from "./companies/companies.component";
+import {HomeComponent} from "./home/home.component";
 
 
 const routes: Routes = [
@@ -48,9 +50,18 @@ const routes: Routes = [
   {
     path:'admin',
     component: AdminComponent
+  },
+  {
+    path:'companies',
+    component: CompaniesComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    pathMatch: 'full'
   }
 
- 
+
 ];
 
 @NgModule({

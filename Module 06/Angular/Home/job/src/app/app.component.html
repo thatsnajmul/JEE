@@ -14,24 +14,22 @@
                     <a class="nav-link active" aria-current="page" routerLink="/jobs">Jobs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Companies</a>
+                    <a class="nav-link" href="#" routerLink="/companies">Companies</a>
                 </li>
                 <!-- *ngIf="userInfo.userRole == ''" -->
-                <li class="nav-item" > 
+                <li class="nav-item" >
                     <a class="nav-link" href="#" routerLink="/create-job">Create New Job</a>
                 </li>
 
-                <li class="nav-item" > 
+                <li class="nav-item" >
                     <a class="nav-link" href="#" routerLink="/modify-jobs">Modify Jobs</a>
                 </li>
-                <li class="nav-item" > 
+                <li class="nav-item" >
                     <a class="nav-link" href="#" routerLink="/view-job-application">View Application</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <a routerLink="/login" class="btn btn-outline-primary round-button mx-2" type="button">Login</a>
-                <a routerLink="/register" class="btn btn-success round-button" type="button">Register</a>
-            </form>
+            <app-navbar></app-navbar>
+
         </div>
     </div>
   </nav>
