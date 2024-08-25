@@ -20,6 +20,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LogoutComponent } from './logout/logout.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { AddJobComponent } from './admin/addjob/add-job.component';
+import { PersonalInfoComponent } from './cv/personal-info/personal-info.component';
+import { ExperienceComponent } from './cv/experience/experience.component';
+import { EducationComponent } from './cv/education/education.component';
+import { SkilComponent } from './cv/skil/skil.component';
 
 
 
@@ -42,6 +46,10 @@ import { AddJobComponent } from './admin/addjob/add-job.component';
     LogoutComponent,
     CompaniesComponent,
     AddJobComponent,
+    PersonalInfoComponent,
+    ExperienceComponent,
+    EducationComponent,
+    SkilComponent,
 
   ],
   imports: [

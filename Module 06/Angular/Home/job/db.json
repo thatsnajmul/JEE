@@ -24,6 +24,14 @@
       "location": "Dhaka",
       "company": "Daraz",
       "type": "part-time"
+    },
+    {
+      "id": "5b6e",
+      "title": "Junior Soft Engineer",
+      "description": "Junior Soft Engineer",
+      "location": "Rahshahi",
+      "company": "Orion",
+      "type": "contract"
     }
   ],
   "applications": [

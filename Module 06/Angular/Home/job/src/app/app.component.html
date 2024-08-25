@@ -34,6 +34,14 @@
     </div>
   </nav>
 
+<div id="cv">
+  <app-personal-info></app-personal-info>
+  <app-experience></app-experience>
+  <app-education></app-education>
+  <app-skills></app-skills>
+</div>
+<button (click)="generatePdf()">Download CV as PDF</button>
+
 <div class="container-fluid">
 <router-outlet></router-outlet>
 </div>

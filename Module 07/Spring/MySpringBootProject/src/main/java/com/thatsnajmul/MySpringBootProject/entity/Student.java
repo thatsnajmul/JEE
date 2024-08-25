@@ -30,5 +30,9 @@ public class Student {
 
     private Date dob;
 
+    @OneToOne
+    @JoinColumn(name = "departmentId")
+    private Department department;
+
 
 }

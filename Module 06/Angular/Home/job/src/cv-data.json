@@ -1,0 +1,30 @@
+{
+  "personalInfo": {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "(123) 456-7890",
+    "address": "123 Main St, Hometown, USA"
+  },
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Tech Company",
+      "startYear": 2018,
+      "endYear": 2022
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor's",
+      "field": "Computer Science",
+      "university": "Tech University",
+      "startYear": 2014,
+      "endYear": 2018
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "Angular",
+    "TypeScript"
+  ]
+}

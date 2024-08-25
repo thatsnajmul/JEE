@@ -1,7 +1,9 @@
 package com.thatsnajmul.MySpringBootProject.service;
 
 import com.thatsnajmul.MySpringBootProject.entity.Department;
+import com.thatsnajmul.MySpringBootProject.entity.Faculty;
 import com.thatsnajmul.MySpringBootProject.repository.DepartmentRepository;
+import com.thatsnajmul.MySpringBootProject.repository.FacultyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,14 @@ public class DepartmentService {
 
 
     //For Save
+    @Autowired
+    private FacultyRepository facultyRepository;
     public void saveDepartment(Department department) {
+        Faculty faculty = facultyRepository.findById(department.getFaculty().getId())
+                .orElseThrow(
+                        () -> new RuntimeException("User Not Found has ID"+department.getFaculty().getId())
+                );
+        department.setFaculty(faculty);
         departmentRepository.save(department);
     }
 

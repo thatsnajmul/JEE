@@ -19,4 +19,8 @@ public class Department {
     @Column(nullable = false, unique = true, length = 40)
     private String name;
 
+    @OneToOne
+    @JoinColumn(name = "facultyId")
+    private Faculty faculty;
+
 }
