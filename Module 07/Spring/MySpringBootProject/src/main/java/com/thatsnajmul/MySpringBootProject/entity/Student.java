@@ -1,20 +1,25 @@
 package com.thatsnajmul.MySpringBootProject.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Date;
 
-@Data
+
 @Entity
 @Table(name = "students")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Student {
 
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(nullable = false, length = 40, name = "studentName")
     private String name;
@@ -30,9 +35,7 @@ public class Student {
 
     private Date dob;
 
-    @OneToOne
-    @JoinColumn(name = "departmentId")
-    private Department department;
+
 
 
 }

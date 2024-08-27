@@ -14,19 +14,10 @@ public class StudentService {
 
     @Autowired
     private StudentRepository studentRepository;
-    @Autowired
-    private DepartmentRepository departmentRepository;
 
 
-    //DATA INSERT
-    @Autowired
-    private DepartmentService departmentService;
     public void saveStudent(Student student) {
 
-        Department department =departmentRepository.findById(student.getDepartment().getId())
-                .orElseThrow(() -> new RuntimeException("Department not found"
-                        +student.getDepartment().getId()));
-        student.setDepartment(department);
         studentRepository.save(student);
     }
 
@@ -36,14 +27,17 @@ public class StudentService {
     }
 
     //DATA DELETE
-    public void deleteById(int id) {
+    public void deleteById(Long id) {
         studentRepository.deleteById(id);
     }
 
     //DATA FIND BY ID
-    public Student findStudentById(int id) {
-        return studentRepository.findById(id).get();
+    public Student findStudentById(Long id) {
+        return studentRepository.findById().get();
     }
 
+    public void updateStudent(Student student, Long id) {
+        studentRepository.save(student);
+    }
 
 }

@@ -19,9 +19,9 @@ public class StudentRestController {
 
     //Get all Student from Database
     @GetMapping("/")
-    public ResponseEntity<List<Student>> getAllStudents() {
-        List<Student> students=studentService.getAllStudents();
-        return new ResponseEntity<>(students, HttpStatus.OK);
+    public List<Student> getAllStudents() {
+
+        return studentService.getAllStudents();
     }
 
     //Post
@@ -31,17 +31,19 @@ public class StudentRestController {
 
     }
 
+    //Delete
+    @DeleteMapping("/delete/{id}")
+    public void deleteStudent(@PathVariable Long id) {
+        studentService.findStudentById(id);
+    }
+
     //Update
     @PutMapping("/update/")
     public void updateStudent(@RequestBody Student student) {
         studentService.saveStudent(student);
     }
 
-    //Delete
-    @DeleteMapping("/delete/{id}")
-    public void deleteStudent(@PathVariable int id) {
-        studentService.findStudentById(id);
-    }
+
 
 
 

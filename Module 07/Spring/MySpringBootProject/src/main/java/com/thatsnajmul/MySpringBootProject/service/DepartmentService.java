@@ -16,16 +16,8 @@ public class DepartmentService {
     @Autowired
     private DepartmentRepository departmentRepository;
 
-
-    //For Save
-    @Autowired
-    private FacultyRepository facultyRepository;
     public void saveDepartment(Department department) {
-        Faculty faculty = facultyRepository.findById(department.getFaculty().getId())
-                .orElseThrow(
-                        () -> new RuntimeException("User Not Found has ID"+department.getFaculty().getId())
-                );
-        department.setFaculty(faculty);
+
         departmentRepository.save(department);
     }
 

@@ -21,7 +21,7 @@ public class StudentController {
     @RequestMapping("/savestudentform")
     public String saveStudent(Model m) {
         m.addAttribute("as", new Student());
-        m.addAttribute("title", "Student Form");
+        m.addAttribute("title", "Add New Student");
         return "savestudentform";
     }
 
@@ -40,13 +40,13 @@ public class StudentController {
     }
 
     @RequestMapping("deletestudent/{id}")
-    public String deleteStudent(@PathVariable("id") int id) {
+    public String deleteStudent(@PathVariable("id") Long id) {
         studentService.deleteById(id);
         return "redirect:/showAllStudent";
     }
 
     @RequestMapping("editstudent/{id}")
-    public String editStudent(@PathVariable("id")int id, Model m){
+    public String editStudent(@PathVariable("id")Long id, Model m){
         Student s=studentService.findStudentById(id);
         m.addAttribute("as", s);
         return "savestudentform";
