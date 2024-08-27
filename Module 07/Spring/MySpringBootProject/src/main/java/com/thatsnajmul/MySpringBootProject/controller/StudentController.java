@@ -47,7 +47,7 @@ public class StudentController {
 
     @RequestMapping("editstudent/{id}")
     public String editStudent(@PathVariable("id")Long id, Model m){
-        Student s=studentService.findStudentById(id);
+        Student s=studentService.findById(id);
         m.addAttribute("as", s);
         return "savestudentform";
 

@@ -32,8 +32,8 @@ public class StudentService {
     }
 
     //DATA FIND BY ID
-    public Student findStudentById(Long id) {
-        return studentRepository.findById().get();
+    public Student findById(Long id) {
+        return studentRepository.findById(id).get();
     }
 
     public void updateStudent(Student student, Long id) {
