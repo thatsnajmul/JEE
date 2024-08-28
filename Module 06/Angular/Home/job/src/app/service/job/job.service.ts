@@ -11,9 +11,19 @@ import {Application} from "../../model/applications.model";
 export class JobService {
   private apiUrl = 'http://localhost:3000/jobs';
 
+  private dbj = 'http://localhost:300';
+
   private apiUrl1 = 'http://localhost:3000/applications';
 
   constructor(private http: HttpClient) { }
+
+
+  //////////
+  getJobs(): Observable<any> {
+    return this.http.get<any>(this.dbj);
+  }
+  //////////////
+
 
   //Job Application
   //Create

@@ -28,4 +28,10 @@ export class JobsComponent implements OnInit{
   }
 
 
+
+  //SEARCH
+  
+
+
+
 }
