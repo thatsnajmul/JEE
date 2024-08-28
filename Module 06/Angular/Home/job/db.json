@@ -6,6 +6,18 @@
       "email": "",
       "password": "",
       "role": ""
+    },
+    {
+      "id": "1a0f",
+      "name": "Md Najmul Islam",
+      "email": "najmul@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "16cb",
+      "name": "Md Najmul",
+      "email": "najmul123@gmail.com",
+      "password": "12346"
     }
   ],
   "jobs": [

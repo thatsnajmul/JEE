@@ -13,17 +13,15 @@ import { UpdateModifyJobsComponent } from './update-modify-jobs/update-modify-jo
 import { CreateJobApplicationComponent } from './create-job-application/create-job-application.component';
 import { ViewJobApplicationComponent } from './view-job-application/view-job-application.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LogoutComponent } from './logout/logout.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { AddJobComponent } from './admin/addjob/add-job.component';
-import { PersonalInfoComponent } from './cv/personal-info/personal-info.component';
-import { ExperienceComponent } from './cv/experience/experience.component';
-import { EducationComponent } from './cv/education/education.component';
-import { SkilComponent } from './cv/skil/skil.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+
 
 
 
@@ -39,17 +37,14 @@ import { SkilComponent } from './cv/skil/skil.component';
     CreateJobApplicationComponent,
     ViewJobApplicationComponent,
     HomeComponent,
-    LoginComponent,
-    RegisterComponent,
     AdminComponent,
     NavbarComponent,
     LogoutComponent,
     CompaniesComponent,
     AddJobComponent,
-    PersonalInfoComponent,
-    ExperienceComponent,
-    EducationComponent,
-    SkilComponent,
+    LoginComponent,
+    RegistrationComponent,
+    UserprofileComponent
 
   ],
   imports: [

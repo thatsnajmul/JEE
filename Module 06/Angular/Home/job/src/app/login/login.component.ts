@@ -20,10 +20,10 @@ export class LoginComponent {
 
     this.loginForm = this.formBuilder.group({
       email: [''],
-      password: [''],
-      role:['']
+      password: ['']
     });
   }
+
 
   onSubmit(): void {
     if (this.loginForm.valid) {
@@ -34,10 +34,10 @@ export class LoginComponent {
           this.authService.storeToken(res.token);
 
           const role=this.authService.getUserRole();
-
+          
             this.router.navigate(['/userprofile']);
 
-
+          
 
            // Navigate to a protected route after login
         },
@@ -47,6 +47,8 @@ export class LoginComponent {
       });
     }
   }
+
+
 
 
 }

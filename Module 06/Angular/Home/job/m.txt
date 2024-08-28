@@ -1,0 +1,7 @@
+ng g c login
+ng g c registration
+ng g c userprofile
+
+
+logout
+navbar
