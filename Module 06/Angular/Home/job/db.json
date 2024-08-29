@@ -73,5 +73,20 @@
       "coverLetter": "fgfgf",
       "jobId": "fgfgfgf"
     }
+  ],
+  "education": [],
+  "experience": [],
+  "skill": [],
+  "language": [],
+  "personaldetails": [
+    {
+      "id": "801f",
+      "name": "Md Najmul Islam",
+      "email": "najmul@gmail.com",
+      "phone": "01790610524",
+      "gender": "male",
+      "dob": "2024-08-07",
+      "address": "Banani"
+    }
   ]
 }

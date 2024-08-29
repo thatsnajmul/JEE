@@ -27,6 +27,7 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     AddJobComponent,
     LoginComponent,
     RegistrationComponent,
-    UserprofileComponent
+    UserprofileComponent,
+
 
   ],
   imports: [

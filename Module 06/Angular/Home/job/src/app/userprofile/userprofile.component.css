@@ -1,0 +1,10 @@
+/* sidebar.component.css */
+.list-group-item.active {
+    background-color: #007bff;
+    color: blue;
+    
+  }
+.list-group-item:hover {
+    cursor: pointer;
+  }
+  

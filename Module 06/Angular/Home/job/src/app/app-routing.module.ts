@@ -16,6 +16,7 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { LogoutComponent } from './logout/logout.component';
 
 
+
 const routes: Routes = [
 
   {
@@ -75,7 +76,8 @@ const routes: Routes = [
   {
     path: 'logout',
     component: LogoutComponent
-  }
+  },
+  
 
 
 
