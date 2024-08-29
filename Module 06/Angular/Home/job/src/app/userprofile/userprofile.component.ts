@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserModel } from '../model/user.model';
 import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { UserprofileService } from '../service/userprofile/userprofile.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { PersonalDetails } from '../model/personalDetails.model';
 
 @Component({
   selector: 'app-userprofile',
   templateUrl: './userprofile.component.html',
   styleUrl: './userprofile.component.css'
 })
-export class UserprofileComponent {
+export class UserprofileComponent implements OnInit{
 
   // Holds the active tab state
   activeTab: string = 'profile'; // Default tab
@@ -38,6 +39,7 @@ export class UserprofileComponent {
 
   ngOnInit(): void {
     this.loadUserProfile();
+    this.getPersonalDetails();
 
   }
 
@@ -88,6 +90,20 @@ export class UserprofileComponent {
       });
     }
   }
+
+  personaldetail: PersonalDetails[] = [];
+
+
+  getPersonalDetails(): void {
+    this.userProfileService.getPersonalDetails().subscribe(
+      (data: PersonalDetails[]) => {
+        this.personaldetail = data;
+      },
+      (error: any) => { // Using 'any' type
+        console.error('There was an error fetching the jobs!', error);
+      }
+    );
+    }
 
   
 

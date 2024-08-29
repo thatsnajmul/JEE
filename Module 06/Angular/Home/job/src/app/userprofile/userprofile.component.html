@@ -25,7 +25,7 @@
   <div id="page-content-wrapper">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="">
           <!-- Display content based on the active tab -->
           <div *ngIf="activeTab === 'profile'">   
             <!--////////////////////////////////////-->
@@ -122,7 +122,34 @@
               
             </div>
             <div *ngIf="activeTabs === 'view'">
-              View
+              
+              <div *ngFor="let p of personaldetail">
+                
+              <div>
+                Full Name: <p>{{ p.name }}</p>
+              </div>
+              
+              <div>
+                Email Address: <p>{{ p.email }}</p>
+              </div>
+              
+              <div >
+                Phone Number: <p>{{ p.phone }}</p>
+              </div>
+              
+              <div>
+                Gender: <p>{{ p.gender }}</p>
+              </div>
+              
+              <div>
+                Date of Birth: <p>{{ p.dob | date }}</p>
+              </div>
+              
+              <div>
+               Address: <p>{{ p.address }}</p>
+              </div>
+            </div>
+              
             </div>
             <div *ngIf="activeTabs === 'edit'">
               Edit

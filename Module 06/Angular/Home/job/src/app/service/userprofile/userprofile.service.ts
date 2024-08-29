@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AuthService } from '../../service/auth/auth.service';
 import { UserModel } from '../../model/user.model';
 import { Observable, of } from 'rxjs';
+import { PersonalDetails } from '../../model/personalDetails.model';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,11 @@ export class UserprofileService {
 
   submitpersonalDetails(personaldetails: any): Observable<any> {
     return this.http.post<any>(this.personalDetails, personaldetails);
+  }
+
+  
+  getPersonalDetails(): Observable<PersonalDetails[]> {
+    return this.http.get<PersonalDetails[]>(this.personalDetails);
   }
 
   
