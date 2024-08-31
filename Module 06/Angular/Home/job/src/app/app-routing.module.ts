@@ -24,46 +24,32 @@ const routes: Routes = [
 
   {
     path:'create-job',
-    component: CreateJobComponent,
-    canActivate:[AuthGuard, RoleGuard],
-    data: { role: 'Employeer' }
+    component: CreateJobComponent
     
   },
   {
     path:'jobs',
-    component: JobsComponent,
-    canActivate:[AuthGuard, RoleGuard],
-    data: { role: 'Job Seeker' }
+    component: JobsComponent
   },
   {
     path:'modify-jobs',
-    component: ModifyJobsComponent,
-    canActivate:[AuthGuard, RoleGuard],
-    data: { role: 'Employeer' }
+    component: ModifyJobsComponent
   },
   {
     path:'update-modify-jobs/:id',
-    component: UpdateModifyJobsComponent,
-    canActivate:[AuthGuard, RoleGuard],
-    data: { role: 'Employeer' }
+    component: UpdateModifyJobsComponent
   },
   {
     path:'create-job-application',
-    component: CreateJobApplicationComponent,
-    canActivate:[AuthGuard, RoleGuard],
-    data: { role: 'Job Seeker' }
+    component: CreateJobApplicationComponent
   },
   {
     path:'view-job-application',
-    component: ViewJobApplicationComponent,
-    canActivate:[AuthGuard, RoleGuard],
-    data: { role: 'Employeer' }
+    component: ViewJobApplicationComponent
   },
   {
     path:'admin',
-    component: AdminComponent,
-    canActivate:[AuthGuard, RoleGuard],
-    data: { role: 'Employeer' }
+    component: AdminComponent
   },
   {
     path:'companies',
@@ -99,9 +85,7 @@ const routes: Routes = [
   },
   {
     path: 'personaldetail',
-    component: PersonaldetailComponent,
-    canActivate:[AuthGuard, RoleGuard],
-    data: { role: 'Job Seeker' }
+    component: PersonaldetailComponent
   }
   
 

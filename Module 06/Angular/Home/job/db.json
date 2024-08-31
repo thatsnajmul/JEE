@@ -1,11 +1,25 @@
 {
   "user": [
     {
-      "id": "b449",
-      "name": "Md Najmul Islam",
-      "email": "najmul@gmail.com",
-      "password": "12345",
+      "id": "8e29",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
       "role": "admin"
+    },
+    {
+      "id": "4827",
+      "name": "Job Seeker",
+      "email": "jobseeker@gmail.com",
+      "password": "jobseeker",
+      "role": "jobSeeker"
+    },
+    {
+      "id": "d273",
+      "name": "Employeer",
+      "email": "employeer@gmail.com",
+      "password": "employeer",
+      "role": "employer"
     }
   ],
   "jobs": [
@@ -63,19 +77,8 @@
       "jobId": "fgfgfgf"
     }
   ],
-  "education": [],
-  "experience": [],
-  "skill": [],
-  "language": [],
-  "personaldetails": [
-    {
-      "id": "801f",
-      "name": "Md Najmul Islam",
-      "email": "najmul@gmail.com",
-      "phone": "01790610524",
-      "gender": "male",
-      "dob": "2024-08-07",
-      "address": "Banani"
-    }
+  "cvdata":[
+    
   ]
+
 }

@@ -4,7 +4,11 @@ import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { UserprofileService } from '../service/userprofile/userprofile.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { PersonalDetails } from '../model/personalDetails.model';
+
+
+import { JobService } from '../service/job/job.service';
+import { Job } from '../model/job.model';
+import { cvData } from '../model/cvData.model';
 
 @Component({
   selector: 'app-userprofile',
@@ -35,12 +39,12 @@ export class UserprofileComponent implements OnInit{
   constructor(
     private userProfileService: UserprofileService,
     private router: Router,
+    private jobService: JobService
   ) { }
 
   ngOnInit(): void {
     this.loadUserProfile();
-    this.getPersonalDetails();
-
+    this.getCvData();
   }
 
   loadUserProfile(): void {
@@ -63,47 +67,19 @@ export class UserprofileComponent implements OnInit{
     this.subscription.unsubscribe();  // Unsubscribe when the component is destroyed
   }
 
+  cvDatas: cvData[] = [];
 
-
-  //For Personal Details
-  personaldetails = {
-    name: '',
-    email: '',
-    phone: '',
-    gender: '',
-    dob: '',
-    address: ''
-
-  }
-
-  onSubmit(form: NgForm): void {
-    if (form.valid) {
-      this.userProfileService.submitpersonalDetails(this.personaldetails).subscribe({
-        next: () => {
-          alert(' submitted successfully!');
-          form.reset();
-        },
-        error: (err) => {
-          console.error('Error submitting: ', err);
-          alert('Failed to submit');
-        }
-      });
-    }
-  }
-
-  personaldetail: PersonalDetails[] = [];
-
-
-  getPersonalDetails(): void {
-    this.userProfileService.getPersonalDetails().subscribe(
-      (data: PersonalDetails[]) => {
-        this.personaldetail = data;
+  getCvData(): void {
+    this.jobService.getAllCvData().subscribe(
+      (data: cvData[]) => {
+        this.cvDatas = data;
       },
       (error: any) => { // Using 'any' type
-        console.error('There was an error fetching the jobs!', error);
+        console.error('There was an error fetching', error);
       }
     );
-    }
+ 
+  }
 
   
 
