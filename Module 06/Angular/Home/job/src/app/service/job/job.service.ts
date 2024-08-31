@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Job } from '../../model/job.model';
 import {Application} from "../../model/applications.model";
+import { cvData } from '../../model/cvData.model';
 @Injectable({
   providedIn: 'root',
 })
@@ -11,6 +12,8 @@ export class JobService {
   private apiUrl = 'http://localhost:3000/jobs';
   private dbj = 'http://localhost:300';
   private application = 'http://localhost:3000/applications';
+  private cvData = 'http://localhost:3000/cvData';
+
   
   constructor(private http: HttpClient) { }
   getJobs(): Observable<any> {
@@ -30,7 +33,12 @@ export class JobService {
     return this.http.post<any>(this.application, application);
   }
   //
-  
+  submitCvData(cvData: any): Observable<any> {
+    return this.http.post<any>(this.cvData, cvData);
+  }
+  getAllCvData(): Observable<cvData[]> {
+    return this.http.get<cvData[]>(this.cvData);
+  }
 
 
 
