@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { JobService } from '../service/job/job.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-personaldetails',
-  templateUrl: './personaldetails.component.html',
-  styleUrl: './personaldetails.component.css'
+  selector: 'app-personaldetail',
+  templateUrl: './personaldetail.component.html',
+  styleUrl: './personaldetail.component.css'
 })
-export class PersonaldetailsComponent {
-
+export class PersonaldetailComponent {
   cvData = {
     fullName: '',
     email: '',
@@ -24,7 +23,7 @@ export class PersonaldetailsComponent {
 
   constructor(private jobService: JobService) {}
 
-  onSubmit(form: NgForm): void {
+  onSubmits(form: NgForm): void {
     if (form.valid) {
       this.jobService.submitCvData(this.cvData).subscribe({
         next: () => {
@@ -38,5 +37,4 @@ export class PersonaldetailsComponent {
       });
     }
   }
-
 }

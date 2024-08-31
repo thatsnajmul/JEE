@@ -1,22 +1,11 @@
 {
   "user": [
     {
-      "id": "1a0f",
+      "id": "b449",
       "name": "Md Najmul Islam",
       "email": "najmul@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "16cb",
-      "name": "Md Najmul",
-      "email": "najmul123@gmail.com",
-      "password": "12346"
-    },
-    {
-      "id": "1901",
-      "name": "Md Najmul Islam",
-      "email": "najmul@gmail.com",
-      "password": "12345"
+      "password": "12345",
+      "role": "admin"
     }
   ],
   "jobs": [

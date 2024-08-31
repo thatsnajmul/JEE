@@ -14,6 +14,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { LogoutComponent } from './logout/logout.component';
+import { AuthGuard } from './guard/auth.guard';
+import { RoleGuard } from './guard/role.guard';
+import { PersonaldetailComponent } from './personaldetail/personaldetail.component';
 
 
 
@@ -21,35 +24,51 @@ const routes: Routes = [
 
   {
     path:'create-job',
-    component: CreateJobComponent
+    component: CreateJobComponent,
+    canActivate:[AuthGuard, RoleGuard],
+    data: { role: 'Employeer' }
+    
   },
   {
     path:'jobs',
-    component: JobsComponent
+    component: JobsComponent,
+    canActivate:[AuthGuard, RoleGuard],
+    data: { role: 'Job Seeker' }
   },
   {
     path:'modify-jobs',
-    component: ModifyJobsComponent
+    component: ModifyJobsComponent,
+    canActivate:[AuthGuard, RoleGuard],
+    data: { role: 'Employeer' }
   },
   {
     path:'update-modify-jobs/:id',
-    component: UpdateModifyJobsComponent
+    component: UpdateModifyJobsComponent,
+    canActivate:[AuthGuard, RoleGuard],
+    data: { role: 'Employeer' }
   },
   {
     path:'create-job-application',
-    component: CreateJobApplicationComponent
+    component: CreateJobApplicationComponent,
+    canActivate:[AuthGuard, RoleGuard],
+    data: { role: 'Job Seeker' }
   },
   {
     path:'view-job-application',
-    component: ViewJobApplicationComponent
+    component: ViewJobApplicationComponent,
+    canActivate:[AuthGuard, RoleGuard],
+    data: { role: 'Employeer' }
   },
   {
     path:'admin',
-    component: AdminComponent
+    component: AdminComponent,
+    canActivate:[AuthGuard, RoleGuard],
+    data: { role: 'Employeer' }
   },
   {
     path:'companies',
     component: CompaniesComponent
+
   },
   {
     path: 'home',
@@ -71,12 +90,19 @@ const routes: Routes = [
   },
   {
     path: 'userprofile',
-    component: UserprofileComponent
+    component: UserprofileComponent,
+    
   },
   {
     path: 'logout',
     component: LogoutComponent
   },
+  {
+    path: 'personaldetail',
+    component: PersonaldetailComponent,
+    canActivate:[AuthGuard, RoleGuard],
+    data: { role: 'Job Seeker' }
+  }
   
 
 
