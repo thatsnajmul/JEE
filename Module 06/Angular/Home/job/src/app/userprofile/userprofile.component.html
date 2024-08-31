@@ -49,7 +49,66 @@
           <!--////////////////////////////////////-->
 
           <div *ngIf="activeTab === 'cv-details'">
-
+            <div  *ngFor="let cvData of cvDatas" class="container mt-5">
+              <div class="row">
+                <!-- Personal Information Section -->
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <div class="card-header bg-primary text-white">
+                      <h5>Personal Information</h5>
+                    </div>
+                    <div class="card-body">
+                      <p><strong>Full Name:</strong> {{ cvData.fullName }}</p>
+                      <p><strong>Email:</strong> {{ cvData.email }}</p>
+                      <p><strong>Phone Number:</strong> {{ cvData.phone }}</p>
+                      <p><strong>Address:</strong> {{ cvData.address }}</p>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Education Section -->
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                      <h5>Education</h5>
+                    </div>
+                    <div class="card-body">
+                      <p><strong>Degree:</strong> {{ cvData.degree }}</p>
+                      <p><strong>Institution:</strong> {{ cvData.institution }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="row">
+                <!-- Work Experience Section -->
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <div class="card-header bg-success text-white">
+                      <h5>Work Experience</h5>
+                    </div>
+                    <div class="card-body">
+                      <p><strong>Company Name:</strong> {{ cvData.companyName }}</p>
+                      <p><strong>Job Title:</strong> {{ cvData.jobTitle }}</p>
+                      <p><strong>Job Description:</strong> {{ cvData.jobDescription }}</p>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Skills Section -->
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header bg-info text-white">
+                      <h5>Skills</h5>
+                    </div>
+                    <div class="card-body">
+                      <p>{{ cvData.skills }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
         </div>
       </div>
     </div>

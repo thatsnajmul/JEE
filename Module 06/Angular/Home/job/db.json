@@ -77,8 +77,19 @@
       "jobId": "fgfgfgf"
     }
   ],
-  "cvdata":[
-    
+  "cvdata": [
+    {
+      "id": "ce32",
+      "fullName": "Md Najmul Islam",
+      "email": "najmul@gmail.com",
+      "phone": "01790610524",
+      "address": "Banani",
+      "degree": "SSC",
+      "institution": "ss",
+      "companyName": "gdgdg",
+      "jobTitle": "sds",
+      "jobDescription": "svgsv",
+      "skills": "sdsd"
+    }
   ]
-
 }

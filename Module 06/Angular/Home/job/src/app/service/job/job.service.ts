@@ -10,9 +10,9 @@ import { cvData } from '../../model/cvData.model';
 })
 export class JobService {
   private apiUrl = 'http://localhost:3000/jobs';
-  private dbj = 'http://localhost:300';
+  private dbj = 'http://localhost:3000';
   private application = 'http://localhost:3000/applications';
-  private cvData = 'http://localhost:3000/cvData';
+  private cvData = 'http://localhost:3000/cvdata';
 
   
   constructor(private http: HttpClient) { }
