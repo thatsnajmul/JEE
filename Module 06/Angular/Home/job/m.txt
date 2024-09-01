@@ -5,3 +5,8 @@ ng g c userprofile
 
 logout
 navbar
+
+
+admin
+jobSeeker
+employer

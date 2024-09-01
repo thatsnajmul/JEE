@@ -24,14 +24,6 @@
   ],
   "jobs": [
     {
-      "id": "e93a",
-      "title": "Executive",
-      "description": "An accomplished executive with expertise in strategic leadership, operational excellence, and driving business growth. Skilled in fostering innovation, optimizing processes, and building high-performing teams. Proven track record of delivering results in dynamic, fast-paced environments.",
-      "location": "Khulna",
-      "company": "Rangs",
-      "type": "internship"
-    },
-    {
       "id": "f72f",
       "title": "Business Analyst",
       "description": "A Business Analyst bridges the gap between business needs and technology solutions, analyzing processes to improve efficiency. They gather and document requirements, communicate with stakeholders, and provide data-driven insights to support decision-making. Their role ensures that project outcomes align with business objectives.",
