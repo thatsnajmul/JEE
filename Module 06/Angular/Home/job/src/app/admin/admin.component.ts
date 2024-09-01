@@ -3,7 +3,10 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import {Job} from "../model/job.model";
 import {JobService} from "../service/job/job.service";
+import {UserprofileService} from "../service/userprofile/userprofile.service";
 import {Application} from "../model/applications.model";
+import { UserModel } from '../model/user.model';
+
 
 @Component({
   selector: 'app-admin',
@@ -14,8 +17,11 @@ export class AdminComponent implements OnInit{
 
   jobs: Job[] = [];  // Changed the property name to 'jobs' for consistency
   applications: Application[] = [];
+  users: UserModel[] = [];
+  
 
   constructor(
+    private http: HttpClient,
     private jobService: JobService,
     private router: Router
   ) { }
@@ -23,6 +29,35 @@ export class AdminComponent implements OnInit{
   ngOnInit(): void {
     this.loadData();
     this.getJobApplications();
+    this.http.get<{ id: string, name: string, email: string, password: string, role: string }[]>('http://localhost:3000/user')
+      .subscribe(
+        data => {
+          this.userCount = data.length;
+        },
+        error => {
+          console.error('Error fetching users:', error);
+        }
+      );
+      this.http.get<{ id: string, title: string, description: string, location: string, company: string, type: string }[]>('http://localhost:3000/jobs')
+      .subscribe(
+        data => {
+          this.jobsCount = data.length;
+        },
+        error => {
+          console.error('Error fetching users:', error);
+        }
+      );
+      this.http.get<{ id: string, name: string, email: string, phone: string, resume: string, coverLetter: string, jobId: string }[]>('http://localhost:3000/applications')
+      .subscribe(
+        data => {
+          this.jobApplicationCount = data.length;
+        },
+        error => {
+          console.error('Error fetching users:', error);
+        }
+      );
+
+
   }
 
 
@@ -62,6 +97,14 @@ export class AdminComponent implements OnInit{
   updateJob(jobId?: string): void {
     this.router.navigate(['/admin', jobId]);
   }
+
+  userCount: number = 0;
+  jobsCount: number = 0;
+  jobApplicationCount: number = 0;
+
+
+
+  
 
 }
 

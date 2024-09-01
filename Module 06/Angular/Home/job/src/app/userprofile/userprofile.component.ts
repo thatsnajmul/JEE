@@ -4,11 +4,13 @@ import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { UserprofileService } from '../service/userprofile/userprofile.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { jsPDF } from 'jspdf';
 
 
 import { JobService } from '../service/job/job.service';
 import { Job } from '../model/job.model';
 import { cvData } from '../model/cvData.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-userprofile',
@@ -33,18 +35,29 @@ export class UserprofileComponent implements OnInit{
 
   ///////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////
+  
   user: UserModel | null = null;
   private subscription: Subscription = new Subscription();
 
   constructor(
     private userProfileService: UserprofileService,
     private router: Router,
-    private jobService: JobService
+    private jobService: JobService,
+    private http: HttpClient
   ) { }
 
   ngOnInit(): void {
     this.loadUserProfile();
     this.getCvData();
+    this.http.get('http://localhost:3000/cvdata')
+      .subscribe(
+        data => {
+          this.cvData = data; // Assuming there's only one item
+        },
+        error => {
+          console.error('Error fetching CV data:', error);
+        }
+      );
   }
 
   loadUserProfile(): void {
@@ -80,6 +93,26 @@ export class UserprofileComponent implements OnInit{
     );
  
   }
+  
+  cvData: any = {};
+  generatePDF() {
+    const doc = new jsPDF();
 
+    // Add content to PDF
+    doc.text('Curriculum Vitae', 10, 10);
+    doc.text(`Full Name: ${this.cvData.fullName}`, 10, 20);
+    doc.text(`Email: ${this.cvData.email}`, 10, 30);
+    doc.text(`Phone: ${this.cvData.phone}`, 10, 40);
+    doc.text(`Address: ${this.cvData.address}`, 10, 50);
+    doc.text(`Degree: ${this.cvData.degree}`, 10, 60);
+    doc.text(`Institution: ${this.cvData.institution}`, 10, 70);
+    doc.text(`Company Name: ${this.cvData.companyName}`, 10, 80);
+    doc.text(`Job Title: ${this.cvData.jobTitle}`, 10, 90);
+    doc.text(`Job Description: ${this.cvData.jobDescription}`, 10, 100);
+    doc.text(`Skills: ${this.cvData.skills}`, 10, 110);
+
+    // Save the PDF
+    doc.save('cvdata.pdf');
+  }
 
 }

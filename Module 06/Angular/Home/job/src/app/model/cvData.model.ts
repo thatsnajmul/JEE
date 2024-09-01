@@ -1,6 +1,8 @@
 export class cvData {
+ 
+    
     id?: string;
-    fullName!: string;
+    fullName!: string ;
     email!: string;
     phone!: string;
     address!: string;
@@ -12,3 +14,4 @@ export class cvData {
     skills!: string;
 
   }
+

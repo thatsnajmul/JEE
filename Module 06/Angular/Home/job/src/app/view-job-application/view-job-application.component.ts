@@ -3,6 +3,7 @@ import { JobService } from '../service/job/job.service';
 import { Job } from '../model/job.model';
 import {Application} from "../model/applications.model";
 
+
 @Component({
   selector: 'app-view-job-application',
   templateUrl: './view-job-application.component.html',
@@ -27,4 +28,6 @@ export class ViewJobApplicationComponent implements OnInit{
       }
     );
   }
+
+  
 }

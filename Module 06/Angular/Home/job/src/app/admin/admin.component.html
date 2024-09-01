@@ -19,7 +19,7 @@
                 <div class="d-flex justify-content-between">
                   <div>
                     <h5 class="card-title">Total Jobs</h5>
-                    <h2>No Count</h2>
+                    <h2>{{ jobsCount }}</h2>
                   </div>
 
                 </div>
@@ -32,7 +32,7 @@
                 <div class="d-flex justify-content-between">
                   <div>
                     <h5 class="card-title">Active Users</h5>
-                    <h2>No Count</h2>
+                    <h2>{{ userCount }}</h2>
                   </div>
 
                 </div>
@@ -44,8 +44,8 @@
               <div class="card-body">
                 <div class="d-flex justify-content-between">
                   <div>
-                    <h5 class="card-title">Pending Approvals</h5>
-                    <h2>No Count</h2>
+                    <h5 class="card-title">Total Job Application</h5>
+                    <h2>{{ jobApplicationCount }}</h2>
                   </div>
 
                 </div>
@@ -148,21 +148,11 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>John Doe</td>
-                  <td>john.doe.com</td>
-                  <td>Job Seeker</td>
-                  <td>
-                    <button class="btn btn-sm btn-primary"><i class="fas fa-edit"></i> Edit</button>
-                    <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jane Smith</td>
-                  <td>jane.smith.com</td>
-                  <td>Employer</td>
+                <tr *ngFor="let user of users">
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.name }}</td>
                   <td>
                     <button class="btn btn-sm btn-primary"><i class="fas fa-edit"></i> Edit</button>
                     <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</button>

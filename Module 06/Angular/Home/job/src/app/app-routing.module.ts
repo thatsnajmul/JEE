@@ -90,7 +90,8 @@ const routes: Routes = [
   {
     path: 'userprofile',
     component: UserprofileComponent,
-    
+    canActivate:[AuthGuard, RoleGuard],
+    data: { role: 'employer,admin,jobSeeker'  }
   },
   {
     path: 'logout',

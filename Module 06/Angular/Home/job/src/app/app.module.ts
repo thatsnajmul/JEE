@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { JobsComponent } from './job/jobs.component';
+import {NgxPrintModule} from 'ngx-print';
 
 import { ModifyJobsComponent } from './modify-jobs/modify-jobs.component';
 import { UpdateModifyJobsComponent } from './update-modify-jobs/update-modify-jobs.component';
@@ -56,7 +57,8 @@ import { PersonaldetailComponent } from './personaldetail/personaldetail.compone
     AppRoutingModule,
     FormsModule,  // Add FormsModule here
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPrintModule
   ],
   providers: [
     provideClientHydration(),
