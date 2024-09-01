@@ -1,22 +1,25 @@
 {
   "user": [
     {
-      "id": "1a0f",
-      "name": "Md Najmul Islam",
-      "email": "najmul@gmail.com",
-      "password": "12345"
+      "id": "8e29",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "role": "admin"
     },
     {
-      "id": "16cb",
-      "name": "Md Najmul",
-      "email": "najmul123@gmail.com",
-      "password": "12346"
+      "id": "4827",
+      "name": "Job Seeker",
+      "email": "jobseeker@gmail.com",
+      "password": "jobseeker",
+      "role": "jobSeeker"
     },
     {
-      "id": "1901",
-      "name": "Md Najmul Islam",
-      "email": "najmul@gmail.com",
-      "password": "12345"
+      "id": "d273",
+      "name": "Employeer",
+      "email": "employeer@gmail.com",
+      "password": "employeer",
+      "role": "employer"
     }
   ],
   "jobs": [
@@ -74,19 +77,19 @@
       "jobId": "fgfgfgf"
     }
   ],
-  "education": [],
-  "experience": [],
-  "skill": [],
-  "language": [],
-  "personaldetails": [
+  "cvdata": [
     {
-      "id": "801f",
-      "name": "Md Najmul Islam",
+      "id": "ce32",
+      "fullName": "Md Najmul Islam",
       "email": "najmul@gmail.com",
       "phone": "01790610524",
-      "gender": "male",
-      "dob": "2024-08-07",
-      "address": "Banani"
+      "address": "Banani",
+      "degree": "SSC",
+      "institution": "ss",
+      "companyName": "gdgdg",
+      "jobTitle": "sds",
+      "jobDescription": "svgsv",
+      "skills": "sdsd"
     }
   ]
 }

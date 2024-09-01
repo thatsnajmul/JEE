@@ -7,16 +7,9 @@
     <div class="list-group list-group-flush">
       <a (click)="setActiveTab('profile')" class="list-group-item list-group-item-action bg-light"
         [class.active]="activeTab === 'profile'">Profile</a>
-      <a (click)="setActiveTab('personal-details')" class="list-group-item list-group-item-action bg-light"
-        [class.active]="activeTab === 'personal-details'">Personal Details</a>
-      <a (click)="setActiveTab('education')" class="list-group-item list-group-item-action bg-light"
-        [class.active]="activeTab === 'education'">Education</a>
-      <a (click)="setActiveTab('experience')" class="list-group-item list-group-item-action bg-light"
-        [class.active]="activeTab === 'experience'">Experience</a>
-      <a (click)="setActiveTab('skills')" class="list-group-item list-group-item-action bg-light"
-        [class.active]="activeTab === 'skills'">Skills</a>
-      <a (click)="setActiveTab('languages')" class="list-group-item list-group-item-action bg-light"
-        [class.active]="activeTab === 'languages'">Languages</a>
+        <a (click)="setActiveTab('cv-details')" class="list-group-item list-group-item-action bg-light"
+        [class.active]="activeTab === 'cv-details'">CV Details</a>
+      
 
     </div>
   </div>
@@ -25,7 +18,7 @@
   <div id="page-content-wrapper">
     <div class="container-fluid">
       <div class="row">
-        <div class="">
+        <div class="col-lg-12">
           <!-- Display content based on the active tab -->
           <div *ngIf="activeTab === 'profile'">   
             <!--////////////////////////////////////-->
@@ -55,337 +48,69 @@
           </div>
           <!--////////////////////////////////////-->
 
-          <div *ngIf="activeTab === 'personal-details'">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('add')" class="nav-link" data-toggle="tab" >Add</a> 
-              </li>
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('view')" class="nav-link" data-toggle="tab" >View</a> 
-              </li>
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('edit')" class="nav-link" data-toggle="tab" >Edit</a>
-              </li>       
-            </ul>
-
+          <div *ngIf="activeTab === 'cv-details'">
+            <div  *ngFor="let cvData of cvDatas" class="container mt-5">
+              <div class="row">
+                <!-- Personal Information Section -->
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <div class="card-header bg-primary text-white">
+                      <h5>Personal Information</h5>
+                    </div>
+                    <div class="card-body">
+                      <p><strong>Full Name:</strong> {{ cvData.fullName }}</p>
+                      <p><strong>Email:</strong> {{ cvData.email }}</p>
+                      <p><strong>Phone Number:</strong> {{ cvData.phone }}</p>
+                      <p><strong>Address:</strong> {{ cvData.address }}</p>
+                    </div>
+                  </div>
+                </div>
             
-            <div *ngIf="activeTabs === 'add'">
-              <div class="container mt-4">
-                <h2>Personal Details</h2>
-                <form #personalDetailsForm="ngForm" (ngSubmit)="onSubmit(personalDetailsForm)">
-                  <!-- Name -->
-                  <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input [(ngModel)]="personaldetails.name" name="name" type="text" class="form-control" id="name" placeholder="Enter full name">
+                <!-- Education Section -->
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                      <h5>Education</h5>
+                    </div>
+                    <div class="card-body">
+                      <p><strong>Degree:</strong> {{ cvData.degree }}</p>
+                      <p><strong>Institution:</strong> {{ cvData.institution }}</p>
+                    </div>
                   </div>
-              
-                  <!-- Email -->
-                  <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input  [(ngModel)]="personaldetails.email" name="email" type="email" class="form-control" id="email" placeholder="Enter email">
-                  </div>
-              
-                  <!-- Phone -->
-                  <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input [(ngModel)]="personaldetails.phone" name="phone" type="tel" class="form-control" id="phone" placeholder="Enter phone number">
-                  </div>
-              
-                  <!-- Gender -->
-                  <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select [(ngModel)]="personaldetails.gender" name="gender" class="form-control" id="gender">
-                      <option value="">Select Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-              
-                  <!-- Date of Birth -->
-                  <div class="form-group">
-                    <label for="dob">Date of Birth</label>
-                    <input [(ngModel)]="personaldetails.dob" name="dob" type="date" class="form-control" id="dob">
-                  </div>
-              
-                  <!-- Address -->
-                  <div class="form-group">
-                    <label for="address">Address</label>
-                    <textarea [(ngModel)]="personaldetails.address" name="address" class="form-control" id="address" rows="3" placeholder="Enter address"></textarea>
-                  </div>
-              
-                  <!-- Submit Button -->
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                </div>
               </div>
-              
-              
-            </div>
-            <div *ngIf="activeTabs === 'view'">
-              
-              <div *ngFor="let p of personaldetail">
-                
-              <div>
-                Full Name: <p>{{ p.name }}</p>
-              </div>
-              
-              <div>
-                Email Address: <p>{{ p.email }}</p>
-              </div>
-              
-              <div >
-                Phone Number: <p>{{ p.phone }}</p>
-              </div>
-              
-              <div>
-                Gender: <p>{{ p.gender }}</p>
-              </div>
-              
-              <div>
-                Date of Birth: <p>{{ p.dob | date }}</p>
-              </div>
-              
-              <div>
-               Address: <p>{{ p.address }}</p>
-              </div>
-
-              
-            </div>
-              
-            </div>
-            <div *ngIf="activeTabs === 'edit'">
-              <div class="container mt-4">
-                <h2>Personal Details</h2>
-                <form>
-                  <!-- Name -->
-                  <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter full name">
+            
+              <div class="row">
+                <!-- Work Experience Section -->
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <div class="card-header bg-success text-white">
+                      <h5>Work Experience</h5>
+                    </div>
+                    <div class="card-body">
+                      <p><strong>Company Name:</strong> {{ cvData.companyName }}</p>
+                      <p><strong>Job Title:</strong> {{ cvData.jobTitle }}</p>
+                      <p><strong>Job Description:</strong> {{ cvData.jobDescription }}</p>
+                    </div>
                   </div>
-              
-                  <!-- Email -->
-                  <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input name="email" type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+            
+                <!-- Skills Section -->
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header bg-info text-white">
+                      <h5>Skills</h5>
+                    </div>
+                    <div class="card-body">
+                      <p>{{ cvData.skills }}</p>
+                    </div>
                   </div>
-              
-                  <!-- Phone -->
-                  <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input name="phone" type="tel" class="form-control" id="phone" placeholder="Enter phone number">
-                  </div>
-              
-                  <!-- Gender -->
-                  <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select class="form-control" id="gender">
-                      <option value="">Select Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-              
-                  <!-- Date of Birth -->
-                  <div class="form-group">
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" class="form-control" id="dob">
-                  </div>
-              
-                  <!-- Address -->
-                  <div class="form-group">
-                    <label for="address">Address</label>
-                    <textarea name="address" class="form-control" rows="3" placeholder="Enter address"></textarea>
-                  </div>
-              
-                  <!-- Submit Button -->
-                  <button type="submit" class="btn btn-primary">Update</button>
-                </form>
+                </div>
               </div>
             </div>
             
-          </div>
-          <div *ngIf="activeTab === 'education'">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('add')" class="nav-link" data-toggle="tab" >Add</a> 
-              </li>
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('view')" class="nav-link" data-toggle="tab" >View</a> 
-              </li>
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('edit')" class="nav-link" data-toggle="tab" >Edit</a>
-              </li>       
-            </ul>
-
-            
-            <div *ngIf="activeTabs === 'add'">
-              <div class="container mt-4">
-                <form>
-                  <div class="form-group">
-                    <label for="schoolName">School/University</label>
-                    <input type="text" class="form-control" id="schoolName" placeholder="Enter your school or university">
-                  </div>
-                  <div class="form-group">
-                    <label for="degree">Degree</label>
-                    <input type="text" class="form-control" id="degree" placeholder="Enter your degree">
-                  </div>
-                  <div class="form-group">
-                    <label for="fieldOfStudy">Field of Study</label>
-                    <input type="text" class="form-control" id="fieldOfStudy" placeholder="Enter your field of study">
-                  </div>
-                  <div class="form-group">
-                    <label for="graduationYear">Graduation Year</label>
-                    <input type="number" class="form-control" id="graduationYear" placeholder="Enter your graduation year">
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-              
-            </div>
-            <div *ngIf="activeTabs === 'view'">
-              View
-            </div>
-            <div *ngIf="activeTabs === 'edit'">
-              Edit
-            </div>
-            
-          </div>
-          <div *ngIf="activeTab === 'experience'">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('add')" class="nav-link" data-toggle="tab" >Add</a> 
-              </li>
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('view')" class="nav-link" data-toggle="tab" >View</a> 
-              </li>
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('edit')" class="nav-link" data-toggle="tab" >Edit</a>
-              </li>       
-            </ul>
-
-            
-            <div *ngIf="activeTabs === 'add'">
-              <div class="container mt-4">
-                <form>
-                  <div class="form-group">
-                    <label for="companyName">Company Name</label>
-                    <input type="text" class="form-control" id="companyName" placeholder="Enter company name">
-                  </div>
-                  <div class="form-group">
-                    <label for="jobTitle">Job Title</label>
-                    <input type="text" class="form-control" id="jobTitle" placeholder="Enter your job title">
-                  </div>
-                  <div class="form-group">
-                    <label for="startDate">Start Date</label>
-                    <input type="date" class="form-control" id="startDate">
-                  </div>
-                  <div class="form-group">
-                    <label for="endDate">End Date</label>
-                    <input type="date" class="form-control" id="endDate">
-                  </div>
-                  <div class="form-group">
-                    <label for="jobDescription">Job Description</label>
-                    <textarea class="form-control" id="jobDescription" rows="3" placeholder="Enter your job description"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-              
-            </div>
-            <div *ngIf="activeTabs === 'view'">
-              View
-            </div>
-            <div *ngIf="activeTabs === 'edit'">
-              Edit
-            </div>
-          </div>
-          <div *ngIf="activeTab === 'skills'">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('add')" class="nav-link" data-toggle="tab" >Add</a> 
-              </li>
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('view')" class="nav-link" data-toggle="tab" >View</a> 
-              </li>
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('edit')" class="nav-link" data-toggle="tab" >Edit</a>
-              </li>       
-            </ul>
-
-            
-            <div *ngIf="activeTabs === 'add'">
-              <div class="container mt-4">
-                <form>
-                  <div class="form-group">
-                    <label for="skillName">Skill</label>
-                    <input type="text" class="form-control" id="skillName" placeholder="Enter a skill">
-                  </div>
-                  <div class="form-group">
-                    <label for="skillLevel">Proficiency</label>
-                    <select class="form-control" id="skillLevel">
-                      <option>Beginner</option>
-                      <option>Intermediate</option>
-                      <option>Advanced</option>
-                    </select>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-              
-            </div>
-            <div *ngIf="activeTabs === 'view'">
-              View
-            </div>
-            <div *ngIf="activeTabs === 'edit'">
-              Edit
-            </div>
-          </div>
-          <div *ngIf="activeTab === 'languages'">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('add')" class="nav-link" data-toggle="tab" >Add</a> 
-              </li>
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('view')" class="nav-link" data-toggle="tab" >View</a> 
-              </li>
-              <li class="nav-item" role="presentation">
-                <a (click)="setActiveTabs('edit')" class="nav-link" data-toggle="tab" >Edit</a>
-              </li>       
-            </ul>
-
-            
-            <div *ngIf="activeTabs === 'add'">
-              <div class="container mt-4">
-                <form>
-                  <div class="form-group">
-                    <label for="languageName">Add Language</label>
-                    <input type="text" class="form-control" id="languageName" placeholder="Enter a language">
-                  </div>
-                  <div class="form-group">
-                    <label for="languageLevel">Proficiency</label>
-                    <select class="form-control" id="languageLevel">
-                      <option>Beginner</option>
-                      <option>Intermediate</option>
-                      <option>Fluent</option>
-                      <option>Native</option>
-                    </select>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-              
-            </div>
-            <div *ngIf="activeTabs === 'view'">
-              View
-            </div>
-            <div *ngIf="activeTabs === 'edit'">
-              Edit
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>

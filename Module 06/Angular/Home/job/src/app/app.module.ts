@@ -21,6 +21,7 @@ import { AddJobComponent } from './admin/addjob/add-job.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { PersonaldetailComponent } from './personaldetail/personaldetail.component';
 
 
 
@@ -46,6 +47,7 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     LoginComponent,
     RegistrationComponent,
     UserprofileComponent,
+    PersonaldetailComponent,
 
 
   ],

@@ -14,6 +14,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { LogoutComponent } from './logout/logout.component';
+import { AuthGuard } from './guard/auth.guard';
+import { RoleGuard } from './guard/role.guard';
+import { PersonaldetailComponent } from './personaldetail/personaldetail.component';
 
 
 
@@ -22,6 +25,7 @@ const routes: Routes = [
   {
     path:'create-job',
     component: CreateJobComponent
+    
   },
   {
     path:'jobs',
@@ -50,6 +54,7 @@ const routes: Routes = [
   {
     path:'companies',
     component: CompaniesComponent
+
   },
   {
     path: 'home',
@@ -71,12 +76,17 @@ const routes: Routes = [
   },
   {
     path: 'userprofile',
-    component: UserprofileComponent
+    component: UserprofileComponent,
+    
   },
   {
     path: 'logout',
     component: LogoutComponent
   },
+  {
+    path: 'personaldetail',
+    component: PersonaldetailComponent
+  }
   
 
 
