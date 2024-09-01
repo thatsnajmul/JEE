@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserModel } from '../model/user.model';
+
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
+  user: UserModel | null = null;
 
 }

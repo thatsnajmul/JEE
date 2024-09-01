@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { JobService } from '../app/service/job/job.service';
+import { UserModel } from './model/user.model';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,7 @@ import { JobService } from '../app/service/job/job.service';
 
 
 export class AppComponent {
-  title = 'job';
+  title = 'job';  
 
-  
-
-  
-  
+  user: UserModel | null = null;
 }
