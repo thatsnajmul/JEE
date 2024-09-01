@@ -37,5 +37,7 @@ export class UserprofileService {
     return this.http.get<PersonalDetails[]>(this.personalDetails);
   }
 
+ 
+
   
 }

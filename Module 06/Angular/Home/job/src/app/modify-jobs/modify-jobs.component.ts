@@ -45,7 +45,7 @@ export class ModifyJobsComponent implements OnInit {
     });
   }
 
-  updateJob(jobId?: string): void {
+  editJob(jobId?: string): void {
     this.router.navigate(['/update-modify-jobs', jobId]);
   }
 
