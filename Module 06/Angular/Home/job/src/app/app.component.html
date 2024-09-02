@@ -17,17 +17,17 @@
                     <a class="nav-link" href="#" routerLink="/companies">Companies</a>
                 </li>
                 <!-- *ngIf="userInfo.userRole == ''" -->
-                <li  class="nav-item" >
+                <li *ngIf="userRole === 'admin' || userRole === 'employer'" class="nav-item" >
                     <a  class="nav-link" href="#" routerLink="/create-job">Create New Job</a>
                 </li>
 
-                <li  class="nav-item" >
+                <li *ngIf="userRole === 'admin' || userRole === 'employer'" class="nav-item" >
                     <a class="nav-link" href="#" routerLink="/modify-jobs">Modify Jobs</a>
                 </li>
-                <li  class="nav-item" >
+                <li *ngIf="userRole === 'admin'" class="nav-item" >
                     <a class="nav-link" href="#" routerLink="/view-job-application">View Application</a>
                 </li>
-                <li  class="nav-item" >
+                <li *ngIf="userRole === 'jobSeeker'" class="nav-item" >
                     <a class="nav-link" href="#" routerLink="/personaldetail">Personal Details</a>
                 </li>   
             </ul>

@@ -24,20 +24,84 @@
   ],
   "jobs": [
     {
-      "id": "f72f",
-      "title": "Business Analyst",
-      "description": "A Business Analyst bridges the gap between business needs and technology solutions, analyzing processes to improve efficiency. They gather and document requirements, communicate with stakeholders, and provide data-driven insights to support decision-making. Their role ensures that project outcomes align with business objectives.",
-      "location": "Dhaka",
-      "company": "Daraz",
-      "type": "part-time"
-    },
-    {
       "id": "5b6e",
       "title": "Junior Soft Engineer",
-      "description": "Junior Soft Engineer",
+      "description": "Description: Work with a dynamic team on software projects, writing clean and maintainable code. Must have experience in JavaScript and Angular.",
       "location": "Rahshahi",
       "company": "Orion",
       "type": "contract"
+    },
+    {
+      "id": "7ddd",
+      "title": "Junior Soft Engineer",
+      "description": "Description: Collaborate on innovative software development, ensuring code quality. Experience with Java and Spring Boot preferred. Strong problem-solving skills required.",
+      "location": "Rahshahi",
+      "company": "Orion",
+      "type": "part-time"
+    },
+    {
+      "id": "04f1",
+      "title": "Junior Soft Engineer",
+      "description": "Description: Join a fast-paced environment, contributing to front-end and back-end systems. Familiarity with REST APIs and databases essential.",
+      "location": "Rahshahi",
+      "company": "Orion",
+      "type": "part-time"
+    },
+    {
+      "id": "3aa9",
+      "title": "Junior Software Engineer",
+      "description": "Description: Develop and test scalable web applications. Required knowledge includes HTML, CSS, and React. Strong analytical skills are a must.",
+      "location": "Rajshahi",
+      "company": "Orion",
+      "type": "part-time"
+    },
+    {
+      "id": "6c3a",
+      "title": "Junior Software Engineer",
+      "description": "Description: Engage in full-stack development, focusing on responsive web designs. Knowledge of Node.js and MongoDB is an advantage.",
+      "location": "Rajshahi",
+      "company": "Orion",
+      "type": "part-time"
+    },
+    {
+      "id": "4fb4",
+      "title": "Junior Software Engineer",
+      "description": "Description: Participate in cross-functional teams to deliver high-quality code. Proficiency in Git version control is a plus.",
+      "location": "Rajshahi",
+      "company": "Orion",
+      "type": "part-time"
+    },
+    {
+      "id": "7913",
+      "title": "Junior Software Engineer",
+      "description": "Description: Support ongoing projects with bug fixing and feature enhancements. Familiarity with Agile methodologies is preferred.",
+      "location": "Rajshahi",
+      "company": "Orion",
+      "type": "full-time"
+    },
+    {
+      "id": "3699",
+      "title": "Junior Software Engineer",
+      "description": "Description: Develop features for enterprise software solutions. Skills in database optimization and performance tuning are advantageous.",
+      "location": "Rajshahi",
+      "company": "Orion",
+      "type": "part-time"
+    },
+    {
+      "id": "0507",
+      "title": "Junior Software Engineer",
+      "description": "Description: Work in a collaborative team to implement new features. Hands-on experience with cloud technologies is desirable.",
+      "location": "Rajshahi",
+      "company": "Orion",
+      "type": "part-time"
+    },
+    {
+      "id": "564c",
+      "title": "Junior Software Engineer",
+      "description": "Description: Contribute to a team working on real-time applications. Familiarity with Docker and microservices architecture is beneficial.",
+      "location": "Rajshahi",
+      "company": "Orion",
+      "type": "part-time"
     }
   ],
   "applications": [
@@ -47,8 +111,8 @@
       "email": "nmhislam1@gmail.com",
       "phone": "017903493101",
       "resume": "https://github.com/thatsnajmul",
-      "coverLetter": "zsdfasfasfv",
-      "jobId": "1088"
+      "coverLetter": "I am writing to express my interest in the Junior Software Engineer position at Orion. With a strong foundation in [mention key skills like JavaScript, Angular, or other relevant technologies], I am eager to contribute to your team and help develop high-quality software solutions.",
+      "jobId": "Junior Softwere Eng -1001"
     },
     {
       "id": "76da",
@@ -56,17 +120,8 @@
       "email": "najmul@gmail.com",
       "phone": "017903493101",
       "resume": "https://github.com/thatsnajmul",
-      "coverLetter": "xvxx",
-      "jobId": "1089"
-    },
-    {
-      "id": "caa5",
-      "name": "fgdfgfg",
-      "email": "gfgfg",
-      "phone": "fgfgf",
-      "resume": "gfgfgg",
-      "coverLetter": "fgfgf",
-      "jobId": "fgfgfgf"
+      "coverLetter": "I am writing to express my interest in the Junior Software Engineer position at Orion. With a strong foundation in [mention key skills like JavaScript, Angular, or other relevant technologies], I am eager to contribute to your team and help develop high-quality software solutions.",
+      "jobId": "Junior Softwere Eng -1005"
     }
   ],
   "cvdata": [
@@ -76,12 +131,12 @@
       "email": "najmul@gmail.com",
       "phone": "01790610524",
       "address": "Banani",
-      "degree": "SSC",
-      "institution": "ss",
-      "companyName": "gdgdg",
-      "jobTitle": "sds",
-      "jobDescription": "svgsv",
-      "skills": "sdsd"
+      "degree": "Masters in Political Science",
+      "institution": "Govt. Tongi College",
+      "companyName": "Social Worker",
+      "jobTitle": "Executive",
+      "jobDescription": "We are seeking a dynamic and results-driven Executive to join our team. As an Executive, you will be responsible for overseeing key business operations, driving strategic initiatives, and ensuring smooth day-to-day functions. You will work closely with senior leadership, manage cross-functional teams, and play a crucial role in achieving company objectives.",
+      "skills": "Social Science, Coding, Public Relationship"
     }
   ]
 }

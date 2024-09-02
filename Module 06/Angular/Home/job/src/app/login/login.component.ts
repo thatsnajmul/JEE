@@ -35,7 +35,7 @@ export class LoginComponent {
 
           const role=this.authService.getUserRole();
           
-            this.router.navigate(['/userprofile']);
+            this.router.navigate(['/']);
 
           
 
