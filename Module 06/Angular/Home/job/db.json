@@ -84,7 +84,7 @@
       "title": "Junior Software Engineer",
       "description": "Description: Develop features for enterprise software solutions. Skills in database optimization and performance tuning are advantageous.",
       "location": "Rajshahi",
-      "company": "Orion",
+      "company": "Rangs",
       "type": "part-time"
     },
     {
@@ -92,7 +92,7 @@
       "title": "Junior Software Engineer",
       "description": "Description: Work in a collaborative team to implement new features. Hands-on experience with cloud technologies is desirable.",
       "location": "Rajshahi",
-      "company": "Orion",
+      "company": "Xcel",
       "type": "part-time"
     },
     {
@@ -100,8 +100,16 @@
       "title": "Junior Software Engineer",
       "description": "Description: Contribute to a team working on real-time applications. Familiarity with Docker and microservices architecture is beneficial.",
       "location": "Rajshahi",
-      "company": "Orion",
+      "company": "Genics",
       "type": "part-time"
+    },
+    {
+      "id": "6e37",
+      "title": "ffsf",
+      "description": "sfsf",
+      "location": "sfsf",
+      "company": "sffs",
+      "type": "full-time"
     }
   ],
   "applications": [
@@ -122,6 +130,15 @@
       "resume": "https://github.com/thatsnajmul",
       "coverLetter": "I am writing to express my interest in the Junior Software Engineer position at Orion. With a strong foundation in [mention key skills like JavaScript, Angular, or other relevant technologies], I am eager to contribute to your team and help develop high-quality software solutions.",
       "jobId": "Junior Softwere Eng -1005"
+    },
+    {
+      "id": "f673",
+      "name": "Md Najmul Islam",
+      "email": "najmul@gmail.com",
+      "phone": "01790610524",
+      "resume": "gfgfgg",
+      "coverLetter": "dsff",
+      "jobId": "fgfgfgf"
     }
   ],
   "cvdata": [

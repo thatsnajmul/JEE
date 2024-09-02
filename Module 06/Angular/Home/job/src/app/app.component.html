@@ -24,7 +24,7 @@
                 <li *ngIf="userRole === 'admin' || userRole === 'employer'" class="nav-item" >
                     <a class="nav-link" href="#" routerLink="/modify-jobs">Modify Jobs</a>
                 </li>
-                <li *ngIf="userRole === 'admin'" class="nav-item" >
+                <li *ngIf="userRole === 'admin' || userRole === 'employer'" class="nav-item" >
                     <a class="nav-link" href="#" routerLink="/view-job-application">View Application</a>
                 </li>
                 <li *ngIf="userRole === 'jobSeeker'" class="nav-item" >
