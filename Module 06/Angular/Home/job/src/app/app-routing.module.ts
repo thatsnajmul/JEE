@@ -101,7 +101,7 @@ const routes: Routes = [
     path: 'personaldetail',
     component: PersonaldetailComponent,
     canActivate:[AuthGuard, RoleGuard],
-    data: { role: 'jobSeeker'  }
+    data: { role: 'jobSeeker' }
 
   }
   

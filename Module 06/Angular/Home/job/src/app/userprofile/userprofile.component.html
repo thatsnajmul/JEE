@@ -46,6 +46,10 @@
               
             </div>
           </div>
+
+          <div *ngIf="user?.role === 'admin'">
+            <button class="btn btn-outline-primary" href="#" routerLink="/admin">View Admin</button>
+          </div>
           <!--////////////////////////////////////-->
 
           <div *ngIf="activeTab === 'cv-details'">

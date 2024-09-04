@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { JobService } from '../app/service/job/job.service';
 import { UserModel } from './model/user.model';
+import { AuthService } from './service/auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,21 @@ import { UserModel } from './model/user.model';
 })
 
 
-export class AppComponent  {
+export class AppComponent implements OnInit{
   title = 'job';  
 
-  user: UserModel | null = null;
+  userRole: string | null = '';
+  currentUser: UserModel| null = null;
+  
+  constructor(private authService:AuthService){
 
-  jobs: any[] = [];
+  }
 
-  constructor(private jobService: JobService) { }
 
- 
+  ngOnInit(): void {
+    this.authService.currentUser$.subscribe(user => {
+      this.currentUser = user;
+      this.userRole = user?.role || null;
+    });
+  }
 }

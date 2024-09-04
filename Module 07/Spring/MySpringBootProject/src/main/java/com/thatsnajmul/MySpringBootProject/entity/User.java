@@ -1,26 +1,25 @@
 package com.thatsnajmul.MySpringBootProject.entity;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
-@Table(name = "faculties")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Faculty {
+@Table(name = "users")
+public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 40)
+    @Column(unique = true)
     private String name;
-
-    @Column(nullable = false)
-    private int totalseat;
-
+    private String email;
+    private String password;
+    private String image;
 }

@@ -5,6 +5,7 @@ import { UserprofileService } from '../service/userprofile/userprofile.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { jsPDF } from 'jspdf';
+import { AuthService } from '../service/auth/auth.service';
 
 
 import { JobService } from '../service/job/job.service';
