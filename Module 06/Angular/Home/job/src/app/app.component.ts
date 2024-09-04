@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { JobService } from '../app/service/job/job.service';
 import { UserModel } from './model/user.model';
 
@@ -9,8 +9,14 @@ import { UserModel } from './model/user.model';
 })
 
 
-export class AppComponent {
+export class AppComponent  {
   title = 'job';  
 
   user: UserModel | null = null;
+
+  jobs: any[] = [];
+
+  constructor(private jobService: JobService) { }
+
+ 
 }
