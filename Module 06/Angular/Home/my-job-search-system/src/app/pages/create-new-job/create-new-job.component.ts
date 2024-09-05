@@ -37,6 +37,8 @@ export class CreateNewJobComponent implements OnInit {
     })
   }
 
+  registerAsJobSeeker(){}
+
 
 
   
