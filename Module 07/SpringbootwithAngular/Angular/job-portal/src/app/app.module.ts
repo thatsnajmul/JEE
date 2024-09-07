@@ -9,7 +9,7 @@ import { SearchJobsComponent } from './search-jobs/search-jobs.component';
 import { JobListingComponent } from './job-listing/job-listing.component';
 import { FooterComponent } from './footer/footer.component';
 import { CompaniesComponent } from './companies/companies.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
