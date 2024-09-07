@@ -1,0 +1,18 @@
+<form [formGroup]="jobForm" (ngSubmit)="submitForm()" enctype="multipart/form-data">
+    <label for="jobTitle">Job Title:</label>
+    <input id="jobTitle" formControlName="jobTitle" type="text" />
+  
+    <label for="companyName">Company Name:</label>
+    <input id="companyName" formControlName="companyName" type="text" />
+
+    <label for="companyName">Company Name:</label>
+    <input id="companyName" formControlName="companyName" type="text" />
+  
+    <!-- Other form fields for job details -->
+  
+    <label for="companyImage">Company Image:</label>
+    <input id="companyImage" type="file" (change)="onFileSelected($event)" />
+  
+    <button type="submit">Submit</button>
+  </form>
+  

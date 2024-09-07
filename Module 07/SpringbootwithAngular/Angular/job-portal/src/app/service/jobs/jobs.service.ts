@@ -20,8 +20,8 @@ export class JobsService {
     return this.http.get<Job>(`${this.apiUrl}/${id}`);
   }
 
-  createJob(job: Job): Observable<Job> {
-    return this.http.post<Job>(this.apiUrl, job);
+  addJob(jobData: FormData): Observable<any> {
+    return this.http.post(this.apiUrl+"/add-jobs", jobData);
   }
 
   updateJob(id: number, job: Job): Observable<Job> {
