@@ -9,7 +9,7 @@ import { SearchJobsComponent } from './search-jobs/search-jobs.component';
 import { JobListingComponent } from './job-listing/job-listing.component';
 import { FooterComponent } from './footer/footer.component';
 import { CompaniesComponent } from './companies/companies.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AddJobComponent } from './add-job/add-job.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
