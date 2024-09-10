@@ -13,15 +13,15 @@ export class JobsService {
   constructor(private http: HttpClient) {}
 
   getJobs(): Observable<Job[]> {
-    return this.http.get<Job[]>(this.apiUrl+"/get-jobs");
+    return this.http.get<Job[]>(this.apiUrl+'/get-jobs');
   }
 
   getJobById(id: number): Observable<Job> {
     return this.http.get<Job>(`${this.apiUrl}/${id}`);
   }
 
-  addJob(jobData: FormData): Observable<any> {
-    return this.http.post(this.apiUrl+"/add-jobs", jobData);
+  createJob(job: Job): Observable<Job> {
+    return this.http.post<Job>(this.apiUrl+'/post', job);
   }
 
   updateJob(id: number, job: Job): Observable<Job> {
@@ -30,5 +30,15 @@ export class JobsService {
 
   deleteJob(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+
+
+  //
+  createJobWithImage(formData: FormData): Observable<Job> {
+    return this.http.post<Job>(this.apiUrl, formData);
+  }
+
+  updateJobWithImage(id: number, formData: FormData): Observable<Job> {
+    return this.http.put<Job>(`${this.apiUrl}/${id}`, formData);
   }
 }

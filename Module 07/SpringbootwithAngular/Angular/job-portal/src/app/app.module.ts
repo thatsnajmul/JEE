@@ -10,8 +10,10 @@ import { JobListingComponent } from './job-listing/job-listing.component';
 import { FooterComponent } from './footer/footer.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
-import { AddJobComponent } from './add-job/add-job.component';
+
 import { ReactiveFormsModule } from '@angular/forms';
+import { JobCreateComponent } from './job-create/job-create.component';
+import { JobEditComponent } from './job-edit/job-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     JobListingComponent,
     FooterComponent,
     CompaniesComponent,
-    AddJobComponent
+    JobCreateComponent,
+    JobEditComponent
   ],
   imports: [
     BrowserModule,
