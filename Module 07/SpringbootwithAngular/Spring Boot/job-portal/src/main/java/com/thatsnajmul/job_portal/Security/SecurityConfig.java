@@ -22,4 +22,51 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
+
+    private final UserService userService;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
+        return
+                http
+                        .csrf(AbstractHttpConfigurer::disable)
+                        .authorizeHttpRequests(
+
+                                req ->
+                                        req.requestMatchers("/login", "/register", "", "")
+                                                .permitAll()
+                                                .requestMatchers("", "")
+                                                .hasAuthority("ADMIN")
+                                                .requestMatchers("", "","", "")
+                                                .hasAnyAuthority("ADMIN", "HOTEL")
+                                                .requestMatchers("")
+                                                .hasAuthority("USER")
+
+                        )
+                        .userDetailsService(userService)
+                        .sessionManagement(
+                                session ->
+                                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                        )
+                        .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                        .build();
+
+
+    }
+
+
+
+    @Bean
+    public PasswordEncoder encoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
+        return configuration.getAuthenticationManager();
+    }
+
 }

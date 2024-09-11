@@ -36,15 +36,6 @@ public class JobRestController {
         return jobService.getJobById(id);
     }
 
-    @GetMapping("/get-jobs")
-    public List<JobEntity> getAllJobs(
-            @RequestParam(value = "jobType", required = false) String jobType,
-            @RequestParam(value = "experience", required = false) String experience,
-            @RequestParam(value = "category", required = false) String category) {
-
-        return jobService.getJobs(jobType, experience, category);
-    }
-
 
 
     @PostMapping("add-jobs")
