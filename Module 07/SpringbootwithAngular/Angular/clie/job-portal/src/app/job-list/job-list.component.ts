@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { JobService } from '../service/job.service';
 import { Job } from '../model/job.model';
 
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-job-list',
   templateUrl: './job-list.component.html',
@@ -15,7 +17,11 @@ export class JobListComponent implements OnInit{
   totalPages: number=0;
 
 
-  constructor(private jobService: JobService) {}
+  constructor(
+    private jobService: JobService,
+    private http: HttpClient
+
+  ) {}
 
   ngOnInit(): void {
     this.loadJobs();
@@ -37,8 +43,19 @@ export class JobListComponent implements OnInit{
   }
   
 
-  downloadCv(url: string): void {
-    window.open(url, '_blank');
+  openOrDownloadPdf(url: string): void {
+    // Create a temporary anchor element
+    const link = document.createElement('a');
+    link.href = url;
+
+    // Set the desired file name (optional)
+    link.download = 'CV.pdf';
+
+    // Open in a new tab or download
+    window.open(url, '_blank'); // Open in a new tab
+
+    // Trigger a download (comment this line if you only want to open in a new tab)
+    link.click();
   }
 
 }

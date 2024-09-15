@@ -12,6 +12,7 @@
           <th>Salary</th>
           <th>Category</th>
           <th>Deadline</th>
+          <th>Image</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -25,9 +26,9 @@
           <td>{{ job.minSalary }} - {{ job.maxSalary }}</td>
           <td>{{ job.category }}</td>
           <td>{{ job.deadline }}</td>
+          <td><img [src]="job.companyImageUrl" alt="Company Image" width="100" height="100"></td>
           <td>
-            <a [href]="job.companyImageUrl" target="_blank">View Image</a> |
-            <button class="btn btn-link" (click)="downloadCv(job.cvDownloadUrl)">Download CV</button>
+            <a (click)="openOrDownloadPdf(job.cvDownloadUrl)" class="btn btn-link">Download CV</a>
           </td>
         </tr>
       </tbody>
