@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { JobPostComponent } from './job-posting/job-post.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { JobPostingListComponent } from './service/job-posting-list/job-posting-list.component';
-import { JobPostingDetailComponent } from './service/job-posting-detail/job-posting-detail.component';
-import { JobPostingEditComponent } from './service/job-posting-edit/job-posting-edit.component';
+import { JobPostingListComponent } from './job-posting-list/job-posting-list.component';
+import { JobPostingDetailComponent } from './job-posting-detail/job-posting-detail.component';
+import { JobPostingEditComponent } from './job-posting-edit/job-posting-edit.component';
 
 @NgModule({
   declarations: [
