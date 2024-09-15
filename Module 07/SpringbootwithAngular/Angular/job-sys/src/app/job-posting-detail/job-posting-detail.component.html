@@ -1,0 +1,7 @@
+<div *ngIf="jobPosting">
+    <h2>{{ jobPosting.title }}</h2>
+    <img [src]="jobPosting.imageUrl" alt="Job Image" width="300">
+    <p>{{ jobPosting.description }}</p>
+    <button (click)="downloadCv()">Download CV</button>
+  </div>
+  

@@ -1,0 +1,28 @@
+<mat-table [dataSource]="jobPostings " >
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+      <mat-cell *matCellDef="let jobPosting">{{jobPosting.title}}</mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="image">
+      <mat-header-cell *matHeaderCellDef>Image</mat-header-cell>
+      <mat-cell *matCellDef="let jobPosting">
+        <img [src]="jobPosting.imageUrl" alt="Job Image" width="100">
+      </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+      <mat-cell *matCellDef="let jobPosting">
+        <a [routerLink]="['/job-postings', jobPosting.id]">View</a>
+        <a [routerLink]="['/job-postings/edit', jobPosting.id]">Edit</a>
+        <button (click)="deleteJobPosting(jobPosting.id)">Delete</button>
+      </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="['title', 'image', 'actions']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['title', 'image', 'actions'];"></mat-row>
+  </mat-table>
+  
+  <mat-paginator (page)="onPageChange($event.pageIndex)"></mat-paginator>
+  
