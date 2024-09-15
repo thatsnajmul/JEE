@@ -44,18 +44,26 @@ export class JobListComponent implements OnInit{
   
 
   openOrDownloadPdf(url: string): void {
-    // Create a temporary anchor element
-    const link = document.createElement('a');
-    link.href = url;
+    this.http.head(url, { observe: 'response', responseType: 'text' }).subscribe(response => {
+      const contentType = response.headers.get('Content-Type');
+      if (contentType && contentType.includes('pdf')) {
+        // Create a temporary anchor element
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'CV.pdf'; // Specify the filename
 
-    // Set the desired file name (optional)
-    link.download = 'CV.pdf';
+        // Open the PDF in a new tab
+        window.open(url, '_blank'); // Open in a new tab
 
-    // Open in a new tab or download
-    window.open(url, '_blank'); // Open in a new tab
-
-    // Trigger a download (comment this line if you only want to open in a new tab)
-    link.click();
+        // Trigger a download
+        link.click();
+      } else {
+        // Handle other file types or errors
+        console.error('The URL does not point to a PDF.');
+      }
+    }, error => {
+      console.error('Error fetching file type:', error);
+    });
   }
 
 }
