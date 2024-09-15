@@ -1,4 +1,4 @@
-package com.thatsnajmul.job_portal.Service;
+package com.thatsnajmul.job_portal.service;
 
 public class UserService{
 

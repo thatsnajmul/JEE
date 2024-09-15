@@ -1,9 +1,7 @@
-package com.thatsnajmul.job_portal.Entity;
+package com.thatsnajmul.job_portal.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
-import java.time.LocalDate;
 
 @Entity
 @Data

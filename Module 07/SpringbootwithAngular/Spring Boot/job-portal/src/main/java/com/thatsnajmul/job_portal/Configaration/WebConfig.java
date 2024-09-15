@@ -1,4 +1,4 @@
-package com.thatsnajmul.job_portal.Configaration;
+package com.thatsnajmul.job_portal.configaration;
 
 
 
