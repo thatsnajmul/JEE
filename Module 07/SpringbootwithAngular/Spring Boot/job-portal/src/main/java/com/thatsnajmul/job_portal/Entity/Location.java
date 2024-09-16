@@ -1,4 +1,5 @@
-package com.thatsnajmul.job_portal.Entity;
+package com.thatsnajmul.job_portal.entity;
+
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "joblocations")
+@Table(name = "locations")
 public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
