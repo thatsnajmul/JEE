@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/jobs")
 @CrossOrigin("*")
@@ -54,4 +56,12 @@ public class JobController {
         Pageable pageable = PageRequest.of(page, size);
         return ResponseEntity.ok(jobService.searchJobs(keyword, pageable));
     }
+
+//    // Suggest jobs by a partial ID or keyword
+//    @GetMapping("/search")
+//    public List<Job> searchJobs(@RequestParam("query") String query) {
+//        return jobService.searchJobs(query);
+//    }
+
+
 }

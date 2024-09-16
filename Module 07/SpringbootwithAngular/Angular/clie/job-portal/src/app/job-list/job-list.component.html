@@ -1,6 +1,20 @@
 <div class="container">
     <h2>Job Listings</h2>
-    <input type="text" placeholder="Search Jobs" (keyup)="searchJobs($event)" class="form-control mb-3">
+
+    <input 
+  type="text" 
+  placeholder="Search Jobs" 
+  (keyup)="searchJobs($event)" 
+  class="form-control mb-3" 
+/>
+
+<ul *ngIf="searchResults.length > 0" class="list-group">
+  <li *ngFor="let job of searchResults" class="list-group-item">
+    <a [routerLink]="['/job', job.id]">{{ job.title }} (ID: {{ job.id }})</a>
+  </li>
+</ul>
+
+
     <table class="table table-striped">
       <thead>
         <tr>

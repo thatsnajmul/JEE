@@ -33,8 +33,8 @@ export class JobService {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 
-  searchJobs(keyword: string, page: number, size: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/search?keyword=${keyword}&page=${page}&size=${size}`);
+  searchJobs(query: string): Observable<Job[]> {
+    return this.http.get<Job[]>(`${this.apiUrl}/search?query=${query}`);
   }
 
 }

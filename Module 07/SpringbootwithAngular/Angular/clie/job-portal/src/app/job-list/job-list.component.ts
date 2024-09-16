@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { JobService } from '../service/job.service';
 import { Job } from '../model/job.model';
-
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -21,7 +22,17 @@ export class JobListComponent implements OnInit{
     private jobService: JobService,
     private http: HttpClient
 
-  ) {}
+  ) {
+
+    this.searchSubject.pipe(
+      debounceTime(300), // wait 300ms after the last event before emitting last event
+      distinctUntilChanged() // only emit if value is different from the last
+    ).subscribe((query) => {
+      this.jobService.searchJobs(query).subscribe((results) => {
+        this.searchResults = results;
+      });
+    });
+  }
 
   ngOnInit(): void {
     this.loadJobs();
@@ -34,13 +45,16 @@ export class JobListComponent implements OnInit{
     });
   }
 
+  searchResults: Job[] = [];
+  private searchSubject = new Subject<string>();
   searchJobs(event: Event): void {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement) {
       const inputValue = inputElement.value;
-      console.log(inputValue);
+      this.searchSubject.next(inputValue); // Emit the input value
     }
   }
+  
   
 
   openOrDownloadPdf(url: string): void {
