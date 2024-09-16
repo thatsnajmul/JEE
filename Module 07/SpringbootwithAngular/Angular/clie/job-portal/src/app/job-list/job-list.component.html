@@ -27,6 +27,8 @@
           <th>Category</th>
           <th>Deadline</th>
           <th>Image</th>
+          <th>CV</th>
+
           <th>Actions</th>
         </tr>
       </thead>
@@ -46,6 +48,13 @@
           <td>
             <a (click)="openOrDownloadPdf(job.cvDownloadUrl)" class="btn btn-link">Download CV</a>
           </td>
+
+          <td>
+            <td>
+              <a [routerLink]="['/jobs/edit', job.id]" class="btn btn-warning btn-sm">Edit</a>
+              <button (click)="deleteJob(job.id)" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+            
         </tr>
       </tbody>
     </table>
@@ -60,6 +69,9 @@
         <li class="page-item" [class.disabled]="currentPage === totalPages - 1">
           <a class="page-link" (click)="currentPage = currentPage + 1; loadJobs()">Next</a>
         </li>
+
+
+
       </ul>
     </nav>
   </div>

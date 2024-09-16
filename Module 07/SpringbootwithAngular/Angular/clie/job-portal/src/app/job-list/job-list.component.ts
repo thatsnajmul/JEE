@@ -5,6 +5,8 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
+
+
 @Component({
   selector: 'app-job-list',
   templateUrl: './job-list.component.html',
@@ -18,9 +20,11 @@ export class JobListComponent implements OnInit{
   totalPages: number=0;
 
 
+
   constructor(
     private jobService: JobService,
-    private http: HttpClient
+    private http: HttpClient,
+  
 
   ) {
 
@@ -36,6 +40,7 @@ export class JobListComponent implements OnInit{
 
   ngOnInit(): void {
     this.loadJobs();
+    
   }
 
   loadJobs(): void {
@@ -44,6 +49,10 @@ export class JobListComponent implements OnInit{
       this.totalPages = data.totalPages;
     });
   }
+
+
+
+
 
   searchResults: Job[] = [];
   private searchSubject = new Subject<string>();
@@ -54,8 +63,6 @@ export class JobListComponent implements OnInit{
       this.searchSubject.next(inputValue); // Emit the input value
     }
   }
-  
-  
 
   openOrDownloadPdf(url: string): void {
     this.http.head(url, { observe: 'response', responseType: 'text' }).subscribe(response => {
@@ -78,6 +85,15 @@ export class JobListComponent implements OnInit{
     }, error => {
       console.error('Error fetching file type:', error);
     });
+  }
+
+  deleteJob(id: number): void {
+    if (confirm('Are you sure you want to delete this job?')) {
+      this.jobService.deleteJob(id).subscribe(() => {
+        this.loadJobs();  // Refresh the job list after deletion
+      });
+    }
+
   }
 
 }

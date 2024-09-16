@@ -53,8 +53,8 @@ public class JobController {
             @RequestParam String keyword,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
-        Pageable pageable = PageRequest.of(page, size);
-        return ResponseEntity.ok(jobService.searchJobs(keyword, pageable));
+            Pageable pageable = PageRequest.of(page, size);
+            return ResponseEntity.ok(jobService.searchJobs(keyword, pageable));
     }
 
 //    // Suggest jobs by a partial ID or keyword

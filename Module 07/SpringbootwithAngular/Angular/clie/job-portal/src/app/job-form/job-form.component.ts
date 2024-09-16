@@ -14,6 +14,7 @@ export class JobFormComponent implements OnInit{
   jobForm!: FormGroup;
   isEditMode = false;
   jobId: number =0;
+  
 
   constructor(
     private fb: FormBuilder,
