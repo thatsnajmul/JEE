@@ -1,4 +1,4 @@
-package com.thatsnajmul.job_portal.Jwt;
+package com.thatsnajmul.job_portal.jwt;
 
 
 public class JwtAuthenticationFilter {

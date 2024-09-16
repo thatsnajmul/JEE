@@ -1,11 +1,9 @@
-package com.thatsnajmul.job_portal.Entity;
+package com.thatsnajmul.job_portal.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.sql.Date;
 
 @Entity
 @Data
