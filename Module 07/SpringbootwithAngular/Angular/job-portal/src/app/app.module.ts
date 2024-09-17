@@ -14,6 +14,7 @@ import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@ang
 import { ReactiveFormsModule } from '@angular/forms';
 import { JobCreateComponent } from './job-create/job-create.component';
 import { JobEditComponent } from './job-edit/job-edit.component';
+import { ModifyJobsComponent } from './modify-jobs/modify-jobs.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { JobEditComponent } from './job-edit/job-edit.component';
     FooterComponent,
     CompaniesComponent,
     JobCreateComponent,
-    JobEditComponent
+    JobEditComponent,
+    ModifyJobsComponent
   ],
   imports: [
     BrowserModule,

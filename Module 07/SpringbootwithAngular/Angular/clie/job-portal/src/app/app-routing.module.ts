@@ -4,6 +4,7 @@ import { JobListComponent } from './job-list/job-list.component';
 import { JobFormComponent } from './job-form/job-form.component';
 
 const routes: Routes = [
+  
   { path:'job-list', component:JobListComponent},
   { path: 'jobs', component: JobListComponent },
   { path: 'jobs/add', component: JobFormComponent },
