@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { JobService } from '../service/job.service';
+import { JobService } from '../service/job/job.service';
 import { Job } from '../model/job.model';
 
 @Component({
@@ -61,15 +61,11 @@ export class JobFormComponent implements OnInit{
 
     const job: Job = this.jobForm.value;
 
-    if (this.isEditMode) {
-      this.jobService.updateJob(this.jobId, job).subscribe(() => {
-        this.router.navigate(['/jobs']);
-      });
-    } else {
+    
       this.jobService.createJob(job).subscribe(() => {
         this.router.navigate(['/jobs']);
       });
-    }
+    
   }
 
 }
