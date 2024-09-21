@@ -2,25 +2,30 @@
     <div class="row">
         <!-- Step Indicators -->
         <div class="col-md-4">
-            <div class="step-indicator active" id="indicator-1" onclick="goToStep(1)">Step 1: Personal Details</div>
-            <div class="step-indicator" id="indicator-2" onclick="goToStep(2)">Step 2: Contact Details</div>
-            <div class="step-indicator" id="indicator-3" onclick="goToStep(3)">Step 3: Address Details</div>
-            <div class="step-indicator" id="indicator-4" onclick="goToStep(4)">Step 4: Skills</div>
-            <div class="step-indicator" id="indicator-5" onclick="goToStep(5)">Step 5: Educational Details</div>
-            <div class="step-indicator" id="indicator-6" onclick="goToStep(6)">Step 6: Work Experience</div>
-            <div class="step-indicator" id="indicator-7" onclick="goToStep(7)">Step 7: Certification</div>
-            <div class="step-indicator" id="indicator-8" onclick="goToStep(8)">Step 8: Awards</div>
-            <div class="step-indicator" id="indicator-9" onclick="goToStep(9)">Step 9: Interest</div>
-            <div class="step-indicator" id="indicator-10" onclick="goToStep(10)">Step 10: Confirmation</div>
+            <div class="step-indicator" [ngClass]="{'active': currentStep === 1}" (click)="goToStep(1)">Step 1: Personal Details</div>
+            <div class="step-indicator" [ngClass]="{'active': currentStep === 2}" (click)="goToStep(2)">Step 2: Contact Details</div>
+            <div class="step-indicator" [ngClass]="{'active': currentStep === 3}" (click)="goToStep(3)">Step 3: Address Details</div>
+            <div class="step-indicator" [ngClass]="{'active': currentStep === 4}" (click)="goToStep(4)">Step 4: Skills</div>
+            <div class="step-indicator" [ngClass]="{'active': currentStep === 5}" (click)="goToStep(5)">Step 5: Educational Details</div>
+            <div class="step-indicator" [ngClass]="{'active': currentStep === 6}" (click)="goToStep(6)">Step 6: Work Experience</div>
+            <div class="step-indicator" [ngClass]="{'active': currentStep === 7}" (click)="goToStep(7)">Step 7: Certification</div>
+            <div class="step-indicator" [ngClass]="{'active': currentStep === 8}" (click)="goToStep(8)">Step 8: Awards</div>
+            <div class="step-indicator" [ngClass]="{'active': currentStep === 9}" (click)="goToStep(9)">Step 9: Interest</div>
+            <div class="step-indicator" [ngClass]="{'active': currentStep === 10}" (click)="goToStep(10)">Step 10: Confirmation</div>
         </div>
 
-        <!-- Form Content -->
+        <!-- Form Content Start-->
+        
+            <!-- Form Content -->
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <form id="registrationForm">
+                    <form [formGroup]="personalDetailsForm" (ngSubmit)="createOrUpdatePersonalDetails()">
+
+
+
                         <!-- Step 1: Personal Details -->
-                        <div class="step active" id="step-1">
+                        <div *ngIf="currentStep === 1">
                             <h4>Step 1: Personal Details</h4>
                             <div class="form-group">
                                 <label for="firstName">First Name</label>
@@ -43,11 +48,11 @@
                                 <label for="birthday">Birthday</label>
                                 <input type="date" class="form-control" id="birthday" required>
                             </div>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                             <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
                         </div>
 
                         <!-- Step 2: Contact Details -->
-                        <div class="step" id="step-2">
+                        <div *ngIf="currentStep === 2">
                             <h4>Step 2: Contact Details</h4>
                             <div class="form-group">
                                 <label for="email">Email</label>
@@ -61,12 +66,12 @@
                                 <label for="website">Website</label>
                                 <input type="url" class="form-control" id="website">
                             </div>
-                            <button type="button" class="btn btn-secondary" onclick="previousStep()">Previous</button>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                            <button type="button" class="btn btn-secondary" (click)="previousStep()">Previous</button>
+              <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
                         </div>
 
                         <!-- Step 3: Address Details -->
-                        <div class="step" id="step-3">
+                        <div *ngIf="currentStep === 3">
                             <h4>Step 3: Address Details</h4>
                             <div class="form-group">
                                 <label for="address">Address</label>
@@ -84,12 +89,12 @@
                                 <label for="zipCode">Zip Code</label>
                                 <input type="text" class="form-control" id="zipCode" required>
                             </div>
-                            <button type="button" class="btn btn-secondary" onclick="previousStep()">Previous</button>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                            <button type="button" class="btn btn-secondary" (click)="previousStep()">Previous</button>
+              <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
                         </div>
 
                         <!-- Step 4: Skills -->
-                        <div class="step" id="step-4">
+                        <div *ngIf="currentStep === 4">
                             <h4>Step 4: Skills</h4>
                             <div class="form-group">
                                 <label for="computerSkills">Computer Skills</label>
@@ -99,12 +104,12 @@
                                 <label for="languageSkills">Language Skills</label>
                                 <input type="text" class="form-control" id="languageSkills" required>
                             </div>
-                            <button type="button" class="btn btn-secondary" onclick="previousStep()">Previous</button>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                            <button type="button" class="btn btn-secondary" (click)="previousStep()">Previous</button>
+              <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
                         </div>
 
                         <!-- Step 5: Educational Details -->
-                        <div class="step" id="step-5">
+                        <div *ngIf="currentStep === 5">
                             <h4>Step 5: Educational Details</h4>
                             <div class="form-group">
                                 <label for="instituteName1">Institute Name 1</label>
@@ -123,12 +128,12 @@
                                 <input type="number" class="form-control" id="gpa1" step="0.01" required>
                             </div>
                             <!-- Repeat similar fields for additional institutes -->
-                            <button type="button" class="btn btn-secondary" onclick="previousStep()">Previous</button>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                            <button type="button" class="btn btn-secondary" (click)="previousStep()">Previous</button>
+              <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
                         </div>
 
                         <!-- Step 6: Work Experience -->
-                        <div class="step" id="step-6">
+                        <div *ngIf="currentStep === 6">
                             <h4>Step 6: Work Experience</h4>
                             <div class="form-group">
                                 <label for="companyName1">Company Name 1</label>
@@ -151,12 +156,12 @@
                                 <textarea class="form-control" id="jobIntro1" rows="3" required></textarea>
                             </div>
                             <!-- Repeat similar fields for additional companies -->
-                            <button type="button" class="btn btn-secondary" onclick="previousStep()">Previous</button>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                            <button type="button" class="btn btn-secondary" (click)="previousStep()">Previous</button>
+              <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
                         </div>
 
                         <!-- Step 7: Certification -->
-                        <div class="step" id="step-7">
+                        <div *ngIf="currentStep === 7">
                             <h4>Step 7: Certification</h4>
                             <div class="form-group">
                                 <label for="certificationName">Certification Name</label>
@@ -170,12 +175,12 @@
                                 <label for="certificationCourse">Course</label>
                                 <input type="text" class="form-control" id="certificationCourse" required>
                             </div>
-                            <button type="button" class="btn btn-secondary" onclick="previousStep()">Previous</button>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                            <button type="button" class="btn btn-secondary" (click)="previousStep()">Previous</button>
+                            <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
                         </div>
 
                         <!-- Step 8: Awards -->
-                        <div class="step" id="step-8">
+                        <div *ngIf="currentStep === 8">
                             <h4>Step 8: Awards</h4>
                             <div class="form-group">
                                 <label for="awardName">Award Name</label>
@@ -185,34 +190,42 @@
                                 <label for="awardYear">Award Year</label>
                                 <input type="number" class="form-control" id="awardYear" required>
                             </div>
-                            <button type="button" class="btn btn-secondary" onclick="previousStep()">Previous</button>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                            <button type="button" class="btn btn-secondary" (click)="previousStep()">Previous</button>
+                            <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
                         </div>
 
                         <!-- Step 9: Interest -->
-                        <div class="step" id="step-9">
+                        <div *ngIf="currentStep === 9">
                             <h4>Step 9: Interest</h4>
                             <div class="form-group">
                                 <label for="interestIntro">Introduce Your Interests</label>
                                 <textarea class="form-control" id="interestIntro" rows="3" required></textarea>
                             </div>
-                            <button type="button" class="btn btn-secondary" onclick="previousStep()">Previous</button>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                            <button type="button" class="btn btn-secondary" (click)="previousStep()">Previous</button>
+                            <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
                         </div>
 
                         <!-- Step 10: Confirmation -->
-                        <div class="step" id="step-10">
+                        <div *ngIf="currentStep === 10">
                             <h4>Step 10: Confirmation</h4>
                             <p>Please review your details and click "Save" to finish.</p>
-                            <button type="button" class="btn btn-secondary" onclick="previousStep()">Previous</button>
+                            <button type="button" class="btn btn-secondary" (click)="previousStep()">Previous</button>
                             <button type="submit" class="btn btn-success">Save</button>
                         </div>
+
+
                     </form>
                 </div>
             </div>
         </div>
+        
+
+         <!-- Form Content End-->
+
+
     </div>
 </div>
+
 
 
 

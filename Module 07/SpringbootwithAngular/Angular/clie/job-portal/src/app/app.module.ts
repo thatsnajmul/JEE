@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JobListComponent } from './job-list/job-list.component';
 import { JobFormComponent } from './job-form/job-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -35,6 +35,7 @@ import { ApplicationListComponent } from './application-list/application-list.co
 import { UserListComponent } from './user-list/user-list.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { JobApplicationEditComponent } from './job-application-edit/job-application-edit.component';
+import { PersonalDetailsComponent } from './jobseeker/personal-details/personal-details.component';
 ;
 
 
@@ -69,14 +70,16 @@ import { JobApplicationEditComponent } from './job-application-edit/job-applicat
     ApplicationListComponent,
     UserListComponent,
     JobDetailsComponent,
-    JobApplicationEditComponent
+    JobApplicationEditComponent,
+    PersonalDetailsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
+    FormsModule
     
     
 
