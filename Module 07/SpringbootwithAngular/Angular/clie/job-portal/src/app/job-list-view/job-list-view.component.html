@@ -50,7 +50,9 @@
                                 <p>Category: {{ job.category }}</p>
                                 <p>Deadline: {{ job.deadline }}</p>
                                 <button routerLink="/create-job-application" class="btn btn-outline-primary m-2">Apply Now</button>
-                                <button class="btn btn-outline-primary m-2">View Details</button>
+                                <button [routerLink]="['/job-details', job.id]" class="btn btn-outline-primary m-2">
+                                    View Details
+                                  </button>                                  
                             </div>
                         </div>
                         

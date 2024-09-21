@@ -19,6 +19,9 @@ import { EmployeerComponent } from './employeer/employeer.component';
 import { JobseekerComponent } from './jobseeker/jobseeker.component';
 import { UserDetailsComponent } from './jobseeker/user-details/user-details.component';
 import { AdminUserDetailsComponent } from './admin/admin-user-details/admin-user-details.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
+import { ApplicationListComponent } from './application-list/application-list.component';
+import { JobApplicationEditComponent } from './job-application-edit/job-application-edit.component';
 
 
 const routes: Routes = [
@@ -31,7 +34,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: '', redirectTo: '/home', pathMatch: 'full' },
   {path:'job-list-view', component: JobListViewComponent},
   {path: 'companies', component:CompaniesComponent},
   {path: 'view-all-companies', component:ViewAllCompaniesComponent},
@@ -46,6 +49,12 @@ const routes: Routes = [
   {path:'logout', component:LogoutComponent},
   {path:'user-profile', component:UserProfileComponent},
   {path:'add-job', component:AddJobComponent},
+  {path:'job-details', component:JobDetailsComponent},
+  //
+  { path: 'job-applications', component: ApplicationListComponent }, //
+  { path: 'job-applications/edit/:id', component: JobApplicationEditComponent },
+  { path: 'admin/job-form', component: JobFormComponent},
+
 
   //
   {path:'employeer', component:EmployeerComponent},
@@ -57,7 +66,7 @@ const routes: Routes = [
   { path:'job-list', component:JobListComponent},
   { path: 'jobs', component: JobListComponent },
   { path: 'jobs/add', component: JobFormComponent },
-  { path: 'jobs/edit/:id', component: JobFormComponent },
+  { path: 'job-details/:id', component: JobDetailsComponent },
   
 ];
 

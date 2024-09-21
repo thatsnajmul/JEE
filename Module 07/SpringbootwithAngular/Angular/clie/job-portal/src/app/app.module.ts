@@ -33,6 +33,8 @@ import { AdminUserDetailsComponent } from './admin/admin-user-details/admin-user
 import { EmployeerUserDetailsComponent } from './employeer/employeer-user-details/employeer-user-details.component';
 import { ApplicationListComponent } from './application-list/application-list.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
+import { JobApplicationEditComponent } from './job-application-edit/job-application-edit.component';
 ;
 
 
@@ -65,7 +67,9 @@ import { UserListComponent } from './user-list/user-list.component';
     AdminUserDetailsComponent,
     EmployeerUserDetailsComponent,
     ApplicationListComponent,
-    UserListComponent
+    UserListComponent,
+    JobDetailsComponent,
+    JobApplicationEditComponent
   ],
   imports: [
     BrowserModule,
