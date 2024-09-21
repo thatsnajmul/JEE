@@ -1,0 +1,65 @@
+/* Custom styles for Profile Page */
+.profile-card {
+    margin-top: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .profile-header {
+    background-color: #007bff;
+    color: white;
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+  }
+
+  .profile-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: -60px;
+    border: 5px solid white;
+  }
+
+  .profile-details {
+    padding:5px;
+    text-align: center;
+  }
+
+  .profile-details h2 {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .profile-details p {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .profile-details .social-links a {
+    font-size: 15px;
+    margin: 5px;
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .profile-details h2 {
+      font-size: 24px;
+    }
+    .profile-header img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .profile-details h2 {
+      font-size: 22px;
+    }
+    .profile-header img {
+      width: 80px;
+      height: 80px;
+    }
+  }

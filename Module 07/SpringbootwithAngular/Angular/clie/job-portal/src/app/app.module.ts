@@ -26,6 +26,13 @@ import { AdminComponent } from './admin/admin.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ViewAllCompaniesComponent } from './view-all-companies/view-all-companies.component';
 import { AddJobComponent } from './admin/addjob/add-job.component';
+import { EmployeerComponent } from './employeer/employeer.component';
+import { JobseekerComponent } from './jobseeker/jobseeker.component';
+import { UserDetailsComponent } from './jobseeker/user-details/user-details.component';
+import { AdminUserDetailsComponent } from './admin/admin-user-details/admin-user-details.component';
+import { EmployeerUserDetailsComponent } from './employeer/employeer-user-details/employeer-user-details.component';
+import { ApplicationListComponent } from './application-list/application-list.component';
+import { UserListComponent } from './user-list/user-list.component';
 ;
 
 
@@ -51,7 +58,14 @@ import { AddJobComponent } from './admin/addjob/add-job.component';
     AdminComponent,
     UserProfileComponent,
     ViewAllCompaniesComponent,
-    AddJobComponent
+    AddJobComponent,
+    EmployeerComponent,
+    JobseekerComponent,
+    UserDetailsComponent,
+    AdminUserDetailsComponent,
+    EmployeerUserDetailsComponent,
+    ApplicationListComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

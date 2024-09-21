@@ -18,5 +18,34 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  let currentStep = 1;
+
+  function nextStep() {
+      if (currentStep < 4) {
+          goToStep(currentStep + 1);
+      }
+  }
+
+  function previousStep() {
+      if (currentStep > 1) {
+          goToStep(currentStep - 1);
+      }
+  }
+
+  function goToStep(step) {
+      document.getElementById('step-' + currentStep).classList.remove('active');
+      document.getElementById('indicator-' + currentStep).classList.remove('active');
+      currentStep = step;
+      document.getElementById('step-' + currentStep).classList.add('active');
+      document.getElementById('indicator-' + currentStep).classList.add('active');
+  }
+
+  document.getElementById('registrationForm').onsubmit = function(e) {
+      e.preventDefault();
+      alert('Form Submitted Successfully!');
+  }
+</script>
 </body>
 </html>

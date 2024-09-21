@@ -15,6 +15,10 @@ import { LogoutComponent } from './logout/logout.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ViewAllCompaniesComponent } from './view-all-companies/view-all-companies.component';
 import { AddJobComponent } from './admin/addjob/add-job.component';
+import { EmployeerComponent } from './employeer/employeer.component';
+import { JobseekerComponent } from './jobseeker/jobseeker.component';
+import { UserDetailsComponent } from './jobseeker/user-details/user-details.component';
+import { AdminUserDetailsComponent } from './admin/admin-user-details/admin-user-details.component';
 
 
 const routes: Routes = [
@@ -43,7 +47,11 @@ const routes: Routes = [
   {path:'user-profile', component:UserProfileComponent},
   {path:'add-job', component:AddJobComponent},
 
-
+  //
+  {path:'employeer', component:EmployeerComponent},
+  {path:'jobseeker', component:JobseekerComponent},
+  {path:'user-details', component:UserDetailsComponent},
+  {path:'admin-user-details', component:AdminUserDetailsComponent},
 
   //For Admin
   { path:'job-list', component:JobListComponent},

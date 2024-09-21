@@ -1,0 +1,16 @@
+.step {
+    display: none;
+}
+.step.active {
+    display: block;
+}
+.step-indicator {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+.step-indicator.active {
+    background-color: #007bff;
+    color: white;
+}
