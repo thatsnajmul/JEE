@@ -4,7 +4,7 @@ export interface Job {
     companyName: string;
     jobType: string;
     location: string;
-    experience: number;
+    experience: string;
     minSalary: number;
     maxSalary: number;
     category: string;
