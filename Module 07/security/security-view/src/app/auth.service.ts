@@ -1,6 +1,9 @@
-import { Injectable } from '@angular/core';
+
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +11,7 @@ import { Observable } from 'rxjs';
 export class AuthService {
   private baseUrl = 'http://localhost:8080/api/auth'; // Your Spring Boot API URL
 
-  constructor(private http: HttpClient) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private http: HttpClient) {}
 
   register(user: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/register`, user);
@@ -30,7 +33,13 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
+
+
   isLoggedIn(): boolean {
-    return !!localStorage.getItem('token');
+    if (isPlatformBrowser(this.platformId)) {
+      const token = localStorage.getItem('token');
+      return !!token;
+    }
+    return false;
   }
 }
