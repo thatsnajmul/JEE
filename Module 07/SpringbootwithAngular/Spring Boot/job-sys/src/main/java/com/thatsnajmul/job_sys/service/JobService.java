@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class JobService {
     @Autowired
@@ -51,4 +53,6 @@ public class JobService {
     public Page<Job> searchJobs(String keyword, Pageable pageable) {
         return jobRepository.findByTitleContainingIgnoreCaseOrCompanyNameContainingIgnoreCase(keyword, keyword, pageable);
     }
+
+    // Search jobs by title or company name
 }

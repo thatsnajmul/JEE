@@ -1,38 +1,40 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { PersonalDetails } from '../../model/personal-details-model'; // create a PersonalDetails model based on your entity
+import { PersonalDetails } from '../../model/personal-details-model';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class PersonalDetailsService {
-    private apiUrl = 'http://localhost:8080/api/personal-details'; // Update with your API URL
 
-    constructor(private http: HttpClient) { }
+  private apiUrl = 'http://localhost:8080/api/personal-details'; // Update with your API URL
 
-    getAllPersonalDetails(): Observable<PersonalDetails[]> {
-        return this.http.get<PersonalDetails[]>(this.apiUrl);
-    }
+  constructor(private http: HttpClient) { }
 
-    getPersonalDetailsById(id: number): Observable<PersonalDetails> {
-        return this.http.get<PersonalDetails>(`${this.apiUrl}/${id}`);
-    }
-
-    createPersonalDetails(personalDetails: PersonalDetails): Observable<PersonalDetails> {
-        return this.http.post<PersonalDetails>(this.apiUrl, personalDetails);
-    }
-
-    getPersonalDetails(): Observable<any[]> {
-      return this.http.get<any[]>(`${this.apiUrl}`);
+  // Get all personal details
+  getAllPersonalDetails(): Observable<PersonalDetails[]> {
+    return this.http.get<PersonalDetails[]>(this.apiUrl);
   }
 
-  updatePersonalDetails(id: number, details: any): Observable<any> {
-      return this.http.put(`${this.apiUrl}/${id}`, details);
+  // Get personal details by ID
+  getPersonalDetailsById(id: number): Observable<PersonalDetails> {
+    return this.http.get<PersonalDetails>(`${this.apiUrl}/${id}`);
   }
 
-  deletePersonalDetails(id: number): Observable<any> {
-      return this.http.delete(`${this.apiUrl}/${id}`);
-  }
+  // Service method to update personal details
+updatePersonalDetails(id: number, personalDetails: PersonalDetails): Observable<PersonalDetails> {
+  return this.http.put<PersonalDetails>(`/api/personal-details/${id}`, personalDetails);
 }
 
+// Service method to create personal details
+createPersonalDetails(personalDetails: PersonalDetails): Observable<PersonalDetails> {
+  return this.http.post<PersonalDetails>('/api/personal-details', personalDetails);
+}
+
+
+  // Delete personal details by ID
+  deletePersonalDetails(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+}

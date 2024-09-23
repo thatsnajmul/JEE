@@ -22,6 +22,7 @@ import { AdminUserDetailsComponent } from './admin/admin-user-details/admin-user
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { ApplicationListComponent } from './application-list/application-list.component';
 import { JobApplicationEditComponent } from './job-application-edit/job-application-edit.component';
+import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/add-personal-details.component';
 
 
 const routes: Routes = [
@@ -61,6 +62,7 @@ const routes: Routes = [
   {path:'jobseeker', component:JobseekerComponent},
   {path:'user-details', component:UserDetailsComponent},
   {path:'admin-user-details', component:AdminUserDetailsComponent},
+  {path:'add-personal-details', component:AddPersonalDetailsComponent},
 
   //For Admin
   { path:'job-list', component:JobListComponent},

@@ -1,12 +1,24 @@
- <!-- Hero Section -->
- <section class="hero-section text-center">
-    <div class="container">
-        <h1>Find Your Dream Job</h1>
-        <p class="lead">Browse thousands of jobs and find the right one for you.</p>
-        <form class="form-inline justify-content-center">
-            <input class="form-control mr-2 mt-2" type="search" placeholder="Job title or keyword" aria-label="Search">
-            <input class="form-control mr-2 mt-2" type="location" placeholder="Location" aria-label="Location">
-            <button class="btn btn-primary mt-2" type="submit">Search Jobs</button>
-        </form>
+<div class="container">
+    
+</div>
+    <div class="search-container m-5">
+        <input class="form-control mr-2 mt-2 p-2" type="search" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="Job title or keyword" aria-label="Search">
     </div>
-</section>
+    
+    <div class="job-list m-5" *ngIf="jobs.length > 0">
+        <div *ngFor="let job of jobs">
+            <div class="scrollable-container">
+                <a (click)="openJobDetails(job.id)" target="_blank">
+                    <h5>{{ job.title }}</h5>
+                    <p>{{ job.companyName }} - {{ job.location }}</p>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div *ngIf="jobs.length === 0 && searchTerm.trim().length > 0">
+        <p class="m-5">No jobs found.</p>
+    </div>
+
+

@@ -1,10 +1,10 @@
-export interface Job {
+export interface JobSearch {
     id: number;
     title: string;
     companyName: string;
     jobType: string;
     location: string;
-    experience: string;
+    experience: number;
     minSalary: number;
     maxSalary: number;
     category: string;

@@ -1,18 +1,17 @@
 package com.thatsnajmul.job_sys.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
 @Data
 public class PersonalDetails {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String firstName;
     private String lastName;
     private String gender;
@@ -28,18 +27,16 @@ public class PersonalDetails {
     private String languageSkills;
     private String instituteName1;
     private String subjectName1;
-    private int passingYear1;
-    private double gpa1;
+    private Integer passingYear1;
+    private Double gpa1;
     private String companyName1;
     private String designation1;
-    private String workStartDate1;
-    private String workEndDate1;
-    private String jobIntro1;
     private String certificationName;
-    private int certificationYear;
-    private String certificationCourse;
+    private Integer certificationYear;
     private String awardName;
-    private int awardYear;
+    private Integer awardYear;
     private String interestIntro;
+
+    // Getters and Setters
 }
 

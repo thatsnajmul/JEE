@@ -36,6 +36,10 @@ import { UserListComponent } from './user-list/user-list.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { JobApplicationEditComponent } from './job-application-edit/job-application-edit.component';
 import { PersonalDetailsComponent } from './jobseeker/personal-details/personal-details.component';
+import { NavLeftComponent } from './nav-left/nav-left.component';
+import { SidebarLeftComponent } from './sidebar-left/sidebar-left.component';
+import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
+import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/add-personal-details.component';
 ;
 
 
@@ -71,7 +75,11 @@ import { PersonalDetailsComponent } from './jobseeker/personal-details/personal-
     UserListComponent,
     JobDetailsComponent,
     JobApplicationEditComponent,
-    PersonalDetailsComponent
+    PersonalDetailsComponent,
+    NavLeftComponent,
+    SidebarLeftComponent,
+    SidebarRightComponent,
+    AddPersonalDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/personal-details")
+@CrossOrigin("*")
 public class PersonalDetailsController {
 
     @Autowired
@@ -27,9 +28,11 @@ public class PersonalDetailsController {
     }
 
     @PostMapping
-    public PersonalDetails createUser(@RequestBody PersonalDetails personalDetails) {
-        return personalDetailsService.createUser(personalDetails);
+    public ResponseEntity<PersonalDetails> createUser(@RequestBody PersonalDetails personalDetails) {
+        PersonalDetails savedDetails = personalDetailsService.createUser(personalDetails);
+        return ResponseEntity.ok(savedDetails); // Ensure you're returning a valid JSON response
     }
+
 
     @PutMapping("/{id}")
     public ResponseEntity<PersonalDetails> updateUser(@PathVariable Long id, @RequestBody PersonalDetails personalDetails) {
