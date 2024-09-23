@@ -67,6 +67,7 @@ const routes: Routes = [
   { path: 'jobs', component: JobListComponent },
   { path: 'jobs/add', component: JobFormComponent },
   { path: 'job-details/:id', component: JobDetailsComponent },
+  { path: 'jobs/edit/:id', component: JobFormComponent },
   
 ];
 
