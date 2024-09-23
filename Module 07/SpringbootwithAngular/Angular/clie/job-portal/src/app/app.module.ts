@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JobListComponent } from './job-list/job-list.component';
 import { JobFormComponent } from './job-form/job-form.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -40,7 +40,6 @@ import { NavLeftComponent } from './nav-left/nav-left.component';
 import { SidebarLeftComponent } from './sidebar-left/sidebar-left.component';
 import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
 import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/add-personal-details.component';
-;
 
 
 
@@ -87,7 +86,7 @@ import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/ad
     AppRoutingModule,
     ReactiveFormsModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
-    FormsModule
+    FormsModule,
     
     
 
@@ -95,7 +94,6 @@ import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/ad
   providers: [
     provideClientHydration(),
     provideHttpClient(withFetch()),
-    GeoService
   ],
   bootstrap: [AppComponent]
 })

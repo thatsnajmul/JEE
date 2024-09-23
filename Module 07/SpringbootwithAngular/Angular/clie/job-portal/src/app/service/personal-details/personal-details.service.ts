@@ -8,28 +8,38 @@ import { PersonalDetails } from '../../model/personal-details-model';
 })
 export class PersonalDetailsService {
 
-  private apiUrl = 'http://localhost:8080/api/personal-details';
+    private apiUrl = 'http://localhost:8080/api/personal-details'; // Update to match your API endpoint
 
     constructor(private http: HttpClient) {}
-
-    createPersonalDetails(details: PersonalDetails): Observable<PersonalDetails> {
-        return this.http.post<PersonalDetails>(this.apiUrl, details);
+  
+    // Get all personal details with pagination
+    getPersonalDetails(page: number, size: number): Observable<any> {
+      return this.http.get(`${this.apiUrl}?page=${page}&size=${size}`);
     }
-
-    updatePersonalDetails(id: number, details: PersonalDetails): Observable<PersonalDetails> {
-        return this.http.put<PersonalDetails>(`${this.apiUrl}/${id}`, details);
+  
+    // Get a specific personal detail by ID
+    getPersonalDetailById(id: number): Observable<PersonalDetails> {
+      return this.http.get<PersonalDetails>(`${this.apiUrl}/${id}`);
     }
-
-    getPersonalDetails(id: number): Observable<PersonalDetails> {
-        return this.http.get<PersonalDetails>(`${this.apiUrl}/${id}`);
+  
+    // Create a new personal detail entry
+    createPersonalDetail(personalDetail: PersonalDetails): Observable<PersonalDetails> {
+      return this.http.post<PersonalDetails>(this.apiUrl, personalDetail);
     }
-
-    deletePersonalDetails(id: number): Observable<void> {
-        return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  
+    // Update an existing personal detail entry
+    updatePersonalDetail(id: number, personalDetail: PersonalDetails): Observable<PersonalDetails> {
+      return this.http.put<PersonalDetails>(`${this.apiUrl}/${id}`, personalDetail);
     }
-
-    getAllPersonalDetails(): Observable<PersonalDetails[]> {
-        return this.http.get<PersonalDetails[]>(this.apiUrl);
+  
+    // Delete a personal detail entry by ID
+    deletePersonalDetail(id: number): Observable<void> {
+      return this.http.delete<void>(`${this.apiUrl}/${id}`);
+    }
+  
+    // Search personal details by keyword
+    searchPersonalDetails(query: string): Observable<PersonalDetails[]> {
+      return this.http.get<PersonalDetails[]>(`${this.apiUrl}/search?query=${query}`);
     }
 
     

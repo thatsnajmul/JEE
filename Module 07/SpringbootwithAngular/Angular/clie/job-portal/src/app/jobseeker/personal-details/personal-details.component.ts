@@ -1,72 +1,44 @@
-// personal-details.component.ts
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PersonalDetailsService } from '../../service/personal-details/personal-details.service';
-
 
 @Component({
   selector: 'app-personal-details',
   templateUrl: './personal-details.component.html',
   styleUrl: './personal-details.component.css'
 })
-export class PersonalDetailsComponent implements OnInit{
-  
-  personalDetailsForm: FormGroup;
-    editMode = false;
-    personalDetailsId!: number;
+export class PersonalDetailsComponent implements OnInit {
 
-    constructor(private fb: FormBuilder, private detailsService: PersonalDetailsService) {
-        this.personalDetailsForm = this.fb.group({
-            firstName: ['', Validators.required],
-            lastName: ['', Validators.required],
-            gender: ['', Validators.required],
-            birthday: ['', Validators.required],
-            email: ['', [Validators.required, Validators.email]],
-            phone: ['', Validators.required],
-            website: [''],
-            address: ['', Validators.required],
-            city: ['', Validators.required],
-            country: ['', Validators.required],
-            zipCode: ['', Validators.required],
-            computerSkills: ['', Validators.required],
-            languageSkills: ['', Validators.required],
-            instituteName1: ['', Validators.required],
-            subjectName1: ['', Validators.required],
-            passingYear1: ['', Validators.required],
-            gpa1: ['', Validators.required],
-            companyName1: ['', Validators.required],
-            designation1: ['', Validators.required],
-            certificationName: ['', Validators.required],
-            certificationYear: ['', Validators.required],
-            awardName: ['', Validators.required],
-            awardYear: ['', Validators.required],
-            interestIntro: ['', Validators.required],
-        });
-    }
+  personalDetails: any;
+  personalDetailsId: number = 0;
 
-    ngOnInit() {
-        // Fetch existing details if in edit mode
-        if (this.personalDetailsId) {
-            this.detailsService.getPersonalDetails(this.personalDetailsId).subscribe(data => {
-                this.personalDetailsForm.patchValue(data);
-            });
-        }
-    }
+  constructor(
+    private personalDetailsService: PersonalDetailsService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
-    toggleEditMode() {
-        this.editMode = !this.editMode;
-    }
+  ngOnInit(): void {
+    // Check if in view mode and get the personal details
+    this.route.params.subscribe(params => {
+      this.personalDetailsId = +params['id'];
+      if (this.personalDetailsId) {
+        this.loadPersonalDetails(this.personalDetailsId);
+      }
+    });
+  }
 
-    createOrUpdatePersonalDetails() {
-        if (this.editMode) {
-            this.detailsService.updatePersonalDetails(this.personalDetailsId, this.personalDetailsForm.value).subscribe();
-        } else {
-            this.detailsService.createPersonalDetails(this.personalDetailsForm.value).subscribe();
-        }
-    }
-  
+  // Load personal details by ID
+  loadPersonalDetails(id: number): void {
+    this.personalDetailsService.getPersonalDetailById(id).subscribe(details => {
+      if (details) {
+        this.personalDetails = details; // Assign the data for display
+      }
+    });
+  }
 
-
- 
-
+  // Navigate to edit component for editing the personal details
+  goToEdit(): void {
+    this.router.navigate(['/edit-personal-details', this.personalDetailsId]);
+  }
 }

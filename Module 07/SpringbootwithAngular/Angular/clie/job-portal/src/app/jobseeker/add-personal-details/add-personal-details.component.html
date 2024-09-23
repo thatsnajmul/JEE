@@ -1,1 +1,169 @@
-<p>add-personal-details works!</p>
+<div class="container mt-5">
+    <button routerLink="/add-personal-details">Add</button>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <form [formGroup]="addPersonalDetailsForm" (ngSubmit)="createOrUpdatePersonalDetails()">
+                    
+                        <!-- Step 1: Personal Details -->
+                        <h4>Step 1: Personal Details</h4>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" formControlName="firstName">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" formControlName="lastName">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="gender" formControlName="gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="birthday">Birthday</label>
+                                <input type="date" class="form-control" id="birthday" formControlName="birthday">
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Contact Details -->
+                        <h4>Step 2: Contact Details</h4>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" formControlName="email">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" formControlName="phone">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="website">Website</label>
+                                <input type="text" class="form-control" id="website" formControlName="website">
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Address Details -->
+                        <h4>Step 3: Address Details</h4>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" formControlName="address">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" formControlName="city">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="country">Country</label>
+                                <input type="text" class="form-control" id="country" formControlName="country">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="zipCode">Zip Code</label>
+                                <input type="text" class="form-control" id="zipCode" formControlName="zipCode">
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Skills -->
+                        <h4>Step 4: Skills</h4>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="computerSkills">Computer Skills</label>
+                                <input type="text" class="form-control" id="computerSkills" formControlName="computerSkills">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="languageSkills">Language Skills</label>
+                                <input type="text" class="form-control" id="languageSkills" formControlName="languageSkills">
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Educational Details -->
+                        <h4>Step 5: Educational Details</h4>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="instituteName1">Institute Name 1</label>
+                                <input type="text" class="form-control" id="instituteName1" formControlName="instituteName1">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="subjectName1">Subject Name 1</label>
+                                <input type="text" class="form-control" id="subjectName1" formControlName="subjectName1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="passingYear1">Passing Year 1</label>
+                                <input type="text" class="form-control" id="passingYear1" formControlName="passingYear1">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="gpa1">GPA 1</label>
+                                <input type="text" class="form-control" id="gpa1" formControlName="gpa1">
+                            </div>
+                        </div>
+
+                        <!-- Step 6: Work Experience -->
+                        <h4>Step 6: Work Experience</h4>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="companyName1">Company Name 1</label>
+                                <input type="text" class="form-control" id="companyName1" formControlName="companyName1">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="designation1">Designation 1</label>
+                                <input type="text" class="form-control" id="designation1" formControlName="designation1">
+                            </div>
+                        </div>
+
+                        <!-- Step 7: Certification -->
+                        <h4>Step 7: Certification</h4>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="certificationName">Certification Name</label>
+                                <input type="text" class="form-control" id="certificationName" formControlName="certificationName">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="certificationYear">Certification Year</label>
+                                <input type="text" class="form-control" id="certificationYear" formControlName="certificationYear">
+                            </div>
+                        </div>
+
+                        <!-- Step 8: Awards -->
+                        <h4>Step 8: Awards</h4>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="awardName">Award Name</label>
+                                <input type="text" class="form-control" id="awardName" formControlName="awardName">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="awardYear">Award Year</label>
+                                <input type="text" class="form-control" id="awardYear" formControlName="awardYear">
+                            </div>
+                        </div>
+
+                        <!-- Interest Intro -->
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="interestIntro">Introduce Your Interests</label>
+                                <textarea class="form-control" id="interestIntro" formControlName="interestIntro" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

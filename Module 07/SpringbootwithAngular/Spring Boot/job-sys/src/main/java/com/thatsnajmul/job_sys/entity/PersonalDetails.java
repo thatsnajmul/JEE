@@ -29,14 +29,14 @@ public class PersonalDetails {
     private String languageSkills;
     private String instituteName1;
     private String subjectName1;
-    private int passingYear1;
-    private double gpa1;
+    private String passingYear1;
+    private String gpa1;
     private String companyName1;
     private String designation1;
     private String certificationName;
-    private int certificationYear;
+    private String certificationYear;
     private String awardName;
-    private int awardYear;
+    private String awardYear;
     private String interestIntro;
 
     // Getters and setters
