@@ -18,26 +18,22 @@ public class PersonalDetailsService {
     }
 
     public PersonalDetails getUserById(Long id) {
-        return personalDetailsRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+        return personalDetailsRepository.findById(id).orElse(null);
     }
 
     public PersonalDetails createUser(PersonalDetails personalDetails) {
         return personalDetailsRepository.save(personalDetails);
     }
 
-
-
     public PersonalDetails updateUser(Long id, PersonalDetails personalDetails) {
-        PersonalDetails existingUser = personalDetailsRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
-
-        existingUser.setFirstName(personalDetails.getFirstName());
-        existingUser.setLastName(personalDetails.getLastName());
-        existingUser.setGender(personalDetails.getGender());
-        // Set other fields...
-
-        return personalDetailsRepository.save(existingUser);
+        PersonalDetails existingDetails = personalDetailsRepository.findById(id).orElse(null);
+        if (existingDetails != null) {
+            existingDetails.setFirstName(personalDetails.getFirstName());
+            existingDetails.setLastName(personalDetails.getLastName());
+            // ... update other fields as necessary
+            return personalDetailsRepository.save(existingDetails);
+        }
+        return null;
     }
 
     public void deleteUser(Long id) {

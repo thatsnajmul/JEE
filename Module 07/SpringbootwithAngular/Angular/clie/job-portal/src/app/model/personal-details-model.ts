@@ -1,5 +1,4 @@
 export interface PersonalDetails {
-    id?: number;
     firstName: string;
     lastName: string;
     gender: string;
@@ -19,12 +18,8 @@ export interface PersonalDetails {
     gpa1: number;
     companyName1: string;
     designation1: string;
-    workStartDate1: string;
-    workEndDate1?: string;
-    jobIntro1: string;
     certificationName: string;
     certificationYear: number;
-    certificationCourse: string;
     awardName: string;
     awardYear: number;
     interestIntro: string;

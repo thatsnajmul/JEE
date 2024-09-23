@@ -1,8 +1,10 @@
 package com.thatsnajmul.job_sys.controller;
 
+// PersonalDetailsController.java
 import com.thatsnajmul.job_sys.entity.PersonalDetails;
-import com.thatsnajmul.job_sys.service.PersonalDetailsService;
+import com.thatsnajmul.job_sys.repository.PersonalDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,40 +12,39 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/personal-details")
-@CrossOrigin("*")
 public class PersonalDetailsController {
-
     @Autowired
-    private PersonalDetailsService personalDetailsService;
+    private PersonalDetailsRepository repository;
 
     @GetMapping
-    public List<PersonalDetails> getAllUsers() {
-        return personalDetailsService.getAllUsers();
+    public List<PersonalDetails> getAll() {
+        return repository.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PersonalDetails> getUserById(@PathVariable Long id) {
-        PersonalDetails personalDetails = personalDetailsService.getUserById(id);
-        return ResponseEntity.ok(personalDetails);
+    public ResponseEntity<PersonalDetails> getById(@PathVariable Long id) {
+        return repository.findById(id)
+                .map(details -> ResponseEntity.ok(details))
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public ResponseEntity<PersonalDetails> createUser(@RequestBody PersonalDetails personalDetails) {
-        PersonalDetails savedDetails = personalDetailsService.createUser(personalDetails);
-        return ResponseEntity.ok(savedDetails); // Ensure you're returning a valid JSON response
+    public ResponseEntity<PersonalDetails> create(@RequestBody PersonalDetails details) {
+        return new ResponseEntity<>(repository.save(details), HttpStatus.CREATED);
     }
 
-
     @PutMapping("/{id}")
-    public ResponseEntity<PersonalDetails> updateUser(@PathVariable Long id, @RequestBody PersonalDetails personalDetails) {
-        PersonalDetails updatedDetails = personalDetailsService.updateUser(id, personalDetails);
-        return ResponseEntity.ok(updatedDetails);
+    public ResponseEntity<PersonalDetails> update(@PathVariable Long id, @RequestBody PersonalDetails details) {
+        if (!repository.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
+        details.setId(id);
+        return ResponseEntity.ok(repository.save(details));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
-        personalDetailsService.deleteUser(id);
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        repository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 }
-
