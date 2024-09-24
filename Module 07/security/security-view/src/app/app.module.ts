@@ -8,7 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { LogoutComponent } from './logout/logout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { JwtInterceptor } from '../app/JwtInterceptor';
 import { FormsModule } from '@angular/forms';
 
@@ -28,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

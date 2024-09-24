@@ -10,6 +10,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
+
+import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 @EnableWebSecurity
@@ -24,15 +27,27 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(csrf -> csrf.disable())  // Disable CSRF for REST API
-                .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/register").permitAll()  // Allow public access to registration
-                        .anyRequest().authenticated()  // All other requests require authentication
-                );
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        // Custom CSRF handler (optional)
+        CsrfTokenRequestAttributeHandler requestHandler = new CsrfTokenRequestAttributeHandler();
+
+        http.csrf(csrf -> csrf.disable())  // Disable CSRF
+
+        // Enable CSRF for specific cases if needed
+                .csrf(csrf -> csrf
+                        .csrfTokenRequestHandler(requestHandler)
+                        .ignoringRequestMatchers("/api/auth/**") // Disable CSRF for API endpoints
+                )
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/auth/**").permitAll() // Public access to auth endpoints
+                        .anyRequest().authenticated() // All other requests require authentication
+                )
+                .cors(withDefaults()); // Use the CORS configuration bean
+
         return http.build();
     }
+
+
 
     @Bean
     public AuthenticationManager authManager(HttpSecurity http) throws Exception {
