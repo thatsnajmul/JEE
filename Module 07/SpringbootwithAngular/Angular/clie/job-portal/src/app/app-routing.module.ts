@@ -9,7 +9,6 @@ import { CurrentTimeComponent } from './current-time/current-time.component';
 import { CreateJobApplicationComponent } from './create-job-application/create-job-application.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
 import { AdminComponent } from './admin/admin.component';
 import { LogoutComponent } from './logout/logout.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -24,6 +23,7 @@ import { ApplicationListComponent } from './application-list/application-list.co
 import { JobApplicationEditComponent } from './job-application-edit/job-application-edit.component';
 import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/add-personal-details.component';
 import { PersonalDetailsComponent } from './jobseeker/personal-details/personal-details.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -46,7 +46,6 @@ const routes: Routes = [
   //Add
 
   {path:'login', component:LoginComponent},
-  {path:'registration', component:RegistrationComponent},
   {path:'admin', component:AdminComponent},
   {path:'logout', component:LogoutComponent},
   {path:'user-profile', component:UserProfileComponent},
@@ -75,7 +74,7 @@ const routes: Routes = [
   { path: 'jobs/edit/:id', component: JobFormComponent },
 
 
-  { path: 'register', component: RegistrationComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/register', pathMatch: 'full' }
   

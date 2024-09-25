@@ -55,7 +55,7 @@ public class AuthService {
     }
 
 
-    public AuthenticationResponse register(User user) {
+    public AuthenticationResponse registerJobSeeker(User user) {
 
         // Check if the user already exists
         if (userRepository.findByEmail(user.getUsername()).isPresent()) {
@@ -65,7 +65,7 @@ public class AuthService {
         // Create a new user entity and save it to the database
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRole(Role.valueOf("JOBSEEKER"));
+        user.setRole(Role.valueOf("JOB_SEEKER"));
         user.setLock(true);
         user.setActive(false);
 
@@ -108,7 +108,7 @@ public class AuthService {
         return new AuthenticationResponse(jwt, "User registration was successful");
     }
 
-    public AuthenticationResponse registerHotel(User user) {
+    public AuthenticationResponse registerEmployer(User user) {
 
         // Check if the user already exists
         if (userRepository.findByEmail(user.getUsername()).isPresent()) {
@@ -118,7 +118,7 @@ public class AuthService {
         // Create a new user entity and save it to the database
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRole(Role.valueOf("HOTEL"));
+        user.setRole(Role.valueOf("EMPLOYER"));
         user.setLock(false);
         user.setActive(false);
 

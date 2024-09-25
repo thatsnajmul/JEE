@@ -1,3 +1,20 @@
+Angular path
+-----------
+
+
+Spring Path
+----------
+
+
+
+
+
+
+
+
+
+
+
 AuthenticationController, Role, JwtService, TokenRepository, SecurityConfig, AuthService
 
 #Application_Properties file 

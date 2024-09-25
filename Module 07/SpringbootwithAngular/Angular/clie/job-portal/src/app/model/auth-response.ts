@@ -1,6 +1,6 @@
-import { UserModel } from "./user.model";
-
+// auth-response.model.ts
 export interface AuthResponse {
-    token:string;
-    user:UserModel
-}
+    token: string;
+    message?: string;
+  }
+  

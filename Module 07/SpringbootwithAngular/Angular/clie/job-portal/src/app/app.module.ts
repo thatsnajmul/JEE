@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { JobListComponent } from './job-list/job-list.component';
 import { JobFormComponent } from './job-form/job-form.component';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { JobListViewComponent } from './job-list-view/job-list-view.component';
@@ -19,7 +19,6 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { CurrentTimeComponent } from './current-time/current-time.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
-import { RegistrationComponent } from './registration/registration.component';
 import { CreateJobApplicationComponent } from './create-job-application/create-job-application.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
@@ -40,6 +39,8 @@ import { NavLeftComponent } from './nav-left/nav-left.component';
 import { SidebarLeftComponent } from './sidebar-left/sidebar-left.component';
 import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
 import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/add-personal-details.component';
+import { RegisterComponent } from './register/register.component';
+import { TokenInterceptor } from './guards/TokenInterceptor';
 
 
 
@@ -58,7 +59,6 @@ import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/ad
     CurrentTimeComponent,
     LoginComponent,
     LogoutComponent,
-    RegistrationComponent,
     CreateJobApplicationComponent,
     HomeComponent,
     AdminComponent,
@@ -78,7 +78,8 @@ import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/ad
     NavLeftComponent,
     SidebarLeftComponent,
     SidebarRightComponent,
-    AddPersonalDetailsComponent
+    AddPersonalDetailsComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -94,6 +95,7 @@ import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/ad
   providers: [
     provideClientHydration(),
     provideHttpClient(withFetch()),
+    //{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

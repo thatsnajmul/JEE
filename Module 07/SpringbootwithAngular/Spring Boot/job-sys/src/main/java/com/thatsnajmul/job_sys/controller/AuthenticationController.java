@@ -15,11 +15,11 @@ public class AuthenticationController {
 
     private final AuthService authService;
 
-    @PostMapping("/register")
+    @PostMapping("/register/job-seeker")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody User request
     ) {
-        return ResponseEntity.ok(authService.register(request));
+        return ResponseEntity.ok(authService.registerJobSeeker(request));
     }
 
     @PostMapping("/register/admin")
@@ -29,11 +29,18 @@ public class AuthenticationController {
         return ResponseEntity.ok(authService.registerAdmin(request));
     }
 
-    @PostMapping("/register/hotel")
-    public ResponseEntity<AuthenticationResponse> registerHotel(
+    @PostMapping("/register/employer")
+    public ResponseEntity<AuthenticationResponse> registerEmployer(
             @RequestBody User request
     ) {
-        return ResponseEntity.ok(authService.registerHotel(request));
+        return ResponseEntity.ok(authService.registerEmployer(request));
+    }
+
+    @PostMapping("/register/jobSeeker")
+    public ResponseEntity<AuthenticationResponse> registerJobSeeker(
+            @RequestBody User request
+    ) {
+        return ResponseEntity.ok(authService.registerJobSeeker(request));
     }
 
     @PostMapping("/login")
