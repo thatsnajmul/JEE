@@ -43,12 +43,12 @@ public class SecurityConfig {
                         .authorizeHttpRequests(
 
                                 req ->
-                                        req.requestMatchers("/login", "/register", "/api/hotel/", "api/room/","/activate/**", "api/location/", "/swagger-ui.html/**","/images/**")
+                                        req.requestMatchers("/login", "/register","/api/jobs","/api/jobs/search","/activate/**", "/swagger-ui.html/**","/images/**")
                                                 .permitAll()
-                                                .requestMatchers("api/hotel/save", "api/room/save")
+                                                .requestMatchers("", "")
                                                 .hasAuthority("ADMIN")
-                                                .requestMatchers("api/hotel/{id}", "api/room/{id}","api/hotel/all/**")
-                                                .hasAnyAuthority("ADMIN", "EMPLOYER")
+                                                .requestMatchers("", "","")
+                                                .hasAnyAuthority("", "")
                                                 .requestMatchers("api/user/**")
                                                 .hasAuthority("JOB_SEEKER")
 
