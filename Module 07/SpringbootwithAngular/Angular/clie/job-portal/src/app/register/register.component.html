@@ -57,6 +57,15 @@
           <label for="image" class="form-label">Image URL:</label>
           <input id="image" type="text" class="form-control" formControlName="image" />
         </div>
+        <!-- <div class="mb-3">
+          <label for="role" class="form-label">Select Role:</label>
+          <select class="form-select" name="role" id="role">
+            <option value="ADMIN">ADMIN</option>
+            <option value="JOB_SEEKER" selected>JOB_SEEKER</option>
+            <option value="EMPLOYER">EMPLOYER</option>
+          </select>
+        </div> -->
+        
         <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>
       </form>
       <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>

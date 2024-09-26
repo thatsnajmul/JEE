@@ -1,5 +1,6 @@
-export enum Role {  
-    ADMIN,
-    USER,
-    EMPLOYER
-  }
+export enum Role {
+    
+  ADMIN,
+  JOB_SEEKER,
+  EMPLOYEER
+}

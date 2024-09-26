@@ -44,7 +44,7 @@ public class SecurityConfig {
 
                                 req ->
                                         req.requestMatchers("/login",
-                                                                "/register",
+                                                        "/register/job-seeker",
                                                                 "/api/jobs","/api/jobs/search", "/api/jobs/{id}",
                                                                 "/api/jobs/get/search", "/api/jobs/get",
                                                                 "/activate/**",
@@ -61,11 +61,11 @@ public class SecurityConfig {
                                                 .requestMatchers("/api/jobs", "/api/jobs/{id}")
                                                 .hasAuthority( "EMPLOYER")
                                                 .requestMatchers("/api/personal-details")
-                                                .hasAuthority("USER")
+                                                .hasAuthority("JOB_SEEKER")
 
                                                 //For all User
                                                 .requestMatchers("api/user/**")
-                                                .hasAuthority("USER")
+                                                .hasAuthority("JOB_SEEKER")
 
 
 
