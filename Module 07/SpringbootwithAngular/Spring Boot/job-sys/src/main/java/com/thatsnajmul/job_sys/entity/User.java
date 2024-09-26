@@ -39,10 +39,11 @@ public class User implements UserDetails {
     @Column()
     private boolean isLock;
 
-
-//    @Column(name = "role", length = 255)
+    //@Column(name = "role", length = 255)
     @Enumerated(value = EnumType.STRING)
     private Role role;
+
+
 
 
     @OneToMany(mappedBy = "user")

@@ -20,7 +20,7 @@ public class JwtService {
 
     @Autowired
     private TokenRepository tokenRepository;
-    private final String SECREAT_KEY = "d169552a202ace4ed9b31a326df08aemran3e197a10213030f7c4be596ba99b6";
+    private final String SECREAT_KEY = "z8N2iFpM3eXlF6CrSj9UqTxLd5HgQv7pX4YtZ3PbKsA1VcRwng";
 
 
 

@@ -11,38 +11,59 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 @CrossOrigin(origins = "http://localhost:4200/")
-@RequestMapping("/register")
 public class AuthenticationController {
 
     private final AuthService authService;
 
-    @PostMapping("/job-seeker")
+
+    @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody User request
     ) {
-        return ResponseEntity.ok(authService.registerJobSeeker(request));
+        return ResponseEntity.ok(authService.register(request));
     }
 
-    @PostMapping("/admin")
+    @PostMapping("/register/admin")
     public ResponseEntity<AuthenticationResponse> registerAdmin(
             @RequestBody User request
     ) {
         return ResponseEntity.ok(authService.registerAdmin(request));
     }
 
-    @PostMapping("/employer")
+    @PostMapping("/register/employer")
     public ResponseEntity<AuthenticationResponse> registerEmployer(
             @RequestBody User request
     ) {
         return ResponseEntity.ok(authService.registerEmployer(request));
     }
 
-    @PostMapping("/register/jobSeeker")
-    public ResponseEntity<AuthenticationResponse> registerJobSeeker(
-            @RequestBody User request
-    ) {
-        return ResponseEntity.ok(authService.registerJobSeeker(request));
-    }
+//    @PostMapping("/register/job-seeker")
+//    public ResponseEntity<AuthenticationResponse> register(
+//            @RequestBody User request
+//    ) {
+//        return ResponseEntity.ok(authService.registerJobSeeker(request));
+//    }
+//
+//    @PostMapping("/register/admin")
+//    public ResponseEntity<AuthenticationResponse> registerAdmin(
+//            @RequestBody User request
+//    ) {
+//        return ResponseEntity.ok(authService.registerAdmin(request));
+//    }
+//
+//    @PostMapping("/register/employer")
+//    public ResponseEntity<AuthenticationResponse> registerEmployer(
+//            @RequestBody User request
+//    ) {
+//        return ResponseEntity.ok(authService.registerEmployer(request));
+//    }
+//
+//    @PostMapping("/register/jobSeeker")
+//    public ResponseEntity<AuthenticationResponse> registerJobSeeker(
+//            @RequestBody User request
+//    ) {
+//        return ResponseEntity.ok(authService.registerJobSeeker(request));
+//    }
 
     @PostMapping("/login")
     public ResponseEntity<AuthenticationResponse> login(

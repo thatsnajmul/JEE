@@ -87,7 +87,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'logout', component:LogoutComponent},
   {path:'register', component: RegisterComponent },
-  {path:'', redirectTo: '/register', pathMatch: 'full' },
+  //{path:'', redirectTo: '/register', pathMatch: 'full' },
   
   
   
