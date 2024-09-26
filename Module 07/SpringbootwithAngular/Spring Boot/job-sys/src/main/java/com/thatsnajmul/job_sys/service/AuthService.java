@@ -9,7 +9,9 @@ import com.thatsnajmul.job_sys.jwt.JwtService;
 import com.thatsnajmul.job_sys.repository.TokenRepository;
 import com.thatsnajmul.job_sys.repository.UserRepository;
 import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
 import lombok.AllArgsConstructor;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -169,9 +171,22 @@ public class AuthService {
                 + ",</h3>"
                 + "<p>Please click on the following link to confirm your account:</p>"
                 + "<a href=\"" + activationLink + "\">Activate Account</a>"
-                + "<br><br>Regards,<br>Hotel Booking";
+                + "<br><br>Regards,<br>Job Portal";
 
         String subject = "Confirm User Account";
+
+//        String mailText = "<h3>Dear " + user.getName() + ",</h3>"
+//                + "<p>Please click on the following link to confirm your account:</p>"
+//                + "<a href=\"" + activationLink + "\">Activate Account</a>"
+//                + "<br><br>Regards,<br>Job Portal";
+//
+//        String subject = "Confirm User Account";
+
+//        MimeMessage message = mailSender.createMimeMessage();
+//        MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
+//        helper.setTo(user.getEmail());
+//        helper.setSubject(subject);
+//        helper.setText(mailText, true);  // Set true for HTML content
 
         try {
 
