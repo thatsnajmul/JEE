@@ -45,7 +45,7 @@ export class AuthService {
   }
 
   register(user: { name: string; email: string; password: string; cell: string; address: string; dob: Date; gender: string; image: string }): Observable<AuthResponse> {
-    return this.http.post<AuthResponse>(`${this.baseUrl}/register`, user, { headers: this.headers }).pipe(
+    return this.http.post<AuthResponse>(`${this.baseUrl}/register/job-seeker`, user, { headers: this.headers }).pipe(
       map((response: AuthResponse) => {
         if (this.isBrowser() && response.token) {
           localStorage.setItem('authToken', response.token); // Store JWT token

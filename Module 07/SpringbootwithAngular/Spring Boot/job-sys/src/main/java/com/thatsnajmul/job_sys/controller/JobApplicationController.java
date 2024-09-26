@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/job-applications")
-@CrossOrigin("*")
 public class JobApplicationController {
     @Autowired
     private JobApplicationService jobApplicationService;

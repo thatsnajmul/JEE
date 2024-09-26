@@ -11,25 +11,26 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 @CrossOrigin(origins = "http://localhost:4200/")
+@RequestMapping("/register")
 public class AuthenticationController {
 
     private final AuthService authService;
 
-    @PostMapping("/register/job-seeker")
+    @PostMapping("/job-seeker")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody User request
     ) {
         return ResponseEntity.ok(authService.registerJobSeeker(request));
     }
 
-    @PostMapping("/register/admin")
+    @PostMapping("/admin")
     public ResponseEntity<AuthenticationResponse> registerAdmin(
             @RequestBody User request
     ) {
         return ResponseEntity.ok(authService.registerAdmin(request));
     }
 
-    @PostMapping("/register/employer")
+    @PostMapping("/employer")
     public ResponseEntity<AuthenticationResponse> registerEmployer(
             @RequestBody User request
     ) {

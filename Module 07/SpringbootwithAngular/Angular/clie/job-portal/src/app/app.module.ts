@@ -95,7 +95,7 @@ import { TokenInterceptor } from './guards/TokenInterceptor';
   providers: [
     provideClientHydration(),
     provideHttpClient(withFetch()),
-    //{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

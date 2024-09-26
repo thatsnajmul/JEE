@@ -9,7 +9,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/jobs/get")
-@CrossOrigin("*")
 public class JobSearchController {
 
     @Autowired

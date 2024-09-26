@@ -24,6 +24,9 @@ import { JobApplicationEditComponent } from './job-application-edit/job-applicat
 import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/add-personal-details.component';
 import { PersonalDetailsComponent } from './jobseeker/personal-details/personal-details.component';
 import { RegisterComponent } from './register/register.component';
+import { AdminGuard } from './guards/admin.guard';
+import { JobSeekerGuard } from './guards/job-seeker.guard';
+import { EmployerGuard } from './guards/employer.guard';
 
 
 const routes: Routes = [
@@ -38,45 +41,62 @@ const routes: Routes = [
   
   {path: '', redirectTo: '/home', pathMatch: 'full' },
   {path:'job-list-view', component: JobListViewComponent},
-  {path: 'companies', component:CompaniesComponent},
-  {path: 'view-all-companies', component:ViewAllCompaniesComponent},
-  {path: 'search', component:SearchComponent},
-  {path: 'current-time', component:CurrentTimeComponent},
-  {path: 'create-job-application', component:CreateJobApplicationComponent},
-  //Add
+  {path:'companies', component:CompaniesComponent},
+  {path:'view-all-companies', component:ViewAllCompaniesComponent},
+  {path:'search', component:SearchComponent},
+  {path:'current-time', component:CurrentTimeComponent},
+  {path:'create-job-application', component:CreateJobApplicationComponent},
 
-  {path:'login', component:LoginComponent},
-  {path:'admin', component:AdminComponent},
-  {path:'logout', component:LogoutComponent},
-  {path:'user-profile', component:UserProfileComponent},
-  {path:'add-job', component:AddJobComponent},
+  //Guardless
+  {path:'jobs', component: JobListComponent },
   {path:'job-details', component:JobDetailsComponent},
-  //
-  { path: 'job-applications', component: ApplicationListComponent }, //
-  { path: 'job-applications/edit/:id', component: JobApplicationEditComponent },
-  { path: 'admin/job-form', component: JobFormComponent},
 
+  //AllGuard
+  {path:'user-profile', component:UserProfileComponent},
+  
+  //All AdminGuard
+  {path:'admin', component:AdminComponent, canActivate: [AdminGuard]},
+  {path:'admin-user-details', component:AdminUserDetailsComponent, canActivate: [AdminGuard] },
+  {path:'add-job', component:AddJobComponent},
+  {path:'admin/job-form', component: JobFormComponent},
+  {path:'job-applications', component: ApplicationListComponent }, //
+  {path:'job-applications/edit/:id', component: JobApplicationEditComponent },
+  {path:'jobs/add', component: JobFormComponent },
+  {path:'job-details/:id', component: JobDetailsComponent },
+  {path:'jobs/edit/:id', component: JobFormComponent },
+  {path:'job-list', component:JobListComponent},
+  
+  //All EmployerGuard
+  {path:'employeer', component:EmployeerComponent, canActivate: [EmployerGuard]},
+  {path:'add-job', component:AddJobComponent},
+  {path:'admin/job-form', component: JobFormComponent},
+  {path:'job-applications', component: ApplicationListComponent }, //
+  {path:'job-applications/edit/:id', component: JobApplicationEditComponent },
+  {path:'jobs/add', component: JobFormComponent },
+  {path:'job-details/:id', component: JobDetailsComponent },
+  {path:'jobs/edit/:id', component: JobFormComponent },
+  {path:'job-list', component:JobListComponent},
 
-  //
-  {path:'employeer', component:EmployeerComponent},
-  {path:'jobseeker', component:JobseekerComponent},
+  //All JobSeekerGuard
+  {path:'jobseeker', component:JobseekerComponent,  canActivate: [JobSeekerGuard]},
   {path:'user-details', component:UserDetailsComponent},
-  {path:'admin-user-details', component:AdminUserDetailsComponent},
   {path:'add-personal-details', component:AddPersonalDetailsComponent},
-  { path: 'personal-details/:id', component: PersonalDetailsComponent },
+  {path:'personal-details/:id', component: PersonalDetailsComponent },
+
+  //Login And Registration
+  {path:'login', component:LoginComponent},
+  {path:'logout', component:LogoutComponent},
+  {path:'register', component: RegisterComponent },
+  {path:'', redirectTo: '/register', pathMatch: 'full' },
+  
+  
+  
   //{ path: 'edit-personal-details/:id', component: EditPersonalDetailsComponent },
-
-  //For Admin
-  { path:'job-list', component:JobListComponent},
-  { path: 'jobs', component: JobListComponent },
-  { path: 'jobs/add', component: JobFormComponent },
-  { path: 'job-details/:id', component: JobDetailsComponent },
-  { path: 'jobs/edit/:id', component: JobFormComponent },
+  
 
 
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/register', pathMatch: 'full' }
+
+
   
 ];
 
