@@ -18,7 +18,7 @@ import { AuthService } from '../service/auth/auth.service';
       if (this.authService.isEmployer()) {
         return true;
       } else {
-        this.router.navigate(['/employer']);
+        this.router.navigate(['/employeer']);
         return false;
       }
     }

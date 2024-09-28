@@ -13,8 +13,6 @@ import { AdminComponent } from './admin/admin.component';
 import { LogoutComponent } from './logout/logout.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ViewAllCompaniesComponent } from './view-all-companies/view-all-companies.component';
-import { AddJobComponent } from './admin/addjob/add-job.component';
-import { EmployeerComponent } from './employeer/employeer.component';
 import { JobseekerComponent } from './jobseeker/jobseeker.component';
 import { UserDetailsComponent } from './jobseeker/user-details/user-details.component';
 import { AdminUserDetailsComponent } from './admin/admin-user-details/admin-user-details.component';
@@ -27,9 +25,40 @@ import { RegisterComponent } from './register/register.component';
 import { AdminGuard } from './guards/admin.guard';
 import { JobSeekerGuard } from './guards/job-seeker.guard';
 import { EmployerGuard } from './guards/employer.guard';
+import { EmployerComponent } from './employer/employer.component';
+import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
+// import { RoleGuard } from './guards/role.guard';
+import { Role } from './model/role.model';
+import { RoleGuard } from './guards/role.guard';
 
 
 const routes: Routes = [
+
+  
+    {
+      path: 'admin',
+      component: AdminComponent,
+      canActivate: [RoleGuard],
+      data: { roles: [Role.ADMIN] }  // Only Admins can access this route
+    },
+    {
+      path: 'jobseeker',
+      component: JobseekerComponent,
+      canActivate: [RoleGuard],
+      data: { roles: [Role.JOB_SEEKER] }  // Only Job Seekers can access this route
+    },
+    {
+      path: 'employer',
+      component: EmployerComponent,
+      canActivate: [RoleGuard],
+      data: { roles: [Role.EMPLOYER] }  // Only Employers can access this route
+    },
+    {
+      path: 'not-authorized',
+      component: NotAuthorizedComponent  // Redirect unauthorized users here
+    },
+
+  
 
   //For Users
   
@@ -53,22 +82,38 @@ const routes: Routes = [
 
   //AllGuard
   {path:'user-profile', component:UserProfileComponent},
+  // {path:'user-profile', component:UserProfileComponent, 
+  //   canActivate:[AdminGuard,JobSeekerGuard,EmployerGuard]},
   
   //All AdminGuard
-  {path:'admin', component:AdminComponent, canActivate: [AdminGuard]},
-  {path:'admin-user-details', component:AdminUserDetailsComponent, canActivate: [AdminGuard] },
-  {path:'add-job', component:AddJobComponent},
+  //{path:'admin', component:AdminComponent, canActivate: [AdminGuard]},
+  {
+    path: 'not-authorized',
+    component: NotAuthorizedComponent  // Redirect unauthorized access here
+  },
+  // {
+  //   path: 'admin',
+  //   component: AdminComponent,
+  //   canActivate: [AdminGuard],
+  //   data: { roles: ['ADMIN'] }  // Only Admin role can access this
+  // },
+  {path:'admin-user-details', component:AdminUserDetailsComponent},
   {path:'admin/job-form', component: JobFormComponent},
   {path:'job-applications', component: ApplicationListComponent }, //
-  {path:'job-applications/edit/:id', component: JobApplicationEditComponent },
+  //{path:'job-applications/edit/:id', component: JobApplicationEditComponent },
   {path:'jobs/add', component: JobFormComponent },
-  {path:'job-details/:id', component: JobDetailsComponent },
-  {path:'jobs/edit/:id', component: JobFormComponent },
+  //{path:'job-details/:id', component: JobDetailsComponent },
+  //{path:'jobs/edit/:id', component: JobFormComponent },
   {path:'job-list', component:JobListComponent},
   
   //All EmployerGuard
-  {path:'employeer', component:EmployeerComponent, canActivate: [EmployerGuard]},
-  {path:'add-job', component:AddJobComponent},
+  //{path:'employer', component:EmployerComponent, canActivate: [EmployerGuard]},
+  // {
+  //   path: 'employer',
+  //   component: EmployerComponent,
+  //   canActivate: [EmployerGuard],
+  //   data: { roles: ['EMPLOYER'] }  // Only Employer role can access this
+  // },
   {path:'admin/job-form', component: JobFormComponent},
   {path:'job-applications', component: ApplicationListComponent }, //
   {path:'job-applications/edit/:id', component: JobApplicationEditComponent },
@@ -78,7 +123,14 @@ const routes: Routes = [
   {path:'job-list', component:JobListComponent},
 
   //All JobSeekerGuard
-  {path:'jobseeker', component:JobseekerComponent,  canActivate: [JobSeekerGuard]},
+  //{path:'jobseeker', component:JobseekerComponent,  canActivate: [JobSeekerGuard]},
+  // {
+  //   path: 'jobseeker',
+  //   component: JobseekerComponent,
+  //   canActivate: [JobSeekerGuard],
+  //   data: { roles: ['JOB_SEEKER'] }  // Only JobSeeker role can access this
+  // },
+  
   {path:'user-details', component:UserDetailsComponent},
   {path:'add-personal-details', component:AddPersonalDetailsComponent},
   {path:'personal-details/:id', component: PersonalDetailsComponent },

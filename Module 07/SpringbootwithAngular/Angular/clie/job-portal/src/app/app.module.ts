@@ -24,12 +24,9 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ViewAllCompaniesComponent } from './view-all-companies/view-all-companies.component';
-import { AddJobComponent } from './admin/addjob/add-job.component';
-import { EmployeerComponent } from './employeer/employeer.component';
 import { JobseekerComponent } from './jobseeker/jobseeker.component';
 import { UserDetailsComponent } from './jobseeker/user-details/user-details.component';
 import { AdminUserDetailsComponent } from './admin/admin-user-details/admin-user-details.component';
-import { EmployeerUserDetailsComponent } from './employeer/employeer-user-details/employeer-user-details.component';
 import { ApplicationListComponent } from './application-list/application-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
@@ -41,6 +38,8 @@ import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
 import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/add-personal-details.component';
 import { RegisterComponent } from './register/register.component';
 import { TokenInterceptor } from './guards/TokenInterceptor';
+import { EmployerComponent } from './employer/employer.component';
+import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
 
 
 
@@ -64,12 +63,9 @@ import { TokenInterceptor } from './guards/TokenInterceptor';
     AdminComponent,
     UserProfileComponent,
     ViewAllCompaniesComponent,
-    AddJobComponent,
-    EmployeerComponent,
     JobseekerComponent,
     UserDetailsComponent,
     AdminUserDetailsComponent,
-    EmployeerUserDetailsComponent,
     ApplicationListComponent,
     UserListComponent,
     JobDetailsComponent,
@@ -79,7 +75,9 @@ import { TokenInterceptor } from './guards/TokenInterceptor';
     SidebarLeftComponent,
     SidebarRightComponent,
     AddPersonalDetailsComponent,
-    RegisterComponent
+    RegisterComponent,
+    EmployerComponent,
+    NotAuthorizedComponent
   ],
   imports: [
     BrowserModule,

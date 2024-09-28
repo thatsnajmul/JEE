@@ -2,11 +2,10 @@
     <div class="row">
       <!-- Sidebar -->
       <div class="col-md-3 sidebar">
-        <a routerLink="/admin-user-details">User Profile</a>
-        <a routerLink="/job-list">Manage Job</a>
-        <a routerLink="/job-applications">Manage Job Application</a>
-        <a routerLink="/">Manage Users</a>
-        
+        <a href="#">Dashboard</a>
+        <a href="#">Manage Job Application</a>
+        <a href="#">Manage Users</a>
+        <app-admin-user-details></app-admin-user-details>
 
       </div>
 
@@ -61,7 +60,7 @@
             <h4>Manage Jobs</h4>
             <a  class="btn btn-primary btn-sm float-end" routerLink="job-form" data-bs-toggle="modal" data-bs-target="#addJobModal"> Add Job</a>
           </div>
-          <router-outlet></router-outlet>
+          <app-job-list></app-job-list>
         </div>
 
         <!-- Job Application Management Table -->
@@ -86,6 +85,7 @@
       </div>
     </div>
   </div>
+
 
 
 

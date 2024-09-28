@@ -58,14 +58,16 @@ public class SecurityConfig {
                                                                  "/api/personal-details", "/api/personal-details/search", "/api/personal-details/{id}",
                                                                  "/api/personal-details", "/api/personal-details/search", "/api/personal-details/{id}")
                                                 .hasAuthority("ADMIN")
+
                                                 .requestMatchers("/api/jobs", "/api/jobs/{id}")
                                                 .hasAuthority( "EMPLOYER")
+
                                                 .requestMatchers("/api/personal-details")
                                                 .hasAuthority("JOB_SEEKER")
 
                                                 //For all User
                                                 .requestMatchers("api/user/**")
-                                                .hasAuthority("JOB_SEEKER")
+                                                .hasAuthority("JOB_SEEKER,EMPLOYER,ADMIN")
 
 
 

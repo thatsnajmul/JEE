@@ -4,6 +4,7 @@ import { BehaviorSubject, map, Observable } from 'rxjs';
 import { AuthResponse } from '../../model/auth-response';
 import { isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
+import { Role } from '../../model/role.model';
 
 @Injectable({
   providedIn: 'root'
@@ -78,13 +79,13 @@ export class AuthService {
     return this.getUserRole() === 'ADMIN';
   }
 
-  isAdminOrEmployer(): boolean {
-    const role = this.getUserRole();
-    return role === 'ADMIN' || role === 'EMPLOYEER';
-  }
+  // isAdminOrEmployer(): boolean {
+  //   const role = this.getUserRole();
+  //   return role === 'ADMIN' || role === 'EMPLOYEER';
+  // }
 
   isEmployer(): boolean {
-    return this.getUserRole() === 'EMPLOYEER';
+    return this.getUserRole() === 'EMPLOYER';
   }
 
   isJobSeeker(): boolean {
@@ -123,6 +124,21 @@ export class AuthService {
   private isBrowser(): boolean {
     return isPlatformBrowser(this.platformId);
   }
+
+  getCurrentUser(): any | null {
+    const token = this.getToken();
+    if (token) {
+      return this.decodeToken(token); // This returns the decoded token, which contains user details
+    }
+    return null;
+  }
+
+  // // Simulating getting the current logged-in user (in a real app, fetch from storage or API)
+  // getCurrentUser() {
+  //   return { role: Role };  // Replace with actual logic for getting the user and role
+  // }
+
+  
 
   
 }

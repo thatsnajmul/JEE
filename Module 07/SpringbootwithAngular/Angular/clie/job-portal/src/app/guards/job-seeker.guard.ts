@@ -18,7 +18,7 @@ import { AuthService } from '../service/auth/auth.service';
       if (this.authService.isJobSeeker()) {
         return true;
       } else {
-        this.router.navigate(['/']);
+        this.router.navigate(['/jobseeker']);
         return false;
       }
     }

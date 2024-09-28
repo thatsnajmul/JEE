@@ -1,17 +1,56 @@
-<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar for larger screens -->
+    <nav class="col-md-3 d-none d-md-block bg-dark text-white sidebar">
+      <div class="sidebar-sticky p-4">
+        <h3 class="text-center">User Details</h3>
+        <ul class="nav flex-column mt-4">
+          <li class="nav-item mb-3">
+            <a *ngIf="user?.role === Role.ADMIN" class="nav-link text-white" (click)="loadContent('admin')">
+              <i class="fas fa-user-shield"></i> Admin
+            </a>
+          </li>
+          <li class="nav-item mb-3">
+            <a *ngIf="user?.role === Role.JOB_SEEKER" class="nav-link text-white" (click)="loadContent('jobseeker')">
+              <i class="fas fa-briefcase"></i> Job Seeker
+            </a>
+          </li>
+          <li class="nav-item mb-3">
+            <a *ngIf="user?.role === Role.EMPLOYER" class="nav-link text-white" (click)="loadContent('employer')">
+              <i class="fas fa-building"></i> Employer
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <div class="container text-center mt-5">
-    <div class="row">
-      <div class="col-md-4">
-        <button class="btn btn-primary btn-block" routerLink="/admin">Admin</button>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-secondary btn-block" routerLink="/jobseeker">JobSeeker</button>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-success btn-block" routerLink="/employeer">Employeer</button>
-      </div>
-    </div>
+    <!-- Main content area -->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4 main-content bg-light py-5">
+      <ng-container [ngSwitch]="currentSection">
+        <!-- Admin content -->
+        <div *ngSwitchCase="'admin'">
+          <h2>Admin Section</h2>
+          <!-- Your admin-related content goes here -->
+        </div>
+
+        <!-- Job Seeker content -->
+        <div *ngSwitchCase="'jobseeker'">
+          <h2>Job Seeker Section</h2>
+          <app-add-personal-details></app-add-personal-details>
+        </div>
+
+        <!-- Employer content -->
+        <div *ngSwitchCase="'employer'">
+          <h2>Employer Section</h2>
+          <!-- Your employer-related content goes here -->
+        </div>
+
+        <!-- Default content -->
+        <div *ngSwitchDefault>
+          <h2>Welcome, {{ user?.username }}!</h2>
+          <p>Select a section to view more details.</p>
+        </div>
+      </ng-container>
+    </main>
   </div>
-     
-  </div>
+</div>

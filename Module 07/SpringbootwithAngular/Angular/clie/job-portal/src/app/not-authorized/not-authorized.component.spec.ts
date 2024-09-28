@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmployeerComponent } from './employeer.component';
+import { NotAuthorizedComponent } from './not-authorized.component';
 
-describe('EmployeerComponent', () => {
-  let component: EmployeerComponent;
-  let fixture: ComponentFixture<EmployeerComponent>;
+describe('NotAuthorizedComponent', () => {
+  let component: NotAuthorizedComponent;
+  let fixture: ComponentFixture<NotAuthorizedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [EmployeerComponent]
+      declarations: [NotAuthorizedComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EmployeerComponent);
+    fixture = TestBed.createComponent(NotAuthorizedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
