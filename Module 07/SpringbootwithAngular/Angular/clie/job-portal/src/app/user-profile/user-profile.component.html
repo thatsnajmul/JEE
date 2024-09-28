@@ -7,9 +7,14 @@
         <ul class="nav flex-column mt-4">
           <li class="nav-item mb-3">
             <a *ngIf="user?.role === Role.ADMIN" class="nav-link text-white" (click)="loadContent('admin')">
-              <i class="fas fa-user-shield"></i> Admin
+              <i class="fas fa-user-shield"></i> Admin Profile
+            </a>
+            <a *ngIf="user?.role === Role.ADMIN" class="nav-link text-white" (click)="loadContent('admin-profile')">
+              <i class="fas fa-user-shield"></i> Admin 
             </a>
           </li>
+          
+          
           <li class="nav-item mb-3">
             <a *ngIf="user?.role === Role.JOB_SEEKER" class="nav-link text-white" (click)="loadContent('jobseeker')">
               <i class="fas fa-briefcase"></i> Job Seeker
@@ -30,6 +35,11 @@
         <!-- Admin content -->
         <div *ngSwitchCase="'admin'">
           <h2>Admin Section</h2>
+          <!-- Your admin-related content goes here -->
+        </div>
+        <!-- Admin content -->
+        <div *ngSwitchCase="'admin-profile'">
+          <h2>Admin Profile</h2>
           <!-- Your admin-related content goes here -->
         </div>
 
