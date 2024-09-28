@@ -55,7 +55,9 @@ const routes: Routes = [
     },
     {
       path: 'not-authorized',
-      component: NotAuthorizedComponent  // Redirect unauthorized users here
+      component: NotAuthorizedComponent,
+      canActivate: [RoleGuard],
+      data: { roles: [Role.ADMIN,Role.EMPLOYER,Role.JOB_SEEKER] }  // Redirect unauthorized users here
     },
 
   
@@ -81,7 +83,9 @@ const routes: Routes = [
   {path:'job-details', component:JobDetailsComponent},
 
   //AllGuard
-  {path:'user-profile', component:UserProfileComponent},
+  {path:'user-profile', component:UserProfileComponent, canActivate: [RoleGuard],
+    data: { roles: [Role.ADMIN,Role.EMPLOYER,Role.JOB_SEEKER] } },
+  
   // {path:'user-profile', component:UserProfileComponent, 
   //   canActivate:[AdminGuard,JobSeekerGuard,EmployerGuard]},
   

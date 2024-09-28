@@ -23,10 +23,10 @@
                 <a routerLink="register" class="nav-link" href="#">Register</a>
             </li>
             <li>
-                <a href="#" routerLink="user-profile"><i class="fa fa-user-circle"></i></a>
+                <a *ngIf="user?.role === Role.ADMIN ||user?.role === Role.EMPLOYER || user?.role === Role.JOB_SEEKER" href="#" routerLink="user-profile"><i class="fa fa-user-circle"></i></a>
             </li>
             <li class="nav-item">
-                <button class="btn btn-outline-success" type="button" (click)="authService.logout()">Logout</button>
+                <button *ngIf="user?.role === Role.ADMIN ||user?.role === Role.EMPLOYER || user?.role === Role.JOB_SEEKER" class="btn btn-outline-success" type="button" (click)="authService.logout()">Logout</button>
             </li>
         </ul>
     </div>
