@@ -30,9 +30,14 @@ import { NotAuthorizedComponent } from './not-authorized/not-authorized.componen
 // import { RoleGuard } from './guards/role.guard';
 import { Role } from './model/role.model';
 import { RoleGuard } from './guards/role.guard';
+import { UserControllComponent } from './user-controll/user-controll.component';
+import { UserControllEditComponent } from './user-controll-edit/user-controll-edit.component';
 
 
 const routes: Routes = [
+
+  { path: 'users', component: UserControllComponent },
+  { path: 'edit-user/:id', component: UserControllEditComponent }, // Example route for editing
 
   
     {
