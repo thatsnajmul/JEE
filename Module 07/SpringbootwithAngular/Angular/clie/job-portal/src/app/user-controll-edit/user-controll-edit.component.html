@@ -1,1 +1,47 @@
-<p>user-controll-edit works!</p>
+<div class="container">
+  <h2>Edit User</h2>
+  <form [formGroup]="userForm" (ngSubmit)="editUser()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        formControlName="name"
+        placeholder="Enter user name"
+      />
+      <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="text-danger">
+        Name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        formControlName="email"
+        placeholder="Enter user email"
+      />
+      <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="text-danger">
+        Valid email is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select id="role" class="form-control" formControlName="role">
+        <option value="ADMIN">Admin</option>
+        <option value="EMPLOYER">Employer</option>
+        <option value="JOB_SEEKER">Job Seeker</option>
+      </select>
+      <div *ngIf="userForm.get('role')?.invalid && userForm.get('role')?.touched" class="text-danger">
+        Role is required.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Save Changes</button>
+    <!-- <button type="button" class="btn btn-secondary" (click)="router.navigate(['/users'])">Cancel</button> -->
+  </form>
+</div>

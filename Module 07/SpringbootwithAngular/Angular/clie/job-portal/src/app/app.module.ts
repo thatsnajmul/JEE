@@ -89,7 +89,6 @@ import { UserControllComponent } from './user-controll/user-controll.component';
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     FormsModule,
     
-    
 
   ],
   providers: [
