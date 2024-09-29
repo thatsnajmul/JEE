@@ -1,5 +1,6 @@
 package com.thatsnajmul.job_sys.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -48,6 +49,11 @@ public class User implements UserDetails {
 
     @OneToMany(mappedBy = "user")
     private List<Token> tokens;
+
+    @OneToMany(mappedBy = "user")
+    @JsonManagedReference // This is the parent
+    private List<Job> jobs;
+
 
 
     @Override

@@ -53,13 +53,13 @@ public class SecurityConfig {
                                                 .permitAll()
 
                                                 .requestMatchers("/api/job-applications", "/api/job-applications/{id}",
-                                                                 "/api/jobs", "/api/jobs/{id}",
+                                                                 "/api/jobs/", "/api/jobs/{id}",
                                                                  "/api/jobs/get/search", "/api/jobs/get",
                                                                  "/api/personal-details", "/api/personal-details/search", "/api/personal-details/{id}",
                                                                  "/api/personal-details", "/api/personal-details/search", "/api/personal-details/{id}")
                                                 .hasAuthority("ADMIN")
 
-                                                .requestMatchers("/api/jobs", "/api/jobs/{id}")
+                                                .requestMatchers("/api/jobs", "/api/jobs/{id}","/api/job-applications", "/api/job-applications/{id}")
                                                 .hasAuthority( "EMPLOYER")
 
                                                 .requestMatchers("/api/personal-details")

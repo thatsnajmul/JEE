@@ -6,62 +6,56 @@
         <h3 class="text-center">User Details</h3>
         <ul class="nav flex-column mt-4">
           <li class="nav-item mb-3">
-            <a *ngIf="user?.role === Role.ADMIN" class="nav-link text-white" (click)="loadContent('admin-profile')">
+            <a *ngIf="user?.role === Role.ADMIN || user?.role === Role.EMPLOYER" class="nav-link text-white" (click)="loadContent('admin-profile')">
               <i class="fas fa-user-shield"></i> Profile
             </a>
-            <a *ngIf="user?.role === Role.ADMIN" class="nav-link text-white" (click)="loadContent('admin-job-applications')">
+            <a *ngIf="user?.role === Role.ADMIN || user?.role === Role.EMPLOYER" class="nav-link text-white" (click)="loadContent('admin-job-applications')">
               <i class="fas fa-user-shield"></i> View All Job Applications
             </a>
-            <a *ngIf="user?.role === Role.ADMIN" class="nav-link text-white" (click)="loadContent('admin-job-posts')">
+            <a *ngIf="user?.role === Role.ADMIN || user?.role === Role.EMPLOYER" class="nav-link text-white" (click)="loadContent('admin-job-posts')">
               <i class="fas fa-user-shield"></i> View All Job Post
             </a>
-            <a *ngIf="user?.role === Role.ADMIN" class="nav-link text-white" (click)="loadContent('admin-another-pannel')">
+            <a *ngIf="user?.role === Role.ADMIN || user?.role === Role.EMPLOYER" class="nav-link text-white" (click)="loadContent('admin-another-pannel')">
               <i class="fas fa-user-shield"></i> View Another Admin Pannel
-            </a>
-            
+            </a>           
           </li>
           
-          
+
+          <!-- <li class="nav-item mb-3">
+            <a *ngIf="user?.role === Role.EMPLOYER" class="nav-link text-white" (click)="loadContent('employer-profile')">
+              <i class="fas fa-user-shield"></i> Profile
+            </a>
+            <a *ngIf="user?.role === Role.EMPLOYER" class="nav-link text-white" (click)="loadContent('employer-job-applications')">
+              <i class="fas fa-user-shield"></i> View All Job Applications
+            </a>
+            <a *ngIf="user?.role === Role.EMPLOYER" class="nav-link text-white" (click)="loadContent('employer-job-posts')">
+              <i class="fas fa-user-shield"></i> View All Job Post
+            </a>
+            <a *ngIf="user?.role === Role.EMPLOYER" class="nav-link text-white" (click)="loadContent('employer-another-pannel')">
+              <i class="fas fa-user-shield"></i> View Another Admin Pannel
+            </a>           
+          </li> -->
+
           <li class="nav-item mb-3">
             <a *ngIf="user?.role === Role.JOB_SEEKER" class="nav-link text-white" (click)="loadContent('jobseeker')">
               <i class="fas fa-briefcase"></i> Job Seeker
             </a>
           </li>
 
-
-
-
-          <li class="nav-item mb-3">
-            <a *ngIf="user?.role === Role.EMPLOYER" class="nav-link text-white" (click)="loadContent('employer')">
-              <i class="fas fa-building"></i> Employer
-            </a>
-          </li>
         </ul>
       </div>
     </nav>
-
-
-
-
-
-
-
-    
 
     <!-- Main content area -->
     <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4 main-content bg-light py-5">
       <ng-container [ngSwitch]="currentSection">
 
 
-
-
-
-
-
         <!-- Admin content -->
         <div *ngSwitchCase="'admin-profile'">
-          <h2>View User Details</h2>
+          <h2>View Profile Details</h2>
           <app-admin-user-details></app-admin-user-details>
+          <app-employer-user-details *ngIf=" user?.role === Role.EMPLOYER"></app-employer-user-details>
           <!-- Your admin-related content goes here -->
         </div>
         <!-- Admin content -->
@@ -78,18 +72,36 @@
         <div *ngSwitchCase="'admin-another-pannel'">
           <h2>Admin Pannel</h2>
           <app-admin></app-admin>
+          <app-employer *ngIf=" user?.role === Role.EMPLOYER"></app-employer>
           <!-- Your admin-related content goes here -->
         </div>
 
 
-
-
-
-
-
-
-
-
+        <!--
+        Employer content
+        <div *ngSwitchCase="'employer-profile'">
+          <h2>View Profile Details</h2>
+          <app-employer-user-details></app-employer-user-details>
+          
+        </div>
+    
+        <div *ngSwitchCase="'employer-job-applications'">
+          <h2>View All Application</h2>
+          <app-application-list></app-application-list>
+        
+        </div>
+        <div *ngSwitchCase="'employer-job-posts'">
+          <h2>Viwe all Job Posts</h2>
+          <app-job-list></app-job-list>
+          
+        </div>
+        <div *ngSwitchCase="'employer-another-pannel'">
+          <h2>Employer Pannel</h2>
+          <app-employer></app-employer>
+        </div>
+        
+        -->
+        
 
 
 
@@ -98,29 +110,6 @@
           <h2>Job Seeker Section</h2>
           <app-add-personal-details></app-add-personal-details>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Employer content -->
-        <div *ngSwitchCase="'employer'">
-          <h2>Employer Section</h2>
-          <!-- Your employer-related content goes here -->
-        </div>
-
-
-
-
-
-
 
 
 

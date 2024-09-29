@@ -1,9 +1,7 @@
 package com.thatsnajmul.job_sys.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -26,6 +24,11 @@ public class Job {
     private String companyImageUrl;
     private String jobDescription;
     private String cvDownloadUrl;
+
+    @ManyToOne
+    @JoinColumn(name = "userId")
+    @JsonBackReference // This is the child
+    private User user;
 
     // Getters and Setters
 }

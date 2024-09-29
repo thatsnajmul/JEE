@@ -103,8 +103,6 @@ const routes: Routes = [
   // },
   {path:'admin-user-details', component:AdminUserDetailsComponent},
   {path:'admin/job-form', component: JobFormComponent},
-  {path:'job-applications', component: ApplicationListComponent }, //
-  //{path:'job-applications/edit/:id', component: JobApplicationEditComponent },
   {path:'jobs/add', component: JobFormComponent },
   //{path:'job-details/:id', component: JobDetailsComponent },
   //{path:'jobs/edit/:id', component: JobFormComponent },

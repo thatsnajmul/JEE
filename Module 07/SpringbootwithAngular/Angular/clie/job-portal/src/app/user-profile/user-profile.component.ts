@@ -33,6 +33,9 @@ export class UserProfileComponent implements OnInit{
 
 
 
+
+
+
   //user: User | null = null;  // Assuming you have the user data
   // constructor() {
   //   // Simulate getting user data from backend

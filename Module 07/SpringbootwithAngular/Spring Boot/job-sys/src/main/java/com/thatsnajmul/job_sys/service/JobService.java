@@ -1,7 +1,9 @@
 package com.thatsnajmul.job_sys.service;
 
+import com.thatsnajmul.job_sys.entity.User;
 import com.thatsnajmul.job_sys.repository.JobRepository;
 import com.thatsnajmul.job_sys.entity.Job;
+import com.thatsnajmul.job_sys.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,6 +15,9 @@ import java.util.List;
 public class JobService {
     @Autowired
     private JobRepository jobRepository;
+
+    @Autowired
+    private UserRepository userRepository;
 
     public Page<Job> getAllJobs(Pageable pageable) {
         return jobRepository.findAll(pageable);
@@ -53,6 +58,18 @@ public class JobService {
     public Page<Job> searchJobs(String keyword, Pageable pageable) {
         return jobRepository.findByTitleContainingIgnoreCaseOrCompanyNameContainingIgnoreCase(keyword, keyword, pageable);
     }
+
+
+    public List<Job> getJobByUserEmail(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User Not Found"));
+        return jobRepository.findByUserID(user.getId());
+    }
+
+
+
+
+
 
     // Search jobs by title or company name
 }

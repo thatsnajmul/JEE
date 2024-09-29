@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Job } from "../../model/job.model";
@@ -19,6 +19,11 @@ export class JobService {
 
   getJobById(id: number): Observable<Job> {
     return this.http.get<Job>(`${this.apiUrl}/${id}`);
+  }
+
+  getJobsByEmail(email: string): Observable<Job[]> {
+    const params = new HttpParams().set('email', email);
+    return this.http.get<Job[]>(`${this.apiUrl}/job`, { params });
   }
 
   createJob(job: Job): Observable<Job> {

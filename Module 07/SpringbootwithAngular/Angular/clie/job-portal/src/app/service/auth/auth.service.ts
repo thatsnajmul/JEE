@@ -133,10 +133,22 @@ export class AuthService {
     return null;
   }
 
+
+
   // // Simulating getting the current logged-in user (in a real app, fetch from storage or API)
   // getCurrentUser() {
   //   return { role: Role };  // Replace with actual logic for getting the user and role
   // }
+
+
+  getCurrentUserEmail(): string | null {
+    const token = this.getToken();
+    if (token) {
+      const decodedToken = this.decodeToken(token);
+      return decodedToken.sub; // 'sub' is usually where the email is stored in JWT
+    }
+    return null;
+  }
 
   
 

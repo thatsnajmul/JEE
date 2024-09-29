@@ -4,6 +4,9 @@ import { Job } from '../model/job.model';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Role } from '../model/role.model';
+import { AuthService } from '../service/auth/auth.service';
+
 
 
 
@@ -12,19 +15,32 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './job-list.component.html',
   styleUrl: './job-list.component.css'
 })
-export class JobListComponent implements OnInit{
+export class JobListComponent implements OnInit {
+
+  user: any;  // This will hold the current user
+  Role = Role;  // Importing Role for easy template access
+
+  email!: string;
+
+
+
+  currentSection: string = '';  // Track which section to display
+
+  loadContent(section: string) {
+    this.currentSection = section;
+  }
 
   jobs: Job[] = [];
   currentPage = 0;
   pageSize = 10;
-  totalPages: number=0;
+  totalPages: number = 0;
 
 
 
   constructor(
     private jobService: JobService,
     private http: HttpClient,
-  
+    private authService: AuthService
 
   ) {
 
@@ -38,19 +54,41 @@ export class JobListComponent implements OnInit{
     });
   }
 
+  getUserEmailAddress() {
+
+    this.email = this.authService.getCurrentUserEmail() || '';
+    this.fetchJobsByEmail(this.email);
+
+  }
+
   ngOnInit(): void {
-    this.loadJobs();
-    
+    // this.loadJobs();
+    // Get the current user from the AuthService
+    this.user = this.authService.getCurrentUser();
+
+
+    this.getUserEmailAddress();
   }
 
-  loadJobs(): void {
-    this.jobService.getJobs(this.currentPage, this.pageSize).subscribe(data => {
-      this.jobs = data.content;
-      this.totalPages = data.totalPages;
-    });
+  // loadJobs(): void {
+  //   this.jobService.getJobs(this.currentPage, this.pageSize).subscribe(data => {
+  //     this.jobs = data.content;
+  //     this.totalPages = data.totalPages;
+  //   });
+  // }
+
+
+
+  fetchJobsByEmail(email: string): void {
+    this.jobService.getJobsByEmail(email).subscribe(
+      (data: Job[]) => {
+        this.jobs = data; // Assign the retrieved jobs to the jobs array
+      },
+      (error) => {
+        console.error('Error fetching jobs:', error); // Handle errors
+      }
+    );
   }
-
-
 
 
 
@@ -90,10 +128,9 @@ export class JobListComponent implements OnInit{
   deleteJob(id: number): void {
     if (confirm('Are you sure you want to delete this job?')) {
       this.jobService.deleteJob(id).subscribe(() => {
-        this.loadJobs();  // Refresh the job list after deletion
+        this.getUserEmailAddress();  // Refresh the job list after deletion
       });
     }
-
   }
 
 }
