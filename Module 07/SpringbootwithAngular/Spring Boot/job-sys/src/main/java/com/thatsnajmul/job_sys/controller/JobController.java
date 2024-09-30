@@ -1,6 +1,7 @@
 package com.thatsnajmul.job_sys.controller;
 
 import com.thatsnajmul.job_sys.entity.Job;
+import com.thatsnajmul.job_sys.entity.User;
 import com.thatsnajmul.job_sys.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -55,6 +56,29 @@ public class JobController {
             Pageable pageable = PageRequest.of(page, size);
             return ResponseEntity.ok(jobService.searchJobs(keyword, pageable));
     }
+
+    @GetMapping("/job")
+    public ResponseEntity<List<Job>> getJobByUser(@RequestParam("email") String email) {
+        // Fetch the jobs associated with the user's email
+        List<Job> jobs = jobService.getJobByUserEmail(email);
+        // Check if the job list is empty
+        if (jobs.isEmpty()) {
+            return ResponseEntity.noContent().build();  // Return 204 No Content if no jobs found
+        }
+        // Return the list of jobs wrapped in a ResponseEntity with 200 OK status
+        return ResponseEntity.ok(jobs);
+    }
+
+
+
+//    @GetMapping("/job")
+//    public List<Job> getJobByUser(@RequestParam("email") String email) {
+//        // Fetch the jobs associated with the user's email
+//      List<Job> jobs = jobService.getJobByUserEmail(email);
+//        // Return the list of jobs wrapped in a ResponseEntity
+//
+//        return  jobs;
+//    }
 
 
 

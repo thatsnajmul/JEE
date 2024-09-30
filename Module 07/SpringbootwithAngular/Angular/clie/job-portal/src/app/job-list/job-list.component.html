@@ -52,7 +52,7 @@
           <td>
             <td>
               <a [routerLink]="['/jobs/edit', job.id]" class="btn btn-warning btn-sm">Edit</a>
-              <button (click)="deleteJob(job.id)" class="btn btn-danger btn-sm">Delete</button>
+              <button *ngIf="user?.role === Role.ADMIN" (click)="deleteJob(job.id)" class="btn btn-danger btn-sm">Delete</button>
             </td>
             
         </tr>
@@ -61,13 +61,13 @@
     <nav>
       <ul class="pagination">
         <li class="page-item" [class.disabled]="currentPage === 0">
-          <a class="page-link" (click)="currentPage = currentPage - 1; loadJobs()">Previous</a>
+          <a class="page-link" (click)="currentPage = currentPage - 1; getUserEmailAddress()">Previous</a>
         </li>
         <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index" [class.active]="i === currentPage">
-          <a class="page-link" (click)="currentPage = i; loadJobs()">{{ i + 1 }}</a>
+          <a class="page-link" (click)="currentPage = i; getUserEmailAddress()">{{ i + 1 }}</a>
         </li>
         <li class="page-item" [class.disabled]="currentPage === totalPages - 1">
-          <a class="page-link" (click)="currentPage = currentPage + 1; loadJobs()">Next</a>
+          <a class="page-link" (click)="currentPage = currentPage + 1; getUserEmailAddress()">Next</a>
         </li>
 
 

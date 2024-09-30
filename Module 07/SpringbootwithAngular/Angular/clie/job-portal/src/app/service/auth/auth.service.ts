@@ -5,6 +5,7 @@ import { AuthResponse } from '../../model/auth-response';
 import { isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
 import { Role } from '../../model/role.model';
+import { User } from '../../model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -75,6 +76,11 @@ export class AuthService {
     return null;
   }
 
+  // Add this method to fetch user by email
+  getUserByEmail(email: string): Observable<User> {
+    return this.http.get<User>(`${this.baseUrl}/email/${email}`);
+  }
+
   isAdmin(): boolean {
     return this.getUserRole() === 'ADMIN';
   }
@@ -133,10 +139,24 @@ export class AuthService {
     return null;
   }
 
+
+
   // // Simulating getting the current logged-in user (in a real app, fetch from storage or API)
   // getCurrentUser() {
   //   return { role: Role };  // Replace with actual logic for getting the user and role
   // }
+
+
+  getCurrentUserEmail(): string | null {
+    const token = this.getToken();
+    if (token) {
+      const decodedToken = this.decodeToken(token);
+      return decodedToken.sub; // 'sub' is usually where the email is stored in JWT
+    }
+    return null;
+  }
+
+
 
   
 

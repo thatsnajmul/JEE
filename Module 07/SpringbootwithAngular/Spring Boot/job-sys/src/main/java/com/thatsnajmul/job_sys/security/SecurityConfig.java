@@ -44,7 +44,7 @@ public class SecurityConfig {
 
                                 req ->
                                         req.requestMatchers("/login",
-                                                        "/register/job-seeker",
+                                                        "/register/job-seeker", "api/users/**", "/api/access/users",
                                                                 "/api/jobs","/api/jobs/search", "/api/jobs/{id}",
                                                                 "/api/jobs/get/search", "/api/jobs/get",
                                                                 "/activate/**",
@@ -53,20 +53,20 @@ public class SecurityConfig {
                                                 .permitAll()
 
                                                 .requestMatchers("/api/job-applications", "/api/job-applications/{id}",
-                                                                 "/api/jobs", "/api/jobs/{id}",
+                                                                 "/api/jobs/", "/api/jobs/{id}",
                                                                  "/api/jobs/get/search", "/api/jobs/get",
                                                                  "/api/personal-details", "/api/personal-details/search", "/api/personal-details/{id}",
                                                                  "/api/personal-details", "/api/personal-details/search", "/api/personal-details/{id}")
                                                 .hasAuthority("ADMIN")
 
-                                                .requestMatchers("/api/jobs", "/api/jobs/{id}")
+                                                .requestMatchers("/api/jobs", "/api/jobs/{id}","/api/job-applications", "/api/job-applications/{id}")
                                                 .hasAuthority( "EMPLOYER")
 
                                                 .requestMatchers("/api/personal-details")
                                                 .hasAuthority("JOB_SEEKER")
 
                                                 //For all User
-                                                .requestMatchers("api/user/**")
+                                                .requestMatchers("api/users/**")
                                                 .hasAuthority("JOB_SEEKER,EMPLOYER,ADMIN")
 
 

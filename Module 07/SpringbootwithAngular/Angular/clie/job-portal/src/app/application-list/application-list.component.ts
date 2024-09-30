@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { JobApplicationService } from '../service/job-application/job-application.service';
 import { JobApplication } from '../model/job-application.model';
 import { Router } from '@angular/router';
+import { AuthService } from '../service/auth/auth.service';
 
 @Component({
   selector: 'app-application-list',
@@ -15,9 +16,30 @@ export class ApplicationListComponent implements OnInit{
   pageSize = 10;
   totalPages: number = 0;
 
+  email!: string;
+  jobapplications: JobApplication[] = [];
+  getUserEmailAddress() {
+
+    this.email = this.authService.getCurrentUserEmail() || '';
+    this.fetchJobApplicationByEmail(this.email);
+
+  }
+
+  fetchJobApplicationByEmail(email: string): void {
+    this.jobApplicationService.getJobApplicationByEmail(email).subscribe(
+      (data: JobApplication[]) => {
+        this.jobapplications = data; // Assign the retrieved jobs to the jobs array
+      },
+      (error) => {
+        console.error('Error fetching jobs:', error); // Handle errors
+      }
+    );
+  }
+
   constructor(
     private jobApplicationService: JobApplicationService,
-    private router: Router  // Add the Router service here
+    private router: Router,  // Add the Router service here
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {

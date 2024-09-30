@@ -40,7 +40,7 @@ import { RegisterComponent } from './register/register.component';
 import { TokenInterceptor } from './guards/TokenInterceptor';
 import { EmployerComponent } from './employer/employer.component';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
-import { UserControllComponent } from './user-controll/user-controll.component';
+import { EmployerUserDetailsComponent } from './employer/employer-user-details/employer-user-details.component';
 
 
 
@@ -79,7 +79,7 @@ import { UserControllComponent } from './user-controll/user-controll.component';
     RegisterComponent,
     EmployerComponent,
     NotAuthorizedComponent,
-    UserControllComponent
+    EmployerUserDetailsComponent
   ],
   imports: [
     BrowserModule,

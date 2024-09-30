@@ -62,13 +62,6 @@ export class JobListViewComponent implements OnInit{
     }
   }
 
-  deleteJob(id: number): void {
-    if (confirm('Are you sure you want to delete this job?')) {
-      this.jobService.deleteJob(id).subscribe(() => {
-        this.loadJobs();  // Refresh the job list after deletion
-      });
-    }
 
-  }
 
 }
