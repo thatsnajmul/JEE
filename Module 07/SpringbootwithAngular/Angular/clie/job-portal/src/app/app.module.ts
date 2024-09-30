@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JobListComponent } from './job-list/job-list.component';
@@ -21,28 +20,19 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { CreateJobApplicationComponent } from './create-job-application/create-job-application.component';
 import { HomeComponent } from './home/home.component';
-import { AdminComponent } from './admin/admin.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ViewAllCompaniesComponent } from './view-all-companies/view-all-companies.component';
-import { JobseekerComponent } from './jobseeker/jobseeker.component';
-import { UserDetailsComponent } from './jobseeker/user-details/user-details.component';
-import { AdminUserDetailsComponent } from './admin/admin-user-details/admin-user-details.component';
 import { ApplicationListComponent } from './application-list/application-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { JobApplicationEditComponent } from './job-application-edit/job-application-edit.component';
-import { PersonalDetailsComponent } from './jobseeker/personal-details/personal-details.component';
 import { NavLeftComponent } from './nav-left/nav-left.component';
 import { SidebarLeftComponent } from './sidebar-left/sidebar-left.component';
 import { SidebarRightComponent } from './sidebar-right/sidebar-right.component';
-import { AddPersonalDetailsComponent } from './jobseeker/add-personal-details/add-personal-details.component';
 import { RegisterComponent } from './register/register.component';
 import { TokenInterceptor } from './guards/TokenInterceptor';
-import { EmployerComponent } from './employer/employer.component';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
-import { EmployerUserDetailsComponent } from './employer/employer-user-details/employer-user-details.component';
-
-
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -61,25 +51,18 @@ import { EmployerUserDetailsComponent } from './employer/employer-user-details/e
     LogoutComponent,
     CreateJobApplicationComponent,
     HomeComponent,
-    AdminComponent,
     UserProfileComponent,
     ViewAllCompaniesComponent,
-    JobseekerComponent,
-    UserDetailsComponent,
-    AdminUserDetailsComponent,
     ApplicationListComponent,
-    UserListComponent,
     JobDetailsComponent,
     JobApplicationEditComponent,
-    PersonalDetailsComponent,
     NavLeftComponent,
     SidebarLeftComponent,
     SidebarRightComponent,
-    AddPersonalDetailsComponent,
     RegisterComponent,
-    EmployerComponent,
     NotAuthorizedComponent,
-    EmployerUserDetailsComponent
+    UserProfileComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
