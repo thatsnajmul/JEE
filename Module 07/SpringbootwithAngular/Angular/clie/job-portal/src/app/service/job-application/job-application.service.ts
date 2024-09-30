@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { JobApplication } from "../../model/job-application.model"; // Make sure to update the model path
@@ -38,9 +38,20 @@ export class JobApplicationService {
   }
 
   // Search job applications by keyword
+  // searchJobApplications(query: string): Observable<JobApplication[]> {
+  //   return this.http.get<JobApplication[]>(`${this.apiUrl}/search?query=${query}`);
+  // }
+
+  private sapiUrl = '/api/application';
+  // Fetch jobs based on search query
   searchJobApplications(query: string): Observable<JobApplication[]> {
-    return this.http.get<JobApplication[]>(`${this.apiUrl}/search?query=${query}`);
-  }
+   return this.http.get<JobApplication[]>(`${this.apiUrl}/get/search?keyword=${query}`);
+ }
+
+ getJobApplicationByEmail(email: string): Observable<JobApplication[]> {
+  const params = new HttpParams().set('email', email);
+  return this.http.get<JobApplication[]>(`${this.apiUrl}/application`, { params });
+}
 
 }
 

@@ -19,6 +19,9 @@ public interface JobRepository extends JpaRepository<Job, Long> {
     @Query("select j from Job j where j.user.id=:id")
     List<Job>  findByUserID(long id);
 
+//    @Query("select r from Job r where r.roles.id=:id")
+//    List<Job>  findByUserID(long id);
+
 
 //    List<Job> jobs = jobRepository.findByUserIdEmailAndRole(userId, userEmail, userRole);
 //

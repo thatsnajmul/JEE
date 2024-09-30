@@ -61,12 +61,10 @@ public class JobController {
     public ResponseEntity<List<Job>> getJobByUser(@RequestParam("email") String email) {
         // Fetch the jobs associated with the user's email
         List<Job> jobs = jobService.getJobByUserEmail(email);
-
         // Check if the job list is empty
         if (jobs.isEmpty()) {
             return ResponseEntity.noContent().build();  // Return 204 No Content if no jobs found
         }
-
         // Return the list of jobs wrapped in a ResponseEntity with 200 OK status
         return ResponseEntity.ok(jobs);
     }

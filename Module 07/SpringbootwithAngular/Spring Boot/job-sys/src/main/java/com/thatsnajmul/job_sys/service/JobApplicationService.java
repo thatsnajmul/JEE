@@ -1,16 +1,24 @@
 package com.thatsnajmul.job_sys.service;
 
+import com.thatsnajmul.job_sys.entity.Job;
+import com.thatsnajmul.job_sys.entity.User;
 import com.thatsnajmul.job_sys.repository.JobApplicationRepository;
 import com.thatsnajmul.job_sys.entity.JobApplication;
+import com.thatsnajmul.job_sys.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class JobApplicationService {
     @Autowired
     private JobApplicationRepository jobApplicationRepository;
+
+    @Autowired
+    private UserRepository userRepository;
 
     // Retrieve all job applications with pagination
     public Page<JobApplication> getAllJobApplications(Pageable pageable) {
@@ -63,6 +71,12 @@ public class JobApplicationService {
             return jobApplicationRepository.findByJobIdContainingIgnoreCase(jobId, pageable);
         }
         return jobApplicationRepository.findAll(pageable); // Return all if no criteria
+    }
+
+    public List<JobApplication> getJobApplicationByUserEmail(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User Not Found"));
+        return jobApplicationRepository.findByUserID(user.getId());
     }
 }
 
