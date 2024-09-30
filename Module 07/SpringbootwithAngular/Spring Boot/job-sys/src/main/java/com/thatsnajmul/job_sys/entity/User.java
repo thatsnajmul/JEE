@@ -58,12 +58,6 @@ public class User implements UserDetails {
     @JsonManagedReference // This is the parent
     private List<Job> roles;
 
-
-
-
-
-
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));

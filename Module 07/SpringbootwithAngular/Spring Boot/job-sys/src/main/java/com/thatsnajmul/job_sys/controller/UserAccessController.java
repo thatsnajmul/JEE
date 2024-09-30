@@ -53,5 +53,6 @@ public class UserAccessController {
         userAccessService.deleteUser(id);
         return ResponseEntity.ok().build();
     }
+
 }
 
