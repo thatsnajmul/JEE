@@ -5,6 +5,7 @@ import { AuthResponse } from '../../model/auth-response';
 import { isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
 import { Role } from '../../model/role.model';
+import { User } from '../../model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -73,6 +74,11 @@ export class AuthService {
       return localStorage.getItem('userRole');
     }
     return null;
+  }
+
+  // Add this method to fetch user by email
+  getUserByEmail(email: string): Observable<User> {
+    return this.http.get<User>(`${this.baseUrl}/email/${email}`);
   }
 
   isAdmin(): boolean {
@@ -150,7 +156,7 @@ export class AuthService {
     return null;
   }
 
-  
+
 
   
 

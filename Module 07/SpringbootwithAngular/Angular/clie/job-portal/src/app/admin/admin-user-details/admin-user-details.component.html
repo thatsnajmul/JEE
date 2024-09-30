@@ -1,25 +1,22 @@
-<div class="row justify-content-center m-5">
-    <div class="col-md-12 col-sm-8 col-xs-12">
-      <div class="profile-card">
-        <!-- Profile Header -->
-        <div class="profile-header">
-          <img src="https://via.placeholder.com/120" alt="Profile Picture">
-          <h2>John Doe</h2>
-          <p>Full Stack Developer</p>
-        </div>
+<div *ngIf="user; else userNotFound">
+  <h2>User Details for {{ user.name }}</h2>
+  <img [src]="user.image" alt="{{ user.name }}" width="150" />
+  <ul>
+    <li><strong>Name:</strong> {{ user.name }}</li>
+    <li><strong>Email:</strong> {{ user.email }}</li>
+    <li><strong>Cell:</strong> {{ user.cell }}</li>
+    <li><strong>Address:</strong> {{ user.address }}</li>
+    <li><strong>Date of Birth:</strong> {{ user.dob | date }}</li>
+    <li><strong>Gender:</strong> {{ user.gender }}</li>
+    <li><strong>Active:</strong> {{ user.active ? 'Yes' : 'No' }}</li>
+    <li><strong>Role:</strong> {{ user.role }}</li>
+  </ul>
+</div>
 
-        <!-- Profile Details -->
-        <div class="profile-details">
-          <p><strong>Email:</strong> john.doe&#64;gmail.com</p>
-          <p><strong>Phone:</strong> +123 456 789</p>
-          <p><strong>Location:</strong> New York, USA</p>
-          
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- If user is not found, show this template -->
+<ng-template #userNotFound>
+  <p>User not found. Please check the email.</p>
+
+  
+
+</ng-template>

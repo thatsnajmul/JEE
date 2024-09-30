@@ -30,10 +30,10 @@ public class Job {
     @JsonBackReference // This is the child
     private User user;
 
-    @ManyToOne
-    @JoinColumn(name = "roleId")
-    @JsonBackReference // This is the child
-    private User roles;
+//    @ManyToOne
+//    @JoinColumn(name = "roleId")
+//    @JsonBackReference // This is the child
+//    private User roles;
 
 
 

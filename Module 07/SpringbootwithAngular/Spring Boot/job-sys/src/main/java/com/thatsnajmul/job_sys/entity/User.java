@@ -54,9 +54,9 @@ public class User implements UserDetails {
     @JsonManagedReference // This is the parent
     private List<Job> jobs;
 
-    @OneToMany(mappedBy = "roles")
-    @JsonManagedReference // This is the parent
-    private List<Job> roles;
+//    @OneToMany(mappedBy = "roles")
+//    @JsonManagedReference // This is the parent
+//    private List<Job> roles;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

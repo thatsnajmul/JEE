@@ -102,6 +102,7 @@ const routes: Routes = [
   //   data: { roles: ['ADMIN'] }  // Only Admin role can access this
   // },
   {path:'admin-user-details', component:AdminUserDetailsComponent},
+  {path:'admin-user-details/:email', component:AdminUserDetailsComponent},
   {path:'admin/job-form', component: JobFormComponent},
   {path:'jobs/add', component: JobFormComponent },
   //{path:'job-details/:id', component: JobDetailsComponent },
