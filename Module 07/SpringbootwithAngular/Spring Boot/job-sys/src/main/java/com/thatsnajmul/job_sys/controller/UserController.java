@@ -19,12 +19,21 @@ public class UserController {
     private UserService userService;
 
     // Get user by Email
+//    @GetMapping("/email/{email}")
+//    public ResponseEntity<User> getUserByEmail(@PathVariable String username) {
+//        Optional<User> user = userService.loadUserByUsername(username);
+//        return user.map(ResponseEntity::ok)
+//                .orElseGet(() -> ResponseEntity.notFound().build());
+//    }
+
     @GetMapping("/email/{email}")
     public ResponseEntity<User> getUserByEmail(@PathVariable String email) {
-        Optional<User> user = userService.getUserByEmail(email);
+        Optional<User> user = userService.getUserByEmail(email);  // Use the new method here
         return user.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
+
+
 
 
 

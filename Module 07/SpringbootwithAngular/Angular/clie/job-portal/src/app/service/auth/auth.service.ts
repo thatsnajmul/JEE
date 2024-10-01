@@ -81,7 +81,9 @@ export class AuthService {
   getUserByEmail(email: string): Observable<User> {
     const token = this.getToken(); // Retrieve the token
     const headers = this.headers.append('Authorization', `Bearer ${token}`); // Add Authorization header
-    return this.http.get<User>(`${this.baseUrl}/email/${email}`, { headers });
+    return this.http.get<User>(`${this.baseUrl}/api/users/email/${email}`, { headers });
+
+   
 }
 
 
@@ -159,6 +161,12 @@ export class AuthService {
     }
     return null;
   }
+
+  
+
+ 
+
+
 
   
 

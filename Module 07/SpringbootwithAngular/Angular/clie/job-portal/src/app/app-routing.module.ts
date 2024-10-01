@@ -78,7 +78,8 @@ const routes: Routes = [
   //{path:'', redirectTo: '/register', pathMatch: 'full' },
 
 
-  { path: 'profile', component: ProfileComponent }
+  { path: 'profile', component: ProfileComponent },
+  
   
 ];
 

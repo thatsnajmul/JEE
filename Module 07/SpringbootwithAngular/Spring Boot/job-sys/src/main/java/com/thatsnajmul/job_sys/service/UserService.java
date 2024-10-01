@@ -17,18 +17,24 @@ public class UserService implements UserDetailsService {
     private UserRepository userRepository;
 
 
+    // This is for authentication purposes
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByEmail(username)
-                .orElseThrow(
-                        ()->  new UsernameNotFoundException("User Not Found With this Email Address"));
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("User Not Found With this Email Address"));
     }
 
-
-    // Find user by Email
+    // This method is for retrieving the user profile
     public Optional<User> getUserByEmail(String email) {
-        return userRepository.findByEmail(email);
+        return userRepository.findByEmail(email);  // Ensure this method returns Optional<User>
     }
+
+
+
+//    // Find user by Email
+//    public Optional<User> getUserByEmail(String email) {
+//        return userRepository.findByEmail(email);
+//    }
 
     // Update user by Email
     public User updateUserByEmail(String email, User updatedUser) {

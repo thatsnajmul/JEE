@@ -1,13 +1,11 @@
-<div *ngIf="user">
-    <h2>User Profile</h2>
-    <img [src]="user.image" alt="User Image" *ngIf="user.image" />
-    <p><strong>Name:</strong> {{ user.name }}</p>
-    <p><strong>Email:</strong> {{ user.email }}</p>
-    <p><strong>Cell:</strong> {{ user.cell }}</p>
-    <p><strong>Address:</strong> {{ user.address }}</p>
-    <p><strong>Date of Birth:</strong> {{ user.dob | date }}</p>
-    <p><strong>Gender:</strong> {{ user.gender }}</p>
-    <p><strong>Role:</strong> {{ user.role }}</p>
-    <p><strong>Status:</strong> {{ user.active ? 'Active' : 'Inactive' }}</p>
-  </div>
-  
+<div *ngIf="user; else errorTemplate">
+  <h2>{{ user.name }}'s Profile</h2>
+  <p>Email: {{ user.email }}</p>
+  <p>Role: {{ user.role }}</p>
+  <!-- Other user details -->
+</div>
+
+<ng-template #errorTemplate>
+  <p>{{ errorMessage }}</p>
+</ng-template>
+

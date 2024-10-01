@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit{
   }
 
   loadUserProfile(): void {
-    const email = this.authService.getCurrentUserEmail(); // Get current user's email
+    const email = this.authService.getCurrentUserEmail();
     if (email) {
       this.authService.getUserByEmail(email).subscribe(
         (user: User) => {
@@ -29,7 +29,7 @@ export class ProfileComponent implements OnInit{
         },
         (error) => {
           console.error('Error fetching user data: ', error);
-          this.errorMessage = 'Error fetching user data.'; // Handle error accordingly
+          this.errorMessage = 'Error fetching user data.';
         }
       );
     } else {

@@ -19,10 +19,8 @@ export class ApplicationListComponent implements OnInit{
   email!: string;
   jobapplications: JobApplication[] = [];
   getUserEmailAddress() {
-
     this.email = this.authService.getCurrentUserEmail() || '';
     this.fetchJobApplicationByEmail(this.email);
-
   }
 
   fetchJobApplicationByEmail(email: string): void {

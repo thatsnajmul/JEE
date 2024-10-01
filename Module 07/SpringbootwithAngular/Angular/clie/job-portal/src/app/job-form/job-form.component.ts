@@ -56,15 +56,21 @@ export class JobFormComponent implements OnInit{
 
   onSubmit(): void {
     if (this.jobForm.invalid) {
+      this.jobForm.markAllAsTouched();  // Highlight invalid fields
       return;
     }
-
+  
     const job: Job = this.jobForm.value;
-
-    
+  
+    if (this.isEditMode) {
+      this.jobService.updateJob(this.jobId, job).subscribe(() => {
+        this.router.navigate(['/jobs']);
+      });
+    } else {
       this.jobService.createJob(job).subscribe(() => {
         this.router.navigate(['/jobs']);
       });
+    }
     
   }
 

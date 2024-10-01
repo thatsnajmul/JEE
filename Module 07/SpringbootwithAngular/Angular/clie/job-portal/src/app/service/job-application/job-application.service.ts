@@ -22,6 +22,12 @@ export class JobApplicationService {
     return this.http.get<JobApplication>(`${this.apiUrl}/${id}`);
   }
 
+  // Get job applications by email
+  getJobApplicationByEmail(email: string): Observable<JobApplication[]> {
+    const params = new HttpParams().set('email', email);
+    return this.http.get<JobApplication[]>(`${this.apiUrl}/application`, { params });
+  }
+
   // Create a new job application
   createJobApplication(jobApplication: JobApplication): Observable<JobApplication> {
     return this.http.post<JobApplication>(this.apiUrl, jobApplication);
@@ -38,20 +44,9 @@ export class JobApplicationService {
   }
 
   // Search job applications by keyword
-  // searchJobApplications(query: string): Observable<JobApplication[]> {
-  //   return this.http.get<JobApplication[]>(`${this.apiUrl}/search?query=${query}`);
-  // }
-
-  private sapiUrl = '/api/application';
-  // Fetch jobs based on search query
   searchJobApplications(query: string): Observable<JobApplication[]> {
-   return this.http.get<JobApplication[]>(`${this.apiUrl}/get/search?keyword=${query}`);
- }
-
- getJobApplicationByEmail(email: string): Observable<JobApplication[]> {
-  const params = new HttpParams().set('email', email);
-  return this.http.get<JobApplication[]>(`${this.apiUrl}/application`, { params });
-}
+    return this.http.get<JobApplication[]>(`${this.apiUrl}/get/search?keyword=${query}`);
+  }
 
 }
 
