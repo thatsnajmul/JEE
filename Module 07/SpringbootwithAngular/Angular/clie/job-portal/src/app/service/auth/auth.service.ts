@@ -76,10 +76,14 @@ export class AuthService {
     return null;
   }
 
-  // Add this method to fetch user by email
+  
+
   getUserByEmail(email: string): Observable<User> {
-    return this.http.get<User>(`${this.baseUrl}/email/${email}`);
-  }
+    const token = this.getToken(); // Retrieve the token
+    const headers = this.headers.append('Authorization', `Bearer ${token}`); // Add Authorization header
+    return this.http.get<User>(`${this.baseUrl}/email/${email}`, { headers });
+}
+
 
   isAdmin(): boolean {
     return this.getUserRole() === 'ADMIN';
@@ -155,6 +159,8 @@ export class AuthService {
     }
     return null;
   }
+
+  
 
 
 

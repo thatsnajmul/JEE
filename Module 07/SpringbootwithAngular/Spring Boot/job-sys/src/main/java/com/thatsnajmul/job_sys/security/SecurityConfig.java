@@ -21,6 +21,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
 
@@ -66,7 +68,7 @@ public class SecurityConfig {
                                                 .hasAuthority("JOB_SEEKER")
 
                                                 //For all User
-                                                .requestMatchers("api/users/**")
+                                                .requestMatchers("api/users/**", "/email/${email}")
                                                 .hasAuthority("JOB_SEEKER,EMPLOYER,ADMIN")
 
 
@@ -83,6 +85,18 @@ public class SecurityConfig {
 
     }
 
+    @Configuration
+    public class WebConfig implements WebMvcConfigurer {
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+            registry.addMapping("/**")
+                    .allowedOrigins("http://localhost:4200") // Adjust based on your frontend URL
+                    .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                    .allowedHeaders("*")
+                    .allowCredentials(true);
+        }
+    }
+
 
 
     @Bean
@@ -97,9 +111,11 @@ public class SecurityConfig {
     }
 
 
+
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
+
         configuration.setAllowedOrigins(List.of("http://localhost:4200", "http://127.0.0.1:4200"));  // Add allowed origins
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("Authorization", "Cache-Control", "Content-Type"));

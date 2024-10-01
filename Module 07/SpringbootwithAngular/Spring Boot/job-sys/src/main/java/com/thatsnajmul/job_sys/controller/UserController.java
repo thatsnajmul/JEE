@@ -4,6 +4,7 @@ import com.thatsnajmul.job_sys.entity.User;
 import com.thatsnajmul.job_sys.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -11,6 +12,7 @@ import java.util.Optional;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/users")
+@PreAuthorize("hasRole('ADMIN') or hasRole('EMPLOYER')")
 public class UserController {
 
     @Autowired

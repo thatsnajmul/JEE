@@ -12,5 +12,6 @@ export interface Job {
     companyImageUrl: string;
     jobDescription: string;
     cvDownloadUrl: string;
+    userId: number;
   }
   

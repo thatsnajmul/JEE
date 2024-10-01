@@ -23,6 +23,7 @@ import { NotAuthorizedComponent } from './not-authorized/not-authorized.componen
 // import { RoleGuard } from './guards/role.guard';
 import { Role } from './model/role.model';
 import { RoleGuard } from './guards/role.guard';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -75,6 +76,9 @@ const routes: Routes = [
   {path:'logout', component:LogoutComponent},
   {path:'register', component: RegisterComponent },
   //{path:'', redirectTo: '/register', pathMatch: 'full' },
+
+
+  { path: 'profile', component: ProfileComponent }
   
 ];
 
