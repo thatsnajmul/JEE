@@ -82,8 +82,6 @@ export class AuthService {
     const token = this.getToken(); // Retrieve the token
     const headers = this.headers.append('Authorization', `Bearer ${token}`); // Add Authorization header
     return this.http.get<User>(`${this.baseUrl}/api/users/email/${email}`, { headers });
-
-   
 }
 
 

@@ -1,5 +1,6 @@
 package com.thatsnajmul.job_sys.service;
 
+import com.thatsnajmul.job_sys.dto.UserDTO;
 import com.thatsnajmul.job_sys.entity.User;
 import com.thatsnajmul.job_sys.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,6 +59,57 @@ public class UserService implements UserDetailsService {
     public void deleteUserByEmail(String email) {
         userRepository.findByEmail(email).ifPresent(userRepository::delete);
     }
+
+
+    public UserDTO convertToDTO(User user) {
+        return new UserDTO(
+                user.getId(),
+                user.getName(),
+                user.getEmail(),
+                user.getCell(),
+                user.getAddress(),
+                user.getDob(),
+                user.getGender(),
+                user.getImage(),
+                user.isActive(),
+                user.isLock(),
+                user.getRole()
+        );
+    }
+
+    // Method to convert DTO to entity
+    public User convertToEntity(UserDTO userDTO) {
+        User user = new User();
+        user.setId(userDTO.getId());
+        user.setName(userDTO.getName());
+        user.setEmail(userDTO.getEmail());
+        user.setCell(userDTO.getCell());
+        user.setAddress(userDTO.getAddress());
+        user.setDob(userDTO.getDob());
+        user.setGender(userDTO.getGender());
+        user.setImage(userDTO.getImage());
+        user.setActive(userDTO.isActive());
+        user.setLock(userDTO.isLock());
+        user.setRole(userDTO.getRole());
+        return user;
+    }
+
+    // Find user by ID method
+    public User findUserById(long id) {
+        Optional<User> user = userRepository.findById(id);
+        if (user.isPresent()) {
+            return user.get();
+        } else {
+            throw new RuntimeException("User not found with id: " + id);
+        }
+    }
+
+    // Save user method
+    public User saveUser(User user) {
+        return userRepository.save(user);
+    }
+
+
 
 
 }

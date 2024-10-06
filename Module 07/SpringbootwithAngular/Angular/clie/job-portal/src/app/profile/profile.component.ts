@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth/auth.service';
 import { User } from '../model/user.model';
 import { Role } from '../model/role.model';
+import { UserService } from '../service/user/user.service';
 
 
 @Component({
@@ -11,31 +12,25 @@ import { Role } from '../model/role.model';
 })
 export class ProfileComponent implements OnInit{
 
-  user: User | null = null; // To hold the user data
-  errorMessage: string | null = null; // To hold any error message
+  
+  users: User[] = [];
 
-  constructor(private authService: AuthService) {}
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.loadUserProfile();
+    // Fetch all users when the component loads
+    this.userService.getAllUsers().subscribe(
+      (data: User[]) => {
+        this.users = data;
+      },
+      (error) => {
+        console.error('Error fetching users', error);
+      }
+    );
   }
 
-  loadUserProfile(): void {
-    const email = this.authService.getCurrentUserEmail();
-    if (email) {
-      this.authService.getUserByEmail(email).subscribe(
-        (user: User) => {
-          this.user = user; // Set the user data if retrieved successfully
-        },
-        (error) => {
-          console.error('Error fetching user data: ', error);
-          this.errorMessage = 'Error fetching user data.';
-        }
-      );
-    } else {
-      this.errorMessage = 'User is not logged in or email not found.';
-    }
-  }
+ 
+  
 
   
 
