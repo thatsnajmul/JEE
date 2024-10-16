@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WebView</string>
+
+    <!-- to toggle the open close button of the navigation drawer -->
+        <string name="open_nav">Open Navigation Drawer</string>
+        <string name="close_nav">Close Navigation Drawer</string>
+
+</resources>
