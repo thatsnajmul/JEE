@@ -31,6 +31,18 @@ public class JobService {
         return jobRepository.save(job);
     }
 
+//    public Job createJobByEmail(Job job, String email) {
+//        // Find the user by email
+//        User user = userRepository.findByEmail(email)
+//                .orElseThrow(() -> new RuntimeException("User Not Found"));
+//
+//        // Associate the job with the found user
+//        job.setUser(user);  // Assuming Job entity has a User field
+//
+//        // Save the job
+//        return jobRepository.save(job);
+//    }
+
     public Job updateJob(Long id, Job jobDetails) {
         Job job = getJobById(id);
         if (job != null) {

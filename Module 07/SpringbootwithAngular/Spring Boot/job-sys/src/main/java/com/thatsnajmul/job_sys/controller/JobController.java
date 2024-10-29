@@ -37,6 +37,15 @@ public class JobController {
         return ResponseEntity.status(HttpStatus.CREATED).body(jobService.createJob(job));
     }
 
+//    @PostMapping
+//    public ResponseEntity<Job> createJob(@RequestBody Job job, @RequestParam("email") String email) {
+//        // Create a job for the user associated with the provided email
+//        Job createdJob = jobService.createJobByEmail(job, email);
+//
+//        // Return the created job wrapped in a ResponseEntity with 201 Created status
+//        return ResponseEntity.status(HttpStatus.CREATED).body(createdJob);
+//    }
+
     @PutMapping("/{id}")
     public ResponseEntity<Job> updateJob(@PathVariable Long id, @RequestBody Job jobDetails) {
         return ResponseEntity.ok(jobService.updateJob(id, jobDetails));

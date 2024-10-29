@@ -68,7 +68,7 @@ public class SecurityConfig {
                                                 .hasAuthority("JOB_SEEKER")
 
                                                 //For all User
-                                                .requestMatchers("api/users/**", "/email/${email}")
+                                                .requestMatchers("api/users/**", "api/users/email/${email}", "api/users/email/")
                                                 .hasAuthority("JOB_SEEKER,EMPLOYER,ADMIN")
 
 

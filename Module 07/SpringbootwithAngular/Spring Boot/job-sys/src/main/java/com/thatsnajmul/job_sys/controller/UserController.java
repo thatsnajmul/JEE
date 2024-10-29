@@ -1,5 +1,6 @@
 package com.thatsnajmul.job_sys.controller;
 
+import com.thatsnajmul.job_sys.dto.UserDTO;
 import com.thatsnajmul.job_sys.entity.User;
 import com.thatsnajmul.job_sys.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,12 +27,35 @@ public class UserController {
 //                .orElseGet(() -> ResponseEntity.notFound().build());
 //    }
 
-    @GetMapping("/email/{email}")
-    public ResponseEntity<User> getUserByEmail(@PathVariable String email) {
-        Optional<User> user = userService.getUserByEmail(email);  // Use the new method here
-        return user.map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+//    @GetMapping("/email/{email}")
+//    public ResponseEntity<User> getUserByEmail(@PathVariable String email) {
+//        Optional<User> user = userService.getUserByEmail(email);  // Use the new method here
+//        return user.map(ResponseEntity::ok)
+//                .orElseGet(() -> ResponseEntity.notFound().build());
+//    }
+
+    // Get user by ID and return DTO
+    @GetMapping("/{id}")
+    public ResponseEntity<UserDTO> getUserById(@PathVariable long id) {
+        User user = userService.findUserById(id);  // Assuming findUserById returns a User entity
+        UserDTO userDTO = userService.convertToDTO(user);
+        return ResponseEntity.ok(userDTO);
     }
+
+    // Example for POST/PUT endpoints
+    @PostMapping
+    public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO) {
+        User user = userService.convertToEntity(userDTO);
+        User savedUser = userService.saveUser(user);  // Assuming saveUser saves the entity
+        UserDTO savedUserDTO = userService.convertToDTO(savedUser);
+        return ResponseEntity.ok(savedUserDTO);
+    }
+
+        // You can add more endpoints for different CRUD operations
+
+
+
+
 
 
 
