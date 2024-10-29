@@ -16,9 +16,9 @@ public interface JobApplicationRepository extends JpaRepository<JobApplication, 
     Page<JobApplication> findByExperience(Integer experience, Pageable pageable);
     Page<JobApplication> findByJobIdContainingIgnoreCase(String jobId, Pageable pageable);
 
-    List<JobApplication> findByUser(User user);
-
-    @Query("select ja from JobApplication ja where ja.user.id=:id")
-    List<JobApplication>  findByUserID(long id);
+//    List<JobApplication> findByUser(User user);
+//
+//    @Query("select ja from JobApplication ja where ja.user.id=:id")
+//    List<JobApplication>  findByUserID(long id);
 }
 
