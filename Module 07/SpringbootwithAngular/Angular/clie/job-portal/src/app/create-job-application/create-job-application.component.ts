@@ -55,17 +55,17 @@ export class CreateJobApplicationComponent implements OnInit{
     });
   }
 
-  fetchJobApplicationByEmail(email: string): void {
-    this.jobApplicationService.getJobApplicationByEmail(email).subscribe(
-      (data: JobApplication[]) => {
-        // Handle the response (if you need to use it)
-        console.log('Fetched job applications:', data);
-      },
-      (error) => {
-        console.error('Error fetching job applications:', error);
-      }
-    );
-  }
+  // fetchJobApplicationByEmail(email: string): void {
+  //   this.jobApplicationService.getJobApplicationByEmail(email).subscribe(
+  //     (data: JobApplication[]) => {
+  //       // Handle the response (if you need to use it)
+  //       console.log('Fetched job applications:', data);
+  //     },
+  //     (error) => {
+  //       console.error('Error fetching job applications:', error);
+  //     }
+  //   );
+  // }
 
   onSubmit(): void {
     if (this.jobapplicationForm.invalid) {

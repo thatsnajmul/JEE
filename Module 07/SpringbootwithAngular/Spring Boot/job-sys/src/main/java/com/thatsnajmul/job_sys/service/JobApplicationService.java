@@ -73,10 +73,10 @@ public class JobApplicationService {
         return jobApplicationRepository.findAll(pageable); // Return all if no criteria
     }
 
-    public List<JobApplication> getJobApplicationByUserEmail(String email) {
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User Not Found"));
-        return jobApplicationRepository.findByUserID(user.getId());
-    }
+//    public List<JobApplication> getJobApplicationByUserEmail(String email) {
+//        User user = userRepository.findByEmail(email)
+//                .orElseThrow(() -> new RuntimeException("User Not Found"));
+//        return jobApplicationRepository.findByUserID(user.getId());
+//    }
 }
 
