@@ -1,0 +1,55 @@
+FrontEnd:
+---------
+Angular (My)
+Vue Js
+JQuery
+Bootstrap
+
+BackEnd:
+--------
+Spring Framework/Spring Boot (My)
+Django
+Flask
+Ruby On Rails
+Laravel
+
+1:Algorithm  
+	How to write an algorithm
+	Data structure
+	Practice/Train your brain
+	Complexity
+2: OOP
+	Abstraction
+	Encapsulation
+	Inheritance
+	Polymorphism
+3: Choose a programming language
+	Start with Basics:
+		The syntax
+		Conditions
+		Loops
+		Practice the code
+		Code something more meaningful than Hello world.
+		Strive for understanding, not perfection
+		
+		Finally:
+			Make sure you're learning the language for the right reason
+			Read the documentation
+			Do some coding challanges/hackathons/competitions
+			Ask for code review from more experienced developer
+			Learn the way that works for you...
+
+UML:
+----
+Use Case Diagram
+Sequence Diagram
+Class Diagram
+
+Database design/SQL:
+--------------------
+How Database works
+Diff between Relational/Non-Relational
+Write quries/manipulate data
+PLSQL/SQL
+Stored procedures
+

@@ -1,0 +1,84 @@
+Angular & Spring
+----------------
+Crossjoin == Relation(One to Many, Many to one, Many to many, one to one/ Model Engineering/ Forward Engineering
+
+Authguard : restcontroller: AuthenticationController, security: SecurityConfig, 
+service: Authservice, UserService, Tokenservice, jwt: JwtAuthenticationFilter, JwtService, configaration: WebConfigaration, 
+entity: AuthenticationResponse, Role(Enum), Token, UserEntity
+
+
+Routing{}
+App Module
+Service
+
+
+ednr wvnq ayja qbjb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**//Spring and Spring Boot
+
+
+Add extra Entity, service and restcontroller for Jobs(jobTitle, companyName, jobType, jobLocation, jobExperience, jobMinSalary, jobMaxSalary, jobCategory, jobDeadline, companyImage, jobDescription)
+
+Cv(Enter your degree information, Enter your work experience, Add your skills, Add any additional informations)
+
+Packages:
+	configaration: @Configuration
+		Class:
+		   WebConfig
+
+	entity: @Entity 
+		@Data
+		@NoArgsConstructor
+		@AllArgsConstructor
+		Class: 
+		   Authentication
+		   Role
+		   Token
+		   UserEntity
+
+	jwt:   @Component
+	       @RequiredArgsConstructor
+		Class:
+		   JwtAuthenticationFilter
+		   JwtService @Service
+
+	repository: @Repository
+		Interface:
+		   TokenRepository	
+		   UserRepository
+	security: 	@Configuration
+			@EnableWebSecurity
+			@RequiredArgsConstructor
+		Class:
+		   SecurityConfig ()
+
+	service: 	@Service
+		 	@AllArgsConstructor
+		Class:
+		   AuthService
+		   TokenService
+		   UserService
+		   
+		
+	

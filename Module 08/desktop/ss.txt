@@ -1,0 +1,7 @@
+model: User
+repository: UserRepository
+service: UserService implements UserDetailsService
+util: JwtUtils
+config: SecurityConfig
+filter: JwtAuthenticationFilter
+controller: AuthController
